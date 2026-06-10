@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#fff8f0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<title>વાણી-વિજ્ઞાન - દાદા ભગવાન કથિત</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@400;600&family=Noto+Sans+Gujarati:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+
+/* ===== GLOBAL RESET & BASE ===== */
+@keyframes pulse-border { 0%{box-shadow:0 0 0 0 rgba(13,71,161,0.4)} 70%{box-shadow:0 0 0 10px rgba(13,71,161,0)} 100%{box-shadow:0 0 0 0 rgba(13,71,161,0)} }
+@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+@keyframes tts-pulse { 0%,100%{background-color:#fffdf5} 50%{background-color:#fff3e0} }
+@keyframes index-flash { 0%, 100% { background-color: transparent; } 15%, 85% { background-color: #ffe0b2; } }
+@keyframes dark-index-flash { 0%, 100% { background-color: transparent; } 15%, 85% { background-color: #4e342e; } }
+@keyframes dark-tts-pulse { 0%, 100% { background-color: #221f1c; } 50% { background-color: #2c2723; } }
+
+*,*::before,*::after { box-sizing: border-box; }
+html,body { overflow-x: hidden; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Hind Vadodara', 'Noto Sans Gujarati', 'Shruti', 'Nirmala UI', sans-serif;
+  font-size: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0ece4;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4b483' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #1a1a1a;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ===== PAGE CONTAINERS ===== */
+.page-container {
+  background-color: #fffef9;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 28px auto;
+  min-height: 820px;
+  box-shadow: 0 2px 16px rgba(139,90,43,0.12), 0 1px 4px rgba(0,0,0,0.08);
+  position: relative;
+  padding: 50px;
+  overflow: hidden;
+  page-break-after: always;
+  border-bottom: 2px dashed #d4b896;
+  border-radius: 2px;
+  animation: fadeIn 0.3s ease both;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* ===== RUNNING TITLES ===== */
+.running-title {
+  font-size: 13px !important;
+  color: #999 !important;
+  margin: 0 0 18px 0 !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e8e0d4;
+  padding-bottom: 6px;
+}
+.odd-page .running-title  { text-align: right !important; }
+.even-page .running-title { text-align: left !important; }
+
+/* ===== TYPOGRAPHY ===== */
+p { text-align: left !important; margin-bottom: 16px; line-height: 1.9; }
+h1,h2,h3 { text-align: center !important; line-height: 1.4; }
+h1 { font-size: 30px !important; color: #1a1a1a !important; }
+h2 { font-size: 26px !important; color: #1a1a1a !important; }
+h3 { font-size: 21px !important; color: #7b3f1e; margin: 22px 0 10px; }
+
+/* ===== HERO TITLE BOX ===== */
+.hero-title-box {
+  background: linear-gradient(145deg, #fffcf0 0%, #fff8e7 100%);
+  padding: 55px 20px 15px;
+  border-radius: 16px;
+  border: 1px solid #e8d8b0;
+  border-top: 4px solid #bf953f;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  max-width: 88%;
+  box-shadow: 0 8px 28px rgba(192,154,63,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+  position: relative;
+}
+.hero-title-box::before {
+  content: "❈";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  background: #fffcf0;
+  padding: 0 12px;
+  color: #bf953f;
+  font-size: 22px;
+}
+.hero-title-box h2 {
+  color: #9a8060 !important;
+  font-size: 20px !important;
+  margin-bottom: 8px !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px;
+}
+.hero-title-box h1 {
+  font-size: 52px !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  display: inline-block;
+  padding: 10px 0;
+  background: linear-gradient(160deg, #bf953f 0%, #fcf6ba 40%, #b38728 65%, #fcf6ba 80%, #aa771c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.25));
+}
+.hero-title-box h1::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #bf953f 30%, #fcf6ba 50%, #bf953f 70%, transparent);
+  margin: 16px auto 0;
+}
+
+/* ===== EDITORIAL HEADER ===== */
+.editorial-header {
+  background: linear-gradient(135deg, #fdfaf0 0%, #faf5e6 100%);
+  border-left: 6px solid #c0392b;
+  padding: 18px 28px;
+  margin-bottom: 28px;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 2px 0 12px rgba(192,57,43,0.08);
+}
+.editorial-header h2 {
+  text-align: left !important;
+  margin: 0 !important;
+  color: #1a1a1a !important;
+  font-size: 30px !important;
+  letter-spacing: 1px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  padding-bottom: 5px !important;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 15px 0;
+}
+.nav button {
+  padding: 11px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3e2723;
+  background: linear-gradient(180deg, #f5efe0 0%, #ede3d0 100%);
+  border: 1px solid #c8b590;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Hind Vadodara',sans-serif;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.nav button:first-child { clip-path: polygon(15% 0%,100% 0%,100% 100%,15% 100%,0% 50%); padding-left: 24px; }
+.nav button:last-child  { clip-path: polygon(0% 0%,85% 0%,100% 50%,85% 100%,0% 100%); padding-right: 24px; }
+.nav button:hover { background: linear-gradient(180deg, #ede3d0 0%, #ddd0b8 100%); transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
+.nav button:active { transform: translateY(0); }
+
+/* ===== QUICK NAV (Sticky bottom-left) ===== */
+.quick-nav {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  left: 16px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.quick-nav button {
+  background: linear-gradient(135deg, #c0392b 0%, #962d22 100%);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(192,57,43,0.4);
+  opacity: 0.88;
+  transition: all 0.25s;
+  font-family: 'Hind Vadodara',sans-serif;
+  white-space: nowrap;
+}
+#theme-toggle-btn { background: linear-gradient(135deg, #455a64 0%, #263238 100%) !important; box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important; }
+#font-size-btn   { background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%) !important; box-shadow: 0 4px 12px rgba(46,125,50,0.35) !important; }
+.quick-nav button:hover { opacity: 1; transform: scale(1.06) translateX(2px); }
+
+/* ===== TTS PLAYER (Sticky bottom-right) ===== */
+#tts-player {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: 16px;
+  background: linear-gradient(145deg, #1c1c1c, #2d2d2d);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 1000;
+  align-items: center;
+  font-family: sans-serif;
+  border: 1px solid #3a3a3a;
+  min-width: 130px;
+}
+.tts-title-bar { font-size: 11px; color: #aaa; letter-spacing: 1px; text-transform: uppercase; text-align: center; }
+.tts-controls { display: flex; gap: 6px; align-items: center; }
+#tts-player button {
+  background: linear-gradient(135deg, #f57c00, #e65100);
+  color: #fff;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(245,124,0,0.4);
+}
+#tts-player button:hover { transform: scale(1.05); filter: brightness(1.1); }
+#stop-btn { background: linear-gradient(135deg, #d32f2f, #b71c1c) !important; box-shadow: 0 2px 6px rgba(211,47,47,0.4) !important; }
+#speed-btn { background: linear-gradient(135deg, #1565c0, #0d47a1) !important; box-shadow: 0 2px 6px rgba(21,101,192,0.4) !important; font-size: 11px !important; }
+.tts-progress { font-size: 11px; color: #888; text-align: center; min-height: 14px; }
+
+/* ===== TTS INTERACTIVE ELEMENTS ===== */
+.tts-clickable {
+  border-left: 4px solid transparent;
+  padding-left: 10px;
+  margin-left: -10px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.tts-clickable:hover {
+  background-color: #faf5e8;
+  border-left-color: #d4b896;
+  border-radius: 0 6px 6px 0;
+}
+.tts-active {
+  border-left: 4px solid #c0392b !important;
+  background-color: #fffdf5;
+  border-radius: 0 6px 6px 0;
+  animation: tts-pulse 2s ease-in-out infinite;
+}
+
+/* ===== BROWSER BANNER ===== */
+.browser-banner {
+  display: none;
+  padding: 13px 16px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.5;
+}
+#edge-banner      { background-color: #e3f2fd; color: #0d47a1; border: 1px solid #90caf9; }
+#no-voice-banner  { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+
+/* ===== INDEX PAGE ===== */
+#index { border-bottom: none; }
+#index .index-box {
+  background: linear-gradient(160deg, #fffdf2 0%, #f9f5e8 100%);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e0d4b8;
+}
+#index .index-header h1 { color: #c0392b; text-align: center; margin-bottom: 5px; }
+#index .index-header h2 { color: #555; text-align: center; margin-top: 0; }
+#index .index-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  font-size: 28px !important;
+  border-bottom: 2px solid #c0392b;
+  padding-bottom: 12px;
+}
+#index .index-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+#index .index-table th {
+  background: linear-gradient(135deg, #e8dfc8 0%, #ddd4ba 100%);
+  color: #2c2c2c;
+  font-size: 20px !important;
+  padding: 13px;
+  border-bottom: 2px solid #c8b898;
+}
+#index .index-table tr:nth-child(even) { background-color: #fdfdfa; }
+#index .index-table tr:nth-child(odd)  { background-color: #faf7f0; }
+#index .index-table tr:hover { background-color: #f0e8d8; transition: 0.25s; }
+#index .index-table td { padding: 11px 12px; border-bottom: 1px solid #e8e0d0; }
+#index .index-table tr.highlight-index td { animation: index-flash 2.5s ease-in-out !important; }
+.dark-saver #index .index-table tr.highlight-index td { animation: dark-index-flash 2.5s ease-in-out !important; }
+#index .index-table td:nth-child(1),
+#index .index-table td:nth-child(3) { text-align: center; width: 75px; font-weight: bold; color: #666; }
+#index .index-table a {
+  text-decoration: none;
+  color: #b71c1c;
+  font-weight: 700;
+  font-size: 20px !important;
+  display: block;
+  transition: color 0.2s;
+}
+#index .index-table a:hover { color: #e53935; text-decoration: underline; }
+#index .index-footer { margin-top: 30px; text-align: center; font-weight: bold; color: #c0392b; font-size: 22px !important; }
+
+/* ===== BOX COMPONENTS ===== */
+.box {
+  border: 1px solid #c8b898;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  background: #fdfaf0;
+}
+.instruction-box {
+  background: linear-gradient(135deg, #e8f4fd 0%, #dff0fb 100%) !important;
+  border-color: #81c8e8 !important;
+  border-left: 5px solid #0288d1 !important;
+}
+.instruction-box h3 { color: #0277bd; margin-top: 0; font-size: 19px !important; }
+
+/* ===== TABLES ===== */
+.p2-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; }
+.p2-table th { border-top: 2px solid #555; border-bottom: 2px solid #555; padding: 9px; background: #f0ece0; }
+.p2-table td { padding: 7px; text-align: center; border-bottom: 1px solid #e8e0d0; }
+
+/* ===== SIDEBAR ===== */
+.content-flex { display: flex; gap: 25px; align-items: stretch; }
+.sidebar-container {
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+  background: #fff;
+  position: relative;
+  box-sizing: border-box;
+  color: #3e2723;
+}
+.sidebar-p3 {
+  height: 380px;
+  padding: 30px 0 60px 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100,85 0,100' fill='none' stroke='%23555' stroke-width='4' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.sidebar-p4 {
+  height: 420px;
+  padding: 30px 0 0 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100,100 0,85' fill='none' stroke='%23555' stroke-width='4' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.signature-block { text-align: right; margin-top: 28px; font-weight: bold; font-size: 17px; }
+
+/* ===== FONT SIZE SCALE ===== */
+body.font-lg .page-container { font-size: 22px; }
+body.font-xl .page-container { font-size: 25px; }
+body.font-lg p, body.font-lg li { font-size: 22px; }
+body.font-xl p, body.font-xl li { font-size: 25px; }
+
+/* ===== DARK SAVER MODE (Manual Toggle) ===== */
+body.dark-saver {
+  background-color: #100f0e !important;
+  color: #b8b0a4 !important;
+  background-image: none !important;
+}
+.dark-saver .page-container {
+  background-color: #1a1816 !important;
+  border-bottom-color: #2a2826 !important;
+  color: #b8b0a4 !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5) !important;
+}
+.dark-saver .hero-title-box {
+  background: linear-gradient(145deg, #1e1c1a 0%, #1a1816 100%) !important;
+  border-color: #333 !important;
+  box-shadow: none !important;
+}
+.dark-saver .hero-title-box::before { background: #1e1c1a; color: #d4af37; }
+.dark-saver h1 {
+  background: linear-gradient(160deg, #d4af37, #f4e4bc, #b8860b) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.dark-saver h2, .dark-saver h3 { color: #c5b068 !important; }
+.dark-saver .hero-title-box h2 { color: #888 !important; }
+.dark-saver p, .dark-saver li, .dark-saver td { color: #b8b0a4 !important; }
+.dark-saver .nav button {
+  background: linear-gradient(180deg, #252320 0%, #1e1c1a 100%) !important;
+  color: #888 !important;
+  border-color: #383430 !important;
+}
+.dark-saver .running-title { color: #666 !important; border-bottom-color: #2a2826 !important; }
+.dark-saver #index .index-box { background: linear-gradient(160deg, #1a1816 0%, #181614 100%) !important; border-color: #2a2826 !important; }
+.dark-saver #index .index-table { background: #1e1c1a !important; }
+.dark-saver #index .index-table th { background: #252320 !important; color: #b8b0a4 !important; border-color: #333 !important; }
+.dark-saver #index .index-table tr:nth-child(even) { background-color: #1c1a18 !important; }
+.dark-saver #index .index-table tr:nth-child(odd)  { background-color: #1a1816 !important; }
+.dark-saver #index .index-table tr:hover { background-color: #242220 !important; }
+.dark-saver #index .index-table a { color: #d4856a !important; }
+.dark-saver .tts-active { background-color: #221f1c !important; border-left-color: #c0392b !important; animation: dark-tts-pulse 2s ease-in-out infinite !important; }
+.dark-saver .tts-clickable:hover { background-color: #221f1c !important; border-left-color: #5a4a3a !important; }
+.dark-saver .instruction-box { background: linear-gradient(135deg, #131e26 0%, #111c24 100%) !important; border-color: #1e3548 !important; }
+.dark-saver .box { background: #1a1816 !important; border-color: #2a2826 !important; }
+.dark-saver .creator-credits div { color: #666 !important; }
+.dark-saver .bottom-banner-box { background: linear-gradient(145deg, #1c1a18 0%, #18130e 100%) !important; border-color: #3a3020 !important; }
+.dark-saver .bottom-banner-box .bbb-title { color: #d4af37 !important; }
+.dark-saver .bottom-banner-box .bbb-name { color: #c8a070 !important; }
+.dark-saver .bottom-banner-box .bbb-sub  { color: #777 !important; }
+.dark-saver .bottom-banner-box .bbb-tagline { color: #8a6030 !important; }
+body.dark-saver { background-image: none !important; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  body { padding: 0 0 120px 0 !important; font-size: 18px; overflow-x: hidden !important; word-wrap: break-word !important; }
+  .page-container { padding: 4px 12px 40px !important; margin: 0 0 12px 0 !important; width: 100% !important; max-width: 100% !important; box-shadow: none !important; border-radius: 0 !important; min-height: unset !important; overflow-x: hidden !important; }
+  .hero-title-box { padding: 28px 12px 12px !important; max-width: 100% !important; box-sizing: border-box !important; }
+  .hero-title-box h1 { font-size: 34px !important; line-height: 1.3 !important; }
+  .hero-title-box h2 { font-size: 16px !important; }
+  .index-title { font-size: 20px !important; }
+  #index .index-table th { font-size: 14px !important; padding: 8px 4px !important; }
+  #index .index-table td { padding: 9px 4px !important; font-size: 14px !important; }
+  #index .index-table td:nth-child(1), #index .index-table td:nth-child(3) { width: 40px !important; }
+  #index .index-table a { font-size: 14px !important; }
+  #index .index-footer { font-size: 15px !important; }
+  #index .index-box { padding: 15px !important; }
+  .nav { gap: 4px !important; }
+  .nav button { min-width: 0 !important; flex: 1 !important; font-size: 13px !important; padding: 10px 4px !important; letter-spacing: -0.5px !important; }
+  .nav button:first-child { padding-left: 14px !important; clip-path: polygon(10% 0%,100% 0%,100% 100%,10% 100%,0% 50%) !important; }
+  .nav button:last-child { padding-right: 14px !important; clip-path: polygon(0% 0%,90% 0%,100% 50%,90% 100%,0% 100%) !important; }
+  .quick-nav { bottom: calc(15px + env(safe-area-inset-bottom)); left: 10px; }
+  #tts-player { bottom: calc(15px + env(safe-area-inset-bottom)); right: 10px; padding: 9px 12px; min-width: 118px; }
+  .content-flex { flex-direction: row !important; gap: 12px !important; }
+  .sidebar-container { display: flex !important; width: 45px !important; font-size: 18px !important; }
+  
+  /* height ની જગ્યાએ min-height વાપરો જેથી મોટા ફોન્ટમાં લેઆઉટ ના તૂટે */
+  .sidebar-p3 { min-height: 260px !important; padding: 20px 0 40px 0 !important; height: auto !important; }
+  .sidebar-p4 { min-height: 280px !important; padding: 20px 0 0 0 !important; height: auto !important; }
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  .bottom-banner-box { margin: 20px 0 100px !important; padding: 24px 15px !important; }
+  .publisher-info { flex-direction: column !important; gap: 15px !important; align-items: center !important; }
+  .publisher-info .pub-col { width: 100% !important; text-align: center !important; }
+  .instruction-box { padding: 15px 12px !important; }
+}
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    .quick-nav { bottom: calc(25px + env(safe-area-inset-bottom)); }
+    #tts-player { bottom: calc(25px + env(safe-area-inset-bottom)); }
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  body { padding: 10px; }
+  .page-container { padding: 35px 30px; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .no-print, .nav, #tts-player, .browser-banner, .quick-nav { display: none !important; }
+  body { background: white !important; background-image: none !important; }
+  .page-container { box-shadow: none !important; border: none !important; margin: 0 !important; }
+}
+
+/* ===== BOTTOM BANNER (Improved) ===== */
+.bottom-banner-box {
+  background: linear-gradient(145deg, #fdf8ef 0%, #f8f0e0 50%, #f2e8d2 100%);
+  border: 1px solid #ddc898;
+  border-top: 3px solid #bf953f;
+  border-radius: 16px;
+  padding: 32px 28px;
+  margin: 30px auto 130px auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(192,154,63,0.15), 0 1px 4px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.bottom-banner-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #bf953f 20%, #fcf6ba 50%, #bf953f 80%, transparent);
+}
+.bottom-banner-box::after {
+  content: "❈ ❈ ❈";
+  display: block;
+  color: #bf953f;
+  font-size: 18px;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+.bbb-jay {
+  font-size: 27px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 50%, #aa771c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 14px;
+  display: block;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+}
+.bbb-divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c8a870, transparent);
+  margin: 14px auto;
+}
+.bbb-title {
+  font-size: 13px;
+  color: #7a6040;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.bbb-name {
+  font-size: 21px;
+  font-weight: 700;
+  color: #3e2600;
+  margin-bottom: 4px;
+}
+.bbb-sub {
+  font-size: 15px;
+  color: #7a6a50;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.bbb-tagline {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.bbb-tagline-guj {
+  font-size: 18px;
+  color: #555;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* New Disclaimer & Buttons */
+.bbb-disclaimer {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: inset 0 1px 3px rgba(200,0,0,0.05);
+}
+.dark-saver .bbb-disclaimer {
+  background: linear-gradient(135deg, #2a1a1a 0%, #221212 100%) !important;
+  color: #ff8a80 !important;
+  border-color: #4a2a2a !important;
+}
+.bbb-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.bbb-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-family: 'Hind Vadodara', 'Noto Sans Gujarati', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bbb-btn-top {
+  background: linear-gradient(135deg, #c0392b 0%, #962d22 100%);
+}
+.bbb-btn-index {
+  background: linear-gradient(135deg, #0277bd 0%, #01579b 100%);
+}
+.bbb-buttons button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.dark-saver .bbb-btn-top { 
+  background: linear-gradient(135deg, #8e2015 0%, #5c140d 100%) !important; 
+  box-shadow: none !important;
+}
+.dark-saver .bbb-btn-index { 
+  background: linear-gradient(135deg, #014d7a 0%, #003355 100%) !important; 
+  box-shadow: none !important;
+}
+
+/* Enforce Vertical Separator Mobile-Only Rule */
+@media (min-width: 768px) {
+  .vertical-separator, .sidebar-separator { border-right: none !important; border-left: none !important; }
+}
+
+</style>
+<script>
+// ===== DETECTION =====
+const isEdge = /Edg|Edge|EdgiOS|EdgA/i.test(navigator.userAgent); 
+const isIOS  = /iPhone|iPad|iPod/.test(navigator.userAgent) && 'ontouchend' in document;
+
+// ===== TTS STATE =====
+let ttsElements = [], currentIndex = 0, synth = window.speechSynthesis;
+let isPlaying = false, currentUtterance = null, mobileWakeLock = null, mobilePauseTimer = null;
+let ttsRate = 0.9; // default speed
+const rateSteps = [0.7, 0.9, 1.1, 1.3];
+let rateIndex = 1;
+let currentBoundaryIndex = 0; // NEW: શબ્દ ટ્રેક કરવા માટે (Word Boundary)
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = () => synth.getVoices();
+}
+
+// --- MASTER PRONUNCIATION DICTIONARY ---
+const masterPronunciation = {
+    // Emails
+    "aptaputratrust@gmail.com": "આપ્તપુત્ર ટ્રસ્ટ એટ જીમેઈલ ડૉટ કૉમ",
+    "akramvignan@gmail.com": "અક્રમ વિજ્ઞાન એટ જીમેઈલ ડૉટ કૉમ",
+    "aptbharatanand@gmail.com": "આપ્ત ભરતાનંદ એટ જીમેઈલ ડૉટ કૉમ",
+    
+    // English Phrases & Acronyms
+    "Vani-Vignan": "વાણી-વિજ્ઞાન",
+    "CPT": "સી પી ટી",
+    "Read Aloud": "રીડ અલાઉડ",
+    "Edge": "એજ",
+    "Chrome": "ક્રોમ",
+    "Top": "ટોપ",
+    "Index": "ઇન્ડેક્સ",
+	"F9": "એફ નાઇન",
+    "ctrl+shift+U": "કંટ્રોલ શિફ્ટ યુ",
+        
+    // Credits & Roman Numerals
+    "II Jai Sachchidanand II": "જય સચ્ચિદાનંદ",
+    "Digital Archiver & Interactive Audio Creator : Kamleshanand Mehta,": "ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો ક્રિએટર, કમલેશાનંદ મહેતા",
+    "Digital Archiver & Interactive Audio Seva": "ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો સેવા",
+    "Dada Bhagwan Samadhi-Mandir, Kelanpuri, Vadodara.": "દાદા ભગવાન સમાધિ મંદિર, કેલનપુરી, વડોદરા",
+    "Dada Bhagwan Samadhi-Mandir": "દાદા ભગવાન સમાધિ મંદિર",
+    "Kelanpuri, Vadodara, Gujarat": "કેલનપુરી, વડોદરા, ગુજરાત",
+    "Kamleshanand Mehta": "કમલેશાનંદ મહેતા",
+    "Jagat Kalyan Ho !": "જગત કલ્યાણ હો, જગત કલ્યાણ હો, જગત કલ્યાણ હો",
+    "Jagat Kalyan Ho ! (3)": "જગત કલ્યાણ હો, જગત કલ્યાણ હો, જગત કલ્યાણ હો",
+    "II": "" 
+};
+
+function cleanTextForSpeech(text) {
+    let txt = text;
+
+    // 1. Process Master Dictionary First
+    for (const [writtenText, spokenAudio] of Object.entries(masterPronunciation)) {
+        txt = txt.replace(new RegExp(writtenText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), spokenAudio);
+    }
+
+    // 2. Format PIN Codes & Phone Numbers
+    txt = txt.replace(/\b\d{3}\s\d{3}\b/g, match => match.replace(/\D/g, '').split('').join(' '));
+    txt = txt.replace(/(?:\(\d{3,5}\)\s*)?\b\d{6,10}\b/g, match => match.replace(/\D/g, '').split('').join(' '));
+
+    // 3. Standard Punctuation and Symbol cleanup (added ❑➤❈ for your styling)
+    return txt
+        .replace(/[□■❑➤❈❖◎✦★☆▪▸►◄◆◇○●:'"‘’“”*()[\]{}]/g, '') 
+        .replace(/[-–—/]/g, ' ')
+        .replace(/\.{2,}/g, '. ')
+        .replace(/[।॥]/g, '. ') 
+        .replace(/\s+/g, ' ') 
+        .trim();
+}
+
+// ===== WAKE LOCK =====
+async function enableMobileWakeLock() {
+  if ('wakeLock' in navigator && !mobileWakeLock) {
+    try { mobileWakeLock = await navigator.wakeLock.request('screen'); mobileWakeLock.addEventListener('release', () => { mobileWakeLock = null; }); }
+    catch(err) { console.warn('WakeLock:', err); }
+  }
+}
+function disableMobileWakeLock() {
+  if (mobileWakeLock) { mobileWakeLock.release().catch(()=>{}); mobileWakeLock = null; }
+}
+
+// ===== THEME TOGGLE =====
+function manualThemeToggle() {
+  const isDark = document.body.classList.contains('dark-saver');
+  document.documentElement.classList.toggle('dark-saver', !isDark);
+  document.body.classList.toggle('dark-saver', !isDark);
+  const val = isDark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', val); } catch(e) {}
+  try { sessionStorage.setItem('theme', val); } catch(e) {}
+}
+
+// ===== FONT SIZE CYCLE (Safe Stop, Anchor & Visual Marker Version) =====
+const fontSizes = ['', 'font-lg', 'font-xl']; // DO NOT DELETE
+let fontIdx = 0;                              // DO NOT DELETE
+let fontScrollTimer = null; 
+let currentFontClass = ''; 
+
+function cycleFontSize() {
+  // 1. SAFETY FIRST: Instantly stop the custom audio engine if it is running
+  if (typeof stopTTS === 'function' && isPlaying) {
+    stopTTS();
+  }
+
+  // 2. Identify the text currently on screen so we don't lose our place
+  let targetElement = null;
+  
+  if (isEdge) {
+    targetElement = ttsElements.find(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top >= 0 && rect.top < (window.innerHeight * 0.6);
+    });
+    if (!targetElement && ttsElements.length > 0) {
+      targetElement = ttsElements.find(el => el.getBoundingClientRect().top >= -50);
+    }
+  } else {
+    if (ttsElements.length > 0 && ttsElements[currentIndex]) {
+      targetElement = ttsElements[currentIndex];
+    }
+  }
+
+  // 3. Apply the new font size safely (No DOM thrashing)
+  const newFontIdx = (fontIdx + 1) % fontSizes.length;
+  const newFontClass = fontSizes[newFontIdx];
+
+  if (currentFontClass) {
+    document.body.classList.remove(currentFontClass);
+  }
+  if (newFontClass) {
+    document.body.classList.add(newFontClass);
+  }
+
+  currentFontClass = newFontClass;
+  fontIdx = newFontIdx;
+  
+  const labels = ['ક', 'ક+', 'ક++'];
+  document.getElementById('font-size-btn').textContent = '🔤 ' + labels[fontIdx];
+  try { localStorage.setItem('fontIdx', fontIdx); } catch(e) {}
+  try { sessionStorage.setItem('fontIdx', fontIdx); } catch(e) {}
+
+  // 4. Cancel overlapping clicks
+  if (fontScrollTimer) {
+    clearTimeout(fontScrollTimer);
+  }
+
+  // 5. Execute the Reflow Delay & Scroll
+  if (targetElement) {
+    fontScrollTimer = setTimeout(() => {
+      const offset = window.innerHeight * 0.25; 
+      const y = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+      
+      const scrollBehavior = isEdge ? "auto" : "smooth";
+      window.scrollTo({ top: y, behavior: scrollBehavior });
+      
+    }, 150); 
+  }
+
+  // 6. VISUAL PERSISTENCE: Re-highlight the current line so the user knows where they are!
+  if (!isEdge && ttsElements.length > 0 && ttsElements[currentIndex]) {
+    ttsElements[currentIndex].classList.add("tts-active");
+  }
+}
+
+// ===== SPEED CONTROL (With Local Storage) =====
+function cycleSpeed() {
+  rateIndex = (rateIndex + 1) % rateSteps.length;
+  ttsRate = rateSteps[rateIndex];
+  const labels = ['🐢', '▶', '⏩', '⚡'];
+  document.getElementById('speed-btn').textContent = labels[rateIndex] + ' ' + ttsRate + 'x';
+  
+  // સ્પીડને યુઝરના ફોનમાં કાયમ માટે સેવ કરો
+  try { localStorage.setItem('rateIndex', rateIndex); } catch(e) {}
+  try { sessionStorage.setItem('rateIndex', rateIndex); } catch(e) {} 
+}
+
+// ===== NAVIGATION =====
+function scrollToIndex() {
+  stopTTS();
+  
+  // 1. Identify which page is currently in the center of the viewport
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  let currentPageId = null;
+  
+  for (let p of pages) {
+    if (p.id === 'index') continue;
+    const rect = p.getBoundingClientRect();
+    // If the top is above the middle, and bottom is below the middle
+    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+      currentPageId = p.id;
+      break;
+    }
+  }
+
+  // 2. Find the exact row in the index table and scroll to it
+  if (currentPageId) {
+    const indexLink = document.querySelector(`.index-table a[href="#${currentPageId}"]`);
+    if (indexLink) {
+      const row = indexLink.closest('tr');
+      row.scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      // 3. Apply the highlight flash
+      row.classList.add('highlight-index');
+      setTimeout(() => row.classList.remove('highlight-index'), 2500);
+      return;
+    }
+  }
+  
+  // Fallback to top of index if specific page isn't found
+  const idx = document.querySelector(".index-title");
+  if (idx) idx.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function nextPage() {
+  stopTTS();
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  const next = pages.find(p => p.getBoundingClientRect().top > 10);
+  if (next) next.scrollIntoView({ behavior: 'smooth' });
+}
+function prevPage() {
+  stopTTS();
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  const prev = [...pages].reverse().find(p => p.getBoundingClientRect().top < -10);
+  if (prev) prev.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== VISIBILITY / INTERRUPTIONS =====
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && isPlaying) togglePlayPause();
+});
+if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+  navigator.mediaDevices.addEventListener('devicechange', () => { if (isPlaying) togglePlayPause(); });
+}
+
+// ===== DOM READY =====
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Restore saved preferences
+  // જો યુઝરે ક્યારેય 🌓 બટન દબાવ્યું ન હોય, તો OS ડાર્ક મોડ ચેક કરો
+  let _savedTheme = '';
+  try { _savedTheme = localStorage.getItem('theme') || ''; } catch(e) { try { _savedTheme = sessionStorage.getItem('theme') || ''; } catch(e2) {} }
+  const _osDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (_savedTheme === 'dark' || (_savedTheme === '' && _osDark)) {
+    document.body.classList.add('dark-saver');
+    document.documentElement.classList.add('dark-saver');
+  }
+  // OS dark mode change વખતે live update (user ટૉગલ ન કર્યું હોય ત્યાં સુધી)
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      let _cur = '';
+      try { _cur = localStorage.getItem('theme') || ''; } catch(e2) {}
+      if (_cur === '') {
+        document.body.classList.toggle('dark-saver', e.matches);
+        document.documentElement.classList.toggle('dark-saver', e.matches);
+      }
+    });
+  }
+
+  // Restore saved font size
+  let _fontRaw = '0';
+  try { _fontRaw = localStorage.getItem('fontIdx') || '0'; } catch(e) { try { _fontRaw = sessionStorage.getItem('fontIdx') || '0'; } catch(e2) {} }
+  const savedFont = parseInt(_fontRaw);
+  if (savedFont > 0 && fontSizes[savedFont]) {
+    fontIdx = savedFont;
+    document.body.classList.add(fontSizes[fontIdx]);
+    const labels = ['ક', 'ક+', 'ક++'];
+    const fbtn = document.getElementById('font-size-btn');
+    if (fbtn) fbtn.textContent = '🔤 ' + labels[fontIdx];
+  }
+
+  // === નવો સુધારો ૩: સ્પીડ રિસ્ટોર કરવાનો કોડ ===
+  let _rateRaw = '1'; // Default is 1 (0.9x)
+  try { _rateRaw = localStorage.getItem('rateIndex') || '1'; } catch(e) { try { _rateRaw = sessionStorage.getItem('rateIndex') || '1'; } catch(e2) {} }
+  const savedRate = parseInt(_rateRaw);
+  if (rateSteps[savedRate]) {
+    rateIndex = savedRate;
+    ttsRate = rateSteps[rateIndex];
+    const sLabels = ['🐢', '▶', '⏩', '⚡'];
+    const sBtn = document.getElementById('speed-btn');
+    if (sBtn) sBtn.textContent = sLabels[rateIndex] + ' ' + ttsRate + 'x';
+  }
+
+  // ===== EDGE BROWSER HARD-LOCK (PERMANENT FIX) =====
+  // ⚠️ DO NOT REMOVE THIS BLOCK EVER ⚠️
+  // REASON: Microsoft Edge strictly uses its own native "Read Aloud" cloud engine.
+  // Our custom JS speed buttons, play/pause, and progress tracker CANNOT control Edge's native voice.
+  // To completely prevent user confusion, we MUST hide our custom TTS player when Edge is detected.
+  // Let the user rely entirely on Edge's built-in F9 / native menu controls.
+  if (isEdge) {
+    document.getElementById("edge-banner").style.display = "block";
+    const customPlayer = document.getElementById("tts-player");
+    if (customPlayer) {
+      customPlayer.style.display = "none"; // Permanently hides the player on screen
+    }
+  }
+
+  // Build TTS element list
+  let pages = document.querySelectorAll(".page-container, .bottom-banner-box");
+  pages.forEach(page => {
+    if (page.id === 'index' || page.id === 'page-2') return;
+    let allReadable = Array.from(page.querySelectorAll('h1, h2, h3, p, li, figcaption, td, .signature-block, [aria-label]'));
+    allReadable = allReadable.filter(el => !el.closest('.nav') && el.getAttribute('aria-hidden') !== 'true' && !el.closest('.no-tts') && !el.classList.contains('page-number'));
+    allReadable = allReadable.filter(el => {
+      let hasChild = Array.from(el.children).some(c => c.matches('h1,h2,h3,p,li,figcaption'));
+      return !hasChild && el.innerText.trim().length > 1;
+    });
+    allReadable.forEach(el => ttsElements.push(el));
+  });
+
+  // Attach click handlers via Event Delegation
+  ttsElements.forEach((el, index) => {
+    el.classList.add("tts-clickable");
+    el.setAttribute('title', 'ક્લિક કરો - અહીંથી વાંચો');
+    el.setAttribute('data-tts-index', index);
+  });
+
+  document.getElementById("magazine-content").addEventListener("click", e => {
+    const targetEl = e.target.closest('.tts-clickable');
+    if (targetEl && e.target.tagName.toLowerCase() !== 'a' && e.target.tagName.toLowerCase() !== 'button') {
+      e.stopPropagation();
+      if (!isEdge) enableMobileWakeLock();
+      playFromIndex(parseInt(targetEl.getAttribute('data-tts-index')));
+    }
+  });
+
+  document.querySelectorAll('.index-table a').forEach(link => {
+    link.addEventListener('click', () => stopTTS());
+  });
+
+  updateProgressDisplay();
+});
+
+// ===== TTS CORE =====
+function playFromIndex(index) { 
+  stopTTS(); 
+  currentIndex = index; 
+  currentBoundaryIndex = 0; // નવો ફકરો શરૂ થાય એટલે જૂની મેમરી ઝીરો કરો
+  readCurrentElement(); 
+}
+
+function stopTTS() {
+  synth.cancel();
+  isPlaying = false;
+  currentBoundaryIndex = 0; // સ્ટોપ દબાવવા પર મેમરી ઝીરો કરો
+  ttsElements.forEach(el => el.classList.remove("tts-active"));
+  disableMobileWakeLock();
+  if (mobilePauseTimer) clearTimeout(mobilePauseTimer);
+  updatePlayerUI();
+  updateProgressDisplay();
+}
+
+function readCurrentElement(startCharIndex = 0) {
+  if (currentIndex >= ttsElements.length) { stopTTS(); return; }
+  ttsElements.forEach(el => el.classList.remove("tts-active"));
+
+  let el = ttsElements[currentIndex];
+  el.classList.add("tts-active");
+  
+  // Calculate a position that places the active text at the top 25% of the viewport
+  const offset = window.innerHeight * 0.25; 
+  const y = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+
+  if (isEdge) return;
+
+  // Get text
+  let text = "";
+  if (el.hasAttribute('aria-label')) {
+    text = el.getAttribute('aria-label');
+  } else {
+    let clone = el.cloneNode(true);
+    clone.querySelectorAll('[aria-label]').forEach(node => { node.textContent = node.getAttribute('aria-label'); });
+    clone.querySelectorAll('[aria-hidden="true"]').forEach(node => node.remove());
+    text = clone.innerText || clone.textContent;
+  }
+
+  // Clean up text for TTS using the Master Dictionary
+  text = cleanTextForSpeech(text);
+
+  // ===== WORD BOUNDARY SLICING (SUBSTRING) =====
+  if (startCharIndex > 0) {
+    text = text.substring(startCharIndex);
+  } else {
+    currentBoundaryIndex = 0; // નવો ફકરો હોય તો મેમરી ઝીરો કરો
+  }
+
+  if (!text) { currentIndex++; readCurrentElement(); return; }
+
+  let voices = synth.getVoices();
+  let gujaratiVoice = voices.find(v => v.lang.startsWith('gu'));
+
+  if (!gujaratiVoice && !document.getElementById("no-voice-banner").style.display.includes('block')) {
+    document.getElementById("no-voice-banner").style.display = "block";
+    stopTTS(); return;
+  }
+
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  if (gujaratiVoice) currentUtterance.voice = gujaratiVoice;
+  currentUtterance.lang = "gu-IN";
+  currentUtterance.rate = ttsRate;
+
+  // ===== TRACK EVERY WORD (શબ્દ ટ્રેકિંગ) =====
+  currentUtterance.onboundary = (event) => {
+    if (event.name === 'word') {
+      currentBoundaryIndex = startCharIndex + event.charIndex;
+    }
+  };
+
+  if (isIOS) {
+    currentUtterance.onpause = () => { if (isPlaying) { synth.resume(); } };
+  }
+
+  currentUtterance.onend = () => {
+    currentBoundaryIndex = 0; // ફકરો પૂરો થાય એટલે મેમરી ક્લિયર કરો
+    if (isPlaying) { currentIndex++; updateProgressDisplay(); readCurrentElement(); }
+  };
+  
+  currentUtterance.onerror = (e) => {
+    if (e.error !== 'interrupted' && isPlaying) { currentIndex++; readCurrentElement(); }
+  };
+
+  isPlaying = true;
+  updatePlayerUI();
+  updateProgressDisplay();
+  synth.speak(currentUtterance);
+}
+ 
+// ===== PLAY / PAUSE TOGGLE =====
+function togglePlayPause() {
+  if (isPlaying) {
+    isPlaying = false; // OnEnd ઇવેન્ટ અટકાવવા માટે પહેલા false કરો
+    synth.cancel(); // ⚠️ બગ દૂર કરવા: pause() ના બદલે cancel() વાપરો
+    disableMobileWakeLock();
+    
+    // ⚠️ 3-minute timer KEPT to prevent OS audio thread hangs/battery drain during phone calls.
+    // Modified to save and restore the exact word position before calling the full stop!
+    mobilePauseTimer = setTimeout(() => {
+      let savedWordIndex = currentBoundaryIndex; 
+      stopTTS(); 
+      currentBoundaryIndex = savedWordIndex; 
+    }, 3 * 60 * 1000);
+    
+  } else {
+    enableMobileWakeLock();
+    if (mobilePauseTimer) clearTimeout(mobilePauseTimer);
+    isPlaying = true;
+    readCurrentElement(currentBoundaryIndex); // સેવ કરેલા શબ્દથી જ નવેસરથી શરૂ કરો
+  }
+  updatePlayerUI();
+}
+
+
+function updatePlayerUI() {
+  const btn = document.getElementById("play-pause-btn");
+  if (btn) btn.textContent = isPlaying ? "⏸ Pause" : "▶ Play";
+}
+
+function updateProgressDisplay() {
+  const prog = document.getElementById('tts-progress');
+  if (!prog) return;
+  if (ttsElements.length === 0) { prog.textContent = ''; return; }
+  if (!isPlaying && currentIndex === 0) { prog.textContent = ''; return; }
+  prog.textContent = (currentIndex + 1) + ' / ' + ttsElements.length;
+}
+
+// iOS background audio keep-alive
+if (isIOS) {
+  setInterval(() => {
+    if (isPlaying && synth && !synth.speaking && !synth.pending) {
+      readCurrentElement();
+    }
+  }, 500);
+}
+</script>
+</head>
+<body>
+
+<div style="flex:1;width:100%;display:flex;flex-direction:column;">
+
+<!-- BROWSER BANNERS -->
+<div class="browser-banner no-print" id="edge-banner">
+  વધુ સારા ઑડિયો અનુભવ માટે બ્રાઉઝરના '<span lang="en">Read Aloud</span>' વિકલ્પનો ઉપયોગ કરો.
+</div>
+<div class="browser-banner no-print" id="no-voice-banner">
+  ⚠️ <b>નોંધ:</b> ગુજરાતી અવાજ ઉપલબ્ધ નથી. <b><span lang="en">Google Chrome</span></b> અથવા <b><span lang="en">Microsoft Edge</span></b> માં ખોલો.
+</div>
+
+<div id="magazine-content">
+
+<!-- INDEX PAGE -->
+<div class="page-container" id="index" aria-hidden="true">
+            <div class="index-box">
+                <div class="index-header">
+                    <div class="hero-title-box">
+                        <h2>દાદા ભગવાન કથિત</h2>
+                        <h1>વાણી<br>-વિજ્ઞાન</h1>
+                    </div>
+                    <h2 class="index-title">વિષય સૂચિ</h2>
+                    <table class="index-table">
+                        <tr><th>ક્ર.</th><th>વિષય</th><th>પાન</th></tr>
+                        <tr><td>1</td><td><a href="#page-1">દાદા ભગવાન કથિત<br/>વાણી-વિજ્ઞાન</a></td><td>1</td></tr>
+                        <tr><td>2</td><td><a href="#page-2">પ્રકાશન વિગતો</a></td><td>2</td></tr>
+                        <tr><td>3</td><td><a href="#page-3">સંપાદકીય</a></td><td>3</td></tr>
+                        <tr><td>4</td><td><a href="#page-5">પરસ્પર</a></td><td>5</td></tr>
+                        <tr><td>5</td><td><a href="#page-7">જગત ઊભું શબ્દ થકી</a></td><td>7</td></tr>
+                        <tr><td>6</td><td><a href="#page-9">ન રુઝાય ઘા વાણીના</a></td><td>9</td></tr>
+                        <tr><td>7</td><td><a href="#page-9">શબ્દથી રોગી, શબ્દથી નીરોગી</a></td><td>9</td></tr>
+                        <tr><td>8</td><td><a href="#page-10">હેતુ પ્રકાશે વાણી</a></td><td>10</td></tr>
+                        <tr><td>9</td><td><a href="#page-11">અપશબ્દ અમથાયે જોખમી</a></td><td>11</td></tr>
+                        <tr><td>10</td><td><a href="#page-11">ન કરાય ટીકા</a></td><td>11</td></tr>
+                        <tr><td>11</td><td><a href="#page-12">જાણો પરિણામ ટીકાનાં</a></td><td>12</td></tr>
+                        <tr><td>12</td><td><a href="#page-12">નથી ધર્મ જ્યાં ટીકા</a></td><td>12</td></tr>
+                        <tr><td>13</td><td><a href="#page-13">નિંદા</a></td><td>13</td></tr>
+                        <tr><td>14</td><td><a href="#page-13">નિંદા-તિરસ્કારે દેશ દરિદ્ર</a></td><td>13</td></tr>
+                        <tr><td>15</td><td><a href="#page-14">અવર્ણવાદ</a></td><td>14</td></tr>
+                        <tr><td>16</td><td><a href="#page-15">અપવ્યય : દુર્વ્યય</a></td><td>15</td></tr>
+                        <tr><td>17</td><td><a href="#page-15">ટોણો</a></td><td>15</td></tr>
+                        <tr><td>18</td><td><a href="#page-16">જોખમો મશ્કરી તણાં</a></td><td>16</td></tr>
+                        <tr><td>19</td><td><a href="#page-17">'જોક' "જ્ઞાની"ની</a></td><td>17</td></tr>
+                        <tr><td>20</td><td><a href="#page-18">વાળો વાણીની તરછોડ વાણીથી</a></td><td>18</td></tr>
+                        <tr><td>21</td><td><a href="#page-19">પડે અંતરાય તરછોડથી</a></td><td>19</td></tr>
+                        <tr><td>22</td><td><a href="#page-19">સ્તંભિત કરે કઠોર વાણી</a></td><td>19</td></tr>
+                        <tr><td>23</td><td><a href="#page-20">કઠોર ન બોલે 'પોલીસ' પાસે</a></td><td>20</td></tr>
+                        <tr><td>24</td><td><a href="#page-20">તાંતો પંદર વર્ષેય?</a></td><td>20</td></tr>
+                        <tr><td>25</td><td><a href="#page-21">મૃદુ-ઋજુ (વાણી) છૂટવા કાજે</a></td><td>21</td></tr>
+                        <tr><td>26</td><td><a href="#page-21">મારણ કઠોર ભાષા તણું</a></td><td>21</td></tr>
+                        <tr><td>27</td><td><a href="#page-22">નિર્વિવાદી વાણી</a></td><td>22</td></tr>
+                        <tr><td>28</td><td><a href="#page-23">આ છે સમજાવવાની સાચી રીત</a></td><td>23</td></tr>
+                        <tr><td>29</td><td><a href="#page-24">ઓછું બોલવું ઉત્તમ</a></td><td>24</td></tr>
+                        <tr><td>30</td><td><a href="#page-24">કહેવાની છૂટ વીસ વર્ષ સુધી</a></td><td>24</td></tr>
+                        <tr><td>31</td><td><a href="#page-24">વઢવાથી કોઈ ના સુધરે</a></td><td>24</td></tr>
+                        <tr><td>32</td><td><a href="#page-25">સીધા થવાનો માર્ગ</a></td><td>25</td></tr>
+                        <tr><td>33</td><td><a href="#page-25">ઠપકો આપો, પણ પ્રેમથી</a></td><td>25</td></tr>
+                        <tr><td>34</td><td><a href="#page-26">અબોલા, નથી ઉપાય સાચો</a></td><td>26</td></tr>
+                        <tr><td>35</td><td><a href="#page-27">સુધારવા જતાં</a></td><td>27</td></tr>
+                        <tr><td>36</td><td><a href="#page-27">સત્ય?</a></td><td>27</td></tr>
+                        <tr><td>37</td><td><a href="#page-28">સત્ય : હિત, મિત, પ્રિય</a></td><td>28</td></tr>
+                        <tr><td>38</td><td><a href="#page-29">અંતિમ વ્યવહાર-સત્ય</a></td><td>29</td></tr>
+                        <tr><td>39</td><td><a href="#page-29">ઓળખો બીજને, ફળને</a></td><td>29</td></tr>
+                        <tr><td>40</td><td><a href="#page-30">આત્માર્થે અસત્ય હિતકારી</a></td><td>30</td></tr>
+                        <tr><td>41</td><td><a href="#page-30">જૂઠનાં પ્રેરક કારણો</a></td><td>30</td></tr>
+                        <tr><td>42</td><td><a href="#page-31">જૂઠ, પણ ગુનાહિત વૃત્તિનો અભાવ</a></td><td>31</td></tr>
+                        <tr><td>43</td><td><a href="#page-31">જૂઠનાં જોખમો</a></td><td>31</td></tr>
+                        <tr><td>44</td><td><a href="#page-32">આમ છૂટાય જૂઠથી</a></td><td>32</td></tr>
+                        <tr><td>45</td><td><a href="#page-33">કાળને અનુરૂપ યથાર્થ ધર્મ</a></td><td>33</td></tr>
+                        <tr><td>46</td><td><a href="#page-33">અમે પ્રતિક્રમણ કરવાનું શિખવાડીએ</a></td><td>33</td></tr>
+                        <tr><td>47</td><td><a href="#page-34">વચનબળ</a></td><td>34</td></tr>
+                        <tr><td>48</td><td><a href="#page-34">આમ વચનબળ નબળું પડે</a></td><td>34</td></tr>
+                        <tr><td>49</td><td><a href="#page-35">મહિમા મૌન તણો</a></td><td>35</td></tr>
+                        <tr><td>50</td><td><a href="#page-36">મૌન તપોબળ</a></td><td>36</td></tr>
+                        <tr><td>51</td><td><a href="#page-36">મૌનથીય કર્મ બંધાય?</a></td><td>36</td></tr>
+                        <tr><td>52</td><td><a href="#page-37">ભગવાનની ભાષાનું મૌન</a></td><td>37</td></tr>
+                        <tr><td>53</td><td><a href="#page-38">અહો! વીતરાગવાણી</a></td><td>38</td></tr>
+                        <tr><td>54</td><td><a href="#page-38">ઉપદેશના અધિકારી</a></td><td>38</td></tr>
+                        <tr><td>55</td><td><a href="#page-39">આદેશ-ઉપદેશ-દેશના</a></td><td>39</td></tr>
+                        <tr><td>56</td><td><a href="#page-39">દીવો પ્રગટાવે, તે બોધ</a></td><td>39</td></tr>
+                        <tr><td>57</td><td><a href="#page-40">અહંકારરહિત, ત્યાં સિદ્ધાંત</a></td><td>40</td></tr>
+                        <tr><td>58</td><td><a href="#page-40">'પૉઝિટિવ' બોલતાં જ ફેરફાર</a></td><td>40</td></tr>
+                        <tr><td>59</td><td><a href="#page-40">બોલની જુદી જુદી અસરો</a></td><td>40</td></tr>
+                        <tr><td>60</td><td><a href="#page-41">ગાડી જાય છે...હું જઉં છું?</a></td><td>41</td></tr>
+                        <tr><td>61</td><td><a href="#page-43">પ્રકૃતિ સ્વભાવે લજામણી</a></td><td>43</td></tr>
+                        <tr><td>62</td><td><a href="#page-43">અસરો 'પૉઝિટિવ'ની, 'નેગેટિવ'ની</a></td><td>43</td></tr>
+                        <tr><td>63</td><td><a href="#page-44">એમાં શો દોષ જીભનો?</a></td><td>44</td></tr>
+                        <tr><td>64</td><td><a href="#page-45">જગત ફસાયું અધ્યવસાનમાં</a></td><td>45</td></tr>
+                        <tr><td>65</td><td><a href="#page-45">ફસામણમાંથી છૂટવાની ચાવી</a></td><td>45</td></tr>
+                        <tr><td>66</td><td><a href="#page-46">લેપાયમાન ભાવમાં 'પોતે' નિર્લેપ</a></td><td>46</td></tr>
+                        <tr><td>67</td><td><a href="#page-46">છૂટો 'ઉપકારી' સમજી</a></td><td>46</td></tr>
+                        <tr><td>68</td><td><a href="#page-47">કડવું-મીઠું હિસાબથી</a></td><td>47</td></tr>
+                        <tr><td>69</td><td><a href="#page-47">આવકારો સંયમના સંજોગને</a></td><td>47</td></tr>
+                        <tr><td>70</td><td><a href="#page-48">સમજીને જમા કરતાં મુક્તિ</a></td><td>48</td></tr>
+                        <tr><td>71</td><td><a href="#page-49">સર્વ ઘા રુઝાય આમ...</a></td><td>49</td></tr>
+                        <tr><td>72</td><td><a href="#page-49">માફી આપી છૂટી જાવ આ કાળમાં</a></td><td>49</td></tr>
+                        <tr><td>73</td><td><a href="#page-49">વગર વાંકે...વઢે ત્યારે</a></td><td>49</td></tr>
+                        <tr><td>74</td><td><a href="#page-50">તપ પધાર્યા ઘેર બેઠાં</a></td><td>50</td></tr>
+                        <tr><td>75</td><td><a href="#page-50">વૈજ્ઞાનિક સમજથી દુઃખમુક્તિ</a></td><td>50</td></tr>
+                        <tr><td>76</td><td><a href="#page-50">ઉત્પત્તિ શબ્દની</a></td><td>50</td></tr>
+                        <tr><td>77</td><td><a href="#page-51">ન હોય એ આત્માનો અવાજ</a></td><td>51</td></tr>
+                        <tr><td>78</td><td><a href="#page-52">વાણી, 'ઓરિજિનલ ટેપરેકર્ડ'</a></td><td>52</td></tr>
+                        <tr><td>79</td><td><a href="#page-53">'હું બોલ્યો'! ના, 'ટેપરેકર્ડ' બોલી</a></td><td>53</td></tr>
+                        <tr><td>80</td><td><a href="#page-54">'ટેપ' ઊતરી અજ્ઞાનતાથી</a></td><td>54</td></tr>
+                        <tr><td>81</td><td><a href="#page-55">'ટેપ' થતાં પહેલાંની અવસ્થાઓ</a></td><td>55</td></tr>
+                        <tr><td>82</td><td><a href="#page-55">નિર-અહંકારી સમજે વાણી 'ટેપરેકર્ડ'</a></td><td>55</td></tr>
+                        <tr><td>83</td><td><a href="#page-56">કૂંચી દુઃખમુક્તિની</a></td><td>56</td></tr>
+                        <tr><td>84</td><td><a href="#page-57">'કોડ' બદલાતાં વાણી સુધરે</a></td><td>57</td></tr>
+                        <tr><td>85</td><td><a href="#page-58">"જ્ઞાની"નું દર્શન, "જ્ઞાની"નું 'ડીલિંગ'</a></td><td>58</td></tr>
+                        <tr><td>86</td><td><a href="#page-58">વાણી છે માપદંડ દશાનો</a></td><td>58</td></tr>
+                        <tr><td>87</td><td><a href="#page-59">સ્યાદ્દવાદ-વાણી</a></td><td>59</td></tr>
+                        <tr><td>88</td><td><a href="#page-61">સાહજિક વાણી આપે સમાધાન</a></td><td>61</td></tr>
+                        <tr><td>89</td><td><a href="#page-61">એક જ શબ્દ મોક્ષે લઈ જાય</a></td><td>61</td></tr>
+                        <tr><td>90</td><td><a href="#page-62">શુક્લહૃદયી સમજે “જ્ઞાની” તણી વાણી</a></td><td>62</td></tr>
+                        <tr><td>91</td><td><a href="#page-62">નિર્જરતી વાણી વખતે “જ્ઞાની”ની આંતરદશા</a></td><td>62</td></tr>
+                        <tr><td>92</td><td><a href="#page-63">માલિકી વિનાની વાણી</a></td><td>63</td></tr>
+                        <tr><td>93</td><td><a href="#page-63">અપૂર્વ વાણી, “જ્ઞાની” તણી</a></td><td>63</td></tr>
+                        <tr><td>94</td><td><a href="#page-63">દેશના તીર્થંકર તણી</a></td><td>63</td></tr>
+                        <tr><td>95</td><td><a href="#page-64">સર્વ દુઃખથી મુક્ત કરે “જ્ઞાની” તણી વાણી</a></td><td>64</td></tr>
+                    </table>
+                    <div class="index-footer" style="position:relative;margin-top:28px;">
+                      જય સચ્ચિદાનંદ સંઘ
+                      <div style="position:absolute;bottom:-26px;right:0;font-size:11px;color:#999;font-weight:normal;font-style:italic;">*કમલેશાનંદ મહેતા*</div>
+                    </div>
+                </div>
+                <!-- Instructions Box -->
+    <div class="box instruction-box no-print" style="margin-top:50px;">
+      <h3>:: ઉપયોગ માટેની સૂચનાઓ ::</h3>
+      <ol style="margin-bottom:0;padding-left:22px;line-height:2;">
+        <li>વિષય પર જવા: <b>ઉપરની સૂચિમાં તે વિષય પર ક્લિક/ટચ કરો.</b></li>
+        <li>અવાજ શરૂ કરવા: <b>નીચે આપેલા '▶ Play' બટન પર ક્લિક કરો અથવા કોઈપણ પાના પર જઈને લખાણ પર ટચ કરો.</b></li>
+        <li>Index પર પાછા: <b>'🏠 Index' બટન</b> પર ક્લિક કરો (દરેક પાના પર).</li>
+        <li>બુકના અંતે જવા: <b>'⬇ Bottom' બટન</b> પર ક્લિક કરો.</li>
+        <li>ઝડપ બદલવા: <b>TTS Player ના '▶ 0.9x' બટન</b> વડે ઝડપ ઓછી/વધારે કરો.</li>
+        <li><span style="color:#2e7d32;font-weight:700;">🔤 ફૉન્ટ સાઈઝ:</span> ડાબી બાજુ <b>'🔤 ક'</b> બટન દ્વારા ત્રણ સ્ટેજ: સામાન્ય → મોટો → વધુ મોટો.</li>
+        <li><span style="color:#455a64;font-weight:700;">🌓 ડાર્ક મોડ:</span> <b>'🌓'</b> બટન – આંખોને આરામ, બૅટેરી બચત.</li>
+        <li><span style="color:#c0392b;font-weight:700;">⚠️ iPhone / iOS:</span> ગુજરાતી TTS ન ચાલે તો <b>Edge Browser</b> માં ખોલો → <b>Read Aloud (F9) અથવા ctrl+shift+U</b>.</li>
+        <li><span style="color:#c0392b;font-weight:700;">⚠️ Edge એરર:</span> જો Edge માં 'Poor Internet' ની એરર આવે અને અવાજ બંધ થાય, તો તે માઇક્રોસોફ્ટ સર્વરનો પ્રોબ્લેમ છે. કૃપા કરીને થોડી સેકન્ડ પછી બ્રાઉઝરનું 'Play' બટન ફરીથી દબાવો.</li>
+        <li><span style="color:#0288d1;font-weight:700;">🔋 બૅટરી:</span> અવાજ બંધ થઈ જાય તો Settings → Apps → Browser → <b>Battery: Unrestricted</b>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+        <div class="page-container odd-page" id="page-1">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">1</div>
+            <div class="hero-title-box"><h2>દાદા ભગવાન કથિત</h2><h1>વાણી<br>-વિજ્ઞાન</h1></div>
+            <hr style="width: 60%; border: 0.5px solid #000;"/>
+            <div style="text-align: center; font-size: 18px; margin: 20px 0;">: સંકલન :<br/><strong>આપ્તપુત્ર નિમેષાનંદ, આપ્તપુત્ર કમલેશાનંદ મહેતા</strong></div>
+            <hr style="width: 60%; border: 0.5px solid #000;"/>
+            <div style="text-align: center; margin: 25px 0;">
+                <svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,50 Q25,30 50,50 T90,50" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <path d="M10,65 Q25,45 50,65 T90,65" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <path d="M10,80 Q25,60 50,80 T90,80" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <circle cx="50" cy="35" r="10" fill="none" stroke="#8B6914" stroke-width="6"/>
+                </svg>
+            </div>
+            <div aria-hidden="true" style="text-align:center;font-size:24px;margin:40px 0 20px;color:#bf953f;">❑</div>
+            <div style="text-align: center; font-weight: bold; border-top: 2px solid #000; border-bottom: 2px solid #000; padding: 5px 0; width: 80%; margin: 0 auto;">શ્રી આપ્તપુત્ર ટ્રસ્ટ, વડોદરા</div>
+        </div>
+
+        <div class="page-container even-page" id="page-2" aria-hidden="true">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">2</div>
+            <p style="margin:0;"><span lang="en">Vani-Vignan</span></p>
+            <p style="margin:0;">©</p>
+            <p style="margin:0;">જય સચ્ચિદાનંદ સંઘ, મુંબઈ</p>
+            <div aria-hidden="true" style="font-size:20px;margin:10px 0;color:#bf953f;">❑</div>
+            <div style="border-top: 2px solid #000; border-bottom: 2px solid #000; text-align: center; font-weight: bold; padding: 10px 0; margin-top: 15px;">
+                મૂલ્ય : ‘પરમ વિનય’ અને ‘હું કંઈ જ જાણતો નથી’ એ ભાવ
+            </div>
+            <div style="max-width: 100%; overflow-x: auto;">
+                <table class="p2-table">
+                    <tr><th aria-hidden="true" style="width: 10%;"></th><th style="text-align: left;">આવૃત્તિ</th><th>માસ/વર્ષ</th><th>પ્રત</th></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">પ્રથમ</td><td>નવેમ્બર 1992</td><td>10000</td></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">બીજીથી દસમી</td><td>જાન્યુઆરી 1994થી<br>ઑક્ટોબર 2007</td><td>65000</td></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">અગિયારમી</td><td>જાન્યુઆરી 2012</td><td>10000</td></tr>
+                </table>
+            </div>
+            <div style="display: flex; align-items: center; margin: 15px 0;">
+                <span aria-hidden="true" style="margin-right:10px;">❑</span>
+                <hr style="flex:1; border:0; border-top:1px solid #000;"/>
+                <span style="border: 1px solid #000; padding: 2px 15px; font-weight: bold; margin: 0 10px;">પ્રાપ્તિસ્થાન</span>
+                <hr style="flex:1; border:0; border-top:1px solid #000;"/>
+                <span aria-hidden="true" style="margin-left:10px;">❑</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 14px; line-height: 1.4;">
+                <div style="width: 45%;">
+                    <strong>પ્રકાશક</strong><br/><strong>શ્રી આપ્તપુત્ર ટ્રસ્ટ વતી</strong><br/>આપ્તપુત્ર શ્રી મિનેષકુમાર એચ. મહેતા<br/>સંયમધામ, નાગર બાગ સંકુલ,<br/>સિંગોદ-394 335<br/>
+                    <span aria-label="ફોન નંબર: શૂન્ય બે છ બે બે, બે ચાર છ પાંચ એક ત્રણ">✆ : (02622) 246513</span><br/><span lang="en">E-mail</span>: <span lang="en">aptaputratrust@gmail.com</span>
+                </div>
+                <div style="width: 48%; text-align: right;">
+                    <strong>જય સચ્ચિદાનંદ સંઘ</strong><br/>36, પાર્શ્વનાથ ચેમ્બર્સ,<br/>‘રિઝર્વ બૅન્ક’ની ગલીમાં,<br/>ઇન્કમટૅક્સ પાસે, આશ્રમ રોડ,<br/>અમદાવાદ-380 014<br/>
+                    <span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે સાત પાંચ ચાર શૂન્ય પાંચ છ સાત">✆ : (079) 27540567</span><br/>(079) 27582611<br/><span lang="en">E-mail</span>: <span lang="en">akramvignan@gmail.com</span>
+                </div>
+            </div>
+            <div style="border-top:1px solid #000; margin-top:20px; text-align:center; font-size: 14px;">
+                <p style="margin:5px 0;"><strong>લેસર કમ્પોઝ: જય સચ્ચિદાનંદ સંઘ</strong></p>
+                <p style="margin:2px 0; font-size:13px;">36, પાર્શ્વનાથ ચેમ્બર્સ, રિઝર્વ બૅન્કની પાસે, ઇન્કમટૅક્સ ઑફિસ સામે, અમદાવાદ-380 014</p>
+                <p style="margin:2px 0;"><span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે સાત પાંચ ચાર શૂન્ય પાંચ છ સાત, અને બે સાત પાંચ આઠ બે છ એક એક">✆ : (079) 27540567, 27582611</span></p>
+            </div>
+            <div style="border-top:1px solid #000; border-bottom:1px solid #000; text-align:center; font-size: 12px; padding:5px 0;">
+                આ પુસ્તિકામાં બી ભારતી ગોપિકા-2 ટાઈપનો ઉપયોગ કરવામાં આવ્યો છે.<br/>આ પુસ્તિકા <span lang="en">CPT </span>દ્વારા છપાઈ છે.
+            </div>
+            <div style="text-align:center; font-size: 14px; margin-top:5px;">
+                <strong>મુદ્રક: ચિરાગ ઑફસેટ પ્રા. લિ.,</strong> અમદાવાદ-380 022 <span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે પાંચ ચાર છ ચાર સાત ચાર સાત">✆ : (079) 25464747</span>
+            </div>
+        </div>
+
+        <div class="page-container odd-page" id="page-3">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="running-title">વાણી-વિજ્ઞાન</div>
+            <div class="content-flex">
+                <div style="flex: 1;">
+                    <h2 style="height: 1px; opacity: 0.01; overflow: hidden; margin: 0; padding: 0;">સંપાદકીય</h2>
+                    <p style="text-indent: 30px; margin-top: 0;">જ્યાં કંઈક શાંતિ પમાય, કંઈક પરિણામ પામે એવા માર્ગની સહુને ઝંખના છે તેવા આ કાળમાં રોજ-બરોજના વ્યાવહારિક પ્રશ્નોથી લઈ 'આત્મા-પરમાત્મા-કર્મ-મોક્ષ' વગેરે સંબંધી તમામ ફોડ જેમના નિમિત્તે અત્યંત સરળ-સહજ-તળપદી અને હૃદયસ્પર્શી વાણીમાં જગતને પ્રાપ્ત થયા એ સંપૂજ્ય 'દાદાજી'ની વાણીમાંથી 'વાણી' સંબંધી તમામ ફોડોનું અહીં સંકલન થયું છે. અત્યાર સુધી ન જાણેલા, ન વિચારેલા વાણીના અગણિત પર્યાયો સંબંધીના સ્થૂળ-સૂક્ષ્મ ફોડો એમાં સર્વાંગપણે સહજમાં આવી જાય છે.</p>
+                    <p style="text-indent: 30px;">રોજનો વ્યવહાર હોય કે અધ્યાત્મમાર્ગે આગળ જવાની ઝંખના હોય, પણ સર્વમાં 'વાણી'-'વાણી'ની અસરો કેટલી બધી મહત્ત્વની છે! 'ફટાફટ વહ્યે જતી વાણીની કઈ કઈ અસરો હોઈ શકે? એમાં કયા કયા પ્રકારના દોષો થઈ રહ્યા છે? કયા કયા હેતુઓ તેની પાછળ સમાયા છે? શબ્દ બોલતાં જ અસંખ્ય લેપાયમાન ભાવો ફરી વળતાં કેમ મુક્ત રહેવાય?' એ બધું જીવના લક્ષમાં ક્યાં ક્યારેય આવ્યું જ છે? અને તેથી જ વાણીથી થતાં સ્પંદનો-બંધનો બધાથી જીવ તદ્દન અજાણ છે. વિશેષે કરીને બાળકો કે ઘરનાં જોડે થતાં વાણી-વિખવાદો ને તેમાં કેમ રહેવું? સુધારવાની-સાચવવાની ફરજો કેવી રીતે બજાવી શકાય? અને સમગ્ર વ્યવહારને વિશે સત્ય-અસત્યની મૂંઝવણ,'ખરું વ્યવહાર-સત્ય શું છે? કઈ વાણી સત્ય ગણાય? અને તેથી ભિન્ન વાણી કે જૂઠ બોલાય છે, તો તેનાં કારણો ખરેખર કયા હોય છે?' તેય અહીં ખુલ્લું થયું છે. આ વાણી આવી કેમ નીકળે છે? એની પાછળ કયું 'વિજ્ઞાન'? ધાર્યા પ્રમાણેની વાણી નીકળે કે કેમ? નથી નીકળતી, તો શાથી? વાણી સુધારવી છે, તો ઉપાય શો? અલબત્ત સર્વ દુઃખોનાં નિવારણનું એકમેવ નિમિત્ત વીતરાગવાણી જ છે. આપણું ચારિત્ર અને આપણી વાણી પણ આવી ઉત્કૃષ્ટતાની ચરમસીમાએ પહોંચી શકે કે નહીં? અને એ માટે શું કારણો સેવાય? તેય વિચક્ષણ જિજ્ઞાસુને આમાંથી જડે તેમ છે.</p>
+                </div>
+                <div aria-hidden="true" class="sidebar-container sidebar-p3">સં<br/>પા<br/>દ<br/>કી<br/>ય</div>
+            </div>
+            <div aria-hidden="true" class="page-number">3</div>
+        </div>
+
+        <div class="page-container even-page" id="page-4">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="running-title">વાણી-વિજ્ઞાન</div>
+                     
+			<p style="text-indent: 30px;">પ્રસ્તુત પ્રકાશનમાં વાણીની કચાશો-ખામીઓ કે 'વાણી કેવી હોવી જોઈએ' તે જાણીને મુમુક્ષુ તે પરિણામ લાવવા પ્રેરાય અને તેને એમ પણ થાય કે 'પ્રયત્ન કરવા છતાં કેમ વાણી આવી થતી નથી?' ક્વચિત્ હતાશા થાય, પણ ત્યાં જ "જ્ઞાની" કહે છે કે આ જાણ્યાના પરિણામથી જાગૃતિ ઊભી થશે, જેથી નિરંતર પોતાને વાણી('ટેપરેકર્ડ')ના દોષો દેખાશે અને સાથે જ ભાવ અગર અભિપ્રાય ફરી જશે. અત્યાર સુધી કોઈને દફડાવ્યો ને દુઃખદાયી વાણી નીકળી એ ભૂલ થઈ એવું ભાન નહોતું અને ઉપરથી 'દફડાવવા જેવો હતો' એવો 'કોડ'(ભાવ) થાત, તે હવે તમામ ભૂલો 'ભૂલ' તરીકે જોવાશે અને ભૂલ સમજાતાં જ પોતાની સહમતિ તૂટી જશે કે 'આમ ન કરાય, આવું ન બોલાય.' પરિણામ('ઇફૅક્ટ') જે પૂર્વના ભાવના આધારે છે, તે બદલાય કે ન બદલાય, પરંતુ ભાવ-અભિપ્રાય સહજપણે બદલાઈ જતાં જ ભગવાને ચીંધેલો યથાર્થ પુરુષાર્થ થશે અને એટલું જ ખરેખર પોતાની સત્તામાં છે, હાથમાં છે, જેથી નવું દ્રવ્ય સુધરશે.</p>
+            <p style="text-indent: 30px;">સર્વથી વિશેષ તો આ કાળમાં સામાની વાણી જ્યાં કાળજે વાગે છે અને મહાપ્રયત્નો છતાં સમતા ગુમાવી દેવાય છે, ત્યાં શો ઉપાય? ત્યાં પછી એની સાથે વેર ના રહે, કર્મનાં બંધનો ના બંધાય, એ કર્તા કે દોષિત ના દેખાય, એ કેમ સંભવે? આ બધાં કોયડાઓના ઉકેલરૂપ 'યથાર્થ વિજ્ઞાન' અહીં ખુલ્લું થયું છે.</p>
+            <p style="text-indent: 30px;">આવા વિશુદ્ધ વિષયની સંકલનામાં સંકલનકાર પાસે કૃપા સિવાય બીજી કઈ શક્તિ? તોયે "જ્ઞાની પુરુષ"ની વાણી જે સ્વયં આવરણો ભેદી આત્માને સ્પર્શે છે, તેના થકી પડતા ફોડ જ એટલા સરળ-સુસ્પષ્ટ હોય છે કે વાચક અને 'તે'ની વચ્ચે લાંબો સમય આ રીતે આવવું એ વચ્ચે આવનારનું જ મૂલ્ય આંકી દે.</p>
+            <div class="signature-block">નિમેષાનંદ તથા<br/>કમલેશાનંદ મહેતાના<br/>જય સચ્ચિદાનંદ</div>
+			<div aria-hidden="true" class="page-number">4</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-5">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div class="content-flex" style="flex-direction:row-reverse;">
+                <div style="flex: 1;">
+                    <h2 style="height: 1px; opacity: 0.01; overflow: hidden; margin: 0; padding: 0;">પરસ્પર</h2>
+                    <p style="text-indent: 30px; margin-top: 0;"><b>જી</b>વનમાં કેટલીક ગૂંચો એવી હોય છે કે તેને લીધે જિંદગીભર વેદનાઓ વેઠવી પડે છે. આપણી તદ્દન નજીકના માણસ સાથે, કુટુંબ પરિવાર, સગાંસ્નેહીઓ સાથે, પડોશી સાથે સર્જાયેલા પ્રશ્નો ઉકેલવામાં ભારે મુશ્કેલીઓ આવે છે. એક વ્યક્તિના સંબંધમાં કોઈ બાબતમાં ગાંઠ પડી હોય તો તે ગાંઠ ઉકેલવામાં સમય અને શક્તિ વેડફાય છે, તેને ઉકેલવામાં આખી જિંદગી ચાલી જાય. ઘણાને આવા બધા જટિલ પ્રશ્નોને લીધે જીવન નિરર્થક લાગે છે. “જ્ઞાની પુરુષ”ની સમજણથી જીવનના દરેક પ્રશ્નો ઉકેલી શકાય છે, સમાધાન મળે છે.</p>
+                    <p style="text-indent: 30px;">પરમ પૂજ્ય ‘દાદા ભગવાન’ના જ્ઞાન-નિષ્કર્ષક વ્યવહાર-સૂત્રોની, તેમના જ શબ્દોમાં ‘લઘુભાષ્ય’ જેવી બનેલી આ અણમોલ ઉપહાર સમાન સંકલિત પુસ્તિકાઓને... <i>અથડામણ ટાળો, ઍડજસ્ટ એવરીવ્હૅર, ભોગવે તેની ભૂલ, બન્યું તે ન્યાય, નીતિ-અનીતિ, પૉઝિટિવ દૃષ્ટિ, વાણી-વિજ્ઞાન...</i> જીવનના આંતર-બાહ્ય વિકાસપ્રેમી વિશાળ વૃંદે વહાલથી વધાવી લીધી છે. આ જ બાબત આ પુસ્તિકાઓની સમ્યક્ ઉપયોગિતા પુરવાર કરે છે.</p>
+                    <div class="signature-block" style="margin-top: 100px;">સુધીર બી. શાહના<br/>જય સચ્ચિદાનંદ</div>
+                </div>
+                <div aria-hidden="true" class="sidebar-container sidebar-p4">પ<br/>ર<br/>સ્પ<br/>ર</div>
+            </div>
+			<div aria-hidden="true" class="page-number">5</div>
+        </div>
+<div class="page-container even-page" id="page-6">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">6</div>
+            <div style="text-align:center;margin-top:420px;">
+              <h2 style="font-size:22px !important;font-weight:normal;margin-bottom:5px;letter-spacing:1px;">દાદા ભગવાન કથિત</h2>
+              <h1 style="font-size:44px !important;font-weight:800;margin:0;padding-bottom:10px;">વાણી<br>-વિજ્ઞાન</h1>
+            </div>
+        </div>
+
+        <div class="page-container odd-page" id="page-7">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            <h3><span aria-hidden="true">➤ </span>જગત ઊભું શબ્દ થકી</h3>
+
+            <p style="text-indent: 30px; margin: 0;">આ દુષમકાળમાં વાણીથી જ બંધન છે. સુષમકાળમાં મનથી બંધન હતું. આ શબ્દો ના હોત તો મોક્ષ તો સહેજાસહેજ છે. આ કાળમાં વાણીથી જ બંધન છે, માટે કોઈના માટે અક્ષરેય બોલાય નહીં.</p>
+
+            <div aria-hidden="true" class="page-number">7</div>
+        </div>
+        <div class="page-container even-page" id="page-8">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>વાણી ઉપર તો બધી ભાંજગડ છે. વાણીને લીધે જ તો આ બધી ભ્રાંતિ જતી નથી. કહેશે કે, 'આ મને ગાળો દે છે' અને એટલે પછી વેર જાય જ નહીં ને! વાણીથી આખું જગત ઊભું રહ્યું છે. જો વાણી ના હોત તો આ જગત આવું ના હોત, એટલે વાણી જ મુખ્ય આધાર છે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આ શબ્દોથી જ બહુ ઝઘડા થાય છે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> શબ્દોથી તો જગત ઊભું થયું છે. જ્યારે શબ્દ બંધ થશે ત્યારે જગત બંધ થઈ જશે. એક જ શબ્દ અવળો બોલ્યા તો લડાઈ ચાલુ થઈ જાય સામા જોડે અને લડાઈ ચાલુ થાય ને, તે વખતે કોઈક જો મીઠા શબ્દો બોલી ગયા ને, કે 'ભઈ, આમ છે, તેમ છે' તો લડાઈ બંધ થઈ જાય. માટે પાંસરું બોલો, નહીં તો બોલશો જ નહીં. બધી લડાઈઓ શબ્દથી થયેલી છે આ દુનિયામાં, જે થયેલી છે તે.</p>
+            
+            <p>એક જ શબ્દ 'આંધળાના આંધળા', આ શબ્દે તો આખું મહાભારત ઊભું થયું! બીજું તો કોઈ ખાસ કારણ નહોતું, આ જ મુખ્ય કારણ. દ્રૌપદીએ કહ્યું હતું ને? ટકોર મારી હતી ને? હવે એનું ફળ એ દ્રૌપદીને મળ્યું. માટે શબ્દો મીઠા જોઈએ અને શબ્દો મીઠા ના હોય તો બોલશો નહીં. અરે, વઢેલા હોય આપણી જોડે, તેની જોડેય આપણે મીઠું બોલીએ ને, તો બીજે દહાડે એક થઈ જાય પાછા.</p>
+            
+            <p>શબ્દ બોલવામાં તો બહુ 'કંટ્રોલ' હોવો જોઈએ. જે શબ્દ લોકોને દુઃખદાયી થાય, એવો શબ્દ ના બોલાય, એના માટે રોજ રોજ અભ્યાસ કરવો જોઈએ, એટલે માણસે સાચવવું જોઈએ. આ વાતાવરણમાં બધા પરમાણુઓ જ ભરેલા છે! પહોંચી જાય બધું. કશો એક શબ્દ પણ કોઈના માટે બેજવાબદારીવાળો ના બોલાય અને બોલવું હોય તો કંઈક સારું બોલ. આ બધું પરમાણુથી ભરેલું વાતાવરણ છે, માટે બોલતાં પહેલાં વિચારજો.</p>
+
+            <div aria-hidden="true" class="page-number">8</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-9">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <h3><span aria-hidden="true">➤ </span>ન રુઝાય ઘા વાણીના</h3>
+            <p>આપણા લોકો કંઈ લાકડીઓ મારે છે ઘરમાં? લાકડીઓ કે ધોલો નથી મારતા. નીચી નાતમાં હાથથી ને લાકડીથી મારામાર કરે. ઊંચી નાતમાં લાકડીથી મારે નહીં, ત્યારે વચનબાણ જ માર માર કરે છે. સંસ્કારી લોકો આમ તો બહુ વિવેકી છે, એટલે કોઈ મારતા નથી, પણ વચનનાં બાણ મારે છે કે, 'તું આવી છે ને તું તેવી છે.' ત્યારે પેલી કહેશે, 'તમે આવા ને તમે તેવા.' એટલે રુઝાય નહીં એવાં બાણ મારે છે!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>શબ્દથી રોગી, શબ્દથી નીરોગી</h3>
+            <p>આ શબ્દો જે નીકળે છે ને, એ શબ્દોમાં બે જાત! આ દુનિયામાં શબ્દ જે છે એની બે 'ક્વૉલિટી' : સારા શબ્દો શરીરને નીરોગી બનાવે અને ખરાબ શબ્દો શરીરને રોગિષ્ઠ કરે! માટે શબ્દ પણ અવળો ના નીકળવો જોઈએ. 'એય નાલાયક'; હવે 'એય' શબ્દ નુકસાનકારક નથી, 'નાલાયક' શબ્દ બહુ નુકસાનકારક છે. 'તારામાં અક્કલ નથી' એમ કહ્યું 'વાઇફ'ને, એ શબ્દ સામાને દુઃખદાયી છે અને પોતાને રોગ ઊભો કરનાર છે. ત્યારે પેલી કહે, 'તમારામાં ક્યાં બરકત છે?' તો બેઉને રોગ ઊભા થાય. આ તો પેલી બરકત ખોળે છે અને પેલો આમની અક્કલ ખોળે છે! આની આ દશા બધે.</p>
+            
+            <p>બાકી, ત્યાં 'ફૉરીન'માંય વઢવાડ થતાં વાર જ નહીં. આપણે સમજી જઈએ કે આ હમણે બેઉનો નકશો જુદો. એ એનું 'લંડન' જુદું ને આનું 'લંડન' જુદું, બેઉ 'લંડન' વહેંચી નાખે; અને આપણે ત્યાં આવું નહીં, માટે આપણી સ્ત્રીઓ જોડે કશું ન થાય અને સ્ત્રીઓએ પુરુષો જોડે ના કરવું જોઈએ, કારણ કે બંધનવાળા છે, માટે નિવેડો લાવવો જોઈએ.</p>
+            
+            <p>જ્યાં સુધી 'રિલેટિવ'ની જરૂર છે ત્યાં સુધી સારું બોલો. આ સંસાર 'રિલેટિવ' છે. તમે દઝાડો ને એ આપણને માન આપે, એવું બને નહીં, માટે વાણી એવી સરસ બોલો.</p>
+
+            <div aria-hidden="true" class="page-number">9</div>
+        </div>
+
+        <div class="page-container even-page" id="page-10">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપણને ગમે એવું બોલીએ, એટલે એવું જ આપણને સામેથી મળવાનું છે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, એટલે કોઈ આવે અને તેને 'કેમ છો?'ય ના બોલીએ તો એ બિચારો બેસે અને તમે એવી રીતે એને ત્યાં જાવ તો તેય તમને આવું કરે, એવી ઇચ્છા તમને હોય છે? તમને શું ગમે છે?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપણને આવકાર આપે એ જ ગમે ને!</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, તો તમારેય પેલાને આવકાર આપવાનો. એટલે આ પડઘો છે. આપણને શું પોષાય છે, એ આપણે બીજાને આપો. શો ગુનો છે આ વાતમાં? કાયદો સમજાય તેવો નથી? આપણને જેવું ગમે છે તે બોલવું. એવું 'પ્રોજેક્ટ' કરો કે તમને ગમે. આ બધું તમારું જ 'પ્રોજેક્શન' છે, આમાં ભગવાને કંઈ ડખલ કરી નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>હેતુ પ્રકાશે વાણી</h3>
+            <p>વાણી તો કેટલા પ્રકારની! માણસ કોઈની જોડે વઢતો હોય તે ઘડીએ એની વાણીનું રૂપ કેવું હોય છે તે જોઈ લેજો. કોઈની ઉપર દ્વેષ કરતો હોય કે કોઈની ઉપર રાગ કરતો હોય ત્યારે વાણીનું રૂપ કેવું હોય તે જોઈ લેજો. રાગ કરે ત્યારે વાણી બદલાય, દ્વેષ કરે ત્યારે વાણી બદલાય, 'કોર્ટ'માં જાય ત્યારે વાણી બદલાય. બધાને ઓળખાણ પડે કે આ વાણી આવી હતી! એટલે જેવો હેતુ તેવી વાણી નીકળે. હેતુ શો છે? કે જગતકલ્યાણની ભાવના છે ને 'પોતે' શુદ્ધાત્મા થયેલા છે, એટલે વીતરાગી નીકળે, જે વાણી નીકળી તે સામાને સીધી અસર કરે.</p>
+            
+            <p class="read-next">વાણી રાગ-દ્વેષવાળી વાણી કેવી હોય? કે સગા ભાઈને માન આપીને ના બોલાવે અને 'ડૉક્ટર'ને 'આવો સાહેબ, આવો સાહેબ' કરે, કારણ કે મહીં ઘાટમાં છે કે ક્યારેક કામ લાગશે. અમારી વાણી વીતરાગી હોય. વીતરાગવાણી શું કહે છે? કે, 'તું તારું કામ કાઢી લેજે, અમારે તારું કામ નથી.' વીતરાગી વાણી 'કામ કાઢી ઉકેલ લાવવાનું' કહે છે, 'મોક્ષ હાથમાં લઈને અહીંથી જા' </p>
+
+            <div aria-hidden="true" class="page-number">10</div>
+        </div>
+<div class="page-container odd-page" id="page-11">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>એમ કહે છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અપશબ્દ અમથાયે જોખમી</h3>
+            
+            <p>શબ્દ કોઈને બોલીએ અને એને ખરાબ લાગે તો એ 'અપશબ્દ' કહેવાય. તે અમથા અમથાયે અપશબ્દ બોલતા હોય ને, તોય જોખમ અને સારા શબ્દો અમથા અમથા બોલતા હોય તોય હિતકારી છે. બીજાને કહીએ ને એને દુઃખ થાય, એ બધાય 'અપશબ્દ' કહેવાય. બહાર તો 'પોલીસ'વાળાને કંઈ કહે નહીં. ઘરમાં જ કહે ને! 'પોલીસ'વાળાને અપશબ્દ બોલનારો મેં કોઈ જોયો નથી એવો બહાદુર (!). 'પોલીસ'વાળો તો આપણને પાઠ ભણાવે. ઘરમાં પાઠ કોણ ભણાવડાવે?</p>
+            
+            <p>આપણી શબ્દોથી ડખોડખલ ના કરવી. શબ્દો તો એવા બોલવા કે સામાને વાગે નહીં, તો શબ્દો બોલવાનો અધિકાર છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ન કરાય ટીકા</h3>
+            
+            <p>આજ તો લોક તમારી ટીકા હઉ કરે. પોતે શું કરી રહ્યા છે તેનું ભાન નથી બિચારાને, એટલે એવું કર્યા કરે છે. દુઃખવાળો જ કોઈની ટીકા કરે, દુઃખવાળો કો'કને સળી કરે. સુખિયો માણસ કોઈની ટીકા કરે નહીં. આ દુઃખિયા લોક છે તે કરે તો ભલે, અને એથી આનંદ રહેતો હોય તો કર.</p>
+            
+            <p class="read-next">એક ભાઈ મને કહે, 'મારી છોડીઓ તો બહુ ડાહી.' મેં કહ્યું, 'હા, સરસ.' પછી એ ભાઈ બીજી છોડીઓની ટીકા કરવા માંડ્યા. ત્યારે મેં તેમને કહ્યું, 'ટીકા શું કરવા કરો છો લોકોની? તમે લોકોની ટીકા કરશો તો તમારી હઉ લોકો ટીકા કરશે.' ત્યારે એ કહે છે, 'મારામાં ટીકા કરવા જેવું છે શું?' ત્યારે મેં કહ્યું, 'દેખાડું, ચૂપ રહેજો.' પછી છોડીઓની ચોપડીઓ લાવીને દેખાડ્યું બધું, 'જુઓ આ.' ત્યારે એ કહે, 'હેં?' મેં કહ્યું, 'ચૂપ થઈ જાવ. કોઈની ટીકા કરશો નહીં. હું જાણું છું તોય હું તમારી જોડે કેમ ચૂપ રહ્યો છું? આટલું બધું તમે રોફ મારો છો તોય હું ચૂપ કેમ રહ્યો છું?' હું જાણું કે ભલે, રોફ મારીને પણ સંતોષ રહે છે ને, એમને! પણ જ્યારે ટીકા કરવા માંડી, ત્યારે કહ્યું કે, 'ના કરશો ટીકા', કારણ કે છોડીઓના બાપ થઈને આપણે કો'કની છોડીઓની</p>
+            
+            <div aria-hidden="true" class="page-number">11</div>
+        </div>
+
+        <div class="page-container even-page" id="page-12">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>ટીકા કરીએ એ ભૂલ છે. છોકરીઓના બાપ ના હોય, જેને છોડીઓ ના હોય, તે આવી ટીકા કરે જ નહીં બિચારો. ત્યારે તું છોડીઓનો બાપ થઈને ટીકા કરે છે? તમને શરમ નથી આવતી? એવો સંશય રાખ્યે ક્યારે પાર આવે?</p>
+            
+            <p>અને આજની છોડીઓય બિચારી એટલી ભોળી હોય છે કે 'મારા બાપા કોઈ દહાડો ડાયરી નહીં વાંચે' એવું માને! એની 'સ્કૂલ'ની લખવાની 'ડાયરી' હોય ને, એની મહીં પત્રો મૂકે. એના બાપેય ભોળા હોય, તે છોડી પર વિશ્વાસ જ આવ્યા કરે, પણ હું તો આ બધું જાણું કે આ છોડીઓ ઉંમરલાયક થઈ છે, હું એના 'ફાધર'ને એટલું જ કહું કે, 'આને પૈણાવી દેજો વહેલી.' હા, બીજું શું કહું તે?</p>
+            
+            <p>આપણી ટીકા કરવાનો લોકોને અધિકાર છે. આપણને કોઈની ટીકા કરવાનો અધિકાર નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>જાણો પરિણામ ટીકાનાં</h3>
+            
+            <p>કોઈનીય ટીકા કરવી એટલે આપણી દસ રૂપિયાની નોટ વટાવીને એક રૂપિયો લાવવો તે. ટીકા કરનાર હંમેશાં પોતાનું જ ગુમાવે છે. જેમાં કશું જ વળે નહીં, તે મહેનત આપણે ના કરવી. ટીકાથી તમારી જ શક્તિઓ વેડફાય છે. આપણને જો દેખાયું કે આ તલ નથી, પણ રેતી જ છે, તો પછી તેને પીલવાની મહેનત શું કામ કરવી? 'ટાઈમ' અને 'એનર્જી' બન્ને 'વેસ્ટ' જાય છે. આ તો ટીકા કરીને સામાનો મેલ ધોઈ આપ્યો ને તારું પોતાનું કપડું મેલું કર્યું, તે હવે ક્યારે ધોઈશ મૂઆ? ટીકા કરવાથી પહેલાં આપણાં કપડાં બગડે છે, બીજી ટીકાથી દેહ બગડે છે અને ત્રીજી ટીકાથી હૃદય બગડે છે! માટે કોઈનામાં ઊંડા ના ઊતરો અને કોઈ આપણી ટીકા કરે તો નોંધ લેવા જેવી નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>નથી ધર્મ જ્યાં ટીકા</h3>
+            
+            <p class="read-next">સામાની ટીકા કરો તો તેની 'આરાધનાની ટીકા કરી' કહેવાય, તે ભયંકર ગુનો છે. તમે સામાને ટેકો ના આપી શકો તો કાંઈ નહીં, પણ ટીકા તો ના કરો. જો ટીકા છે, તો વીતરાગનું વિજ્ઞાન નથી, ત્યાં ધર્મ છે જ નહીં, અભેદતા</p>
+            
+            <div aria-hidden="true" class="page-number">12</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-13">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>છે જ નહીં.</p>
+            
+            <p>કોઈની સહેજ પણ ટીકા કરવા જતાં કેવળજ્ઞાનને બાધક છે, અરે આત્મજ્ઞાનનેય બાધક છે, સમકિતનેય બાધક છે.</p>
+            
+            <p>આ ટીકા, એ તો અહંકારનો મૂળ ગુણ છે, એ સ્પર્ધાનો ગુણ છે. એટલે ટીકા તો રહેવાની જ, અને સ્પર્ધા વગર સંસારમાં રહેવાય નહીં. એ સ્પર્ધા જાય એટલે છુટકારો થઈ ગયો!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>નિંદા</h3>
+            
+            <p>કોઈ પણ માણસની વ્યક્તિગત વાત કરવાનો અર્થ જ નથી. સામાન્યભાવે વાત સમજવાની જરૂર. વ્યક્તિગત વાત કરવી, એ તો 'નિંદા' કહેવાય. 'નિંદા' એ તો અધોગતિમાં જવાની નિશાની! કોઈની નિંદા કરો એટલે તમારે ખાતે 'ડેબિટ'(ઉધાર) થયું અને પેલાને ખાતે 'ક્રેડિટ'(જમા) થયું! એવો ધંધો કોણ કરે?</p>
+            
+            <p>સામાન્યભાવે જગત છે, કોઈની માલિકી નથી આની. જેને જે અનુકૂળ આવે તે કરે. તેની તમે નિંદા કરી શકો નહીં, 'એ ખોટું છે' એમ કહી શકો નહીં, 'એ ખોટું છે' એમ વિચારાય નહીં! આ બધું કુદરતી સંચાલન છે.</p>
+            
+            <p>નિમિત્તની નિંદા કરવાની જરૂર નથી, નિમિત્તથી છેટા રહેવાની જરૂર છે.</p>
+            
+            <p>આપણાં કોઈ સગાંવહાલાં મરી ગયેલાં હોય અને તેની લોકો નિંદા કરતા હોય, તો આપણે વચ્ચે નહીં ભળવું. વચ્ચે ભળ્યા હોય તો આપણે પછી પસ્તાવો કરવો કે આવું ન થવું જોઈએ! કોઈ મરી ગયેલા માણસની વાતો કરવી, એ ભયંકર ગુનો છે. જે મરી ગયો હોય એનેય આપણા લોક તો છોડતા નથી. એવું કરે કે ના કરે લોકો? તે એવું ના હોવું જોઈએ, આપણે એવું કહેવા માગીએ છીએ. જોખમ છે એમાં, બહુ મોટું જોખમ છે!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>નિંદા-તિરસ્કારે દેશ દરિદ્ર</h3>
+            
+            <p>આ વાણી તો સરસ્વતી દેવી છે. જો દુરુપયોગ કરે ને, તો લક્ષ્મી રિસાય. નિંદા ના કરાય.</p>
+            
+            <div aria-hidden="true" class="page-number">13</div>
+        </div>
+<div class="page-container even-page" id="page-14">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>આ આપણો દેશ ક્યારે પૈસાવાળો થશે? ક્યારે લક્ષ્મીવાન અને સુખી થશે? જ્યારે નિંદા અને તિરસ્કાર બે બંધ થઈ જશે ત્યારે. આ બે બંધ થયા કે દેશમાં નર્યા પૈસા ને લક્ષ્મી પાર વગરની થાય!</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> નિંદા ને તિરસ્કાર ક્યારે બંધ થાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> લોભ વધે એટલે નિંદા અને તિરસ્કાર બેઉ બંધ થઈ જાય.</p>
+            
+            <p>અમે શું કહ્યું છે? કે હિન્દુસ્તાનમાં નિંદા અને તિરસ્કાર ઘટવા માંડ્યા છે અને લોભ વધ્યો છે, સુખનો લોભ લાગ્યો છે. તેથી હિન્દુસ્તાનનું સારું થવાનું છે! આ લક્ષણ પરથી હું સમજી જઉં. ભલે ને, જરા મોહ વધશે, પણ બીજું નિંદા-તિરસ્કાર બધું ઘટશે ને?</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અવર્ણવાદ</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> નિંદા અને અવર્ણવાદ એક જ?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> અવર્ણવાદ એટલે એના માટે ગાઢ નિંદાઓ કરવી. આ લોકો નિંદા કેવી કરે છે? સાદી નિંદા કરે છે, પણ 'ગાઢ નિંદા કરવી' એ 'અવર્ણવાદ' કહેવાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> ગાઢ નિંદા, એ કેવી નિંદા?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એનું રૂપક જ ખરાબ દેખાડે. આમ સાધારણ નિંદા કરે કે, 'એ તો માણસ સારા નથી' એ 'સાધારણ નિંદા' કહેવાય, પણ એના માટે પેલો પેલાને ઠસાવી દે, એ 'અવર્ણવાદ' કહેવાય.</p>
+            
+            <p>કંઈ પણ રસ્તે જેમ છે તેમ નહીં ચીતરવું પણ ઊંધું ચીતરવું, એ અવર્ણવાદ! જેમ છે એમેય નહીં ને એથી ઊંધું પાછું!! જેમ છે એમ ચીતરીએ અને ખોટાને 'ખોટો' બોલીએ અને સારાને 'સારો' બોલીએ તો અવર્ણવાદ ના કહેવાય, પણ બધું જ ખોટું બોલીએ ત્યારે 'અવર્ણવાદ' કહેવાય. કોઈ માણસમાં થોડું સારું હોય કે ના હોય?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> હોય.</p>
+            
+            <div aria-hidden="true" class="page-number">14</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-15">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> ને થોડું અવળુંયે હોય, પણ એનું બધું જ અવળું બોલીએ ત્યારે પછી એ 'અવર્ણવાદ' કહેવાય. 'આવી બાબતમાં જરા એવા, પણ આ બીજી બાબતમાં બહુ સારા' એવું હોવું જોઈએ.</p>
+            
+            <p>કોઈનું અવર્ણવાદ બોલ્યા(બોલી જવાયું), પણ પછી પ્રતિક્રમણ કરે તો ચોખ્ખું થઈ જાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અપવ્યય : દુર્વ્યય</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> વાણીનો અપવ્યય અને દુર્વ્યય સમજાવો.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> અપવ્યય એટલે ઊંધી વાણી વાપરવી અને દુર્વ્યય એટલે વ્યય નહીં કરવા જેવી જગ્યાએ વ્યય કરે. વગર કામનો ભસ ભસ કરે, એ 'દુર્વ્યય' કહેવાય. તમે જોયેલું, વગર કામના ભસ ભસ કરે એવા હોય છે ને? એ 'દુર્વ્યય' કહેવાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એનું ઉદાહરણ આપો.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> આપણા લોકો નથી કહેતા કે આ વગર કામનો બોલ બોલ કરે છે, ના બોલવાનું બોલ બોલ કરે છે? એ 'દુર્વ્યય' કહેવાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> અને અપવ્યય એટલે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> જ્યાં જે વાણી હોવી જોઈએ ત્યાં બીજી જ વાણી બોલવી, આ 'અપવ્યય' કહેવાય. જે જ્યાં 'ફીટ' થતું હોય તે જ્ઞાન નહીં બોલવાનું ને બીજી રીતે બોલવાનું, એ અપવ્યય!</p>
+            
+            <p>જૂઠું બોલે, પ્રપંચ કરે, એ બધો 'વાણીનો અપવ્યય' કહેવાય. વાણીના દુર્વ્યય અને અપવ્યયમાં બહુ ફેર છે. અપવ્યય એટલે બધી જ રીતે નાલાયક, બધી રીતે દુરુપયોગ કરે. વકીલો બે રૂપિયા માટે જૂઠું બોલે કે, 'હા, આને હું ઓળખું છું', તે 'અપવ્યય' કહેવાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ટોણો</h3>
+            
+            <p class="read-next"><strong>પ્રશ્નકર્તા:</strong> કોઈને જરા કડવું કહેવું હોય, પણ એવી રીતે ફેરવીને કહીએ</p>
+            
+            <div aria-hidden="true" class="page-number">15</div>
+        </div>
+
+        <div class="page-container even-page" id="page-16">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>કે પેલાને લાગે કે 'આ મને જ કહ્યું', પણ પેલો આપણામાં વાંક ન કાઢી શકે, એ 'અપવ્યય' ગણાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એ અપવ્યય કહેવાય નહીં. એ તો મૂરખા માણસો એક જાતનો અપવ્યય કરે ને દુર્વ્યય કરે અને આવું બોલવું એ 'મૂરખા' ના કહેવાય, આ તો ઊલટાં એને ટોણો મારે. ટોણો એટલે ગધેડાને ડફણું મારવાનું ને આ સ્ત્રીને ટોણો મારવાનું. ટોણો તમે જોયેલો? ટોણો તો બહુ મોટો ભારે હોય ને! આ ટોણો તો કાળજે ઘા વાગે તેવો હોય.</p>
+            
+            <p>ટોણા મારવા, એ તો 'મોટી હિંસા' કહેવાય. આ વાણીનો અપવ્યય અને દુર્વ્યય, એ તો હિંસક નથી, પણ વગર કામની શક્તિ વ્યય કર્યા કરે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>જોખમો મશ્કરી તણાં</h3>
+            
+            <p>આ કાળમાં તો મશ્કરીય ના કરાય, એક શબ્દેય ના બોલાય. જાડા હોય તો એને 'જાડા' ના કહેવાય, લાંબા હોય તો એને 'લાંબા' ન કહેવાય. આ લોક તો 'પ્લાસ્ટિક' જેવાં થઈ ગયાં છે. આપણા લોક તો ગમે તેને વગોવે. 'આ વાયડું છે' કહેશે. 'આ ગરમ પડશે.' અલ્યા, તને વાયડું પડશે, બીજાને નહીં! પણ આમની ભાષા જ વાંકી છે, ત્યાં શું?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મશ્કરી કરવામાં જોખમ શું શું આવે? કઈ જાતનાં જોખમ આવે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવું છે, કે કોઈને ધોલ મારી હોય ને જે જોખમ આવે તેના કરતાં આ મશ્કરી કરવામાં અનંત ગણું જોખમ છે. એને બુદ્ધિ પહોંચી નહીં એટલે તમે એને તમારી 'લાઇટ'થી તમારા કબજામાં લીધો. એટલે પછી ત્યાં આગળ ભગવાન કહેશે, 'આને બુદ્ધિ નથી તેનો આ લહાવો લે છે?' ત્યાં આગળ ખુદ ભગવાનને આપણે સામાવાળિયો કર્યો. પેલાને ધોલ મારી હોત તો તો એ સમજી ગયો, એટલે પોતે માલિક થાય, પણ આ તો બુદ્ધિ પહોંચતી જ નથી, એટલે આપણે એની મશ્કરી કરીએ એટલે પેલો માલિક પોતે ના થાય. એટલે ભગવાન જાણે કે 'ઓહોહો! આને બુદ્ધિ ઓછી છે, તેને તું સપડાવે છે?</p>
+            
+            <div aria-hidden="true" class="page-number">16</div>
+        </div>
+<div class="page-container odd-page" id="page-17">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>આવી જા.' એ તો પછી આપણા સાંધા તોડી નાખે!</p>
+            
+            <p>આ દુનિયામાં મશ્કરી કોઈ પણ પ્રકારની ના કરશો. મશ્કરી કરવાને લઈને જ આ બધાં દવાખાનાં ઊભાં થયાં છે. આ પગ બધા જે ભંગાર માલ છે ને, તે મશ્કરીઓનું ફળ છે. તે અમારુંયે આ મશ્કરીનું ફળ આવેલું છે!</p>
+            
+            <p>તેથી અમે કહીએ છીએ ને, 'મશ્કરી કરો, તો બહુ ખોટું કહેવાય, કારણ કે મશ્કરી ભગવાનની થઈ કહેવાય. ભલે ને, ગધેડો છે, પણ આફ્ટર ઑલ શું છે? ભગવાન છે. હા, છેવટે તો ભગવાન જ છે ને! જીવમાત્રમાં ભગવાન જ રહેલા છે ને!' મશ્કરી કોઈની કરાય નહીં ને! આપણે હસીએ ને, તો ભગવાન જાણે કે 'હા, હવે આવી જા ને, તારો હિસાબ લાવી આપું છું આ ફેરો.'</p>
+            
+            <p>કોઈ ભગવાન આમ ચાલતા હોય, એને આપણા લોક હસે. અલ્યા, શું મશ્કરી કરે છે? મહીં ભગવાન સમજી ગયા બધું! ભગવાનની આવી દશા થઈ, તેની પર તું મશ્કરી કરું છું, એમ? તારી દશાયે એવી થશે! આવા નિયમ જ છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>'જોક' "જ્ઞાની"ની</h3>
+            
+            <p>સહેજેય કોઈને 'જોક' કરી હોય અને સામો જરા કાચો હોય ને, જરા ચલાવી લેતો હોય, પણ મહીં એને દુઃખ થાય, તો એ 'અતિક્રમણ કર્યું' કહેવાય. અમે બધાની 'જોક' કરીએ, પણ કેવી? નિર્દોષ 'જોક' કરીએ અમે તો. એ તો રોગ કાઢીએ ને, એને શક્તિવાળો બનાવવા માટે 'જોક' કરીએ. જરા ગમ્મત આવે, આનંદ આવે ને, પાછું એ આગળ વધતો જાય, નિર્દોષ 'જોક' કરીએ બધી. બાકી, એ 'જોક' કોઈને દુઃખ ના કરે.</p>
+            
+            <p>હવે, આ અમે કોઈની ગમ્મત કરીએ તો એનાંય અમારે પ્રતિક્રમણ કરવાં પડે, અમારે એમ ને એમ એવું ચાલે નહીં.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એ તો 'ગમ્મત' કહેવાય. એવું તો થાય ને?</p>
+            
+            <p class="read-next"><strong>દાદાશ્રી:</strong> ના, પણ એય અમારે પ્રતિક્રમણ કરવાં પડે, નહીં તો અમારું</p>
+            
+            <div aria-hidden="true" class="page-number">17</div>
+        </div>
+
+        <div class="page-container even-page" id="page-18">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>આ 'જ્ઞાન', આ 'ટેપરેકર્ડ' નીકળે ને, તે પછી ઝાંખી નીકળે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>વાળો વાણીની તરછોડ વાણીથી</h3>
+            
+            <p>કોઈને સહેજેય તરછોડ ના વાગે ને, એવું આપણું જીવન હોવું જોઈએ. તમે તરછોડને ઓળખો કે ના ઓળખો? બહુ ઓળખો? સારી રીતે? કો'કને વાગી જાય ખરી?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મહીંથી સૂક્ષ્મ રીતે વાગી જાય.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> તે સૂક્ષ્મ વાગે તેનો વાંધો નહીં, સૂક્ષ્મ વાગે તે તો આપણને નુકસાનકર્તા છે. જોકે સામાને વિરોધકર્તા તો છે જ, કારણ કે સામો એકતા નહીં અનુભવે.</p>
+            
+            <p>સંસારમાં સુખી થવાની ઇચ્છા હોય તો કોઈને તરછોડ ના મારશો. તરછોડ કોને મારો છો? ભગવાનને જ, કારણ કે દરેકની મહીં ભગવાન બેઠેલા છે. માણસને ગાળ નથી પહોંચતી, ભગવાનને પહોંચે છે. સંસારનાં બધાં પરિણામ એ ભગવાન સ્વીકારે છે, માટે એ પરિણામ એવાં કરજો કે ભગવાન સ્વીકારે તો ત્યાં આપણું ખરાબ ના દેખાય. એક જીવને પણ તરછોડ મારીને કોઈ મોક્ષે જઈ શકે નહીં.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> શો ઉપાય કરવો કે જેથી તરછોડનાં પરિણામ ભોગવવાનો વારો ના આવે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એના માટે બીજો કોઈ ઉપાય નથી. એક, પ્રતિક્રમણ કર કર કરવાં, જ્યાં સુધી સામાનું મન પાછું ના ફરે ત્યાં સુધી કરવાં, અને બીજું, ફરી પાછા એની જોડે સારું બોલી અને ફેરવી નાખવાનું. પ્રત્યક્ષ ભેગા થાય તો ફરી પાછું મીઠું બોલીને ક્ષમા માગવી કે, 'ભઈ, મારી તો બહુ ભૂલ થઈ, હું તો મૂરખ છું, અક્કલ વગરનો છું.' એટલે સામાવાળાના ઘા રુઝાતા જાય! આપણે આપણી જાતને વગોવીએ એટલે સામાને સારું લાગે, ત્યારે એના ઘા રુઝાય, પણ તમે એને એમ કહો કે, 'તમે ખોટા છો' તો એ તમને પકડી લે, માટે બીજાને 'ખોટા' કહેવાનું છોડી જ દો. કોઈનેય 'ખોટા' કહેવાનું હોય જ નહીં.</p>
+            
+            <div aria-hidden="true" class="page-number">18</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-19">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>કોઈને 'ખોટો' કહેવો, 'બ્લેઈમ' કરવો, એવું બોલવું, એ 'ફૂલિશનેસ' છે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> પગે પડીનેય માફી માગી લેવાની?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ના, પગે પડીએ તો ગુનો થાય, એવું નહીં. બીજી વાણીથી કરવાનું. વાણીથી વાગ્યું હોય ને, તે વાણીથી ફેરવો. પગે પડવાથી તો એ પાછો મનમાં તે ઘડીએ અવળો ફરેલો માણસ અવળું માને, માટે આ વાણીથી જ ફેરવો એને કે બિચારાને સંતોષ થઈ જાય, એવી મીઠી વાણીથી એને ફેરવો. તે પાછો રાગે આવી જાય, પછી એ સહી કરી આપે તરત. હમણે જ થયું ને, હમણે જ, તરત સહી કરી આપે, એટલે પછી એની જોડે એકતા ના તૂટે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>પડે અંતરાય તરછોડથી</h3>
+            
+            <p>આ સંસારમાં અંતરાય કેવી રીતે પડે છે, તે તમને સમજાવું. તમે જે 'ઓફિસ'માં નોકરી કરતા હો, ત્યાં તમારા 'આસિસ્ટન્ટ'ને 'અક્કલ વગરના' કહો, એ તમારી અક્કલ પર અંતરાય પડ્યો! બોલો, હવે આ અંતરાયથી આખું જગત ફસાઈ ફસાઈને આ મનુષ્ય-જન્મ એણે ખોઈ નાખ્યો છે. તમને 'રાઈટ' જ નથી સામાને 'અક્કલ વગરનો' કહેવાનો. તમે આવું બોલો એટલે સામો પણ અવળું બોલે, તે એનેય અંતરાય પડે! બોલો, હવે આ અંતરાયમાં જગત શી રીતે અટકે? કોઈને તમે 'નાલાયક' કહો તો તમારી લાયકાત ઉપર અંતરાય પડે છે. તમે આનાં તરત જ પ્રતિક્રમણ કરો તો અંતરાય પડતાં પહેલાં ધોવાઈ જાય.</p>
+            
+            <p>એલચી મોંઘી, લવિંગ મોંઘાં, સોપારી મોંઘી, એથી લોકો ખાય નહીં. એ ખાવાની ન મળે, એ અંતરાય પડ્યો છે તેથી! ઘરમાં સાત જણ શ્રીખંડ જમતા હોય ને એક જણ બાજરીનો રોટલો ને છાશ ખાય. 'ડૉક્ટરે' કહ્યું હોય કે, 'શ્રીખંડ ખાશો તો મરી જવાશે!' એ અંતરાય શાથી પડે છે? ખાવાનું સામે આવ્યું ત્યારે આપણે એને તરછોડ મારી હોય તેથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>સ્તંભિત કરે કઠોર વાણી</h3>
+            
+            <p>ઘણા કઠોર ભાષા બોલે છે ને, કે 'તું નાલાયક છે, બદમાશ છે, ચોર છે.'</p>
+            
+            <div aria-hidden="true" class="page-number">19</div>
+        </div>
+<div class="page-container even-page" id="page-20">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>જે શબ્દો આપણે સાંભળ્યા ના હોય ને! કઠોર, એ બોલની સાથે આપણું હૃદય પણ સ્તંભિત થઈ જાય. એ કઠોર ભાષા જરીકે પ્રિય ના પડે, ઊલટું મનમાં બહુ થાય કે આવું ક્યાંથી આ પાછું?</p>
+            
+            <h3><span aria-hidden="true">➤ </span>કઠોર ન બોલે 'પોલીસ' પાસે</h3>
+            
+            <p>આ 'પોલીસ'વાળા બધાને પકડી ગયા હોય, કંઈ ગુનો થયો હોય તો, 'પોલીસ'વાળાને ત્યાં બધાને બેસાડે, તો કોની વાણી વધારે અકળાટવાળી નીકળે? ત્યાં કોઈ કઠોર બોલે?</p>
+            
+            <p>'પોલીસ'વાળા પાસે તો કોઈ મોટો 'કલેક્ટર' ગયો હોય તોય ના બોલે, કારણ કે એક વાર તો એ ઝૂડી નાખે, પછી જોઈ લેવાશે. જો દેહની પડેલી હોય તો! ના પડેલી હોય તો વાંધો નથી.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપે કહેલું કે નાનો બાળક હોય, એની પાસે આપણે કેવી રીતે બોલીએ છીએ, એ રીતની વાણી હોવી જોઈએ.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, એ રીતની! ત્યાં કેમ સાચવીને બોલે છે? નાનું બાળક હોય તો 'કાઉન્ટર પુલી' નાખીને બોલે, ગુસ્સો થયેલો હોય તોયે ફેરવી નાખે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>તાંતો પંદર વર્ષેય?</h3>
+            
+            <p>રાતે તમારે 'વાઈફ' જોડે ભાંજગડ થઈ હોય ને, તે સવારમાં ચા મૂકતી વખતે આમ ટકોરો મારે, એટલે આપણે સમજી ગયા કે 'ઓહો! રાત્રે બન્યું તે ભૂલ્યા નથી', એ તાંતો! પછી બોલે, તે વાણીયે એવી તંતીલી નીકળે.</p>
+            
+            <p>પંદર વર્ષે એ માણસ, ગુનેગાર મળ્યો હોય, ત્યાં સુધી તમને યાદેય ના હોય, પણ પંદર વર્ષે એ ભેગો થાય કે તમને યાદ આવે, બધું તૈયાર થઈ જાય, એનું નામ 'તાંતો' કહેવાય.</p>
+            
+            <p>અને તંતીલી ભાષા એટલે શું? સ્પર્ધામાં જેમ તંત હોય છે ને? જો 'મેં કેવી સરસ રસોઈ બનાવી અને એને તો આવડતી જ નથી' એવું તંતે ચડે, સ્પર્ધામાં ચડે, એ તંતીલી ભાષા બહુ ખરાબ હોય.</p>
+            
+            <div aria-hidden="true" class="page-number">20</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-21">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> ઘણી વખત એવું નથી બનતું કે આપણને સામાનો 'વ્યૂપોઇન્ટ' જ ખોટો દેખાતો હોય, એટલે પછી આપણી વાણી કર્કશભરી નીકળે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એ દેખાયા કરતું હોય, તેથી જ અવળું થાય ને! એ પૂર્વગ્રહો ને એ બધું જ નડે છે ને! 'ખરાબ છે, ખરાબ છે' એવો પૂર્વગ્રહ થયેલો, તે પછી વાણી નીકળે તો એવી ખરાબ જ નીકળે ને!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>મૃદુ-ઋજુ (વાણી) છૂટવા કાજે</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> કોઈ કઠોર ભાષા, તંતીલી ભાષા બોલે, તો તેના પ્રત્યે મૃદુ-ઋજુ ભાષા બોલો, એટલે એનો વાંક ના જુઓ, એવું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એનો તો વાંક જોવાનો ના હોય. એ કઠોર બોલે ને આપણે મૃદુ-ઋજુ બોલીએ.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એ કઠોર હોય, એનું હૃદય બહુ એવું હોય.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એ આપણે જોવાની જરૂર નથી. એ કઠોર બોલે તો આપણે મૃદુ બોલવું જોઈએ, કારણ કે આપણે છૂટવું છે. એને ગમે તે કરવું હોય તે કરે! એને બંધાવું ગમતું હોય કે છૂટવું ગમતું હોય તો એ જાણે, પણ આપણે તો છૂટવું છે. એટલે છૂટવાનો કામી બંધાવાની શરતો સ્વીકારે નહીં અને સામો માણસ 'એગ્રીમેન્ટ' કરાવી લેવા ફરતો હોય, એ કઠોર બોલે એટલે આપણે કઠોર બોલીએ, એ બંધાવાની શરત થઈ. આપણે તો છૂટવાના કામી જ છીએ. એ કઠણ બોલે તોય આપણે મૃદુ-ઋજુ ભાષા બોલવી જોઈએ. એ જવાબદાર નથી, એ તો ફાવે એવું બોલે. આપણે જવાબદાર છીએ. આપણે એક જ દિશામાં જવાનું છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>મારણ કઠોર ભાષા તણું</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> વાણીમાંથી કઠોરતા કેવી રીતે જાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એ તો આપણે વાણીએ એટલે જેવી વાળીએ એવી વળી જાય પછી, પણ અત્યાર સુધી કઠોર આપણે કરી હતી, લોકોને બિવડાવવા માટે, ફફડાવવા માટે.</p>
+            
+            <div aria-hidden="true" class="page-number">21</div>
+        </div>
+
+        <div class="page-container even-page" id="page-22">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એટલે આપણે એને પોષણ આપેલું.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> આપણે મોટી કરી હતી, ખરાબ કરી હતી, અને આપણે પાછી સુધારવી છે, તે આપણે સુધારી નાખો.</p>
+            
+            <p>કવિરાજ લખે છે ને, કે :</p>
+            
+            <p>"કંઠે બિરાજો હે દાદા, ઉચ્ચરાવો સવળી ભાષા."</p>
+            
+            <p>"હે 'દાદા'! કંઠે બિરાજો", એટલે વાણી સુધરી જાય. અહીં ગળે નિદિધ્યાસન કરીએ તોય વાણી સુધરી જાય.</p>
+            
+            <p>કઠોર ને તંતીલી ભાષા બોલાય નહીં. ભાષાના બધા જ દોષો આ બે શબ્દોમાં આવી જાય છે. એટલે નવરાશનો 'ટાઈમ' આવે તો 'દાદા ભગવાન' પાસે આપણે શક્તિઓ માગ માગ કરવી. કઢંગું બોલાતું હોય તો એની પ્રતિપક્ષી શક્તિ માગવી : "હે દાદા ભગવાન! મને કોઈ પણ દેહધારી જીવાત્મા સાથે કિંચિત્માત્ર પણ કઠોર ભાષા, તંતીલી ભાષા ક્યારેય પણ ન બોલાય, ન બોલાવાય કે બોલવા પ્રત્યે ન અનુમોદાય એવી પરમ શક્તિ આપો. કોઈ કઠોર ભાષા, તંતીલી ભાષા બોલે તો મને મૃદુ-ઋજુ ભાષા બોલવાની શક્તિઓ આપો."</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૃદુ-ઋજુ ભાષા એટલે શું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ઋજુ એટલે સરળ હોય અને મૃદુ એટલે નમ્રતાવાળી. અત્યંત નમ્રતાવાળી હોય ત્યારે 'મૃદુ' કહેવાય. એટલે સરળ ભાષા અને નમ્રતાવાળી ભાષાથી આપણે બોલવું અને એવી શક્તિ માગવી, તો એમ કરતાં કરતાં એ આવશે. કઠોર ભાષા બોલ્યા, દીકરાને ખરાબ લાગ્યું તો તેનો પસ્તાવો કરવો અને દીકરાનેય કહી દેવું કે, 'હું માફી માગું છું. હવે ફરી આવું નહીં બોલું.' આ જ વાણી સુધારવાનો રસ્તો છે!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>નિર્વિવાદી વાણી</h3>
+            
+            <p class="read-next"><strong>પ્રશ્નકર્તા:</strong> પસ્તાવો(પ્રતિક્રમણ) કર્યા પછી અમારી વાણી બહુ જ સરસ થઈ જશે, આ જન્મમાં જ?</p>
+            
+            <div aria-hidden="true" class="page-number">22</div>
+        </div>
+<div class="page-container odd-page" id="page-23">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> ત્યાર પછી તો ઓર જ જાતનું હશે. અમારી વાણી છેલ્લામાં છેલ્લી ઢબની નીકળે છે, એનું કારણ જ પ્રતિક્રમણ છે; અને નિર્વિવાદી છે, એનું કારણ પણ પ્રતિક્રમણ જ છે, નહીં તો વિવાદ જ હોય, બધે જ વિવાદી વાણી હોય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>આ છે સમજાવવાની સાચી રીત</h3>
+            
+            <p>કોઈ જગ્યાએ સારી વાણી બોલતા હશો ને? કે નહીં બોલતા હો? ક્યાં આગળ બોલતા હશો? જેમને 'બૉસ' માને છે, તે 'બૉસ' જોડે સારી વાણી બોલવાના ને 'અન્ડરહેન્ડ' જોડે ઝાપટ ઝાપટ કરવાના. આખો દહાડો 'તેં આમ કર્યું, તેં આમ કર્યું' કહ્યા કરે, તે આખી વાણી બધી બગડી જાય છે.</p>
+            
+            <p class="read-next">છોકરામાં ખરાબ ગુણો હોય તો મા-બાપ તેને ટૈડકાવે છે અને કહેતાં ફરે કે, 'મારો છોકરો તો આવો છે, નાલાયક છે, ચોર છે.' અલ્યા, એ એવું કરે છે, તે કરેલાને મેલ ને, પૂળો, પણ અત્યારે એના ભાવ ફેરવ ને! એના મહીંના અભિપ્રાય ફેરવ ને! એના ભાવ કેમ ફેરવવા, તે મા-બાપને આવડતું નથી, કારણ કે 'સર્ટિફાઈડ' મા-બાપ નથી. 'સર્ટિફિકેટ' નથી અને મા-બાપ થઈ ગયાં છે! છોકરાને જો ચોરીની કુટેવ પડી ગઈ હોય, તો મા-બાપ તેને ટૈડકાવ ટૈડકાવ કરે, માર માર કરે કે, 'તને અક્કલ નથી, તું આમ કરે છે, તેમ કરે છે' એમ ઝૂડ ઝૂડ કરે. આમ, મા-બાપ 'એક્સેસ' બોલે! હંમેશાંય 'એક્સેસ' બોલેલું 'હેલ્પ' ના કરે. એટલે છોકરો શું કરે? મનમાં નક્કી કરે કે, 'છો ને, એ બોલ્યા કરે, આપણે તો એવું કરવાના જ.' તે આ છોકરાને મા-બાપ વધારે ચોર બનાવે છે! દ્વાપર, ત્રેતા ને સતયુગમાં જે હથિયારો હતાં તે આજે કળિયુગમાં લોકોએ વાપરવા માંડ્યાં. છોકરાને ફેરવવાની રીત જુદી છે. એના ભાવ ફેરવવાના! એના પર પ્રેમથી હાથ ફેરવીને કહેવું કે, 'આવ. છો ને, તારી બા બૂમાબૂમ કરતી. એ બૂમાબૂમ કરે, પણ તેં આવી રીતે કોઈની ચોરી કરી, એવું કોઈ તારા ગજવામાંથી ચોરી જાય તો તને સુખ લાગે? તે વખતે તને મહીં કેવું દુઃખ થાય? એમ સામાનેય દુઃખ ના થાય?' તેવી આખી 'થિયરી' છોકરાને સમજાવવી પડે. એક વખત એને ઠસી જવું જોઈએ કે આ ખોટું છે. તમે એને</p>
+            
+            <div aria-hidden="true" class="page-number">23</div>
+        </div>
+
+        <div class="page-container even-page" id="page-24">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>માર માર કરો તો એનાથી તો છોકરાં હઠે ચડે છે. ખાલી રીત જ ફેરવવાની છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ઓછું બોલવું ઉત્તમ</h3>
+            
+            <p>આ કાળમાં ઓછું બોલવું એના જેવું એકુય નથી. આ કાળમાં બોલ પથ્થર જેવા વાગે એવા નીકળે છે, અને દરેકના એવા જ હોય, એટલે બોલવાનું ઓછું કરી નાખવું સારું. કોઈને કશું કહેવા જેવું નથી. કહેવાથી વધારે બગડે છે. એને કહીએ કે, 'ગાડીએ વહેલો જા' તો એ મોડો જાય અને કશું ના કહીએ તો 'ટાઈમે' જાય. આપણે ના હોઈએ તો બધું ચાલે એવું છે. આ તો પોતાનો ખોટો અહંકાર છે. જે દહાડાથી છોકરાં જોડે કચકચ કરવાનું બંધ કરશો તે દહાડાથી છોકરાં સુધરશે. તમારા બોલ સારા નીકળતા નથી, એનાથી સામો અકળાય છે. તમારો બોલ એ સંઘરતો નથી, ઊલટા એ બોલ પાછા આવે છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>કહેવાની છૂટ વીસ વર્ષ સુધી</h3>
+            
+            <p>છોકરાંનો અહંકાર જાગે ત્યાર પછી તેને કશું કહેવાય નહીં, અને આપણે શું કામ કહીએ? ઠોકર વાગશે તો શીખશે. છોકરાં પાંચ વર્ષનાં થાય ત્યાં સુધી કહેવાની છૂટ અને પાંચથી સોળવાળાને વખતે બે ટપલી મારવીયે પડે, પણ વીસ વર્ષનો જુવાન થયા પછી એનું નામેય ના લેવાય, કશું અક્ષરેય બોલાય નહીં, 'બોલવું' એ ગુનો કહેવાય, નહીં તો કો'ક દહાડો બંદૂક મારી દે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> પણ ખોટું બોલતા હોય કે ખોટું કરતા હોય, તોય આપણે બોલવું નહીં?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> બોલવાનું એવું કહેવાય, 'આમ ન થાય તો સારું, આવું ન થાય તો સારું' આપણે એવું કહેવાય, પણ આપણે એમના 'બૉસ'(ઉપરી) હોઈએ એવી રીતે વાત કરીએ છીએ ને, તેથી ખોટું લાગે છે. ખરાબ શબ્દ હોય (ખોટું લાગે તેવા) એને વિનયથી કહેવા જોઈએ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>વઢવાથી કોઈ ના સુધરે</h3>
+            
+            <p>વઢવાથી માણસ ચોખ્ખું કહે નહીં ને કપટ કરે. આ બધાં કપટ વઢવાથી જ જગતમાં ઊભાં થયાં છે.</p>
+            
+            <div aria-hidden="true" class="page-number">24</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-25">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>વઢવું, એ મોટામાં મોટો અહંકાર છે, ગાંડો અહંકાર છે. વઢેલું કામનું ક્યારે કહેવાય? પૂર્વગ્રહ વગર વઢે તે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>સીધા થવાનો માર્ગ</h3>
+            
+            <p>ટૈડકાવવાની જગ્યાએ તમે ના ટૈડકાવો, તેનાથી 'વાઈફ' વધારે સીધી રહે. જે ગુસ્સો નથી કરતો એનો તાપ બહુ સખત હોય. અમે કોઈને કોઈ દહાડોય વઢતા નથી, છતાં અમારો તાપ બહુ લાગે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> તો પછી એ સીધી થઈ જાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> સીધા થવાનો માર્ગ જ પહેલેથી આ છે. તે કળિયુગમાં લોકોને પોષાતું નથી, પણ એના વગર છૂટકો નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ઠપકો આપો, પણ પ્રેમથી</h3>
+            
+            <p>સામા માણસને તમો વઢો તોય એને એમાં પ્રેમ દેખાય. તમે ઠપકો આપો તોય એને તમારામાં પ્રેમ દેખાય કે 'ઓહોહો! મારા ફાધરનો મારા પર કેટલો બધો પ્રેમ છે!!' ઠપકો આપો, પણ પ્રેમથી આપો તો સુધરે. આ 'કૉલેજો'માં જો 'પ્રોફેસર' ઠપકો આપવા જાય તો 'પ્રોફેસરો'ને બધા મારે.</p>
+            
+            <p>પ્રેમસ્વરૂપ થશો ત્યારે લોકો તમારું સાંભળશે. પ્રેમસ્વરૂપ ક્યારે થવાય? કાયદા ના ખોળો ત્યારે, જગતમાં કોઈનોય દોષ ન જુઓ ત્યારે.</p>
+            
+            <p>કોણ વઢી શકે આ જગતમાં? જેને લક્ષ્મીની ભીખ નથી, જેને વિષયની ભીખ નથી, જેને માનની ભીખ નથી, કીર્તિની ભીખ નથી, દેરા બાંધવાની ભીખ નથી, શિષ્યોની ભીખ નથી, કોઈ પણ જાતની ભીખ નથી એવા "જ્ઞાની પુરુષ" ગમે તેને વઢી શકે.</p>
+            
+            <p>સામો સુધરે એ માટે પ્રયત્નો કરવા જોઈએ, પણ જે પ્રયત્નો 'રિઍક્શનરી' હોય એવા પ્રયત્નોમાં ના પડવું. આપણે એને ટૈડકાવીએ ને એને ખરાબ લાગે, એ પ્રયત્ન ના કહેવાય. પ્રયત્ન અંદર કરવા જોઈએ, સૂક્ષ્મ રીતે! સ્થૂળ રીતે જો આપણને ના-ફાવતું હોય તો સૂક્ષ્મ રીતે પ્રયત્નો કરવા જોઈએ.</p>
+            
+            <div aria-hidden="true" class="page-number">25</div>
+        </div>
+<div class="page-container even-page" id="page-26">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>સામો આવ્યો તે પહેલાં તેના શુદ્ધાત્મા જોડે વાતચીત કરી લેવાની અને તે પહેલાં બધું એને ઠંડું પાડી દેવાનું (પ્રતિક્રમણભાવથી) અને ત્યાર પછી આપણે બોલ્યા વગર રહેવાનું. આ સૂક્ષ્મ કળા છે, તે તમને હું ટૂંકમાં કહી દઉં છું.</p>
+            
+            <p>વધારે ઠપકો ના આપવો હોય તો થોડાકમાં કહી દેવું જોઈએ કે, 'આપણને આ શોભે નહીં!' બસ, આટલું જ કહીને બંધ રાખવું. કહેવું તો પડે, પણ કહેવાની રીત હોય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> વ્યવહારમાં કોઈ ખોટું કરતો હોય તેને ટકોર કરવી પડે છે, તેનાથી તેને દુઃખ થાય છે, તો કેવી રીતે એનો નિકાલ કરવો?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ટકોર તો કરવી પડે, પણ કહેતાં આવડવું જોઈએ. કહેતાં ના આવડે, વ્યવહાર ના આવડે એટલે અહંકારસહિત ટકોર થાય, એટલે પાછળથી એનું પ્રતિક્રમણ કરવું. તમે સામાને ટકોર કરો એટલે સામાને ખોટું તો લાગશે, પણ એનું પ્રતિક્રમણ કર કર કરશો, એટલે છ મહિને, બાર મહિને વાણી એવી નીકળશે કે સામાને મીઠી લાગે. અત્યારે તો 'ટેસ્ટેડ' વાણી જોઈએ, 'અનટેસ્ટેડ' વાણી બોલવાનો અધિકાર નથી. આ રીતે પ્રતિક્રમણ કરશો તો ગમે તેવું હશે તોય સીધું થઈ જશે!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અબોલા, નથી ઉપાય સાચો</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> અબોલા લઈ વાતને ટાળવાથી, એનો 'નિકાલ' થઈ શકે?</p>
+            
+            <p class="read-next"><strong>દાદાશ્રી:</strong> ના થઈ શકે. આપણે તો સામે મળે તો 'કેમ છો? કેમ નહીં?' એમ કહેવું. સામો જરા બૂમાબૂમ કરે તો આપણે જરા ધીમે રહીને 'સમભાવે નિકાલ' કરવો. એનો 'નિકાલ' તો કરવો જ પડશે ને, જ્યારેત્યારે? અબોલા રહો, તેથી કંઈ 'નિકાલ' થઈ ગયો? એ 'નિકાલ' થતો નથી એટલે તો અબોલા ઊભા થયા છે. અબોલા એટલે બોજો, જેનો 'નિકાલ' ના થયો એનો બોજો. આપણે તો તરત એને ઊભા રાખીને કહીએ, 'ઊભા રહો, અમારી કંઈ ભૂલ હોય તો મને કહો, મારી બહુ ભૂલો થાય છે. તમે તો બહુ હોશિયાર-ભણેલા, તે તમારી ના થાય, પણ હું ભણેલો ઓછું, એટલે મારી</p>
+            
+            <div aria-hidden="true" class="page-number">26</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-27">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>બહુ ભૂલો થાય' એવું કહીએ એટલે એ રાજી થઈ જાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એવું કહેવાથીય નરમ ના પડે, તો શું કરવું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> નરમ ના પડે, તો આપણે શું કરવાનું? આપણે કહી છૂટવું, પછી શો ઉપાય? જ્યારેત્યારે કો'ક દહાડો નરમ થશે. ટૈડકાવીને નરમ કરો, તો તેનાથી કશું નરમ થાય નહીં. આજે નરમ દેખાય, પણ એ મનમાં નોંધ રાખી મેલે ને આપણે જ્યારે નરમ થઈએ તે દહાડે તે બધું પાછું કાઢે. એટલે જગત વેરવાળું છે! કુદરતનો નિયમ એવો છે કે વેર રાખવું, મહીં પરમાણુઓ સંગ્રહી રાખે, માટે આપણે પૂરેપૂરો 'કેસ' ઊંચે મૂકી દેવો.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>સુધારવા જતાં</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપણે ગમે તેટલું કરીએ, પણ સામો ના સુધરે, તો શું કરવું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> પોતે સુધર્યા નથી ને લોકોને સુધારવા ગયા, તેનાથી લોક ઊલટા બગડ્યા, સુધારવા જાય કે બગડે. પોતે જ બગડેલો હોય, તો શું થાય? આપણે સુધરવું સહેલામાં સહેલું છે. આપણે સુધર્યા ના હોઈએ ને બીજાને સુધારવા જઈએ, એ 'મીનિંગલેસ' છે, ત્યાં સુધી આપણા શબ્દ પાછા પડે. તમે કહો કે, 'આવું ના કરીશ', ત્યારે સામો કહે કે, 'જાવ, અમે તો એવું જ કરવાના.' આ તો સામો ઊલટો વધારે અવળો ફર્યો!</p>
+            
+            <p>આને સુધારવા માટે તમે કહો, તેને સુધારવા માટે કહો, પણ કહેવાથી એને જે દુઃખ થયું તેની અસર તમારા ઉપર આવશે. કહેવાનો વાંધો નથી, પણ એવું કહો કે એને દુઃખ ના પડે અને એનો પડઘો પાછો તમને ના પડે. આપણે એ નક્કી કરી રાખવું કે આપણે કોઈને કિંચિત્માત્ર દુઃખ દેવું નથી!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>સત્ય?</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> બે વ્યક્તિઓ છે. ધારો કે આમનું અમુક દૃષ્ટિએ સાચું છે, પેલાની અમુક વસ્તુ ખોટી છે. હવે આ સાચું ઠેરવવા પ્રયત્ન કર કર કરે, તો હવે પેલો સામેવાળો ના માનતો હોય, તો એમણે છોડી દેવું જોઈએ? ઢીલું મૂકી દેવું જોઈએ?</p>
+            
+            <div aria-hidden="true" class="page-number">27</div>
+        </div>
+
+        <div class="page-container even-page" id="page-28">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> તો ઢીલું ના મૂકે તો શું થાય?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> ખેંચાખેંચ કરીએ તો તૂટી જાય.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> અને સત્ય કશું હોતું જ૮ નથી.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આ તો વ્યાવહારિક સત્ય છે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> વ્યવહારમાં પણ સાચું હોતું જ નથી. સાચું એનું નામ કહેવાય કે જે બીજાને 'ઍક્સેપ્ટેબલ'(સ્વીકાર્ય) થાય. વચ્ચે ગૂંચારા જ નહીં, એનું નામ સાચું. અમે બોલીએ તે બધું સાચું હડહડાટ, પછી બહારવાળા તોલ કરે કે આ નથી બરાબર ને આ બરાબર છે! પણ અમે પાછા એની પાસે બોલીએ તોય ગૂંચાય નહીં. ગૂંચાય નહીં, એ સત્ય!</p>
+            
+            <p>સત્ય-અસત્ય કોઈ બાપોય પૂછતું નથી. માણસે વિચાર તો કરવો જોઈએ કે મારું સત્ય છે, છતાં સામો માણસ કેમ સ્વીકારતો નથી? કારણ, સત્ય વાત કહેવા પાછળ આગ્રહ છે, કચકચ છે.</p>
+            
+            <p>ખરું હોય ને આગ્રહ ના હોય, કચકચ ના હોય તો સામાના હૃદયમાં ચોંટી જાય ને ખરું હોય, છતાં કચકચ કરે કે આગ્રહ રાખે તો તે સામાને સ્પર્શ ના થાય.</p>
+            
+            <p>આપણી સાચી વાત છે અને સામાની ખોટી છે, પણ અથડામણ થઈ તો તે ખોટું છે.</p>
+            
+            <p>મતભેદ પડે ત્યાં આપણા શબ્દો પાછા ખેંચી લેવા, એ ડાહ્યા પુરુષોની નિશાની!</p>
+            
+            <p>પોતાની વાતનું રક્ષણ કરવું, તે જ મોટામાં મોટી હિંસા છે. પોતાની વાત સાચી જ છે તેવું ઠસાવવા જાય, તે જ હિંસા છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>સત્ય : હિત, મિત, પ્રિય</h3>
+            
+            <p class="read-next">એકલું સત્ય નહીં, નાગું સત્ય નહીં! સત્ય પ્રિય, હિતકારી ને મિત, એવું જોઈએ. એટલે કોઈ ઘરાક આવ્યો એને પ્રિય લાગે એવી રીતે વાતચીત કરવાની,</p>
+            
+            <div aria-hidden="true" class="page-number">28</div>
+        </div>
+<div class="page-container odd-page" id="page-29">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>એને હિતકારી હોય એવી વાતચીત કરીએ. એવી વસ્તુ ના આપીએ કે જે એને ઘેર જઈને નકામી થઈ જાય! ત્યાં આપણે એને કહીએ, 'ભઈ, આ વસ્તુ તારા કામની નથી.' ત્યારે કહેશે કે, 'આવું સાચું કહી દઈએ તો અમારે ધંધો કેમ કરવો?' અલ્યા, તું જીવે છે શા આધારે? કયા હિસાબથી તું જીવી રહ્યો છે? જે હિસાબથી તું જીવી રહ્યો છે, એ જ હિસાબથી ધંધો ચાલશે. કયા હિસાબથી આ લોકો સવારમાં ઊઠતા હશે? રાતે સૂઈ ગયા ને મરી ગયા તો? માટે આપણે સવારે ના ઊઠીએ, તો શું કરીએ? ઘણા માણસો એવા સવારે પાછા ઊઠેલા નહીં! એ કયા આધારે? એટલે ભડકવાની જરૂર નથી. આપણે સત્ય, પ્રિય, હિત ને મિત રીતે કામ લેવું. આ વ્યવહાર-સત્ય છે, એટલે અહીં આગળ પ્રામાણિકપણે માણસે રહેવું જોઈએ. જ્યાં સુધી ભ્રાંતિ છે ત્યાં સુધી નિષ્ઠા એટલે કોઈનું આપણે પડાવી નહીં લેવાનું, નૈતિક ધોરણથી રહેવું જોઈએ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અંતિમ વ્યવહાર-સત્ય</h3>
+            
+            <p>સત્ય કોને કહેવાય? કોઈ જીવને વાણીથી દુઃખ ના થાય, વર્તનથી દુઃખ ના થાય અને મનથી પણ એને માટે ખરાબ વિચાર ના કરાય, એ મોટામાં મોટું સત્ય છે, મોટામાં મોટો સિદ્ધાંત છે. આ 'રિયલ સત્ય' નથી, આ છેલ્લામાં છેલ્લું વ્યવહાર-સત્ય છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ઓળખો બીજને, ફળને</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આ સમાજમાં ઘણા લોકો જૂઠું બોલે છે અને ચોરી-લબાડી બધું કરે છે ને બહુ સારી રીતે રહે છે. સાચું બોલે છે એને બધી તકલીફો આવે છે. તો હવે કઈ 'લાઈન' પકડવી? જૂઠું બોલીને પોતાને થોડી શાંતિ રહે, એવું કરવું? કે પછી સાચું બોલવું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવું છે ને, થોડું જૂઠું બોલ્યા તેનું તો ફળ આવ્યું છે, અહીં ચાખો છો નિરાંતે. પેલો થોડું સાચું બોલ્યો તેનું ફળ એને આવ્યું છે. હવે અત્યારે જૂઠું બોલે છે તો એનું ફળ એને આવશે. તમે સાચું બોલશો તો એનું ફળ આવશે. આ તો ફળ ચાખે છે. ન્યાય છે, બિલકુલ ન્યાય છે!</p>
+            
+            <div aria-hidden="true" class="page-number">29</div>
+        </div>
+
+        <div class="page-container even-page" id="page-30">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>એક માણસને આજે પરીક્ષાનું 'રિઝલ્ટ' આવ્યું ને એ 'પાસ' થયો અને આપણે નાપાસ થયા. 'પાસ' થનારો માણસ આજે રખડ રખડ કરતો હોય, પણ પરીક્ષા આપતી વખતે 'કરેક્ટ' આપી હોય.</p>
+            
+            <p>એટલે આ બધું જે આવે છે એ ફળ આવે છે, તે ફળને શાંતિપૂર્વક ભોગવી લેવું, એનું નામ પુરુષાર્થ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>આત્માર્થે અસત્ય હિતકારી</h3>
+            
+            <p>જૂઠું બોલીનેય આત્માનું કરતા હશો તો વાંધો નથી અને સાચું બોલીનેય દેહનું હિત કરશો તો વાંધો છે. સાચું બોલીને ભૌતિકનું હિત કરશો તોય વાંધો છે, પણ જૂઠું બોલીને આત્મા માટે કરશો ને, તો હિતકારી છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>જૂઠનાં પ્રેરક કારણો</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મનુષ્ય વિના કારણ જૂઠું બોલવા પ્રેરાય છે, આની પાછળ કયું કારણ કામ કરતું હશે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> કારણ તો ખરું, એ ગુપ્ત કારણ હોય! કારણ વગર તો કોઈ દહાડો જૂઠું બોલે જ નહીં. એ તો લાગે એવું આપણને કે કંઈ કારણ હોતું નથી. ક્રોધ-માન-માયા-લોભને લીધે કરે છે એ.</p>
+            
+            <p>કોઈ પણ વસ્તુ મેળવવી છે : કાં તો માન મેળવવું છે, લક્ષ્મી મેળવવી છે, કંઈ પણ જોઈએ છે, એટલા હારુ જૂઠું બોલે છે અગર તો ભય છે, ભયનો માર્યો જૂઠું બોલે છે. અંદર છૂપો છૂપો ભય કે 'કોઈ મને શું કહેશે?' એવું કંઈ પણ ભય હોય, પછી ધીમે ધીમે જૂઠાની ટેવેય પડી જાય, પછી વગર ભયે જૂઠું બોલી જાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> કોઈનું સારું કામ કરવા માટે આપણે જૂઠું બોલીએ, તો કોને દોષ લાગે? આવું કરી શકાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> જૂઠું બોલે તેને દોષ લાગે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એવું?</p>
+            
+            <div aria-hidden="true" class="page-number">30</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-31">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> ત્યારે બીજા કોને? એને કોણે ઊંચો બાંધ્યો હતો, તે એ જૂઠું બોલીને પણ પેલાના હારુ કરે? બાકી, કોઈના માટે સારાં કામ કરો તો બને ત્યાં સુધી જૂઠું બોલવાનું નહીં, કોઈના સારા માટે ચોરી ના કરવી, કોઈના સારા માટે હિંસા ના કરવી. બધી આપણી જ જોખમદારી છે!</p>
+            
+            <p>આ સ્ત્રીઓ વાતવાતમાં જૂઠું શાથી બોલે, તે હું જાણું ને! હીરાબાને હું પૂછું કે, 'ક્યાં ગયાં હતાં?' ત્યારે એ ગયાં હોય આ બાજુ ને કહેશે, 'આમ.' પછી હું સમજું કે આ ભયને માટે બોલે છે. સ્ત્રીઓમાં આ ગ્રંથિ પડેલી હોય છે, વગર કામની. હવે કશું આપણે વઢતા ના હોઈએ, તોય એ ગ્રંથિ પડેલી હોય છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>જૂઠ, પણ ગુનાહિત વૃત્તિનો અભાવ</h3>
+            
+            <p>એવું બીજાય બોલે, પણ તે હું હસું, હું સમજું. હું તો ગુનો ક્યાં આગળ પકડું? કે ગુનાહિત વૃત્તિ છે કે નહીં, એટલું જ હું જોઈ લઉં. ગુનાહિત એટલે કંઈ છેતરવાની વૃત્તિ, 'ઇન્સિન્સિયારિટી' છે કે નહીં, તે જોઈ લઉં. બીજું બધું હું ના જોઉં, બીજો બધો તો વ્યવહાર છે. હું પૂછું, 'ક્યાં ગયાં હતાં?' ત્યારે કહે, 'અમુક જગ્યાએ.' ત્યારે હું કહું કે, 'કશો વાંધો નહીં.' 'લેટ-ગો' કરું!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>જૂઠનાં જોખમો</h3>
+            
+            <p>આ ઘડિયાળ તમે નેવું રૂપિયામાં લીધું ને વેચવા કાઢ્યું એકસો દસ રૂપિયામાં. તે મૂઓ 'ટ્રિક' વાપરી કહે કે, 'મેં તો એકસો દસ રૂપિયામાં લીધું છે.' તે એકસો દસમાં જ વેચે! એના કરતાં ચોખ્ખેચોખ્ખું કહી દે ને, કે 'નેવુંમાં લીધું છે ને એકસો દસમાં વેચવું છે.' તે સામાને લેવું હશે તો તો એકસો દસ રૂપિયા આપીને લઈ જશે. 'વ્યવસ્થિત' એવું છે કે એકસો દસ રૂપિયા તને મળવાના જ છે, તું 'ટ્રિક' વાપર કે ન વાપર. જો આટલું બધું હિસાબી છે, તો 'ટ્રિક' વાપરી મફતમાં શા માટે જોખમદારી વહોરવી? આ તો 'ટ્રિક'નું જોખમ વહોર્યું, તેનું ફળ અધોગતિ છે. જૂઠું બોલવાથી શું થતું હશે? વિશ્વાસ ઊઠી જાય આપણા પરથી! ને વિશ્વાસ ઊઠી ગયો એટલે માણસની કિંમત ખલાસ!!</p>
+            
+            <div aria-hidden="true" class="page-number">31</div>
+        </div>
+<div class="page-container even-page" id="page-32">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપણે જૂઠું બોલ્યા હોઈએ, તે પણ કર્મ બાંધ્યું જ કહેવાય ને?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ચોક્કસ વળી! પણ જૂઠું બોલ્યા હોય ને, તેના કરતાં જૂઠું બોલવાના ભાવ કરો છો તે 'વધારે કર્મ' કહેવાય. જૂઠું બોલવાનો અભિપ્રાય જ છોડી દેવો જોઈએ અને જૂઠું બોલી જવાય તો પશ્ચાત્તાપ કરવો જોઈએ.</p>
+            
+            <p>જ્યારે જૂઠું બોલાય અને તમને ખબર પડે કે આ જૂઠું બોલાયું કે તરત 'દાદા'ની પાસે માફી માગવાની કે, 'દાદા, મારે જૂઠું નથી બોલવું, છતાં જૂઠું બોલી જવાયું, મને માફ કરો, હવે ફરી જૂઠું નહીં બોલું.' ફરી એવું થાય તો ફરી માફી માગ માગ કર્યા કરવાની. માફી માગી એટલે નોંધ ના થાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>આમ છૂટાય જૂઠથી</h3>
+            
+            <p>'હવે આજથી જૂઠું નહીં બોલું, જૂઠું બોલવું એ મહાપાપ છે, મહાદુઃખદાયી છે અને જૂઠું બોલવું એ જ બંધન છે' એવો જો અભિપ્રાય તમારાથી થઈ ગયો તો તમારાં જૂઠું બોલવાનાં પાપો બંધ થઈ જશે અને પૂર્વે જ્યાં સુધી આ ભાવ બંધ નહોતા કર્યા, ત્યાં સુધી જે એનાં 'રિઍક્શન'(પ્રતિક્રિયા) છે, એટલાં બાકી રહેશે, તેટલો હિસાબ તમારો આવશે. તમારે પછી તેટલું ફરજિયાત જૂઠું બોલવું પડશે, તો તેનો પશ્ચાત્તાપ કરી લેજો.</p>
+            
+            <p>હવે પશ્ચાત્તાપ કરો તો પણ પાછું જે જૂઠું બોલ્યા તે કર્મફળનુંય ફળ આવશે અને પાછું તે તો ભોગવવું જ પડશે, તે લોકો તમારે ઘરેથી બહાર જઈ તમારી બદબોઈ કરશે કે, 'શું આ ચંદુભાઈ, ભણેલા માણસ, આવું જૂઠું બોલ્યા? એમની આ લાયકાત છે?' એટલે બદબોઈનું ફળ ભોગવવું પડશે પાછું, પશ્ચાત્તાપ કરશો તો પણ.</p>
+            
+            <p>એટલે આપણે શું કહીએ છીએ? 'જૂઠું બોલવાનો' તને અભિપ્રાય નથી ને, તો તારી જવાબદારીનો 'એન્ડ'(અંત) આવી જાય છે.</p>
+            
+            <p>જૂઠું બોલવું, એ જીવનના અંત બરાબર છે. જીવનનો અંત લાવવો અને જૂઠું બોલવું, એ બે સરખું છે, એવું 'ડિસાઇડ'(નક્કી) કરવું પડે અને પાછું સત્યનું પૂંછડું ના પકડશો.</p>
+            
+            <div aria-hidden="true" class="page-number">32</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-33">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>આપણે મનમાં નક્કી કરી રાખવું જોઈએ કે વ્યવહાર-સત્ય મારે સંપૂર્ણ, સર્વાંશે પાળવું છે! જે વ્યવહાર-સત્ય પાળે છે તે નિશ્ચય-સત્ય પાળી શકે છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>કાળને અનુરૂપ યથાર્થ ધર્મ</h3>
+            
+            <p>એટલે અમે આ કાળના માણસોને ધર્મ જાણવો હોય તો એને શું શિખવાડીએ છીએ?</p>
+            
+            <p>'જૂઠું બોલવાનો' પ્રકૃતિગુણ છે એટલે બોલ્યા વગર રહે નહીં. (માટે) તારાથી ખોટું બોલાઈ જાય તેનો વાંધો નથી, મનમાં તું જૂઠું બોલ્યો તેનો વાંધો નથી, પણ હવે તું એનું આ રીતે પ્રતિક્રમણ કર ને નક્કી કર કે ફરી આવું નહીં બોલું!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અમે પ્રતિક્રમણ કરવાનું શિખવાડીએ</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> પ્રતિક્રમણ ના કરે, તો શું થાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ત્યાં ને ત્યાં એ દાવા પડ્યા રહે. 'કોર્ટ'માં લોકોએ દાવા માંડ્યા હોય, તેનો 'નિકાલ' ના કરીએ, તો શું થાય?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એમ ને એમ પડ્યું રહે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> દાવા ઊભા રહ્યા, પ્રતિક્રમણ ના કરે તો. આલોચના-પ્રતિક્રમણ-પ્રત્યાખ્યાન, એનું નામ જ મોક્ષમાર્ગ. પોતાના ગુના જાહેર કરવા, પછી 'તે ખોટું છે' તેવો પશ્ચાત્તાપ કરવો અને 'ફરી નહીં કરું' એવો નિશ્ચય કરવો, આ મોક્ષમાર્ગ!</p>
+            
+            <p>મોક્ષમાર્ગમાં ક્રિયાકાંડ કે એવું કશું હોતું નથી. ફક્ત સંસારમાર્ગમાં ક્રિયાકાંડ હોય છે. સંસારમાર્ગ એટલે જેને ભૌતિક સુખો જોઈતાં હોય, બીજું જોઈતું હોય, તેના માટે ક્રિયાકાંડ છે. મોક્ષમાર્ગમાં આવું કશું હોતું નથી. મોક્ષમાર્ગ એટલે શું? આલોચના-પ્રતિક્રમણ-પ્રત્યાખ્યાન! તે આપણો મોક્ષમાર્ગ આલોચના-પ્રતિક્રમણ-પ્રત્યાખ્યાનનો છે, અહીં ક્રિયાકાંડ ને એવું બધું ના હોય.</p>
+            
+            <p class="read-next">એટલે લોકોને મનમાં એમ થાય કે આ લોકો('અક્રમમાર્ગ'વાળાઓ) તો</p>
+            
+            <div aria-hidden="true" class="page-number">33</div>
+        </div>
+
+        <div class="page-container even-page" id="page-34">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>વ્રત-નિયમ કરતા નથી. અલ્યા, નથી કરવાના! વ્રત-નિયમ મોક્ષમાર્ગ માટે નથી. જેને મોક્ષે જવું હોય તો આલોચના-પ્રતિક્રમણ-પ્રત્યાખ્યાનની ગાડીમાં બેસી જ જવાનું, હડહડાટ! નિરંતર ચોવીસેય કલાક આલોચના-પ્રતિક્રમણ-પ્રત્યાખ્યાન જ કર્યા કરવાનું.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>વચનબળ</h3>
+            
+            <p>વાણીના હિસાબના જે જે કાયદા લાગુ પડે તે પાળીએ તો સરસ્વતીદેવી ખુશ રહે. વાણીનો દુરુપયોગ કરું, જૂઠું બોલું, પ્રપંચ કરું, તો પછી સરસ્વતીદેવી કેમ રાજી થાય? મહીં છે એ ના બોલું તો તારી પર સરસ્વતી કેવી રીતે રાજી થાય? આજે કોઈનું વચનબળ શાથી નથી રહ્યું? કારણ કે વાણીના કાયદા નથી પાળ્યા.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>આમ વચનબળ નબળું પડે</h3>
+            
+            <p>આજે વચનબળ કેવાં હોય? બાપ દીકરાને કહે કે, 'ભાઈ, ઊભો થા' તો? ત્યારે દીકરો આડો થઈને સૂઈ જાય! પોતાનો દીકરો ના માને. આ વચનબળ કેવી રીતે જતું રહ્યું? વાણી 'લૂઝ' રીતે વાપરી છે તેથી. વાણીથી લોકોને મુશ્કેલીમાં મૂક્યા, જૂઠ-કપટ-બદમાશી, હેરાનગતિ કરીને લોકોને દુઃખ થાય એવી વાણી બોલ્યા. આમ, વાણીના બધા પર્યાયો ખરાબ કરી નાખ્યા છે, તેથી બધી વાણી નબળી પડતી જાય, 'વીક' થતી જાય અને 'વીક' થતી જાય એટલે કાર્યકારી ના થાય એ. પછી અહંકારે કરીને કાર્યકારી કરવી પડે કે 'જવું જ પડશે, કરવું જ પડશે.' બાકી, આમ સહેજે કાર્યકારી ના હોય.</p>
+            
+            <p>છોકરાને ટૈડકાવે, 'સાલા, સીધો બેસ', તેથી છોકરા આગળ વચનબળ ના રહે. જો વાણી એવી નીકળે કે સામાના હૃદયને ઘા કરે, તો બીજા ભવમાં વાણી હપુચી ખેંચાઈ જાય, દસ-પંદર વર્ષ મૂંગો રહે.</p>
+            
+            <p>વાણીથી કેટલાંકને બિવડાવ્યાં, કૂતરાંબે બિવડાવ્યાં, જૂઠું બોલ્યા, પ્રપંચ બોલ્યા, એ 'વાણીનો દુરુપયોગ કર્યો' કહેવાય, તેથી વચનબળ તૂટી જાય. એકલું જ સત્ય બોલો અને પાછો સત્યનો આગ્રહ ના પકડી રાખો, તો વચનબળ પાછું ઉત્પન્ન થાય.</p>
+            
+            <div aria-hidden="true" class="page-number">34</div>
+        </div>
+<div class="page-container odd-page" id="page-35">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>વચનને સિદ્ધ તો કરવું પડશે ને? વચનબળ માટે વચનના નિયમોમાં તો આવવું પડશે ને?</p>
+            
+            <p>વચનબળ કોને હોય? જેને જગત સંબંધી કોઈ સ્પૃહા ના હોય, પછી ભલે આત્મા પ્રાપ્ત ના કર્યો હોય! એક પણ શબ્દ મશ્કરી માટે ના વાપર્યો હોય, એક પણ શબ્દ ખોટો સ્વાર્થ, પડાવી લેવા માટે ના વાપર્યો હોય, વાણીનો દુરુપયોગ ના કર્યો હોય, પોતાનું માન વધે એટલા માટે વાણી ના બોલ્યા હોય તો એનું વચનબળ સિદ્ધ થાય.</p>
+            
+            <p>"જ્ઞાની પુરુષ"નો એક શબ્દ આરપાર નીકળી ગયો હોય તો તેનો સર્વસ્વ રોગ કાઢી નાખે. આ વાણી અંદર ઊતરી ગઈ હોય, પછી એ નીકળે નહીં, બહુ વચનબળ, જબરદસ્ત.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌન રાખે તો વચનબળ વધે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ના, એનાથી વચનબળ ના આવે. વચનબળ તો 'કોઈ માણસને દુઃખ થાય જ નહીં' એવી વાણી થાય ત્યારે ઉત્પન્ન થાય. દુશ્મનનેય દુઃખ ના થાય એવી વાણી હોય!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>મહિમા મૌન તણો</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌન વિશે આપ કંઈક કહો.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> દરેક શબ્દ બોલવો જોખમ ભરેલો છે, માટે જો બોલતાં ના આવડે તો મૌન રહેવું સારું. ધર્મમાં બોલો તો ધર્મનું જોખમ અને વ્યવહારમાં બોલો તો વ્યવહારનું જોખમ. વ્યવહારનું જોખમ તો ઊડી જાય, પણ ધર્મનું જોખમ બહુ ભારે. ધર્મની બાબતમાં એનાથી બહુ ભારે અંતરાય પડે.</p>
+            
+            <p>મૌન રહેવાથી અક્કલહીણા માણસો 'શાણા' ગણાય. વખતે કહે કે, 'તમારામાં છત નથી' તો મૌન રહેવું અને તે વખતે જો આપણે સામા થઈએ તો પેલાને યાદ રહેશે અને કહેશે કે, 'આ તો છત વગરનો જ છે.' સંસારમાં બહુ બોલ બોલ કરવાથી રોફ તૂટી જાય.</p>
+            
+            <div aria-hidden="true" class="page-number">35</div>
+        </div>
+
+        <div class="page-container even-page" id="page-36">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <h3><span aria-hidden="true">➤ </span>મૌન તપોબળ</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌનને 'તપોબળ' કહે છે, તે કયા અર્થમાં?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌન તપોબળ એટલે માણસ અમુક જગ્યાએ મૌન ના રહી શકે ત્યાં જો મૌન રહે તો એ મૌન 'તપોબળ'માં જાય. નોકરે પ્યાલો ફોડ્યો, ત્યાં મૌન રહે તો 'તપ'માં જાય. એટલે 'મૌન' જેવી કડકાઈ આ જગતમાં કોઈ નથી. બોલે ને, તો કડકાઈ બધી વેડફાઈ જાય. મોટામાં મોટું તપ, તે મૌન. બાપ જોડે ઝઘડો થાય ત્યાં મૌન પકડે તો તપ થાય. મૌન તપોબળ તો બહુ કામ કાઢી નાખે, આખા જગતનું કલ્યાણ કરી નાખે. તેથી કવિએ લખ્યું છે ને,</p>
+            
+            <p>"સત્પુરુષનું મૌન તપોબળ,<br>નિશ્ચય આખા જગને તારે!"</p>
+            
+            <p style="text-align: right!important;">-કવિરાજ નવનીત</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> પછી તો મૌન થઈ જાય ને?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ભલે ને, મૌન થઈ જાય. મૌન, એ જ આ જગતનું સરવૈયું છે. છેવટે 'મૌન' ઉપર આવવા માટે કહ્યું, કારણ કે 'મૌન' એ તો ખરું 'જોવાનું' સાધન છે. વ્યવહારમાં મૌન લે છે, એ તો જગત કેવી રીતે ચાલે છે એ 'જોવાનું' સાધન છે. 'ટાઈમ' થાય ને બીજું અમુક રહીયે જાય અહીં, તો આપણે 'લેટ-ગો' કરવું પડે. જ્યારે મૌન થશે ત્યારે જગત સમજાયા ગણાશે.</p>
+            
+            <p>જેટલા 'સેન્સિટિવ' હોય એણે મૌન રાખવાની જરૂર! મૌન રાખવા કરતાં તો આપણી વાણી બીજાને શી અસર કરે છે, એ લક્ષમાં હોય તો વધારે સારું.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>મૌનથીય કર્મ બંધાય?</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌન રાખે, તો પણ કર્મ બંધાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌન રાખે, તો વધારે બંધાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એ સમજાયું નહીં.</p>
+            
+            <div aria-hidden="true" class="page-number">36</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-37">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌનનો અહંકાર છે એને, 'હું મૌન રાખું છું!'</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌનમાં અહંકાર રહે, એમ?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌન લેનારો જ અહંકારી હોય, તો જ લે ને! આત્મા તો મૌન જ છે. પોતે અહંકારે કરીને કહે છે કે, 'મારે મૌન લેવું છે.'</p>
+            
+            <p>જે જે અહંકારે કરીને કરવામાં આવે છે ને જે કંઈ પણ કરવામાં આવે છે, એનું ફળ પુણ્યમાં આવે છે, મુક્તિ નહીં. એટલે આવતે ભવ જરા સારી વાણી નીકળશે, સારી વાતો નીકળશે, જે એવું-તેવું સારું મળશે ને મજા કરવાની પછી!</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> વાણી ઉપર 'કંટ્રોલ' શી રીતે લાવવો?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> વાણી ઉપર 'કંટ્રોલ' તો, એક તો "જ્ઞાની પુરુષ" પાસેથી આજ્ઞા લઈને મૌન ધારણ કરે તો થાય, નહીં તો પોતે મૌન ધારણ કરવું, પણ એ તો પોતાને આધીન નથી. ઉદયથી એની મેળે મૌન નહીં આવે, કારણ કે ઉદય તો બધું 'વ્યવસ્થિત'ને આધીન છે, માટે "જ્ઞાની"ની આજ્ઞા લઈને મૌન લે તો હિતકારી છે. બીજું, વાણીના 'કંટ્રોલ' માટે પ્રતિક્રમણ કરે તો થાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ભગવાનની ભાષાનું મૌન</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌન કેવું હોવું જોઈએ?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌન કોને કહેવાય? કે જેમાં નોકષાય ના હોય; હાસ્ય, શોક, જુગુપ્સા, એ બધું ના હોય, મહીં સૂક્ષ્મ વાણી પણ ના હોય. મૌનમાં બધી જ ચંચળતા બંધ કરી દે! લખીને કહેવાનું, ઈશારો કરવાનું બધું જ ના હોય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મૌન મોક્ષમાર્ગ તરફ અભિમુખ ક્યારે કરે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મૌન કોઈ દહાડો મોક્ષમાર્ગે લઈ જાય નહીં.</p>
+            
+            <p class="read-next">ખરું મૌન કોને કહેવાય? સંસારી વાત જ નથી કરતા, સંસાર સંબંધી વાત જ નથી, આત્મા-પરમાત્મા સંબંધી જ વાત છે, એને ભગવાને 'મૌન' કહ્યું છે. વાણી બોલવી તો ફક્ત આત્મા સંબંધી બોલવી. 'હું શુદ્ધાત્મા છું' એ રીતે જાગૃત</p>
+            
+            <div aria-hidden="true" class="page-number">37</div>
+        </div>
+<div class="page-container even-page" id="page-38">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>રહે, એ 'શુદ્ધાત્માનું મૌન' કહેવાય. એટલે શાસ્ત્રકારોએ શું કહ્યું? કે જો તમે આત્મા માટે બોલો છો તો તમે મુનિ છો અને સંસાર માટે બોલો છો તો તમે વક્તા છો. સરસ વ્યાખ્યા કરી છે ને? જગતનો સંપૂર્ણ સારાંશ શો? જગત સંબંધી એક અક્ષરેય બોલવા જેવો નથી અને આત્મા સંબંધી જ બોલે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અહો! વીતરાગવાણી</h3>
+            
+            <p>વીતરાગની વાણી સિવાય કોઈ મોક્ષે ગયેલો જ નહીં. વીતરાગની વાણી સાંભળ્યા સિવાય કોઈ મોક્ષે જઈ શકેલો નહીં. વીતરાગવાણી બોલવાની શરૂઆત ક્યારે થાય? કે જ્યારથી સમ્યક્ત્વનો લાભ થઈ જાય ત્યારથી વીતરાગવાણી બોલવાની શરૂઆત થાય અને એ સંપૂર્ણ ક્યારે થાય? કેવળજ્ઞાન થાય ત્યારે એ સંપૂર્ણ થાય, ત્યાં સુધી 'વીતરાગવાણી' કહેવાય છે.</p>
+            
+            <p>જ્યાં સુધી સમ્યક્ત્વ નથી ત્યાં વીતરાગવાણી છે જ નહીં, ત્યાં મિથ્યાત્વવાણી છે ને મિથ્યાત્વવાણી એટલે 'કષાયસહિત પ્રરૂપણા' કહેવાય. આર્તધ્યાન-રૌદ્રધ્યાન હોય ત્યાં સુધી 'કષાયસહિત પ્રરૂપણા' કહેવાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ઉપદેશના અધિકારી</h3>
+            
+            <p>અમે ચોખ્ખું જ કહી દઈએ કે, 'કષાય(ક્રોધ-માન-માયા-લોભ) સહિત પ્રરૂપણા કરો એ નરકે જવાની નિશાની છે! જવાબદારી સમજી લેજો.' ત્યારે એ કહે, 'તો અમારે શું કરવું ત્યારે? આમ પબ્લિકની જોડે શું કરવું?' ત્યારે મેં કહ્યું, 'તમારે સ્વાધ્યાય કરવો. લોકોને કહેવું કે બેસો ભઈ, હું સ્વાધ્યાય કરું છું. તમે સાંભળો' અને જે વાંચો એનું અર્થઘટન ના કરવું. સ્વાધ્યાય કરવાનો વાંધો નથી. કૃપાળુદેવ જ બોલ્યા છે ને, 'સ્વાધ્યાય કરજો, પણ ઉપદેશ ના અપાય.' ઉપદેશ તો છઠ્ઠું ગુંઠાણું અને છઠ્ઠા ગુંઠાણાને લાયક હોવા જોઈએ ને!</p>
+            
+            <p class="read-next">છઠ્ઠું ગુઠાણું હોય અને તે વ્યવહાર-નિશ્ચયથી છઠ્ઠું ગુઠાણું જોઈએ, તો એ પ્રરૂપણા કરી શકે. છઠ્ઠા ગુઠાણામાં કષાય નિર્મૂળ હોતા નથી, પણ મંદકષાય હોય છે, એટલે 'કંટ્રોલેબલ' કષાય હોય છે. એ કષાય બીજા કોઈનેય ખબર ન પડી જાય, બીજા કોઈનેય દુઃખદાયી ન થઈ પડે, એવા કષાયો હોય. અહંકાર</p>
+            
+            <div aria-hidden="true" class="page-number">38</div>
+        </div>
+
+        <div class="page-container odd-page" id="page-39">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>કેવો હોય? વાળી લેવાય એવો હોય. કો'ક અપમાન કરે તો અહંકારને વાળી લે. આપણે ગાળો ભાંડીએ તો મહીં ગુસ્સો થાય, પણ બહાર આપણને ખબર ના પડે, એમ ને એમ વાળી લે. આખી સભામાં કોઈનેય સમજણ ના પડે કે એ ગુસ્સે થઈ ગયા છે. મહીં અકળાયા કરે, પણ આંખોમાં ગુસ્સે થઈ ગયેલા ના દેખાય, ઝાળ બહાર ના નીકળે, એવા મંદકષાય હોય ત્યાં સુધી ભગવાને ચલાવી લીધું છે, કારણ કે એની વાણી બીજાને નુકસાન કરે એવી નહીં નીકળે. મંદકષાય થયા સિવાય ઉપદેશ ના અપાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>આદેશ-ઉપદેશ-દેશના</h3>
+            
+            <p>ત્રણ શબ્દો છે ગુજરાતીમાં : એક તો એવો શબ્દ છે, આદેશ! કોઈ બાપજીને વાંદવા ગયો તો બાપજી એને આદેશ આપે, 'તારે આમ કરવું જ પડશે', એનું નામ 'આદેશ' કહેવાય.</p>
+            
+            <p>અને બીજો શબ્દ છે, ઉપદેશ! તે ઉપદેશ બોલે એટલું જ, પછી કંઈ નહીં. કરો, ના કરો તેનો વાંધો નહીં.</p>
+            
+            <p>અને ત્રીજો શબ્દ છે, દેશના! જે વાણીના માલિક નહીં, તે 'દેશના' કહેવાય. અમારી 'દેશના' કહેવાય. તીર્થંકરોની 'દેશના' કહેવાય!</p>
+            
+            <h3><span aria-hidden="true">➤ </span>દીવો પ્રગટાવે, તે બોધ</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> બોધ, ઉપદેશ અને સિદ્ધાંત; આ ત્રણ શબ્દો સમજાવો.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> મીણબત્તી સળગે નહીં, તો જાણવું કે 'બોધ' જ ન્હોય આ. 'બોધ'નો તો બહુ ઊંડો અર્થ થાય છે. આ તો અંધારું ઘોર જેવું છે, પણ દીવાસળી સળગાવીને મીણબત્તી સળગાવી આપે ત્યારે જાણવું કે 'બોધ' આપ્યો. એટલે સામાને પ્રકાશ ઉત્પન્ન થવો જોઈએ. 'બોધ' આપનાર 'બોધ' આપે તો સામાને પ્રકાશ ઉત્પન્ન થવો જોઈએ અને પ્રકાશ ઉત્પન્ન ના થાય તો એય અંધારું છે અને આયે અંધારું છે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> 'બોધ', પછી એમાં 'ઉપદેશ' શબ્દ છે.</p>
+            
+            <p class="read-next"><strong>દાદાશ્રી:</strong> 'બોધ' જુદી વસ્તુ છે અને 'ઉપદેશ' જુદી વસ્તુ છે. 'ઉપદેશ'</p>
+            
+            <div aria-hidden="true" class="page-number">39</div>
+        </div>
+
+        <div class="page-container even-page" id="page-40">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>સળગે કે નાયે સળગે અને 'બોધ' સળગવો જ જોઈએ. 'બોધ' બહુ કીમતી વસ્તુ છે, અને 'બોધ' આપવાનો અધિકાર કોને છે? ફક્ત "જ્ઞાની" એકલાને જ. 'ઉપદેશ' આપવાનો, તે "જ્ઞાની"થી નીચેની કક્ષાના હોય તો ચાલી શકે. આત્માનું કંઈ 'જ્ઞાન' હોય, સમકિત થયેલું હોય તો 'ઉપદેશ'! સમકિત ના થયું હોય તો 'આદેશ' કહેવાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>અહંકારરહિત, ત્યાં સિદ્ધાંત</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> હવે 'સિદ્ધાંત' શબ્દ સમજવો છે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> 'સિદ્ધાંત'! જેમાં એક 'સેન્ટ' જેટલો વિરોધાભાસ ના હોય અને ત્રણેય કાળમાં એ બદલાય નહીં. બીજું બધું બદલાયા કરે, પણ 'સિદ્ધાંત' ના બદલાય. તીર્થંકરો બદલાય, બીજું બધું બદલાય, પણ 'સિદ્ધાંત' ના બદલાય.</p>
+            
+            <p>બે માર્ગ ધર્મના : એક ઉપદેશમાર્ગ અને બીજો સિદ્ધાંતમાર્ગ. ઉપદેશમાર્ગ, વાણી લેવાય એવા અહંકારથી હોય. 'ઉપદેશ'વાળાને વાણી લે એવો અહંકાર હોવો જોઈએ અને સિદ્ધાંત અહંકારરહિતપણે હોવો જોઈએ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>'પૉઝિટિવ' બોલતાં જ ફેરફાર</h3>
+            
+            <p>એક ભાઈ મને પૂછે છે કે, 'તમારા જેવી મીઠી વાણી ક્યારે થશે?' ત્યારે મેં કહ્યું કે, 'આ નેગેટિવ શબ્દો બધા જે છે તમારા એ બોલવાના બંધ થશે ત્યારે!' કારણ કે દરેક શબ્દ એના ગુણપર્યાયસહિત હોય છે.</p>
+            
+            <p>'પૉઝિટિવ' બોલો, હંમેશાં 'પૉઝિટિવ' બોલો. મહીં આત્મા છે, આત્માની હાજરી છે, માટે 'પૉઝિટિવ' બોલો. 'પૉઝિટિવ'માં 'નેગેટિવ' ના બોલાય. 'પૉઝિટિવ' થયું, એમાં 'નેગેટિવ' બોલીએ એ ગુનો છે અને લોક 'પૉઝિટિવ'માં 'નેગેટિવ' બોલે છે એટલે આ બધી મુશ્કેલી ઊભી થાય છે. 'કાંઈ જ બગડ્યું નથી' એમ બોલતાંની સાથે મહીં કેટલોય ફેરફાર થઈ જાય, માટે 'પૉઝિટિવ' બોલો.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>બોલની જુદી જુદી અસરો</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> બોલવાની અસરો થાય ખરી ને?</p>
+            
+            <div aria-hidden="true" class="page-number">40</div>
+        </div>
+<div class="page-container odd-page" id="page-41">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> બોલવાની તો બધી બહુ અસરો થાય. જેવું એ બોલે ને, એવો એ થઈ જાય. 'હું નાલાયક છું' બોલે તો નાલાયક થઈ જાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> 'કામ નથી કરવું' એમ બોલે, તો એમાં શું થઈ જાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> પછી આળસ આવી જાય, એની મેળે જ આળસ આવે અને 'કરવું છે' કહે તો આળસ બધું ક્યાંય જતું રહે. 'કરવું છે' બોલે કે પાછો હોશિયાર થઈ જાય, ઊંઘ આવતી હોય તોયે ઉડાડી દે, ચૂંટી ખણીને ઉડાડી દે હડહડાટ.</p>
+            
+            <p>હું 'જ્ઞાન' થતાં પહેલાંની વાત કહું છું. હું પચીસ વર્ષનો હતો, ત્યારે મારી તબિયત નરમ હોય, ત્યારે કોઈ કહે કે, 'કેમ છે તમારી તબિયત?' હું કહું કે, 'બહુ સારી છે' અને બીજાને તબિયત સારી હોય અને આપણે પૂછીએ કે, 'કેમ છે તમારી તબિયત?' ત્યારે એ કહે, 'ઠીક છે.' મેર અલ્યા, 'ઠીક છે' કહે છે, તે આગળ નહીં જાય. અલ્યા, કઈ જાતનાં રમકડાં છો તે? 'ઠીક છે' કહે છે એ 'ઠીક'ની બહાર કોઈ દહાડો જાય નહીં, તેને આખી જિંદગી 'ઠીક' રહે. જવાનીમાં 'ઠીક' બોલે, ઘૈડપણમાં 'ઠીક' બોલે, ત્યારે 'સારું' ક્યારે બોલશો? એટલે પછી મેં 'ઠીક' શબ્દ ઉડાડી દીધો, આ શબ્દ નુકસાન કરે છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span>ગાડી જાય છે...હું જઉં છું?</h3>
+            
+            <p>ગાડી આણંદ જાય છે, ત્યારે આપણા લોક શું કહેશે? ગાડીમાં બેઠાં બેઠાં બોલે કે, 'હું આણંદ જઉં છું, આવજો.' 'અલ્યા, તું ક્યાં જાય છે? આ તો ગાડી જાય છે!' તોય કહેશે કે, 'ના, હું જાઉં છું.' આવો લોકનો વ્યવહાર છે. એને 'ના' પણ કહેવાય નહીં ને! 'ખોટો' પણ કહેવાય નહીં, પણ આપણે સમજી જવું જોઈએ કે 'જાય છે ગાડી.' એટલે આપણે ના બોલવું કે, 'હું આણંદ જઉં છું', નહીં તો ગાડીમાં બેઠાં બેઠાં થાક લાગશે.</p>
+            
+            <p class="read-next">'હું જાઉં છું' બોલ્યો કે થાક લાગશે. હવે ગાડીમાં સૂઈ રહ્યો હોય તોય આણંદ આવે કે ના આવે? અને બેઠો હોય તોય આણંદ આવે ને? અને કોઈક જરા મહીં ઉતાવળ હોય, આમ જો જો કરતો હોય કે 'આ ભરૂચ આવ્યું કે</p>
+            
+            <div aria-hidden="true" class="page-number">41</div>
+        </div>
+
+        <div class="page-container even-page" id="page-42">
+            <div aria-hidden="true" class="nav no-print no-tts">
+              <button onclick="prevPage()"><span lang="en">Previous</span></button>
+              <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+              <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+            
+            <p>વડોદરા આવ્યું?' એને પણ આણંદ આવે કે ના આવે? એટલે આપણે જાણીએ કે ગાડી આવી, આપણે નથી આવ્યા, આપણે તો ત્યાંના ત્યાં જ હતા. આ તો વગર કામનો થાક લાગે! ગાડીમાં બેસીને પણ થાક લાગે, આ કોના ઘરની વાત?</p>
+            
+            <p>'જો આમ થાય તો આમ' એ 'જો-તો'વાળાં વાક્ય આપણે ત્યાં 'માઇનસ' કરેલાં છે. 'આમ થાય તો આમ' એ બધું 'વેસ્ટ ઑફ ટાઇમ ઍન્ડ એનર્જી' છે, એ બબૂચક લોકોનાં વાક્ય છે, જેને સંસાર પણ સમજ પડતો નથી તેનાં વાક્યો છે. અલ્યા, જે થયું તેને ગા ગા કર ને! આ કંઈથી લાવ્યો છે? સંસારમાંયે કોઈ આવું ના વાપરે. હું નાનપણથી સમજી ગયો હતો, કેટલું ભયાનક વાક્ય છે 'જો-તો'! એ વાક્ય, એ અહંકારનો 'ફોટો' છે, કશી કોઈ રીતે 'હેલ્પ' કરતું નથી.</p>
+            
+            <p>કો'ક કહેશે, 'આ પ્રમાણે જ થશે, એમાં બીજાનું કંઈ ચાલશે નહીં.' હવે 'ચાલશે નહીં' એવો શબ્દ જ ના બોલાય, એ તો 'ઑર્ડર' કહેવાય. એવો શબ્દ કોઈક સાંભળે તો કેવું ખરાબ લાગે! 'ચાલશે' એ તો ફોજદારી જેવી વાત બધી કહેવાય.</p>
+            
+            <p>'તમે સમજતા નથી' એવુંયે ના બોલાય. આપણે તો એમ કહેવાય કે, 'ભઈ, વિચારો તો ખરા, તમે જરા વિચાર તો કરો.' 'સમજતા નથી' કહીએ, તો પછી આ બધા ડફોળ જ છે? આવું બોલે છે કે નથી બોલતા લોકો?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> બોલે છે, આ બુદ્ધિવાળા એમ જ બોલે છે કે, 'આને સમજ નથી.'</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, એવું બોલે. સામાને 'તમે ના સમજો' એવું કહેવું, એ મોટામાં મોટું જ્ઞાનાવરણકર્મ છે. 'તમે ના સમજો' એવું ના કહેવાય, પણ 'તમને સમજણ પાડીશ' એવું કહેવું. 'તમે ના સમજો' કહે તો સામાને કાળજે ઘા વાગે.</p>
+            
+            <div aria-hidden="true" class="page-number">42</div>
+        </div>
+
+       <!-- PAGE 43 -->
+<div class="page-container odd-page" id="page-43">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">43</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <h3><span aria-hidden="true">➤ </span>પ્રકૃતિ સ્વભાવે લજામણી</h3>
+  <p>પ્રકૃતિનો સ્વભાવ લજામણી જેવો છે. હાથ અડાડીએ ને, તો પાંદડાં સંકોચાઈ જાય! આપણે ઘરમાં કોઈ છોકરાને કહીએ કે, 'તારાથી તો હું કંટાળી ગયો છું' તો તેની પ્રકૃતિ તરત જ લજવાઈ જાય, લજામણીની પેઠ, પણ એને ફરીથી કહેવું જોઈએ કે, 'ના ભાઈ, હું ખરેખર તારાથી કંટાળ્યો નથી' એટલે એની પ્રકૃતિ લજવાય નહીં.</p>
+  <p>આપણે થાકી ગયા હોઈએ તોયે ના બોલીએ કે, 'હું થાકી ગયો છું!' નહીં તો આપણી પ્રકૃતિ લજવાઈ જાય. પ્રકૃતિનો સ્વભાવ લજામણો છે. વધારે ખવાઈ ગયું ને અજીર્ણ જેવું લાગે તો બોલીએ નહીં કે, 'અજીર્ણ જેવું થઈ ગયું છે!' નહીં તો પ્રકૃતિ લજવાઈ જાય. આપણે તો બોલીએ કે, 'ના, સરસ પચી ગયું છે.'</p>
+  <p>ઘણી 'વાઈફ'થી કંટાળી જાય તો બોલી નાખે કે, 'તારાથી તો મારું મગજ ખસી જાય છે!' પણ તરત જ આપણે મહીં બોલવું પડે કે, 'ના, મગજ ખસે એ બીજા, તારાથી તો મને કશું જ થયું નથી.' એટલે આપણી પ્રકૃતિ લજવાય નહીં, નહીં તો પ્રકૃતિ શું કહે છે? કે, 'તમે વચ્ચે ડહાપણ કરનાર કોણ?' એટલે 'આપણે' છતું બોલવાનું.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>અસરો 'પૉઝિટિવ'ની, 'નેગેટિવ'ની</h3>
+  <p>નાના છોકરાનેય જરાક 'અક્કલ વગરનો', 'મૂરખ', 'ગધેડો' એમ જો કહ્યું તો તેય વાંકો ફાટે ને 'બાબા, તું બહુ ડાહ્યો છે' કહીએ કે તરત એ માની જાય.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> અને એને 'બહુ ડાહ્યો' કહીએ તોય એ બગડશે.</p>
+  <p class="read-next"><strong>દાદાશ્રી:</strong> 'મૂરખ' કહીએ તોય બગડી જાય ને 'બહુ ડાહ્યો' કહીએ તોય બગડી જાય, કારણ કે 'ડાહ્યો' કહીએ એટલે એના અહંકારને 'એન્કરેજમૅન્ટ' મળી જાય અને 'મૂરખ' કહો તો 'સાઇકોલૉજિકલ ઇફૅક્ટ' અવળી પડે. ડાહ્યા માણસને પચીસ-પચાસ વખત 'મૂરખ' કહો તો તેના મનમાં વહેમ પડી જશે કે 'ખરેખર શું હું ગાંડો હોઈશ?' એમ કરતો કરતો એ ગાંડો થઈ જાય. એટલે</p>
+</div>
+
+<!-- PAGE 44 -->
+<div class="page-container even-page" id="page-44">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">44</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>હું ગાંડાનેય 'તારા જેવો ડાહ્યો આ જગતમાં કોઈ નથી' એમ કરી કરીને 'એન્કરેજમૅન્ટ' આપું છું. આ જગતમાં હંમેશાં 'પૉઝિટિવ' લો, 'નેગેટિવ' તરફ ચાલશો નહીં. 'પૉઝિટિવ'નો ઉપાય થશે. હું તમને 'ડાહ્યો' કહું ને જો વધારે પડતો અહંકાર તમારો ખસ્યો, તો મને તમને થાપોટ મારતાંય આવડે, નહીં તો એ અવળે રસ્તે ચાલે અને એને 'એન્કરેજ' ના કરીએ તો એ આગળ વધેય નહીં.</p>
+  <p>દુનિયામાં કોઈને 'અક્કલ વગરનો' કહેશો નહીં, 'અક્કલવાળો' જ કહેજો. 'તું ડાહ્યો છે' એવું જ કહેશો તો તમારું કામ થશે.</p>
+  <p>એક માણસ એની ભેંસને કહેતો હતો કે, 'તું બહુ ડાહી છે, બહુ અક્કલવાળી છો, સમજણવાળી છો.' મેં એને પૂછ્યું, 'ભેંસને તું આમ કેમ કહે છે?' ત્યારે એણે કહ્યું કે, 'આવું ના કહું તો ભેંસ દૂધ દેવાનું જ બંધ કરી દે.'</p>
+  <p>ભેંસ જો આવું સમજે છે, તો માણસો શું ના સમજે?</p>
+  
+  <h3><span aria-hidden="true">➤ </span>એમાં શો દોષ જીભનો?</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> આ જીભ એવી છે કે ઘડીકમાં આમ બોલી જાય, ઘડીકમાં તેમ બોલી જાય.</p>
+  <p><strong>દાદાશ્રી:</strong> એવું છે ને, આ જીભમાં એવો દોષ નથી. આ જીભ તો અંદર પેલા બત્રીસ દાંત છે ને, એમની જોડે રહે છે, રાતદહાડો કામ કરે છે, પણ લડતી નથી, ઝઘડતી નથી. એટલે જીભ તો બહુ સરસ છે, પણ આપણે વાંકા છીએ. આપણે 'ઓર્ગેનાઇઝર' વાંકા છીએ, ભૂલ આપણી છે.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> મારી જીભ ઉપર કાબૂ થાય, એવું કરો ને! કારણ કે હું વધારે બોલું છું.</p>
+  <p><strong>દાદાશ્રી:</strong> ને હુંયે બોલ બોલ જ કરું છું આખો દહાડો. તમારા બોલવામાં કોઈ એવું વાક્ય નથી ને, કે કોઈને દુઃખદાયી થઈ પડે એવું? ત્યાં સુધી બોલવાનું ખરાબ કહેવાય નહીં.</p>
+</div>
+
+<!-- PAGE 45 -->
+<div class="page-container odd-page" id="page-45">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">45</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <h3><span aria-hidden="true">➤ </span>જગત ફસાયું અધ્યવસાનમાં</h3>
+  <p>એક માણસને તમે કહો કે, 'તમે જૂઠા છો.' તો હવે 'જૂઠા' કહેતાંની સાથે તો એટલું બધું 'સાયન્સ' ફરી વળે છે મહીં, એના પર્યાયો એટલા બધા ઊભા થાય છે કે તમને બે કલાક સુધી તો એની પર પ્રેમ જ ઉત્પન્ન ના થાય! માટે શબ્દ બોલાય જ નહીં, તો ઉત્તમ છે, અને બોલાય તો પ્રતિક્રમણ કરો.</p>
+  <p>આપણે કો'કને કહી દીધું કે, 'તમે નાલાયક છો, તમે નાલાયકી કરી, આ ન હોવું જોઈએ' અને બીજે દહાડે પછી આપણે 'સમભાવે નિકાલ' કરવા જઈએ તોય મહીં બીજા ભાવ બોલ બોલ કરે કે?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> 'એ તો છે જ એવો, પણ હવે આપણે જવા દો ને, ભઈ.'</p>
+  <p><strong>દાદાશ્રી:</strong> 'નાલાયક છે, બદમાશ છે, આમ છે, તેમ છે', એ બધા બોલનારા કોણ આ?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> ખબર નથી.</p>
+  <p><strong>દાદાશ્રી:</strong> આ બધા પડઘા છે. એ તમે આગલે દહાડે અભિપ્રાય આપ્યો ને, તેનું ફળ છે આ. આપણે પેલું કહ્યું ને, કે 'તમે નાલાયક છો, નાલાયકી કરી?' એવી વાણી નીકળી એટલે પેલા લેપાયમાન ભાવો મહીં તૈયાર થઈને બેસી રહ્યા હોય, તે જેવી આપણી વાણી હોય એવા બધા એ લેપાયમાન ભાવો ઊભા થઈ જાય. 'બહુ ખરાબ છે, આમ છે, તેમ છે' ને જાતજાતનું મહીં લેપાયમાન ભાવો આપણને કહ્યા કરે. એ કુદરતી રીતે ઊભા થાય છે, કારણ કે આપણે બહાર બોલ્યા તેના પરિણામરૂપે એ ભાવો પુદ્ગલમાંથી ઊભા થાય છે. હવે એને 'અધ્યવસાન' કહે છે. તે જગત આખું અહીં ફસાઈ જાય છે!</p>
+  
+  <h3><span aria-hidden="true">➤ </span>ફસામણમાંથી છૂટવાની ચાવી</h3>
+  <p class="read-next">આપણે શું કરવું પડે અધ્યવસાન બંધ કરવા માટે? 'એ તો મારા ઉપકારી છે' એવું-તેવું બોલવું પડે. હવે તમે એવું બોલશો ત્યારે એ અવળા ભાવો બંધ થઈ જાય કે 'આ તો નવી જાતનું ઉપકારી કહે છે પાછા' એટલે પાછા ટાઢા પડી જશે. 'તમે નાલાયક છો' એવું બોલીએ ને, એ શબ્દ એને તો સાંભળીને</p>
+</div>
+
+<!-- PAGE 46 -->
+<div class="page-container even-page" id="page-46">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">46</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>દુઃખ થયું જ, પણ આના જે પર્યાય ઊભા થાય તે તમને બહુ દુઃખ આપે; અને તમે કહો, 'બહુ સારા માણસ, તમે બહુ સારા માણસ', તો એ તમને મહીં શાંતિ આપશે. તમારા બોલવાથી તો પેલાને શાંતિ થઈ ગઈ, તમનેય શાંતિ થશે. એટલે આ જ ચેતવાની જરૂર છે ને!</p>
+  <p>તમે કહો ને, કે 'આ ખોટ જાય એવું છે', એટલે તરત જ લેપાયમાન ભાવો જાતજાતની બૂમો પાડે, 'આમ થઈ જાય, તેમ થઈ જાય.' અલ્યા ભાઈ, તમે બેસો ને, બહાર હમણે. મેં તો કહેતાં કહી દીધું, પણ તમે શું કરવા ભસ ભસ કરો છો? એટલે આપણે કહીએ કે, 'ના, ના, એ તો લાભદાયી છે', ત્યાર પછી એ બધા ભાવો બેસી જાય પાછા.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>લેપાયમાન ભાવમાં 'પોતે' નિર્લેપ</h3>
+  <p>મન-વચન-કાયાના તમામ લેપાયમાન ભાવો, એ શું હોય? એ ચેતનભાવો નથી, એ બધા પ્રાકૃતિક ભાવો, જડ ભાવો છે. લેપાયમાન ભાવો એટલે આપણે લેપાવું ના હોય તોય લેપાયમાન કરી દે. એથી અમે કહીએ છીએ ને, કે 'મન-વચન-કાયાના તમામ લેપાયમાન ભાવોથી હું(શુદ્ધ ચેતન) સર્વથા નિર્લેપ જ છું.' એ લેપાયમાન ભાવોએ જગત આખાને લેપાયમાન કર્યું છે અને એ 'લેપાયમાન ભાવો' એ ખાલી પડઘા જ છે અને તે નિર્જીવ છે પાછું, એટલે તમારે એનું સાંભળવાનું નહીં.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> આ તો બહુ મોટું હથિયાર આપ્યું આપે.</p>
+  <p><strong>દાદાશ્રી:</strong> હા, એટલે આ જે હોય તે તમે સમજી જજો. ગભરાશો નહીં. એ છો ને, આવે!</p>
+  
+  <h3><span aria-hidden="true">➤ </span>છૂટો 'ઉપકારી' સમજી</h3>
+  <p class="read-next">જ્યાં જ્યાં દ્વેષ આવતો હોય ત્યાં અંદરખાનેથી 'ઉપકાર' માનજો તો એ દ્વેષ બંધ થઈ જશે. 'પોલીસ'વાળા ઉપરેય અભાવ આવતો હોય તો એનો 'ઉપકાર' માનજો, તો એ અભાવ બંધ થઈ જશે. આજે કોઈ પણ માણસ ખૂંચતો હોય તો તે 'બહુ સારો માણસ છે, આ તો ઘણા ઉપકારી છે' એવું રહે તો ખૂંચતું</p>
+</div>
+
+<!-- PAGE 47 -->
+<div class="page-container odd-page" id="page-47">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">47</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>બંધ થઈ જશે. આપણે 'ઉપકાર' માનવો. 'ઉપકાર' માનવાથી આપણું મન બગડે નહીં.</p>
+  <p>એટલે આ શબ્દ અમે જે આપીએ છીએ ને, એક-એક શબ્દ, એ દવાઓ છે બધી, દરઅસલ 'મૅડિસીન' છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>કડવું-મીઠું હિસાબથી</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> 'દાદા', કોઈ કડવા શબ્દો કહે તો તે સહન નથી થતા, તો શું કરવું મારે?</p>
+  <p><strong>દાદાશ્રી:</strong> જો તેનો તને ખુલાસો કરું. આ રસ્તા વચ્ચે કાંટો પડ્યો હોય ને હજારો માણસો નીકળે, પણ કાંટો કોઈને વાગે નહીં, પણ લલ્લુભાઈ જાય તો કાંટો આડો હોય તોય એવો વાગે કે પંજામાંથી સોંસરો ઉપર આવે! કડવાનો સ્પર્શ થવો એ હિસાબી હોય છે અને કડવાનો સ્પર્શ થાય તો માનવું કે આપણા કડવાની રકમમાંથી એક ઓછી થઈ. મીઠું પણ સ્પર્શ થાય ત્યારે એટલું ઓછું થાય છે. પેલાને કહીએ કે, 'કડવું ફરી આપ ને!' તોય એ ના આપે. આ તો કોઈના હાથમાં સત્તા જ નથી. બધું જ ગણતરીબદ્ધ છે, સિલક સાથે છે, કશું ગપ્પું નથી. મર્યા સુધીનું બધું જ ગણતરીબદ્ધ છે કે આના તરફથી ત્રણસો એક આવશે, પેલા પાસેથી પચીસ આવશે, આની પાસેથી દસ આવશે. 'જ્ઞાન' જો હાજર રહેતું હોય તો કશું જ સહન કરવું ના પડે. આ તો બધું 'રિલેટિવ રિલેશન' છે. કડવું-મીઠું બધું જ હિસાબથી મળે છે. રોજ કડવું આપનાર એક દહાડો એવું સુંદર આપી દે છે! આ બધા ઋણાનુબંધી ઘરાક-વેપારીના સંબંધો છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>આવકારો સંયમના સંજોગને</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> મને કોઈ ઠપકો આપે, વઢે કે ગાળ દે, ત્યારે હું એ બાજુની બારી જ બંધ કરી દઉં છું, આપણે સાંભળીએ જ નહીં! ભલે ને, એ બોલ્યા કરે.</p>
+  <p class="read-next"><strong>દાદાશ્રી:</strong> આ તો સંયમનો 'સ્કોપ' મળ્યો, તેનો તમે લાભ ઉઠાવ્યો ના</p>
+</div>
+
+<!-- PAGE 48 -->
+<div class="page-container even-page" id="page-48">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">48</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>કહેવાય. તમે કોઈને કહો કે, 'તમે મને વઢો ને હું સંયમ કેળવું' એવું બને જ નહીં ને! આ તો કુદરતી કોઈક ફેરો પ્રાપ્ત થાય ત્યારે આપણે કાન બહેરા કરીને 'હટ્, એ તો બોલે, એને કુટેવ પડી છે' જો એમ કરીએ તો શો લાભ? દુર્ગંધ આવતી હોય ને નાક દબાવી રાખીએ, એમાં તમે શો સંયમ કર્યો?</p>
+  <p>અમે તો પહેલાં ઇનામ કાઢેલું કે 'જેને કોઈને રૂપિયાની જરૂર હોય તે અમને એક ધોલ મારીને પાંચસો રૂપિયા લઈ જાય.' આપણને મફતમાં મારવા તૈયાર છે? અરે, ઇનામ કાઢ્યું તોય મને કોઈ મારવા ના આવ્યું. લોકો કહે કે, 'તમને મારીને અમે ક્યાં જઈશું?' એવું છે. માટે કુદરતી 'સ્કોપ' મળે, એ તો ચૂકશો નહીં.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>સમજીને જમા કરતાં મુક્તિ</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> એક વખત જમે કરીએ, બે વખત જમે કરીએ, સો વખત જમે કરીએ, એવું બધી વખત જમા જ કર્યા કરવાનું?</p>
+  <p><strong>દાદાશ્રી:</strong> હા, ફરી ઉધાર કરશો તો ફરી એ ચોપડા ચાલુ રહેશે. એના કરતાં લાખ વખત તું જમે કરાવ ને! આપણે જમે કરવાના, અને એનો અંત આવશે. જોજો ને, મારા કહ્યા પ્રમાણે ચાલો ને!</p>
+  <p>અપમાન, ગાળો, એવું બધું આપણી પાસે આવે તો આનંદ માનવો કે સિલકમાંથી એક દુઃખ ઓછું થયું, પણ આ તો અવસ્થામાં ચોંટી રહે છે, એ ના હોવું જોઈએ. કોઈની જોડે હજાર ગાળોનો હિસાબ હોય તો એ એક ગાળ આપે તો આપણે એમ કહીએ કે, 'હજારમાંથી એક તો ઓછી થઈ, હવે ૯૯૯ ગાળો બાકી રહી.' કોઈ તમને અવળું કહે તો તમને મનમાં એમ થાય કે 'આ મને અવળું બોલે છે?' એટલે તમે એને નવી રકમ ધીરો છો. એટલે એક ગાળ જે ધીરેલી હતી, તે પાછી આપવા આવ્યો ત્યારે તે આપણે જમે કરી લેવાની હતી, તેને બદલે તમે પાંચ નવી ધીરી પાછી. આ એક તો સહન થતી નથી, ત્યાં બીજી પાંચ ધીરી, તે નવી ધીરધાર કરે છે.</p>
+</div>
+
+<!-- PAGE 49 -->
+<div class="page-container odd-page" id="page-49">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">49</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <h3><span aria-hidden="true">➤ </span>સર્વ ઘા રુઝાય આમ...</h3>
+  <p>સંસારમાં હૈયે અનેક ઘા પડ્યા હોય, તે 'દાદા ભગવાનના અસીમ જય જયકાર હો'ની 'સ્વરૂપ'-કીર્તનભક્તિ કરતાં રુઝાય છે. આઠ 'મિનિટ'થી અડતાળીસ 'મિનિટ' બોલતાં અંદર અમૃત ઝમવા માંડે છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>માફી આપી છૂટી જાવ આ કાળમાં</h3>
+  <p>ભગવાને કહ્યું છે કે આ કાળમાં કોઈ ગાળ ભાંડી ગયો હોય તેને જાતે જમવા બોલાવજો, એટલી બધી 'વાઇલ્ડનેસ' હશે કે એને ક્ષમા જ આપજો! જો કંઈ 'રિવેન્જ'(વેર) લેવા ગયા ને, પછી સંસારમાં પાછા ખેંચાયા. 'રિવેન્જ' લેવાનો ના હોય આ કાળમાં. આ દુષમકાળમાં નરી 'વાઇલ્ડનેસ' હોય. શું વિચાર ના આવે એ કહેવાય જ નહીં! દુનિયાપારના વિચારો હઉ આવે. આ કાળના જીવો તો બહુ અથડાવાના. આવા માણસો જોડે આપણે વેર બાંધીએ તો આપણે હઉ અથડાવું પડે. એટલે આપણે કહીએ છીએ, 'સલામ સાહેબ.' આ કાળમાં તરત માફી આપી દેવી, નહીં તો તમારે ખેંચાવું પડશે, અને આ જગત તો વેરથી ઊભું રહ્યું છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>વગર વાંકે...વઢે ત્યારે</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> આપણો વાંક ના હોય, તો પણ કશું બોલે તો?</p>
+  <p><strong>દાદાશ્રી:</strong> આપણો વાંક ના હોય ને, તો કોઈને બોલવાનો અધિકાર જ નથી જગતમાં! માટે આ બોલે છે, તો એ તમારી ભૂલ છે એનો બદલો આપે છે. તમારી ગયા અવતારની ભૂલ છે, એમાં એ બિચારો નિમિત્ત છે અને ભૂલ તમારી છે, માટે જ એ બોલી રહ્યો છે.</p>
+  <p>એટલે નિમિત્તની જોડે ઝઘડો કરવો, એ નકામો છે. નિમિત્તને બચકાં ભરવાથી ફરી પાછો ગુનો ઊભો થશે.</p>
+  <p class="read-next">આપણને એ માણસ આ ભૂલમાંથી મુક્ત કરાવડાવે છે, માટે એનો ઉપકાર માનીને એને 'લેટ-ગો' કરવો જોઈએ, એના તરફ ભાવ બગડવા ના જોઈએ. આપણે શું કહેવું જોઈએ? કે, 'પ્રભુ, એને સદ્બુદ્ધિ આપજો', એટલું કહેવાનું,</p>
+</div>
+
+<!-- PAGE 50 -->
+<div class="page-container even-page" id="page-50">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">50</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>કારણ કે પેલાએ તો આમાંથી પોતે ગુનો પાછો ઊભો કર્યો અને તે ગુનો એ ભોગવશે. અત્યારે તમારો ગુનો હતો, એ ગુનામાંથી તમે મુક્ત થયા.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>તપ પધાર્યા ઘેર બેઠાં</h3>
+  <p>કોઈ તમને ગાળ ભાંડે, તે વખતે મહીં મન, બુદ્ધિ, ચિત્ત ને અહંકાર બધું તપે, એ તપને 'તમે' ઠંડું થતાં સુધી 'જોયા' કરો, એનું નામ 'સૂક્ષ્મ તપ' કહેવાય.</p>
+  <p>સાસુ વહુને વઢ વઢ કરતી હોય ને વહુ ડહાપણવાળી હોય તો તેને સૂક્ષ્મ તપ બહુ મળ્યા કરે. હિન્દુસ્તાનમાં આ તપ એની મેળે મફતમાં ઘેર બેઠાં મળ્યા કરે. ઘેર બેઠાં ગંગા છે, પણ આ લોકો લાભ ઉઠાવતા નથી ને? ઘણા આપણને કંઈ કહી દે, તે ઘડીએ આપણે તપ કરવું પડે.</p>
+  <p>તપ કરવું એટલે શું? જે પાછલો હિસાબ ચૂકવવાનો આવે છે તે ચૂકવતી વખતે મીઠાશેય આવે અને કડવુંય આવે. મીઠાશ આવે ત્યાંય તપ કરવાનું છે ને કડવું આવે ત્યાંય તપ કરવાનું છે. 'ડિસ્ચાર્જ કર્મ' એનું કડવું-મીઠું ફળ આપ્યા વગર તો રહે જ નહીં ને?</p>
+  <p>મોક્ષે જવા માટે આંતરતપ(સૂક્ષ્મ તપ) જોઈશે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>વૈજ્ઞાનિક સમજથી દુઃખમુક્તિ</h3>
+  <p>'સ્થૂળ સંયોગો, સૂક્ષ્મ સંયોગો અને વાણીના સંયોગો પર છે અને પરાધીન છે' આટલું જ વાક્ય પોતાની સમજમાં રહેતું હોય, પોતાની જાગૃતિમાં રહેતું હોય, તો સામો માણસ ગમે તે બોલે તોય આપણને જરાય અસર થાય નહીં અને આ વાક્ય કલ્પિત નથી, જે 'ઍક્ઝેક્ટ' છે તે કહું છું. હું તમને એમ નથી કહેતો કે, 'મારા શબ્દ માન રાખીને ચાલો.' 'ઍક્ઝેક્ટ' આમ જ છે. હકીકત તમને નહીં સમજ પડવાથી તમે માર ખાવ છો.</p>
+  <p>અને સામો ગમે તે બોલે ત્યારે 'વાણી પર છે ને પરાધીન છે' એનો સ્વીકાર કર્યો એટલે તમારે સામાનું દુઃખ રહ્યું જ નહીં ને!</p>
+  
+  <h3><span aria-hidden="true">➤ </span>ઉત્પત્તિ શબ્દની</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> શબ્દની ઉત્પત્તિ કેવી રીતે થઈ?</p>
+</div>
+
+<!-- PAGE 51 -->
+<div class="page-container odd-page" id="page-51">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">51</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p><strong>દાદાશ્રી:</strong> એ તમને સમજાવું. આપણે ત્યાં પેલા જૂના પ્રકારની ગાડીમાં 'રબર'ના ગોળાવાળા 'હૉર્ન' હતાં ને? એવું જોયેલું છે ને? વગાડી જોયેલું?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> હા, જી.</p>
+  <p><strong>દાદાશ્રી:</strong> ત્યારે શાંતિ હોય, પણ પછી આપણે 'હૉર્ન'ના ગોળાને આમ દબાવીએ ત્યારે શું થાય છે?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> હવા સાંકડી જગ્યામાંથી જાય છે, એટલે અવાજ થાય છે.</p>
+  <p><strong>દાદાશ્રી:</strong> હા, એટલે આમ ઘસાઈને નીકળે છે એટલે અવાજ થાય છે. અહીં કોણ બોલે છે એ? એ આત્માનો અવાજ નીકળ્યો? ત્યાં ક્યાં ચેતન છે? મહીં કોઈ જીવતો માણસ નથી, તો શાથી અવાજ થાય છે? તે ઘડીએ આમાં શું 'સાયન્સ' થયું? એ વિચારવા જેવું છે ને?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> હા.</p>
+  <p><strong>દાદાશ્રી:</strong> જ્યાં આકાશ છે ત્યાં પરમાણુ છે. 'વેક્યૂમ' હંમેશાં ખાલી ના હોય. એટલે પેલા ગોળામાં જે આકાશ છે, તેની મહીં પરમાણુ ભરાઈ રહ્યાં હતાં, સૂક્ષ્મ પરમાણુ, આંખે ન દેખાય એવાં. હવે એ ગોળો આપણે આમ દબાવીએ ને, એની સાથે પરમાણુઓ 'ફોર્સ'થી બહાર નીકળે ને, તે ઘસાઈ ઘસાઈને નીકળે એટલે અવાજ થાય છે, તે એવું આ મહીંયે 'હૉર્ન' મૂકેલાં છે, એ આમ દેખાય છે ને અવાજ નીકળે છે. આ પરમાણુ મહીં જે અંદર હોય છે, તે બધાં ઘસાતાં ઘસાતાં ઘસાતાં બહાર નીકળે છે, કંઠસ્થ ને તાળુસ્થ ને આ બધામાંથી, એ અવાજ શબ્દરૂપે થાય છે. અવાજ પુદ્ગલ ઘસાવાથી થાય છે, તેમાં આત્માની જરૂર જ નથી. એટલે આ અવાજમાત્ર અનાત્મ વિભાગનો છે! એ બધો અજીવ તત્ત્વનો વિભાગ છે, જીવ તત્ત્વનો વિભાગ નથી.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>ન હોય એ આત્માનો અવાજ</h3>
+  <p>'વાણી' એ આત્માનો ગુણ નથી ને આત્માની અવસ્થાએ નથી, આત્માનો સ્વભાવેય નથી. 'જોવું અને જાણવું' એ જ આત્માનો સ્વભાવ છે. 'વાણી' એ પુદ્ગલની અવસ્થા છે, એનો ગુણધર્મ નથી.</p>
+</div>
+
+<!-- PAGE 52 -->
+<div class="page-container even-page" id="page-52">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">52</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p><strong>પ્રશ્નકર્તા:</strong> તો અંતરમાં આવે છે, એ અવાજ કોનો?</p>
+  <p><strong>દાદાશ્રી:</strong> એ ત્યાં જ ભ્રાંતિ છે, આંટી ત્યાં જ પડેલી છે. લોકોને ભ્રમણા પડી કે, 'આ બોલે છે તે જ આત્મા હોવો જોઈએ', પણ એ બધું ઉદયકર્મ બોલે છે. એ પ્રેરણા કરનારું ઉદયકર્મ અને એ જે અવાજ બધો થઈ ગયેલો છે એ અહીં રૂપક આવે છે. ચોરી કરવાના ભાવ કર્યા છે, એટલે પછી મહીં અવાજ થાય 'ચોરી કરવાનો', અને એને કહે છે, 'મારો આત્માનો અવાજ છે', આવું બોલે.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> એક દોહામાં એવું આપ્યું છે કે 'બોલે' એ પરમાત્મા પોતે જ, બીજો નહીં!</p>
+  <p><strong>દાદાશ્રી:</strong> તો તો ગાળો બોલે, તે એ છે? અને સારું બોલે, તેય એ? અને ગાળો બોલે, તેય એ હોય, તો એ બોલે એનો તમને માર શાનો પડે? બોલે એ ને લોક તમને મારવા ફરી વળે, 'કેમ મને ગાળો દે છે?' એ બોલતો હોય તો એને માર પડે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>વાણી, 'ઓરિજિનલ ટેપરેકર્ડ'</h3>
+  <p>આ બધા મનુષ્યમાત્ર જે બોલે છે કે જીવમાત્ર જે બોલે છે, એ 'ટેપરેકર્ડ' બોલે છે. તમારીયે 'ઓરિજિનલ ટેપરેકર્ડ' છે, પણ તમે તો એના માલિક છો ને? તમે એમ બોલો કે આ 'ટેપરેકર્ડ' છે? ના બોલો, કારણ કે તમને અહંકાર હોય કે, 'હું બોલ્યો' અને આખું જગત 'ઇગોઇઝમ'વાળું છે, એટલે કહેશે, 'હમ બોલતા હૈ, હમ બોલતા હૈ.' અરે, ક્યા હમ બોલતા હૈ? આ 'હમ'થી તો બંધાયા છે. એના કરતાં આ ગાયો-ભેંસો સારી, ગધેસિંગ દરબારેય સારા. બોલે, પણ કહે નહીં કે, 'હું બોલ્યો.' એટલે આ જાનવર છે, તે ભલે 'ટેપરેકર્ડ' નથી બોલતા, ત્યારે 'માય સ્પીચે'ય નથી બોલતા બિચારા (!); જ્યારે આ લોકો તો બધાં એવું કહે કે, 'અમે બોલીએ છીએ.' 'હું બોલ્યો ને મેં આમ કર્યું' એ જ બધાં છમકલાં કર્યા કરે.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> પણ તે સિવાય વ્યવહાર જ કેમ થઈ શકે એમ છે?</p>
+</div>
+
+<!-- PAGE 53 -->
+<div class="page-container odd-page" id="page-53">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">53</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p><strong>દાદાશ્રી:</strong> વ્યવહારથી 'હું બોલ્યો' બોલે તેનો વાંધો નથી, પણ એવી 'બિલીફ' ના હોવી જોઈએ. અમે 'અમારી વાણી' એવું બોલીએ છીએ, તે ખાલી 'ડ્રામેટિક' બોલીએ છીએ, 'બિલીફ'માં એવું નથી અમારું; અને તમે જે બોલો છો, તે 'બિલીફ'માં પણ તમને એ જ છે કે, 'હું જ બોલ્યો.'</p>
+  
+  <h3><span aria-hidden="true">➤ </span>'હું બોલ્યો'! ના, 'ટેપરેકર્ડ' બોલી</h3>
+  <p>'હું બોલ્યો' એમ માને છે, એનું નામ ભ્રાંતિ. હા, એનું નામ ભ્રાંતિ, અને ભ્રાંતિથી ઊભું રહ્યું છે આ જગત.</p>
+  <p>સાસુ સવારથી સાંજ સુધી કચકચ કરે કે વહુ મહીં ધૂંધવાયા કરે, એ જો ચાર કલાક સુધી એકધારી ગાળો ભાંડતી હોય ને આપણે તેને કહીએ કે, 'સાસુમા, ફરીથી એની એ જ ગાળો એ જ રીતે કહી જાવ તો' તો તે કહે ખરી? ના. શાથી? મૂઆ, એ તો 'રેકર્ડ' બોલી. આ 'રેકર્ડ' બોલે : 'ચંચળમાં અક્કલ નથી, ચંચળમાં અક્કલ નથી', તો શું 'ચંચળ' 'રેકર્ડ'ને કહે ખરી કે, 'તારામાં અક્કલ નથી?' 'વાણી એ રેકર્ડસ્વરૂપ છે' એવો ફોડ પાડનાર અમે જ છીએ. વાણી જડ છે, 'રેકર્ડ' જ છે. આ 'ટેપરેકર્ડ' વાગે છે તે, તેની પહેલાં પટ્ટી ઊતરે છે કે નહીં? તેવી જ રીતે આ વાણીની પણ આખી પટ્ટી ઊતરી ગયેલી છે ને તેને સંયોગ મળતાં જ, જેમ 'પિન' વાગે ને 'રેકર્ડ' શરૂ થઈ જાય તેમ વાણી શરૂ થઈ જાય છે ને અક્કરમી મૂઓ કહે કે, 'હું બોલ્યો.' આ વકીલ 'કોર્ટ'માં 'કેસ' જીતી આવે, તે બધાને કહે કે, 'મેં આમ Pleading કરીને, તેમ કરીને કેસ જીતી ગયો.' તો તું હારે છે ત્યારે તારી Pleading ક્યાં જાય છે? ત્યારે કહે છે, 'મારે આ દલીલ કરવાની હતી, પણ તે કરવાની રહી ગઈ!' અલ્યા, તું નથી બોલતો, એ તો 'રેકર્ડ' બોલે છે. મૂઓ, ગોઠવીને જો બોલવા જાય તો એક અક્ષરેય ના નીકળે.</p>
+  <p class="read-next">એટલે એવું છે ને, બોલતી વખતે વિચાર હોય જ નહીં માણસને, નહીં તો કોઈ એક જ વાક્ય બોલવું હોય, તો એની પાછળ કલાક કલાક વિચાર્યા પછી બોલાય. માણસ જો કદી બોલી શકતો હોય, માણસને જો જાતે બોલવું હોય, તો વિચારીને બોલવું જોઈએ અને વિચારીને બોલે તો એક વાક્ય એક</p>
+</div>
+
+<!-- PAGE 54 -->
+<div class="page-container even-page" id="page-54">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">54</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>કલાક વિચાર કર્યા પછી જ બોલાય.</p>
+  <p>એટલે આ કોઈ જીવતો નથી બોલતો. આ બધી 'ટેપરેકર્ડ' બોલે છે. પછી એ પાછો પસ્તાય ખરો. ત્યારે એ નથી બોલ્યો એની ખાતરી થઈ ગઈ ને, આપણને?</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> હા, બરાબર છે.</p>
+  <p><strong>દાદાશ્રી:</strong> હવે આ પસ્તાય એવું કરવાની જરૂર છે. તેને બદલે 'કેમ બોલ્યો?' કહે, એટલે ઊલટો એ પસ્તાવાનું છોડી દઈને પાછો આપણી સામે થાય એ.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> સામો બોલે અને પોતાને દુઃખ થાય ત્યારે એ 'ટેપરેકર્ડ' બોલે છે તે સમજાય, પણ પોતે બોલે ને સામાને દુઃખ થાય ત્યારે?</p>
+  <p><strong>દાદાશ્રી:</strong> તમે પોતે અવળું બોલો, પછી તેનું પ્રતિક્રમણ કરો એટલે તમારા બોલનું તમને દુઃખ ના રહ્યું. એટલે આ રીતે બધો ઉકેલ આવી જાય છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>'ટેપ' ઊતરી અજ્ઞાનતાથી</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> આ 'ટેપરેકર્ડ મશીન' છે, એમાં પહેલાં કોઈ સ્વતંત્રપણે બોલેલું હોય તેના પરથી જ થાય.</p>
+  <p><strong>દાદાશ્રી:</strong> હા, એ 'ટેપ' થાય છે, ત્યાં આગળ જોવા જેવું છે. આત્માની હાજરીથી આ 'ટેપરેકર્ડ' ઊતરે છે, તે કેવી રીતે ઊતરે છે તે હું જાણું છું.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> તો મૂળ વાણી ક્યાંથી આવી?</p>
+  <p class="read-next"><strong>દાદાશ્રી:</strong> એ મૂળ વાણી અજ્ઞાનતામાંથી ઉત્પન્ન થાય છે. તમારા 'સ્વરૂપ'ની અજ્ઞાનતા, ત્યાં સુધી વાણીનું ઉત્પન્ન થવું! જ્યાં સુધી 'હું ચંદુભાઈ છું' ત્યાં સુધી 'ટેપરેકર્ડ' ઊતર્યા કરે અને 'હું ચંદુભાઈ છું' એ અજ્ઞાન તૂટી ગયું, 'ફ્રેક્ચર' થઈ ગયું, એ 'ઇગોઇઝમ' 'ફ્રેક્ચર' થઈ ગયો, એટલે બધું ગયું. 'ઇગોઇઝમ' હોય ત્યાં સુધી બધું ચાલ્યા કરે અને તે ખલાસ થઈ જાય પછી</p>
+</div>
+
+<!-- PAGE 55 -->
+<div class="page-container odd-page" id="page-55">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">55</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>'ટેપરેકર્ડ' ઊતરે જ નહીં. એટલે અજ્ઞાનતાથી 'ટેપરેકર્ડ' ઊતર્યા કરે છે. અજ્ઞાનતામાં સંજોગો અનુસાર 'સાયન્ટિફિક સરકમસ્ટેન્શિયલ એવિડન્સ'ના આધારે આ 'ઓરિજિનલ ટેપરેકર્ડ' ઊભી થઈ. આત્માની અત્યારે આ ભ્રાંતદશામાં કેવી રીતે 'ટેપ' થાય છે એ જાણવા જેવું છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>'ટેપ' થતાં પહેલાંની અવસ્થાઓ</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> મૂળ વાણી 'ટેપ' કેવી રીતે થાય, તેનો આપણને ખ્યાલ આવે કે નહીં?</p>
+  <p><strong>દાદાશ્રી:</strong> મૂળ વાણી જ નથી હોતી. મૂળ પોતાની સંજ્ઞા છે. પોતાનો શું કરવાનો આશય છે, તે સંજ્ઞા પરથી 'કોડવર્ડ' થઈ જાય છે. એ સંજ્ઞા જોઈ અને સંજ્ઞા પકડીને 'કોડવર્ડ' થઈ જાય છે પેલા પુદ્ગલમાં.</p>
+  <p>'મારે પેલાને આવું કહેવું છે, સામાને આ વાત સમજાવવી છે' એવો ભાવ ઉત્પન્ન થાય છે, એને 'ભાવસંજ્ઞા' કહી. તે ભાવ ઉત્પન્ન થયો કે તેની સાથે તરત જ 'કોડવર્ડ' એની મેળે જ પુદ્ગલમાં તૈયાર થયા કરે!</p>
+  <p>મૂળ આત્માને કશી લેવાદેવા નથી. વિશેષભાવને લઈને આ બાજુ પુદ્ગલમાં 'કોડવર્ડ' તૈયાર થાય છે. 'કોડવર્ડ' તૈયાર થઈ અને પછી 'શોર્ટહૅન્ડ' થાય છે અને 'શોર્ટહૅન્ડ'માંથી પછી આ 'ટેપ' નીકળ્યા કરે, એટલે ત્રીજી સ્થિતિ આ 'ટેપરેકર્ડ'ની.</p>
+  <p>અને સામો માણસ જ્યારે સાંભળે ત્યારે સંજ્ઞા તરીકે પાછું મહીં જાય! એના આત્માને સંજ્ઞા તરીકે પાછું પહોંચે, એના આત્માને અવાજ તરીકે પહોંચે નહીં. નીકળે અહીંથી સંજ્ઞા તરીકે ને ત્યાં સંજ્ઞા તરીકે પહોંચે!</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> આપની વાણી ક્યારે 'ટેપ' થઈ હશે?</p>
+  <p><strong>દાદાશ્રી:</strong> ગયા ભવમાં 'ટેપ' થયેલી, તે આ ભવમાં બોલાય છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>નિર-અહંકારી સમજે વાણી 'ટેપરેકર્ડ'</h3>
+  <p class="read-next">જ્યાં સુધી અહંકાર ને મમતા હોય ત્યાં સુધી કોઈ 'વાણી એ ટેપરેકર્ડ છે'</p>
+</div>
+
+<!-- PAGE 56 -->
+<div class="page-container even-page" id="page-56">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">56</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>એવું બોલે નહીં અને એને સમજાયયે નહીં, કારણ કે જ્યાં સુધી અહંકાર ને મમતા છે ત્યાં સુધી વાણીનું માલિકીપણું કેમ કરીને તૂટે? એટલે 'ઓરિજિનલ ટેપરેકર્ડ' કોણ સમજી શકે? કે જેને બિલકુલ મમતા ના હોય, જેને અહંકાર બિલકુલ ના હોય તે સમજી શકે. 'વાણી એ ટેપરેકર્ડ છે' એવું કોઈ બોલ્યો જ નથી ને! 'સેલ્ફ રિયલાઈઝેશન'વાળો માણસ એવું બોલી શકે.</p>
+  <p>આ દુનિયામાં પહેલામાં પહેલું 'જ્ઞાન' ખુલ્લું કરું છું! અહંકારને લઈને, મમતાને લઈને કહે છે, 'હું બોલ્યો.' બાકી, 'ટેપરેકર્ડ' છે, બધાની 'ટેપરેકર્ડ' છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>કૂંચી દુઃખમુક્તિની</h3>
+  <p>આપણા 'જ્ઞાન'માં 'આ વાણી એ રેકર્ડ છે' એ એક કૂંચી છે અને એમાં આપણે ગપ્પું મારવાનું નથી. એ છે જ 'રેકર્ડ' અને 'રેકર્ડ' માનીને જો આજથી આરંભ કરે તો તો પછી છે કશું દુઃખ? આ બહાર ખુલ્લું પાડવાનું કારણ શું? તેને લીધે તમારા મનમાંથી વાણીની કિંમત જતી રહે. અમને તો કોઈ ગમે તેવું બોલે ને, તોય એની અક્ષરેય કિંમત નથી. હું જાણું કે એ શી રીતે બિચારો બોલવાનો છે? એ જ ભમરડો છે ને! અને આ તો 'રેકર્ડ' બોલી રહી છે. એ તો ભમરડો છે દયા ખાવા જેવો!</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> આ ભમરડો છે, એટલું તે વખતે લક્ષમાં નથી રહેતું.</p>
+  <p><strong>દાદાશ્રી:</strong> ના, પહેલાં તો 'વાણી એ રેકર્ડ છે' એવું નક્કી કરો. પહેલાં તો આપણે એમ જાણતા હતા કે આ બધા માણસો બોલે છે, પણ હવે આપણને ખબર પડી કે આ તો 'રેકર્ડ' બોલે છે! પછી કોઈ ગમે તેવું બોલ્યો હોય કે ફોજદાર ટૈડકાવતો હોય તો આપણને અસર ના કરે. 'રેકર્ડ' જ બોલે છે ને? એ પોતે નથી બોલતા ને, આજે? એટલે કોઈ માણસ જોખમદાર છે જ નહીં. ભગવાનને એવું દેખાયું કે કોઈ જીવ કોઈ જાતનો જોખમદાર છે જ નહીં. એટલે કોઈ ગુનેગાર છે જ નહીં, એ ભગવાને જોયેલું, એ દૃષ્ટિથી ભગવાન મોક્ષે ગયા અને જગતે 'ગુનેગાર છે' એમ જોયું, તેથી જગતમાં અથડાય છે. બસ, આટલી જ દૃષ્ટિનો ફેર છે!</p>
+</div>
+
+<!-- PAGE 57 -->
+<div class="page-container odd-page" id="page-57">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">57</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <h3><span aria-hidden="true">➤ </span>'કોડ' બદલાતાં વાણી સુધરે</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> વાણી સુધારવી છે, સોળ વર્ષની ઉંમર થઈ તોય સુધરતી નથી, તો તેનું શું કરવું?</p>
+  <p><strong>દાદાશ્રી:</strong> કોઈની ભૂલ ના કાઢે, કોઈની જોડે અથડામણમાં ના આવે તો વાણી સુધરે.</p>
+  <p>આખો દહાડો મનમાં ભાવના રહ્યા કરે કે 'વાણી સુધારવી છે' તો તે સુધરી જાય, પછી આવાં કારણો સેવાય તો જ વાણી સુધરે. કારણો શાં સેવવાનાં? કે કોઈની અથડામણમાં આવવું નથી, કોઈની ભૂલ કાઢવી નથી!</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> ભાવ એવા કર્યા હોય કે 'આવી મધુરી વાણી પ્રાપ્ત હો', તો તે ભાવ જ એવી વાણીની 'રેકર્ડ' કાઢે ને?</p>
+  <p><strong>દાદાશ્રી:</strong> વાણી તો, આપણે ભાવથી એવી માગણી દરરોજ કરવાની કે 'મારી વાણીથી કોઈ પણ દુઃખ ના હો અને સુખ હો', પણ એકલી માગણી જ કરવાથી કશું ના વળે, એવી વાણી ઉત્પન્ન થાય એવાં 'કૉઝિઝ' કરવાનાં, તેથી તેવું ફળ આવે. 'વાણી' એ ફળ છે. સુખ દેવાવાળી વાણી નીકળે એટલે એ મીઠી થતી જાય અને દુઃખ દેવાવાળી વાણી કડવી થતી જાય. પછી પાડા ભોંગેડે ને એ ભોંગેડે, બેઉ સરખું લાગે.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> અત્યારે બોલીએ તે વખતે જાગૃતિ રાખીએ તો?</p>
+  <p><strong>દાદાશ્રી:</strong> અત્યારે તમે કોઈને દફડાવો, પછી મનમાં એવું થાય કે 'આને દફડાવ્યો તે બરાબર છે' એટલે ફરી પાછું તેવા હિસાબનો 'કોડવર્ડ' થયો અને 'આને દફડાવ્યો તે ખોટું થયું' એવો ભાવ થયો તો 'કોડવર્ડ' તમારે નવી જાતનો થયો. 'આ દફડાવ્યો એ બરાબર છે' એવું માન્યું કે એના જેવો જ ફરી 'કોડ' ઊભો થયો, અને એનાથી એ વધારે વજનદાર બને, અને 'આ બહુ ખરાબ થઈ ગયું, આવું ના બોલવું જોઈએ, આવું કેમ થાય છે?' એવું થાય તો 'કોડ' નાનો થઈ ગયો.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> તીર્થંકરોની વાણીના 'કોડ' કેવા હોય છે?</p>
+</div>
+
+<!-- PAGE 58 -->
+<div class="page-container even-page" id="page-58">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">58</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p><strong>દાદાશ્રી:</strong> એમણે 'કોડ' એવો નક્કી કરેલો હોય કે 'મારી વાણીથી કોઈ પણ જીવને કિંચિત્માત્ર પણ દુઃખ થાય નહીં.' દુઃખ તો થાય જ નહીં, પણ કોઈ જીવનું કિંચિત્માત્ર પ્રમાણ પણ ના દુભાય. ઝાડનુંય પ્રમાણ ના દુભાય એવા 'કોડ' ફક્ત તીર્થંકરોને જ થયેલા હોય.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>"જ્ઞાની"નું દર્શન, "જ્ઞાની"નું 'ડીલિંગ'</h3>
+  <p>મોટા મિલમાલિકોય નોકર જો કદી દસ પ્યાલા-રકાબી લઈને આવતો હોય ને 'ટ્રે' હાથમાંથી પડી ગઈ, તોય એનો આત્મા ફૂટી જાય. અલ્યા, ચચ્ચાર મિલના માલિક છો કે કઈ જાતના છો? આવા તે કેવા કે આ પ્યાલામાં જ આત્મા આવી ગયો? ચાર મિલનો માલિક, તે તું શું ગરીબ છે?</p>
+  <p>"જ્ઞાની પુરુષ" તો શું કહે છે? એને પહેલાં તો પૂછે કે, 'ભઈ, કશે તું દઝાયો નથી ને?' પછી કહેશે કે, 'જરા સાચવીને ચાલતો હોય તો?' એટલે "જ્ઞાની" તો બધું કહે, પણ વીતરાગતાથી. "અનુભવજ્ઞાની" તો ગમે એટલું કહે, કરે, છતાં પોતે વીતરાગતામાં રહે. વખતે મોઢે ટૈડકાવેય ખરા, પણ તોય પોતે વીતરાગતામાં રહે! ટૈડકાવવાનું બધું સમયને આધીન હોય છે, કારણ કે એવું ના કરે તો પેલો માણસ કંઈ નવી જ જાતનું ઊંધે રસ્તે જાય તેવું થાય, એટલે બેઉ જવાબદારી સાચવવાની, પેલો સામો આપણા નિમિત્તે ઊંધો થાય નહીં અને કામ ચાલવા દેવાનું.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>વાણી છે માપદંડ દશાનો</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> માણસ કેટલી 'ડિગ્રી' સુધી પહોંચ્યો છે, તે શી રીતે ખબર પડે?</p>
+  <p><strong>દાદાશ્રી:</strong> એની વાણી પરથી ખબર પડે. એકસો એંસી 'ડિગ્રી'એ પહોંચે ત્યાં સુધી કશું વજન પડે નહીં એનું, એ તો ત્રણસો 'ડિગ્રી'એ આવે ત્યારે કંઈ રાગે પડે. ત્રણસો સાઠ 'ડિગ્રી'એ પહોંચવાનું છે. વાણી વીતરાગી હોય, રાગ-દ્વેષ ના હોય, એવી વાણી હોય તો એનું વજન પડે. વાદી, પ્રતિવાદી, બેઉ કબૂલ કરે, એ સ્યાદ્દવાદ-વાણી!</p>
+</div>
+
+<!-- PAGE 59 -->
+<div class="page-container odd-page" id="page-59">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">59</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>વાણી મીઠી, મધુરી, કોઈને આઘાત થાય નહીં, પ્રત્યાઘાત નહીં, ઉપાઘાત થાય નહીં, કિંચિત્માત્ર દુઃખ ના થાય એવી વાણી નીકળે ને, તે બધું ચારિત્ર જ છે. વાણી કેવી નીકળે છે, તેના પરથી ચારિત્રબળ ઓળખાય.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>સ્યાદ્દવાદ-વાણી</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> સ્યાદ્દવાદ-વાણી કોને કહેવાય?</p>
+  <p><strong>દાદાશ્રી:</strong> સ્યાદ્દવાદ-વાણી એટલે ધર્મની બાબતમાં કોઈનું સહેજ પણ પ્રમાણ ના દુભાય એવી વાણી. એટલે જ્યાં આગળ સ્થાનકવાસી બેઠા હોય, દેરાવાસી બેઠા હોય, દિગંબરી બેઠા હોય, વૈષ્ણવ બધા બેઠા હોય, મુસલમાન બેઠા હોય, પણ કોઈનું પ્રમાણ ના દુભાય, બધાને પોતાનું સરખું સમજાય, એ સ્યાદ્દવાદ-વાણી!</p>
+  <p>એથી આગળ કોઈ પણ માણસનું દૃષ્ટિબિંદુ ના દુભાય એવી રીતે વાણી નીકળે, એનું નામ સ્યાદ્દવાદ-વાણી. એટલે સ્યાદ્દવાદ હોય ત્યાં પછી સ્ત્રીઓ, નાનાં છોકરાંઓ બધાં બેસી રહે; અને સ્યાદ્દવાદના વિરુદ્ધ એકાંતિક વાણી હોય ને, તો નાનાં છોકરાં બધાંય ઊઠીને હેંડતાં થઈ જાય.</p>
+  <p>એકાંતિક વાણી એટલે આ એક ધર્મવાળો બોલે, તે પેલા બીજા ધર્મવાળાને ના ગમે, એક પક્ષવાળો બોલે તો બીજા પક્ષવાળાને ના ગમે, એટલે એ ઊઠીને જતા રહે, એ 'એકાંતિક વાણી' કહેવાય, 'પાક્ષિક વાણી' કહેવાય.</p>
+  <p class="read-next">સ્યાદ્દવાદ-વાણી ક્યારે ઉત્પન્ન થાય? અહંકારની ભૂમિકા પૂરી થાય ત્યારે. જગત આખું નિર્દોષ દેખાય, કોઈ દોષિત દેખાય જ નહીં! ચોર પણ દોષિત અમને ના દેખાય. લોકો કહે કે, 'ચોરી કરવી એ ગુનો છે', પણ ચોર શું જાણે? કે 'ચોરી કરવી એ મારો ધર્મ છે!' અમારી પાસે કોઈ ચોરને તેડી લાવે તો અમે એને ખભે હાથ મૂકીને ખાનગીમાં પૂછીએ કે, 'ભઈ, આ બિઝનેસ તને ગમે છે? પસંદ પડે છે?' પછી એ એની બધી હકીકત કહે. અમારી પાસે એને ભય ના લાગે. માણસ ભયને લીધે જૂઠું બોલે છે. પછી એને સમજાવીએ કે, 'આ તું કરે છે તેની જવાબદારી શી આવે છે, તેનું ફળ શું છે,</p>
+</div>
+
+<!-- PAGE 60 -->
+<div class="page-container even-page" id="page-60">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">60</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>તેની તને ખબર છે?' અને 'તે ચોરી કરે છે' એવું અમારા મનમાંય ના હોય! એવું જો કદી અમારા મનમાં હોય તો એના મન ઉપર અસર પડે. દરેક પોતપોતાના ધર્મમાં છે. કોઈ પણ ધર્મનું પ્રમાણ ના દુભાય, એનું નામ સ્યાદ્દવાદ-વાણી. સ્યાદ્દવાદ-વાણી સંપૂર્ણ હોય. દરેકની પ્રકૃતિ જુદી જુદી હોય, તોય સ્યાદ્દવાદ-વાણી કોઈની પણ પ્રકૃતિને હરકત ના કરે.</p>
+  <p>વ્યવહારશુદ્ધિ વગર સ્યાદ્દવાદ-વાણી નીકળે નહીં.</p>
+  <p>સ્યાદ્દવાદ શું કહે છે? કે પોતાનું જે કંઈ પદ હોય તે ભૂલીને સામાની વાત સાંભળજે.</p>
+  <p>સ્યાદ્દવાદ-વાણી છે ત્યાં આત્મજ્ઞાન છે. જ્યાં એકાંતિક વાણી છે ત્યાં આત્મજ્ઞાન નથી.</p>
+  <p>'વાણી'માત્ર ખુલ્લો અહંકાર છે. જે બોલે છે, જેટલું બોલે છે, એ બધો જ ખુલ્લો અહંકાર છે. ફક્ત “જ્ઞાની પુરુષ” જે સ્યાદ્દવાદ બોલે છે, તે વખતે તેમનો અહંકાર નહીં, પણ એ જો બીજું કંઈ બોલે તો એમનો અહંકાર જ નીકળે છે. એને 'નીકળતો અહંકાર', 'ડિસ્ચાર્જ અહંકાર' કહ્યો છે!</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> એટલે અહંકાર વગરની વાણી નીકળે ને?</p>
+  <p><strong>દાદાશ્રી:</strong> એ 'નિર્જીવ અહંકાર' કહેવાય. વાણીમાં સજીવ અહંકાર હોય તો તે વાણી સામાને વાગે. અમારી વાણી નિર્મમત્વ અને નિર્-અહંકારી હોય, તેથી બધાને આનંદ આવે.</p>
+  <p>વાણી પરથી કેટલા પ્રમાણમાં ને કેવો અહંકાર 'ચાર્જ' થયો હતો, તે ખબર પડે. સ્યાદ્દવાદ વગર જેટલા બોલે છે, એ બધો અહંકાર જ છે. વર્તનમાં આમ બહુ અહંકાર દેખાતો નથી. એ તો કોઈક ફેરો છાતી પહોળી થાય, એ પણ લગ્નમાં ગયા હોય ત્યારે જ દેખાય.</p>
+  <p class="read-next">'હું કેવું બોલ્યો' એ વાણીનો પરિગ્રહ! 'હું બોલું છું' એ ભાન છે, તેનાથી</p>
+</div>
+
+<!-- PAGE 61 -->
+<div class="page-container odd-page" id="page-61">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">61</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>નવું બીજ પડે છે.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>સાહજિક વાણી આપે સમાધાન</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> સાહજિક વાણી એટલે શું?</p>
+  <p><strong>દાદાશ્રી:</strong> જેમાં કિંચિત્માત્ર અહંકાર નથી તે! આ વાણીનો હું એક 'સેકંડ' પણ માલિક થતો નથી, એટલે અમારી વાણી એ સાહજિક વાણી છે.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> પણ 'દાદા'ની વાણી સાંભળવાથી અને પરિણામ જ્યારે પામે ત્યારે વ્યવહારની અંદર રહેવા છતાં વ્યવહારની પકડો બધી છૂટી જાય છે.</p>
+  <p><strong>દાદાશ્રી:</strong> હા, બધું છૂટી જાય, વ્યવહારમાં નિર્લેપ થતો જાય. જે લેપાયેલો હતો, પાણીમાં રહેવા છતાં પણ પાણી અડે નહીં એવો નિર્લેપ થતો જાય! કમળનું પાન હોય, તે પાણીમાં હોવા છતાં ભીનું ના થાય.</p>
+  <p><strong>પ્રશ્નકર્તા:</strong> આપના સહજ જવાબ મેળવી સમાધાન થઈ જ જાય છે.</p>
+  <p><strong>દાદાશ્રી:</strong> સહજ જવાબ હોય તો સમાધાન થઈ જાય. આ સહજ જવાબ છે, એટલે સ્થિર થઈ જાય. લોકોના મોટા મોટા પ્રશ્નો 'સૉલ્વ' થઈ ગયેલા. ગમે તેવા મૂંઝાયેલા હોય, પણ 'સૉલ્વ' થઈ જાય, કારણ કે સહજ જવાબ છે.</p>
+  <p>ત્યારે મને લોકો કહે છે, 'આ પ્રશ્નોના યથાર્થ જવાબ આપ શી રીતે આપી શકો છો?' કેવળજ્ઞાન સિવાય યથાર્થ જવાબ કોઈ આપી શકે નહીં. આ બુદ્ધિનો જવાબ ન્હોય. બુદ્ધિના જવાબ હોય ત્યાં તો વાદ થાય અને વિવાદ થાય. જેમ 'કોર્ટ'માં વિવાદ કરીએ છીએ ને, આપણે? એવું અહીં પછી વિવાદ કરે લોકો, વાદ ઉપર વિવાદ કરે. બાકી, અહીં તો એનો આત્મા કબૂલ કરવો જ જોઈએ. પછી એને આવું બોલવું હોય તો છૂટ છે. એ તો અહંકારનો ગુણ છે ને, આવું બોલવું તે? બાકી, સરળ હોય તે આવું ના બોલે, તેથી તો એનું જલદી રાગે પડી જાય.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>એક જ શબ્દ મોક્ષે લઈ જાય</h3>
+  <p class="read-next">“જ્ઞાની”નો એક જ શબ્દ મોક્ષે લઈ જાય! એક જ શબ્દ જો મહીં પેસી ગયો ને પચન થયો તો મોક્ષે લઈ જાય, કારણ કે એમની વાણી આવરણભેદી</p>
+</div>
+
+<!-- PAGE 62 -->
+<div class="page-container even-page" id="page-62">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">62</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>હોય. આવરણને મહીં ભેદ કરીને અંદર આત્મા સુધી પહોંચી જાય, પેલો તરત ‘એક્સેપ્ટ’(સ્વીકાર) કરે. આપણે અહીં તદ્દન નવા માણસો બધા ‘એક્સેપ્ટ’ નથી કરતા? કરે છે! એ જુઓ છો ને, તમે બધું? એ અહીં ઓગળે જ. બીજે કોઈ ‘એક્સેપ્ટ’ નહીં કરે, એકેય માણસ ‘એક્સેપ્ટ’ ના કરે!</p>
+  
+  <h3><span aria-hidden="true">➤ </span>શુક્લહૃદયી સમજે “જ્ઞાની” તણી વાણી</h3>
+  <p><strong>પ્રશ્નકર્તા:</strong> “જ્ઞાની”ની ભાષા અમુક લોકોને નથી સમજાતી.</p>
+  <p><strong>દાદાશ્રી:</strong> શી રીતે સમજાય પણ? એ તો મોહ ઓછો હોય તો સમજણ પડે ને? મોહ ઓછો થાય ત્યારે સમજણ પડે. મોહને લઈને સમજણ પડે નહીં ને! જ્યાં સુધી મૂંઝાયેલું હોય ત્યાં સુધી સમજણ પડે નહીં. મોહ ‘ક્લિયર’ થઈ જાય ત્યાર પછી સમજણ પડે. ભાષા સમજવી, એ આપણું પુણ્ય હોવું જોઈએ અને શુક્લહૃદય હોવું જોઈએ. હૃદય શુક્લ હોય તો તરત બધું ઓળખી જાય, પણ હૃદયમાં જાતજાતના ગોટાળા ભર્યા હોય ને, તે ગોટાળિયું હોય તો સમજાય નહીં. હૃદય શુક્લ જોઈએ. “જ્ઞાની”ઓની ભાષા સમજવા માટે શુક્લહૃદય જોઈએ. બીજું બધું સમજાય; પેલી બાજુનું, સંસારી ભાષા બધી સમજી જાય.</p>
+  <p>આ મારી દુકાનમાં સંસારી માલ ના હોય. મારી વાણીથી જેમ જેમ પરિચિત થશો, તેમ તેમ આત્મબળ વધશે, મનોબળ વધશે ને ચિત્તશક્તિ વધશે.</p>
+  <p>મૂર્ચ્છા વગરની જે વાણી નીકળે ને, એ જગતકલ્યાણમાં વપરાય.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>નિર્જરતી વાણી વખતે “જ્ઞાની”ની આંતરદશા</h3>
+  <p class="read-next">આ તો ‘ટેપરેકર્ડ’ છે ને? હું તો જ્ઞાતા-દૃષ્ટા છું ને? ગજબની વાણી નીકળે તે ‘તમારે’ જાણવાની! મારે ગજબની છે કે નહીં, એવું જાણવાનું હોય જ નહીં ને! આ ‘ટેપરેકર્ડ’, તેમાં મારે શી લેવાદેવા? મેં શું કર્યું આમાં? મારું જો કર્તવ્યપણું હોય તો ‘મને’ મીઠાશ આવે. હું બોલ્યો હોઉં તો ‘મને’ મીઠાશ આવે કે, ‘હા, કેવું સરસ બોલ્યો!’ ‘તમને ગમ્યું કે ના ગમ્યું?’ એવું પૂછ પૂછ કરું, પણ જુઓ, આ વાણી, માલિકી વગરની વાણી જુઓ! એક કલાક સાંભળે</p>
+</div>
+
+<!-- PAGE 63 -->
+<div class="page-container odd-page" id="page-63">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">63</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>એની મુક્તિ થઈ જાય, જો સાચા મનથી સાંભળે તો.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>માલિકી વિનાની વાણી</h3>
+  <p>અમારે માલિકીભાવ ના રહ્યો, અહંકારભાવ ના રહ્યો એટલે ‘હું બોલું છું’ એ ના રહ્યું અને ‘મારો બોલ’ એય ના રહ્યું, બેઉ શબ્દ ના રહ્યા, નહીં તો જો અમારો બોલ હોત ને, તો હું તમને પૂછ પૂછ કરું કે, ‘અમારા બોલથી તમને કેટલો બધો લાભ થઈ ગયો! અમે બોલ્યા ને, તો કેટલો લાભ થઈ ગયો!’</p>
+  
+  <h3><span aria-hidden="true">➤ </span>અપૂર્વ વાણી, “જ્ઞાની” તણી</h3>
+  <p>મારી જોડે રહીને ઘણા ‘સાયન્ટિસ્ટો’, અમુક વિચારક માણસો મને પૂછે છે કે, ‘તમે આ બધું ક્યાંથી બોલો છો?’ મેં કહ્યું, ‘હું જોઈને બોલું છું, નજરે જોઈને બોલું છું આ.’ કોઈ વાક્યનો, કોઈ પુસ્તકનો આધાર નથી, છતાં એક શબ્દ કોઈ ચેકી શકશે નહીં. આ સાચી વાત છે, ‘કરૅક્ટ’ વાત છે. આ હું જેટલી વાત બોલું છું, એ બધી અપૂર્વ વાત છે અને ‘જ્ઞાન’ તેનું તે જ છે, ‘જ્ઞાન’ પૂર્વનું તેનું તે જ છે. ‘જ્ઞાન’માં ફેર નથી, પ્રકાશમાં ફેર નથી, વાસ્તવિક સમજાવવામાં ફેર છે. ‘જોઈને’ કહેવામાં આવે છે આ. શાસ્ત્રોના શબ્દો હું બોલતો નથી. આ વાત ‘એક્ઝેક્ટ’ સમજાઈ જાય માણસને કે જગતની બાજી આવી છે!</p>
+  
+  <h3><span aria-hidden="true">➤ </span>દેશના તીર્થંકર તણી</h3>
+  <p>આ અમારી દેશના હોય છે, પણ અમારી દેશના ઉપદેશ-આદેશના ડંખવાળી હોય. પેલી દેશના તો કોઈ જાતની ખેંચ નહીં! બધી જ જ્ઞાતિઓ સાંભળે, બધા જ પોતાની ભાષામાં સમજે, જાનવરો પણ પોતાની ભાષામાં સમજે. એ તો અમેય અનુભવ કર્યો છે કે અમારી ભાષા જાનવરો સમજે છે, પણ અમારી ઓછી સમજે અને તીર્થંકરોની પૂરી સમજી જાય.</p>
+  <p>એમની ‘ફુલ મૂન’ની દેશના હોય અને અમારી ચૌદશની! અમને તમે જેટલા પ્રશ્નો પૂછો એનું સમાધાન મળે.</p>
+  <p class="read-next">ભગવાનની દેશના જુદી જાતની હોય. ‘કમ્પ્લીટ’ સ્યાદ્દવાદ-વાણી! કોઈ ધર્મનું કિંચિત્માત્ર કોઈ જગ્યાએ ખંડન ના થાય. અમારી સ્યાદ્દવાદ-વાણી</p>
+</div>
+
+<!-- PAGE 64 -->
+<div class="page-container even-page" id="page-64">
+  <div aria-hidden="true" class="nav no-print no-tts">
+    <button onclick="prevPage()"><span lang="en">Previous</span></button>
+    <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+    <button onclick="nextPage()"><span lang="en">Next</span></button>
+  </div>
+  <div aria-hidden="true" class="page-number">64</div>
+  <h2 class="running-title" aria-hidden="true">વાણી-વિજ્ઞાન</h2>
+  
+  <p>ખરી, પણ સ્યાદ્દવાદ અસલ ‘સ્ટેજ’ ઉપર અમારું નહીં બેઠેલું. ‘ફુલ સ્ટેજ’ની દેશના તો, એ વાણી જ જુદી જાતની હોય, એનો રસ જુદી જાતનો હોય.</p>
+  <p>એમને સ્વર કેવો હતો, વીતરાગોનો? હેય... જાણે મધુર વાજિંત્ર વાગ્યા કરતું હોય! આપણા મધ કરતાંય ઉત્તમ ગણાયું છે. બીજી હરેક મીઠાશ કરતાં ઉત્તમમાં ઉત્તમ શબ્દ ભગવાનનો કહેલો ગણાયો છે. એમની વાણી કાનને સાંભળવી નિરંતર ગમ્યા જ કરે, તે લોક ખસતા જ નહોતા! વાદી-પ્રતિવાદી બન્નેય તે કબૂલ કરે, એટલે એ વાણી ‘પ્રમાણ’ કહેવાય.</p>
+  
+  <h3><span aria-hidden="true">➤ </span>સર્વ દુઃખથી મુક્ત કરે “જ્ઞાની” તણી વાણી</h3>
+  <p>આ એક-એક શબ્દ અમારી જોખમદારી પર બોલીએ છીએ. અમારું એક વાક્ય પણ ભવિષ્યમાં કોઈ ચેકશે નહીં. ત્રિકાળ સત્ય હોય છે એવું વાક્ય છે અમારું, એટલે જ તો આ ‘ટેપ’માં ઊતર્યું છે બધું, એમાંથી આ બધી ચોપડીઓ લખાઈ છે. આમાં એક શબ્દેય મારો પુસ્તકમાંથી કે શાસ્ત્રોનો નથી. ‘જોઈ’, અનુભવી, તે પછી આ વાણી નીકળી છે અને તો જ માણસ સર્વ દુઃખથી મુક્ત થાય ને, નહીં તો સર્વ દુઃખથી મુક્ત થવાનો બીજો ઉપાય જ નથી.</p>
+  
+  <br/>
+  <p style="text-align:center;"><strong>॥ જય સચ્ચિદાનંદ ॥</strong></p>
+</div>
+
+<!-- ===== IMPROVED BOTTOM BANNER ===== -->
+<div class="bottom-banner-box no-print">
+  <div class="bbb-disclaimer" aria-label="નોંધ: ઓડિયો બૂકમાં ક્યાંય પણ ક્ષતિ રહી ગઈ હોય તો દરગુજર કરશો અને આ પુસ્તકની મૂળ છપાયેલ આવૃત્તિ અથવા મૂળ પીડીએફ હંમેશા વાંચવા/ જોઈ લેવા વિનંતી છે.">
+    નોંધ: ઓડિયો બૂકમાં ક્યાંય પણ ક્ષતિ રહી ગઈ હોય તો દરગુજર કરશો અને આ પુસ્તકની મૂળ છપાયેલ આવૃત્તિ અથવા મૂળ પીડીએફ હંમેશા વાંચવા/ જોઈ લેવા વિનંતી છે.
+  </div>
+  <span class="bbb-jay" aria-label="જય સચ્ચિદાનંદ">॥ Jai Sachchidanand ॥</span>
+  <div class="bbb-divider" aria-hidden="true"></div>
+  <div class="bbb-title" aria-label="ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો સેવા">Digital Archiver &amp; Interactive Audio Seva</div>
+  <div class="bbb-name" aria-label="કમલેશાનંદ મહેતા">Kamleshanand Mehta</div>
+  <div class="bbb-sub" aria-label="દાદા ભગવાન સમાધિ મંદિર, કેલનપુરી, વડોદરા, ગુજરાત.">
+    Dada Bhagwan Samadhi-Mandir,<br/>
+    Kelanpuri, Vadodara, Gujarat.
+  </div>
+  <div class="bbb-divider" aria-hidden="true"></div>
+  <div class="bbb-tagline" aria-label="જગત કલ્યાણ હો ! જગત કલ્યાણ હો ! જગત કલ્યાણ હો !">🙏 Jagat Kalyan Ho ! (3) 🙏</div>
+  <div class="bbb-tagline-guj" aria-label="જગત કલ્યાણ હો ! જગત કલ્યાણ હો ! જગત કલ્યાણ હો !">જગત કલ્યાણ હો ! (3)</div>
+  
+  <div class="bbb-buttons" aria-hidden="true">
+    <button class="bbb-btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆ શરૂઆતમાં જાવ (Top)</button>
+    <button class="bbb-btn-index" onclick="scrollToIndex()">🏠 અનુક્રમણિકા (Index)</button>
+  </div>
+</div>
+
+</div><!-- #magazine-content -->
+</div><!-- flex wrapper -->
+
+<!-- ===== QUICK NAV (Bottom Left) ===== -->
+<div class="quick-nav no-print">
+  <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">⬇ <span lang="en">Bottom</span></button>
+  <button id="theme-toggle-btn" onclick="manualThemeToggle()" title="Toggle Dark Mode">🌓</button>
+  <button id="font-size-btn" onclick="cycleFontSize()" title="Font Size">🔤 ક</button>
+</div>
+
+<!-- ===== TTS PLAYER (Bottom Right) ===== -->
+<div class="no-print" id="tts-player">
+  <div class="tts-title-bar">🎧 <span lang="en">Audio Player</span></div>
+  <div class="tts-controls">
+    <button id="play-pause-btn" onclick="togglePlayPause()">▶ <span lang="en">Play</span></button>
+    <button id="stop-btn" onclick="stopTTS()">⏹ <span lang="en">Stop</span></button>
+    <button id="speed-btn" onclick="cycleSpeed()" title="Change Speed">▶ 0.9x</button>
+  </div>
+  <div class="tts-progress" id="tts-progress"></div>
+</div>
+
+</body>
+</html>

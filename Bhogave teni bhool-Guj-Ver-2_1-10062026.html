@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#fff8f0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<title>ભોગવે તેની ભૂલ - દાદા ભગવાન કથિત</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@400;600&family=Noto+Sans+Gujarati:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+
+/* ===== GLOBAL RESET & BASE ===== */
+@keyframes pulse-border { 0%{box-shadow:0 0 0 0 rgba(13,71,161,0.4)} 70%{box-shadow:0 0 0 10px rgba(13,71,161,0)} 100%{box-shadow:0 0 0 0 rgba(13,71,161,0)} }
+@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+@keyframes tts-pulse { 0%,100%{background-color:#fffdf5} 50%{background-color:#fff3e0} }
+@keyframes index-flash { 0%, 100% { background-color: transparent; } 15%, 85% { background-color: #ffe0b2; } }
+@keyframes dark-index-flash { 0%, 100% { background-color: transparent; } 15%, 85% { background-color: #4e342e; } }
+@keyframes dark-tts-pulse { 0%, 100% { background-color: #221f1c; } 50% { background-color: #2c2723; } }
+
+*,*::before,*::after { box-sizing: border-box; }
+html,body { overflow-x: hidden; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Hind Vadodara', 'Noto Sans Gujarati', 'Shruti', 'Nirmala UI', sans-serif;
+  font-size: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0ece4;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4b483' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #1a1a1a;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ===== PAGE CONTAINERS ===== */
+.page-container {
+  background-color: #fffef9;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 28px auto;
+  min-height: 820px;
+  box-shadow: 0 2px 16px rgba(139,90,43,0.12), 0 1px 4px rgba(0,0,0,0.08);
+  position: relative;
+  padding: 50px;
+  overflow: hidden;
+  page-break-after: always;
+  border-bottom: 2px dashed #d4b896;
+  border-radius: 2px;
+  animation: fadeIn 0.3s ease both;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* ===== RUNNING TITLES ===== */
+.running-title {
+  font-size: 13px !important;
+  color: #999 !important;
+  margin: 0 0 18px 0 !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e8e0d4;
+  padding-bottom: 6px;
+}
+.odd-page .running-title  { text-align: right !important; }
+.even-page .running-title { text-align: left !important; }
+
+/* ===== TYPOGRAPHY ===== */
+p { text-align: left !important; margin-bottom: 16px; line-height: 1.9; }
+h1,h2,h3 { text-align: center !important; line-height: 1.4; }
+h1 { font-size: 30px !important; color: #1a1a1a !important; }
+h2 { font-size: 26px !important; color: #1a1a1a !important; }
+h3 { font-size: 21px !important; color: #7b3f1e; margin: 22px 0 10px; }
+
+/* ===== HERO TITLE BOX ===== */
+.hero-title-box {
+  background: linear-gradient(145deg, #fffcf0 0%, #fff8e7 100%);
+  padding: 55px 20px 15px;
+  border-radius: 16px;
+  border: 1px solid #e8d8b0;
+  border-top: 4px solid #bf953f;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  max-width: 88%;
+  box-shadow: 0 8px 28px rgba(192,154,63,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+  position: relative;
+}
+.hero-title-box::before {
+  content: "❈";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  background: #fffcf0;
+  padding: 0 12px;
+  color: #bf953f;
+  font-size: 22px;
+}
+.hero-title-box h2 {
+  color: #9a8060 !important;
+  font-size: 20px !important;
+  margin-bottom: 8px !important;
+  font-weight: 400 !important;
+  letter-spacing: 2px;
+}
+.hero-title-box h1 {
+  font-size: 52px !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  display: inline-block;
+  padding: 10px 0;
+  background: linear-gradient(160deg, #bf953f 0%, #fcf6ba 40%, #b38728 65%, #fcf6ba 80%, #aa771c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.25));
+}
+.hero-title-box h1::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #bf953f 30%, #fcf6ba 50%, #bf953f 70%, transparent);
+  margin: 16px auto 0;
+}
+
+/* ===== EDITORIAL HEADER ===== */
+.editorial-header {
+  background: linear-gradient(135deg, #fdfaf0 0%, #faf5e6 100%);
+  border-left: 6px solid #c0392b;
+  padding: 18px 28px;
+  margin-bottom: 28px;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 2px 0 12px rgba(192,57,43,0.08);
+}
+.editorial-header h2 {
+  text-align: left !important;
+  margin: 0 !important;
+  color: #1a1a1a !important;
+  font-size: 30px !important;
+  letter-spacing: 1px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  padding-bottom: 5px !important;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 15px 0;
+}
+.nav button {
+  padding: 11px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #3e2723;
+  background: linear-gradient(180deg, #f5efe0 0%, #ede3d0 100%);
+  border: 1px solid #c8b590;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Hind Vadodara',sans-serif;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.nav button:first-child { clip-path: polygon(15% 0%,100% 0%,100% 100%,15% 100%,0% 50%); padding-left: 24px; }
+.nav button:last-child  { clip-path: polygon(0% 0%,85% 0%,100% 50%,85% 100%,0% 100%); padding-right: 24px; }
+.nav button:hover { background: linear-gradient(180deg, #ede3d0 0%, #ddd0b8 100%); transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0,0,0,0.12); }
+.nav button:active { transform: translateY(0); }
+
+/* ===== QUICK NAV (Sticky bottom-left) ===== */
+.quick-nav {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  left: 16px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.quick-nav button {
+  background: linear-gradient(135deg, #c0392b 0%, #962d22 100%);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(192,57,43,0.4);
+  opacity: 0.88;
+  transition: all 0.25s;
+  font-family: 'Hind Vadodara',sans-serif;
+  white-space: nowrap;
+}
+#theme-toggle-btn { background: linear-gradient(135deg, #455a64 0%, #263238 100%) !important; box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important; }
+#font-size-btn   { background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%) !important; box-shadow: 0 4px 12px rgba(46,125,50,0.35) !important; }
+.quick-nav button:hover { opacity: 1; transform: scale(1.06) translateX(2px); }
+
+/* ===== TTS PLAYER (Sticky bottom-right) ===== */
+#tts-player {
+  position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  right: 16px;
+  background: linear-gradient(145deg, #1c1c1c, #2d2d2d);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 1000;
+  align-items: center;
+  font-family: sans-serif;
+  border: 1px solid #3a3a3a;
+  min-width: 130px;
+}
+.tts-title-bar { font-size: 11px; color: #aaa; letter-spacing: 1px; text-transform: uppercase; text-align: center; }
+.tts-controls { display: flex; gap: 6px; align-items: center; }
+#tts-player button {
+  background: linear-gradient(135deg, #f57c00, #e65100);
+  color: #fff;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(245,124,0,0.4);
+}
+#tts-player button:hover { transform: scale(1.05); filter: brightness(1.1); }
+#stop-btn { background: linear-gradient(135deg, #d32f2f, #b71c1c) !important; box-shadow: 0 2px 6px rgba(211,47,47,0.4) !important; }
+#speed-btn { background: linear-gradient(135deg, #1565c0, #0d47a1) !important; box-shadow: 0 2px 6px rgba(21,101,192,0.4) !important; font-size: 11px !important; }
+.tts-progress { font-size: 11px; color: #888; text-align: center; min-height: 14px; }
+
+/* ===== TTS INTERACTIVE ELEMENTS ===== */
+.tts-clickable {
+  border-left: 4px solid transparent;
+  padding-left: 10px;
+  margin-left: -10px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.tts-clickable:hover {
+  background-color: #faf5e8;
+  border-left-color: #d4b896;
+  border-radius: 0 6px 6px 0;
+}
+.tts-active {
+  border-left: 4px solid #c0392b !important;
+  background-color: #fffdf5;
+  border-radius: 0 6px 6px 0;
+  animation: tts-pulse 2s ease-in-out infinite;
+}
+
+/* ===== BROWSER BANNER ===== */
+.browser-banner {
+  display: none;
+  padding: 13px 16px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.5;
+}
+#edge-banner      { background-color: #e3f2fd; color: #0d47a1; border: 1px solid #90caf9; }
+#no-voice-banner  { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+
+/* ===== INDEX PAGE ===== */
+#index { border-bottom: none; }
+#index .index-box {
+  background: linear-gradient(160deg, #fffdf2 0%, #f9f5e8 100%);
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border: 1px solid #e0d4b8;
+}
+#index .index-header h1 { color: #c0392b; text-align: center; margin-bottom: 5px; }
+#index .index-header h2 { color: #555; text-align: center; margin-top: 0; }
+#index .index-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  font-size: 28px !important;
+  border-bottom: 2px solid #c0392b;
+  padding-bottom: 12px;
+}
+#index .index-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+#index .index-table th {
+  background: linear-gradient(135deg, #e8dfc8 0%, #ddd4ba 100%);
+  color: #2c2c2c;
+  font-size: 20px !important;
+  padding: 13px;
+  border-bottom: 2px solid #c8b898;
+}
+#index .index-table tr:nth-child(even) { background-color: #fdfdfa; }
+#index .index-table tr:nth-child(odd)  { background-color: #faf7f0; }
+#index .index-table tr:hover { background-color: #f0e8d8; transition: 0.25s; }
+#index .index-table td { padding: 11px 12px; border-bottom: 1px solid #e8e0d0; }
+#index .index-table tr.highlight-index td { animation: index-flash 2.5s ease-in-out !important; }
+.dark-saver #index .index-table tr.highlight-index td { animation: dark-index-flash 2.5s ease-in-out !important; }
+#index .index-table td:nth-child(1),
+#index .index-table td:nth-child(3) { text-align: center; width: 75px; font-weight: bold; color: #666; }
+#index .index-table a {
+  text-decoration: none;
+  color: #b71c1c;
+  font-weight: 700;
+  font-size: 20px !important;
+  display: block;
+  transition: color 0.2s;
+}
+#index .index-table a:hover { color: #e53935; text-decoration: underline; }
+#index .index-footer { margin-top: 30px; text-align: center; font-weight: bold; color: #c0392b; font-size: 22px !important; }
+
+/* ===== BOX COMPONENTS ===== */
+.box {
+  border: 1px solid #c8b898;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  background: #fdfaf0;
+}
+.instruction-box {
+  background: linear-gradient(135deg, #e8f4fd 0%, #dff0fb 100%) !important;
+  border-color: #81c8e8 !important;
+  border-left: 5px solid #0288d1 !important;
+}
+.instruction-box h3 { color: #0277bd; margin-top: 0; font-size: 19px !important; }
+
+/* ===== TABLES ===== */
+.p2-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; }
+.p2-table th { border-top: 2px solid #555; border-bottom: 2px solid #555; padding: 9px; background: #f0ece0; }
+.p2-table td { padding: 7px; text-align: center; border-bottom: 1px solid #e8e0d0; }
+
+/* ===== SIDEBAR ===== */
+.content-flex { display: flex; gap: 25px; align-items: stretch; }
+.sidebar-container {
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+  background: #fff;
+  position: relative;
+  box-sizing: border-box;
+  color: #3e2723;
+}
+.sidebar-p3 {
+  height: 380px;
+  padding: 30px 0 60px 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100,85 0,100' fill='none' stroke='%23555' stroke-width='4' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.sidebar-p4 {
+  height: 420px;
+  padding: 30px 0 0 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 100,0 100,100 0,85' fill='none' stroke='%23555' stroke-width='4' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.signature-block { text-align: right; margin-top: 28px; font-weight: bold; font-size: 17px; }
+
+/* ===== FONT SIZE SCALE ===== */
+body.font-lg .page-container { font-size: 22px; }
+body.font-xl .page-container { font-size: 25px; }
+body.font-lg p, body.font-lg li { font-size: 22px; }
+body.font-xl p, body.font-xl li { font-size: 25px; }
+
+/* ===== DARK SAVER MODE (Manual Toggle) ===== */
+body.dark-saver {
+  background-color: #100f0e !important;
+  color: #b8b0a4 !important;
+  background-image: none !important;
+}
+.dark-saver .page-container {
+  background-color: #1a1816 !important;
+  border-bottom-color: #2a2826 !important;
+  color: #b8b0a4 !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5) !important;
+}
+.dark-saver .hero-title-box {
+  background: linear-gradient(145deg, #1e1c1a 0%, #1a1816 100%) !important;
+  border-color: #333 !important;
+  box-shadow: none !important;
+}
+.dark-saver .hero-title-box::before { background: #1e1c1a; color: #d4af37; }
+.dark-saver h1 {
+  background: linear-gradient(160deg, #d4af37, #f4e4bc, #b8860b) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+.dark-saver h2, .dark-saver h3 { color: #c5b068 !important; }
+.dark-saver .hero-title-box h2 { color: #888 !important; }
+.dark-saver p, .dark-saver li, .dark-saver td { color: #b8b0a4 !important; }
+.dark-saver .nav button {
+  background: linear-gradient(180deg, #252320 0%, #1e1c1a 100%) !important;
+  color: #888 !important;
+  border-color: #383430 !important;
+}
+.dark-saver .running-title { color: #666 !important; border-bottom-color: #2a2826 !important; }
+.dark-saver #index .index-box { background: linear-gradient(160deg, #1a1816 0%, #181614 100%) !important; border-color: #2a2826 !important; }
+.dark-saver #index .index-table { background: #1e1c1a !important; }
+.dark-saver #index .index-table th { background: #252320 !important; color: #b8b0a4 !important; border-color: #333 !important; }
+.dark-saver #index .index-table tr:nth-child(even) { background-color: #1c1a18 !important; }
+.dark-saver #index .index-table tr:nth-child(odd)  { background-color: #1a1816 !important; }
+.dark-saver #index .index-table tr:hover { background-color: #242220 !important; }
+.dark-saver #index .index-table a { color: #d4856a !important; }
+.dark-saver .tts-active { background-color: #221f1c !important; border-left-color: #c0392b !important; animation: dark-tts-pulse 2s ease-in-out infinite !important; }
+.dark-saver .tts-clickable:hover { background-color: #221f1c !important; border-left-color: #5a4a3a !important; }
+.dark-saver .instruction-box { background: linear-gradient(135deg, #131e26 0%, #111c24 100%) !important; border-color: #1e3548 !important; }
+.dark-saver .box { background: #1a1816 !important; border-color: #2a2826 !important; }
+.dark-saver .creator-credits div { color: #666 !important; }
+.dark-saver .bottom-banner-box { background: linear-gradient(145deg, #1c1a18 0%, #18130e 100%) !important; border-color: #3a3020 !important; }
+.dark-saver .bottom-banner-box .bbb-title { color: #d4af37 !important; }
+.dark-saver .bottom-banner-box .bbb-name { color: #c8a070 !important; }
+.dark-saver .bottom-banner-box .bbb-sub  { color: #777 !important; }
+.dark-saver .bottom-banner-box .bbb-tagline { color: #8a6030 !important; }
+body.dark-saver { background-image: none !important; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  body { padding: 0 0 120px 0 !important; font-size: 18px; overflow-x: hidden !important; word-wrap: break-word !important; }
+  .page-container { padding: 4px 12px 40px !important; margin: 0 0 12px 0 !important; width: 100% !important; max-width: 100% !important; box-shadow: none !important; border-radius: 0 !important; min-height: unset !important; overflow-x: hidden !important; }
+  .hero-title-box { padding: 28px 12px 12px !important; max-width: 100% !important; box-sizing: border-box !important; }
+  .hero-title-box h1 { font-size: 34px !important; line-height: 1.3 !important; }
+  .hero-title-box h2 { font-size: 16px !important; }
+  .index-title { font-size: 20px !important; }
+  #index .index-table th { font-size: 14px !important; padding: 8px 4px !important; }
+  #index .index-table td { padding: 9px 4px !important; font-size: 14px !important; }
+  #index .index-table td:nth-child(1), #index .index-table td:nth-child(3) { width: 40px !important; }
+  #index .index-table a { font-size: 14px !important; }
+  #index .index-footer { font-size: 15px !important; }
+  #index .index-box { padding: 15px !important; }
+  .nav { gap: 4px !important; }
+  .nav button { min-width: 0 !important; flex: 1 !important; font-size: 13px !important; padding: 10px 4px !important; letter-spacing: -0.5px !important; }
+  .nav button:first-child { padding-left: 14px !important; clip-path: polygon(10% 0%,100% 0%,100% 100%,10% 100%,0% 50%) !important; }
+  .nav button:last-child { padding-right: 14px !important; clip-path: polygon(0% 0%,90% 0%,100% 50%,90% 100%,0% 100%) !important; }
+  .quick-nav { bottom: calc(15px + env(safe-area-inset-bottom)); left: 10px; }
+  #tts-player { bottom: calc(15px + env(safe-area-inset-bottom)); right: 10px; padding: 9px 12px; min-width: 118px; }
+  .content-flex { flex-direction: row !important; gap: 12px !important; }
+  .sidebar-container { display: flex !important; width: 45px !important; font-size: 18px !important; }
+  
+  /* height ની જગ્યાએ min-height વાપરો જેથી મોટા ફોન્ટમાં લેઆઉટ ના તૂટે */
+  .sidebar-p3 { min-height: 260px !important; padding: 20px 0 40px 0 !important; height: auto !important; }
+  .sidebar-p4 { min-height: 280px !important; padding: 20px 0 0 0 !important; height: auto !important; }
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  .bottom-banner-box { margin: 20px 0 100px !important; padding: 24px 15px !important; }
+  .publisher-info { flex-direction: column !important; gap: 15px !important; align-items: center !important; }
+  .publisher-info .pub-col { width: 100% !important; text-align: center !important; }
+  .instruction-box { padding: 15px 12px !important; }
+}
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    .quick-nav { bottom: calc(25px + env(safe-area-inset-bottom)); }
+    #tts-player { bottom: calc(25px + env(safe-area-inset-bottom)); }
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  body { padding: 10px; }
+  .page-container { padding: 35px 30px; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .no-print, .nav, #tts-player, .browser-banner, .quick-nav { display: none !important; }
+  body { background: white !important; background-image: none !important; }
+  .page-container { box-shadow: none !important; border: none !important; margin: 0 !important; }
+}
+
+/* ===== BOTTOM BANNER (Improved) ===== */
+.bottom-banner-box {
+  background: linear-gradient(145deg, #fdf8ef 0%, #f8f0e0 50%, #f2e8d2 100%);
+  border: 1px solid #ddc898;
+  border-top: 3px solid #bf953f;
+  border-radius: 16px;
+  padding: 32px 28px;
+  margin: 30px auto 130px auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(192,154,63,0.15), 0 1px 4px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.bottom-banner-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #bf953f 20%, #fcf6ba 50%, #bf953f 80%, transparent);
+}
+.bottom-banner-box::after {
+  content: "❈ ❈ ❈";
+  display: block;
+  color: #bf953f;
+  font-size: 18px;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+.bbb-jay {
+  font-size: 27px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 50%, #aa771c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 14px;
+  display: block;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+}
+.bbb-divider {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c8a870, transparent);
+  margin: 14px auto;
+}
+.bbb-title {
+  font-size: 13px;
+  color: #7a6040;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.bbb-name {
+  font-size: 21px;
+  font-weight: 700;
+  color: #3e2600;
+  margin-bottom: 4px;
+}
+.bbb-sub {
+  font-size: 15px;
+  color: #7a6a50;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.bbb-tagline {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.bbb-tagline-guj {
+  font-size: 18px;
+  color: #555;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* New Disclaimer & Buttons */
+.bbb-disclaimer {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: inset 0 1px 3px rgba(200,0,0,0.05);
+}
+.dark-saver .bbb-disclaimer {
+  background: linear-gradient(135deg, #2a1a1a 0%, #221212 100%) !important;
+  color: #ff8a80 !important;
+  border-color: #4a2a2a !important;
+}
+.bbb-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.bbb-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-family: 'Hind Vadodara', 'Noto Sans Gujarati', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bbb-btn-top {
+  background: linear-gradient(135deg, #c0392b 0%, #962d22 100%);
+}
+.bbb-btn-index {
+  background: linear-gradient(135deg, #0277bd 0%, #01579b 100%);
+}
+.bbb-buttons button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+.dark-saver .bbb-btn-top { 
+  background: linear-gradient(135deg, #8e2015 0%, #5c140d 100%) !important; 
+  box-shadow: none !important;
+}
+.dark-saver .bbb-btn-index { 
+  background: linear-gradient(135deg, #014d7a 0%, #003355 100%) !important; 
+  box-shadow: none !important;
+}
+
+</style>
+<script>
+// ===== DETECTION =====
+const isEdge = /Edg|Edge|EdgiOS|EdgA/i.test(navigator.userAgent); 
+const isIOS  = /iPhone|iPad|iPod/.test(navigator.userAgent) && 'ontouchend' in document;
+
+// ===== TTS STATE =====
+let ttsElements = [], currentIndex = 0, synth = window.speechSynthesis;
+let isPlaying = false, currentUtterance = null, mobileWakeLock = null, mobilePauseTimer = null;
+let ttsRate = 0.9; // default speed
+const rateSteps = [0.7, 0.9, 1.1, 1.3];
+let rateIndex = 1;
+let currentBoundaryIndex = 0; // NEW: શબ્દ ટ્રેક કરવા માટે (Word Boundary)
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = () => synth.getVoices();
+}
+
+// --- MASTER PRONUNCIATION DICTIONARY ---
+const masterPronunciation = {
+    // Emails
+    "aptaputratrust@gmail.com": "આપ્તપુત્ર ટ્રસ્ટ એટ જીમેઈલ ડૉટ કૉમ",
+    "akramvignan@gmail.com": "અક્રમ વિજ્ઞાન એટ જીમેઈલ ડૉટ કૉમ",
+    "aptbharatanand@gmail.com": "આપ્ત ભરતાનંદ એટ જીમેઈલ ડૉટ કૉમ",
+    
+    // English Phrases & Acronyms
+    "Bhogve Teni Bhool": "ભોગવે તેની ભૂલ",
+    "CPT": "સી પી ટી",
+    "Read Aloud": "રીડ અલાઉડ",
+    "Edge": "એજ",
+    "Chrome": "ક્રોમ",
+    "Top": "ટોપ",
+    "Index": "ઇન્ડેક્સ",
+	"F9": "એફ નાઇન",
+    "ctrl+shift+U": "કંટ્રોલ શિફ્ટ યુ",
+        
+    // Credits & Roman Numerals
+    "II Jai Sachchidanand II": "જય સચ્ચિદાનંદ",
+    "Digital Archiver & Interactive Audio Creator : Kamleshanand Mehta,": "ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો ક્રિએટર, કમલેશાનંદ મહેતા",
+    "Digital Archiver & Interactive Audio Seva": "ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો સેવા",
+    "Dada Bhagwan Samadhi-Mandir, Kelanpuri, Vadodara.": "દાદા ભગવાન સમાધિ મંદિર, કેલનપુરી, વડોદરા",
+    "Dada Bhagwan Samadhi-Mandir": "દાદા ભગવાન સમાધિ મંદિર",
+    "Kelanpuri, Vadodara, Gujarat": "કેલનપુરી, વડોદરા, ગુજરાત",
+    "Kamleshanand Mehta": "કમલેશાનંદ મહેતા",
+    "Jagat Kalyan Ho !": "જગત કલ્યાણ હો, જગત કલ્યાણ હો, જગત કલ્યાણ હો",
+    "Jagat Kalyan Ho ! (3)": "જગત કલ્યાણ હો, જગત કલ્યાણ હો, જગત કલ્યાણ હો",
+    "II": "" 
+};
+
+function cleanTextForSpeech(text) {
+    let txt = text;
+
+    // 1. Process Master Dictionary First
+    for (const [writtenText, spokenAudio] of Object.entries(masterPronunciation)) {
+        txt = txt.replace(new RegExp(writtenText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), spokenAudio);
+    }
+
+    // 2. Format PIN Codes & Phone Numbers
+    txt = txt.replace(/\b\d{3}\s\d{3}\b/g, match => match.replace(/\D/g, '').split('').join(' '));
+    txt = txt.replace(/(?:\(\d{3,5}\)\s*)?\b\d{6,10}\b/g, match => match.replace(/\D/g, '').split('').join(' '));
+
+    // 3. Standard Punctuation and Symbol cleanup (added ❑➤❈ for your styling)
+    return txt
+        .replace(/[□■❑➤❈❖◎✦★☆▪▸►◄◆◇○●:'"‘’“”*()[\]{}]/g, '') 
+        .replace(/[-–—/]/g, ' ')
+        .replace(/\.{2,}/g, '. ')
+        .replace(/[।॥]/g, '. ') 
+        .replace(/\s+/g, ' ') 
+        .trim();
+}
+
+// ===== WAKE LOCK =====
+async function enableMobileWakeLock() {
+  if ('wakeLock' in navigator && !mobileWakeLock) {
+    try { mobileWakeLock = await navigator.wakeLock.request('screen'); mobileWakeLock.addEventListener('release', () => { mobileWakeLock = null; }); }
+    catch(err) { console.warn('WakeLock:', err); }
+  }
+}
+function disableMobileWakeLock() {
+  if (mobileWakeLock) { mobileWakeLock.release().catch(()=>{}); mobileWakeLock = null; }
+}
+
+// ===== THEME TOGGLE =====
+function manualThemeToggle() {
+  const isDark = document.body.classList.contains('dark-saver');
+  document.documentElement.classList.toggle('dark-saver', !isDark);
+  document.body.classList.toggle('dark-saver', !isDark);
+  const val = isDark ? 'light' : 'dark';
+  try { localStorage.setItem('theme', val); } catch(e) {}
+  try { sessionStorage.setItem('theme', val); } catch(e) {}
+}
+
+// ===== FONT SIZE CYCLE (Safe Stop, Anchor & Visual Marker Version) =====
+const fontSizes = ['', 'font-lg', 'font-xl']; // DO NOT DELETE
+let fontIdx = 0;                              // DO NOT DELETE
+let fontScrollTimer = null; 
+let currentFontClass = ''; 
+
+function cycleFontSize() {
+  // 1. SAFETY FIRST: Instantly stop the custom audio engine if it is running
+  if (typeof stopTTS === 'function' && isPlaying) {
+    stopTTS();
+  }
+
+  // 2. Identify the text currently on screen so we don't lose our place
+  let targetElement = null;
+  
+  if (isEdge) {
+    targetElement = ttsElements.find(el => {
+      const rect = el.getBoundingClientRect();
+      return rect.top >= 0 && rect.top < (window.innerHeight * 0.6);
+    });
+    if (!targetElement && ttsElements.length > 0) {
+      targetElement = ttsElements.find(el => el.getBoundingClientRect().top >= -50);
+    }
+  } else {
+    if (ttsElements.length > 0 && ttsElements[currentIndex]) {
+      targetElement = ttsElements[currentIndex];
+    }
+  }
+
+  // 3. Apply the new font size safely (No DOM thrashing)
+  const newFontIdx = (fontIdx + 1) % fontSizes.length;
+  const newFontClass = fontSizes[newFontIdx];
+
+  if (currentFontClass) {
+    document.body.classList.remove(currentFontClass);
+  }
+  if (newFontClass) {
+    document.body.classList.add(newFontClass);
+  }
+
+  currentFontClass = newFontClass;
+  fontIdx = newFontIdx;
+  
+  const labels = ['ક', 'ક+', 'ક++'];
+  document.getElementById('font-size-btn').textContent = '🔤 ' + labels[fontIdx];
+  try { localStorage.setItem('fontIdx', fontIdx); } catch(e) {}
+  try { sessionStorage.setItem('fontIdx', fontIdx); } catch(e) {}
+
+  // 4. Cancel overlapping clicks
+  if (fontScrollTimer) {
+    clearTimeout(fontScrollTimer);
+  }
+
+  // 5. Execute the Reflow Delay & Scroll
+  if (targetElement) {
+    fontScrollTimer = setTimeout(() => {
+      const offset = window.innerHeight * 0.25; 
+      const y = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+      
+      const scrollBehavior = isEdge ? "auto" : "smooth";
+      window.scrollTo({ top: y, behavior: scrollBehavior });
+      
+    }, 150); 
+  }
+
+  // 6. VISUAL PERSISTENCE: Re-highlight the current line so the user knows where they are!
+  if (!isEdge && ttsElements.length > 0 && ttsElements[currentIndex]) {
+    ttsElements[currentIndex].classList.add("tts-active");
+  }
+}
+
+// ===== SPEED CONTROL (With Local Storage) =====
+function cycleSpeed() {
+  rateIndex = (rateIndex + 1) % rateSteps.length;
+  ttsRate = rateSteps[rateIndex];
+  const labels = ['🐢', '▶', '⏩', '⚡'];
+  document.getElementById('speed-btn').textContent = labels[rateIndex] + ' ' + ttsRate + 'x';
+  
+  // સ્પીડને યુઝરના ફોનમાં કાયમ માટે સેવ કરો
+  try { localStorage.setItem('rateIndex', rateIndex); } catch(e) {}
+  try { sessionStorage.setItem('rateIndex', rateIndex); } catch(e) {}
+}
+
+// ===== NAVIGATION =====
+function scrollToIndex() {
+  stopTTS();
+  
+  // 1. Identify which page is currently in the center of the viewport
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  let currentPageId = null;
+  
+  for (let p of pages) {
+    if (p.id === 'index') continue;
+    const rect = p.getBoundingClientRect();
+    // If the top is above the middle, and bottom is below the middle
+    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+      currentPageId = p.id;
+      break;
+    }
+  }
+
+  // 2. Find the exact row in the index table and scroll to it
+  if (currentPageId) {
+    const indexLink = document.querySelector(`.index-table a[href="#${currentPageId}"]`);
+    if (indexLink) {
+      const row = indexLink.closest('tr');
+      row.scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      // 3. Apply the highlight flash
+      row.classList.add('highlight-index');
+      setTimeout(() => row.classList.remove('highlight-index'), 2500);
+      return;
+    }
+  }
+  
+  // Fallback to top of index if specific page isn't found
+  const idx = document.querySelector(".index-title");
+  if (idx) idx.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function nextPage() {
+  stopTTS();
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  const next = pages.find(p => p.getBoundingClientRect().top > 10);
+  if (next) next.scrollIntoView({ behavior: 'smooth' });
+}
+function prevPage() {
+  stopTTS();
+  const pages = Array.from(document.querySelectorAll('.page-container'));
+  const prev = [...pages].reverse().find(p => p.getBoundingClientRect().top < -10);
+  if (prev) prev.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== VISIBILITY / INTERRUPTIONS =====
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && isPlaying) togglePlayPause();
+});
+if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+  navigator.mediaDevices.addEventListener('devicechange', () => { if (isPlaying) togglePlayPause(); });
+}
+
+// ===== DOM READY =====
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Restore saved preferences
+  // જો યુઝરે ક્યારેય 🌓 બટન દબાવ્યું ન હોય, તો OS ડાર્ક મોડ ચેક કરો
+  let _savedTheme = '';
+  try { _savedTheme = localStorage.getItem('theme') || ''; } catch(e) { try { _savedTheme = sessionStorage.getItem('theme') || ''; } catch(e2) {} }
+  const _osDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (_savedTheme === 'dark' || (_savedTheme === '' && _osDark)) {
+    document.body.classList.add('dark-saver');
+    document.documentElement.classList.add('dark-saver');
+  }
+  // OS dark mode change વખતે live update (user ટૉગલ ન કર્યું હોય ત્યાં સુધી)
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      let _cur = '';
+      try { _cur = localStorage.getItem('theme') || ''; } catch(e2) {}
+      if (_cur === '') {
+        document.body.classList.toggle('dark-saver', e.matches);
+        document.documentElement.classList.toggle('dark-saver', e.matches);
+      }
+    });
+  }
+
+  // Restore saved font size
+  let _fontRaw = '0';
+  try { _fontRaw = localStorage.getItem('fontIdx') || '0'; } catch(e) { try { _fontRaw = sessionStorage.getItem('fontIdx') || '0'; } catch(e2) {} }
+  const savedFont = parseInt(_fontRaw);
+  if (savedFont > 0 && fontSizes[savedFont]) {
+    fontIdx = savedFont;
+    document.body.classList.add(fontSizes[fontIdx]);
+    const labels = ['ક', 'ક+', 'ક++'];
+    const fbtn = document.getElementById('font-size-btn');
+    if (fbtn) fbtn.textContent = '🔤 ' + labels[fontIdx];
+  }
+
+  // === નવો સુધારો ૩: સ્પીડ રિસ્ટોર કરવાનો કોડ ===
+  let _rateRaw = '1'; // Default is 1 (0.9x)
+  try { _rateRaw = localStorage.getItem('rateIndex') || '1'; } catch(e) { try { _rateRaw = sessionStorage.getItem('rateIndex') || '1'; } catch(e2) {} }
+  const savedRate = parseInt(_rateRaw);
+  if (rateSteps[savedRate]) {
+    rateIndex = savedRate;
+    ttsRate = rateSteps[rateIndex];
+    const sLabels = ['🐢', '▶', '⏩', '⚡'];
+    const sBtn = document.getElementById('speed-btn');
+    if (sBtn) sBtn.textContent = sLabels[rateIndex] + ' ' + ttsRate + 'x';
+  }
+
+  // ===== EDGE BROWSER HARD-LOCK (PERMANENT FIX) =====
+  // ⚠️ DO NOT REMOVE THIS BLOCK EVER ⚠️
+  // REASON: Microsoft Edge strictly uses its own native "Read Aloud" cloud engine.
+  // Our custom JS speed buttons, play/pause, and progress tracker CANNOT control Edge's native voice.
+  // To completely prevent user confusion, we MUST hide our custom TTS player when Edge is detected.
+  // Let the user rely entirely on Edge's built-in F9 / native menu controls.
+  if (isEdge) {
+    document.getElementById("edge-banner").style.display = "block";
+    const customPlayer = document.getElementById("tts-player");
+    if (customPlayer) {
+      customPlayer.style.display = "none"; // Permanently hides the player on screen
+    }
+  }
+
+  // Build TTS element list
+  let pages = document.querySelectorAll(".page-container, .bottom-banner-box");
+  pages.forEach(page => {
+    if (page.id === 'index' || page.id === 'page-2') return;
+    let allReadable = Array.from(page.querySelectorAll('h1, h2, h3, p, li, figcaption, td, .signature-block, [aria-label]'));
+    allReadable = allReadable.filter(el => !el.closest('.nav') && el.getAttribute('aria-hidden') !== 'true' && !el.closest('.no-tts') && !el.classList.contains('page-number'));
+    allReadable = allReadable.filter(el => {
+      let hasChild = Array.from(el.children).some(c => c.matches('h1,h2,h3,p,li,figcaption'));
+      return !hasChild && el.innerText.trim().length > 1;
+    });
+    allReadable.forEach(el => ttsElements.push(el));
+  });
+
+  // Attach click handlers via Event Delegation
+  ttsElements.forEach((el, index) => {
+    el.classList.add("tts-clickable");
+    el.setAttribute('title', 'ક્લિક કરો - અહીંથી વાંચો');
+    el.setAttribute('data-tts-index', index);
+  });
+
+  document.getElementById("magazine-content").addEventListener("click", e => {
+    const targetEl = e.target.closest('.tts-clickable');
+    if (targetEl && e.target.tagName.toLowerCase() !== 'a' && e.target.tagName.toLowerCase() !== 'button') {
+      e.stopPropagation();
+      if (!isEdge) enableMobileWakeLock();
+      playFromIndex(parseInt(targetEl.getAttribute('data-tts-index')));
+    }
+  });
+
+  document.querySelectorAll('.index-table a').forEach(link => {
+    link.addEventListener('click', () => stopTTS());
+  });
+
+  updateProgressDisplay();
+});
+
+// ===== TTS CORE =====
+function playFromIndex(index) { 
+  stopTTS(); 
+  currentIndex = index; 
+  currentBoundaryIndex = 0; // નવો ફકરો શરૂ થાય એટલે જૂની મેમરી ઝીરો કરો
+  readCurrentElement(); 
+}
+
+function stopTTS() {
+  synth.cancel();
+  isPlaying = false;
+  currentBoundaryIndex = 0; // સ્ટોપ દબાવવા પર મેમરી ઝીરો કરો
+  ttsElements.forEach(el => el.classList.remove("tts-active"));
+  disableMobileWakeLock();
+  if (mobilePauseTimer) clearTimeout(mobilePauseTimer);
+  updatePlayerUI();
+  updateProgressDisplay();
+}
+
+function readCurrentElement(startCharIndex = 0) {
+  if (currentIndex >= ttsElements.length) { stopTTS(); return; }
+  ttsElements.forEach(el => el.classList.remove("tts-active"));
+
+  let el = ttsElements[currentIndex];
+  el.classList.add("tts-active");
+  
+  // Calculate a position that places the active text at the top 25% of the viewport
+  const offset = window.innerHeight * 0.25; 
+  const y = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+
+  if (isEdge) return;
+
+  // Get text
+  let text = "";
+  if (el.hasAttribute('aria-label')) {
+    text = el.getAttribute('aria-label');
+  } else {
+    let clone = el.cloneNode(true);
+    clone.querySelectorAll('[aria-label]').forEach(node => { node.textContent = node.getAttribute('aria-label'); });
+    clone.querySelectorAll('[aria-hidden="true"]').forEach(node => node.remove());
+    text = clone.innerText || clone.textContent;
+  }
+
+  // Clean up text for TTS using the Master Dictionary
+  text = cleanTextForSpeech(text);
+
+  // ===== WORD BOUNDARY SLICING (SUBSTRING) =====
+  if (startCharIndex > 0) {
+    text = text.substring(startCharIndex);
+  } else {
+    currentBoundaryIndex = 0; // નવો ફકરો હોય તો મેમરી ઝીરો કરો
+  }
+
+  if (!text) { currentIndex++; readCurrentElement(); return; }
+
+  let voices = synth.getVoices();
+  let gujaratiVoice = voices.find(v => v.lang.startsWith('gu'));
+
+  if (!gujaratiVoice && !document.getElementById("no-voice-banner").style.display.includes('block')) {
+    document.getElementById("no-voice-banner").style.display = "block";
+    stopTTS(); return;
+  }
+
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  if (gujaratiVoice) currentUtterance.voice = gujaratiVoice;
+  currentUtterance.lang = "gu-IN";
+  currentUtterance.rate = ttsRate;
+
+  // ===== TRACK EVERY WORD (શબ્દ ટ્રેકિંગ) =====
+  currentUtterance.onboundary = (event) => {
+    if (event.name === 'word') {
+      currentBoundaryIndex = startCharIndex + event.charIndex;
+    }
+  };
+
+  if (isIOS) {
+    currentUtterance.onpause = () => { if (isPlaying) { synth.resume(); } };
+  }
+
+  currentUtterance.onend = () => {
+    currentBoundaryIndex = 0; // ફકરો પૂરો થાય એટલે મેમરી ક્લિયર કરો
+    if (isPlaying) { currentIndex++; updateProgressDisplay(); readCurrentElement(); }
+  };
+  
+  currentUtterance.onerror = (e) => {
+    if (e.error !== 'interrupted' && isPlaying) { currentIndex++; readCurrentElement(); }
+  };
+
+  isPlaying = true;
+  updatePlayerUI();
+  updateProgressDisplay();
+  synth.speak(currentUtterance);
+}
+ 
+// ===== PLAY / PAUSE TOGGLE =====
+function togglePlayPause() {
+  if (isPlaying) {
+    isPlaying = false; // OnEnd ઇવેન્ટ અટકાવવા માટે પહેલા false કરો
+    synth.cancel(); // ⚠️ બગ દૂર કરવા: pause() ના બદલે cancel() વાપરો
+    disableMobileWakeLock();
+    
+    // ⚠️ 3-minute timer KEPT to prevent OS audio thread hangs/battery drain during phone calls.
+    // Modified to save and restore the exact word position before calling the full stop!
+    mobilePauseTimer = setTimeout(() => {
+      let savedWordIndex = currentBoundaryIndex; 
+      stopTTS(); 
+      currentBoundaryIndex = savedWordIndex; 
+    }, 3 * 60 * 1000);
+    
+  } else {
+    enableMobileWakeLock();
+    if (mobilePauseTimer) clearTimeout(mobilePauseTimer); // Failsafe clear
+    isPlaying = true;
+    readCurrentElement(currentBoundaryIndex); // સેવ કરેલા શબ્દથી જ નવેસરથી શરૂ કરો
+  }
+  updatePlayerUI();
+}
+
+
+function updatePlayerUI() {
+  const btn = document.getElementById("play-pause-btn");
+  if (btn) btn.textContent = isPlaying ? "⏸ Pause" : "▶ Play";
+}
+
+function updateProgressDisplay() {
+  const prog = document.getElementById('tts-progress');
+  if (!prog) return;
+  if (ttsElements.length === 0) { prog.textContent = ''; return; }
+  if (!isPlaying && currentIndex === 0) { prog.textContent = ''; return; }
+  prog.textContent = (currentIndex + 1) + ' / ' + ttsElements.length;
+}
+
+// iOS background audio keep-alive
+if (isIOS) {
+  setInterval(() => {
+    if (isPlaying && synth && !synth.speaking && !synth.pending) {
+      readCurrentElement();
+    }
+  }, 500);
+}
+</script>
+</head>
+<body>
+
+<div style="flex:1;width:100%;display:flex;flex-direction:column;">
+
+<!-- BROWSER BANNERS -->
+<div class="browser-banner no-print" id="edge-banner">
+  વધુ સારા ઑડિયો અનુભવ માટે બ્રાઉઝરના '<span lang="en">Read Aloud</span>' વિકલ્પનો ઉપયોગ કરો.
+</div>
+<div class="browser-banner no-print" id="no-voice-banner">
+  ⚠️ <b>નોંધ:</b> ગુજરાતી અવાજ ઉપલબ્ધ નથી. <b><span lang="en">Google Chrome</span></b> અથવા <b><span lang="en">Microsoft Edge</span></b> માં ખોલો.
+</div>
+
+<div id="magazine-content">
+
+<!-- INDEX PAGE -->
+<div class="page-container" id="index" aria-hidden="true">
+            <div class="index-box">
+                <div class="index-header">
+                    <div class="hero-title-box">
+                        <h2>દાદા ભગવાન કથિત</h2>
+                        <h1>ભોગવે<br>તેની<br>ભૂલ</h1>
+                    </div>
+                    <h2 class="index-title">વિષય સૂચિ</h2>
+                    <table class="index-table">
+                        <tr><th>ક્રમાંક</th><th>વિષય</th><th>પાન નં</th></tr>
+                        <tr><td>1</td><td><a href="#page-1">દાદા ભગવાન કથિત<br/>ભોગવે તેની ભૂલ</a></td><td>1</td></tr>
+                        <tr><td>2</td><td><a href="#page-3">સંપાદકીય</a></td><td>3</td></tr>
+                        <tr><td>3</td><td><a href="#page-5">પરસ્પર</a></td><td>5</td></tr>
+                        <tr><td>4</td><td><a href="#page-6">દાદા ભગવાન કથિત</a></td><td>6</td></tr>
+                        <tr><td>5</td><td><a href="#page-7">બંધન, પોતાની ભૂલ થકી</a></td><td>7</td></tr>
+                        <tr><td>6</td><td><a href="#page-7">પહેલાંનો ગુનો, આજે દંડ</a></td><td>7</td></tr>
+                        <tr><td>7</td><td><a href="#page-8">તમારી ‘પોસ્ટ’ જ તમને</a></td><td>8</td></tr>
+                        <tr><td>8</td><td><a href="#page-8">આવો છે શીલનો પ્રતાપ</a></td><td>8</td></tr>
+                        <tr><td>9</td><td><a href="#page-9">એ બધું ન્યાય જ</a></td><td>9</td></tr>
+                        <tr><td>10</td><td><a href="#page-9">તમામ શાસ્ત્રોનો સાર</a></td><td>9</td></tr>
+                        <tr><td>11</td><td><a href="#page-10">ભ્રાંતભાષા : વીતરાગભાષા</a></td><td>10</td></tr>
+                        <tr><td>12</td><td><a href="#page-11">ભ્રાંતિનો ન્યાય : કુદરતી ન્યાય</a></td><td>11</td></tr>
+                        <tr><td>13</td><td><a href="#page-11">કુદરતનું સંચાલન કેવું!</a></td><td>11</td></tr>
+                        <tr><td>14</td><td><a href="#page-12">જો એટલું સમજે ને, તો...</a></td><td>12</td></tr>
+                        <tr><td>15</td><td><a href="#page-12">કુદરતનો ગુનો : સરકારનો ગુનો</a></td><td>12</td></tr>
+                        <tr><td>16</td><td><a href="#page-13">એ જ માર્ગ મોક્ષનો</a></td><td>13</td></tr>
+                        <tr><td>17</td><td><a href="#page-13">એ ગુપ્ત તત્ત્વ સમજવા જેવું</a></td><td>13</td></tr>
+                        <tr><td>18</td><td><a href="#page-14">જ્યાં ભોગવટો, ભૂલ પોતાની</a></td><td>14</td></tr>
+                        <tr><td>19</td><td><a href="#page-15">ભૂલ જણાય ભોગવટા થકી</a></td><td>15</td></tr>
+                        <tr><td>20</td><td><a href="#page-15">કોની ભૂલ? કોને બચકાં?</a></td><td>15</td></tr>
+                        <tr><td>21</td><td><a href="#page-15">એમાં નિમિત્તનો શો દોષ?</a></td><td>15</td></tr>
+                        <tr><td>22</td><td><a href="#page-16">આમાં ‘રિસ્પોન્સિબલ’ પોતે જ</a></td><td>16</td></tr>
+                        <tr><td>23</td><td><a href="#page-17">જેવો હિસાબ તેવું થાય</a></td><td>17</td></tr>
+                        <tr><td>24</td><td><a href="#page-17">ભોગવટો, એ જ ભૂલનું પ્રમાણ</a></td><td>17</td></tr>
+                        <tr><td>25</td><td><a href="#page-18">શેકાય કોણ? એની જ ભૂલ</a></td><td>18</td></tr>
+                        <tr><td>26</td><td><a href="#page-20">તો તરફડાટ શમે</a></td><td>20</td></tr>
+                        <tr><td>27</td><td><a href="#page-20">કંઈ કારણ તો હશે ને?</a></td><td>20</td></tr>
+                        <tr><td>28</td><td><a href="#page-21">આમાં ‘સિલેક્શન’ કોનું?</a></td><td>21</td></tr>
+                        <tr><td>29</td><td><a href="#page-21">ભૂલ ત્યાં જ ભોગવટો</a></td><td>21</td></tr>
+                        <tr><td>30</td><td><a href="#page-23">જગત હિસાબસર, તો ભૂલ કોની?</a></td><td>23</td></tr>
+                        <tr><td>31</td><td><a href="#page-24">એ વાક્ય મોક્ષે લઈ જશે</a></td><td>24</td></tr>
+                    </table>
+                    <div class="index-footer" style="position: relative; margin-top:30px; text-align:center; color:#d32f2f; font-weight:bold;">
+                        જય સચ્ચિદાનંદ સંઘ
+                        <div style="position: absolute; bottom: -30px; right: 0; font-size: 11px; color: #777; font-weight: normal; font-style: italic;">*કમલેશાનંદ મહેતા*</div>
+                    </div>
+                </div>
+    <!-- Instructions Box -->
+    <div class="box instruction-box no-print" style="margin-top:50px;">
+      <h3>:: ઉપયોગ માટેની સૂચનાઓ ::</h3>
+      <ol style="margin-bottom:0;padding-left:22px;line-height:2;">
+        <li>વિષય પર જવા: <b>ઉપરની સૂચિમાં તે વિષય પર ક્લિક/ટચ કરો.</b></li>
+        <li>અવાજ શરૂ કરવા: <b>નીચે આપેલા '▶ Play' બટન પર ક્લિક કરો અથવા કોઈપણ પાના પર જઈને લખાણ પર ટચ કરો.</b></li>
+        <li>Index પર પાછા: <b>'🏠 Index' બટન</b> પર ક્લિક કરો (દરેક પાના પર).</li>
+        <li>બુકના અંતે જવા: <b>'⬇ Bottom' બટન</b> પર ક્લિક કરો.</li>
+        <li>ઝડપ બદલવા: <b>TTS Player ના '▶ 0.9x' બટન</b> વડે ઝડપ ઓછી/વધારે કરો.</li>
+        <li><span style="color:#2e7d32;font-weight:700;">🔤 ફૉન્ટ સાઈઝ:</span> ડાબી બાજુ <b>'🔤 ક'</b> બટન દ્વારા ત્રણ સ્ટેજ: સામાન્ય → મોટો → વધુ મોટો.</li>
+        <li><span style="color:#455a64;font-weight:700;">🌓 ડાર્ક મોડ:</span> <b>'🌓'</b> બટન – આંખોને આરામ, બૅટેરી બચત.</li>
+        <li><span style="color:#c0392b;font-weight:700;">⚠️ iPhone / iOS:</span> ગુજરાતી TTS ન ચાલે તો <b>Edge Browser</b> માં ખોલો → <b>Read Aloud (F9) અથવા ctrl+shift+U</b>.</li>
+        <li><span style="color:#c0392b;font-weight:700;">⚠️ Edge એરર:</span> જો Edge માં 'Poor Internet' ની એરર આવે અને અવાજ બંધ થાય, તો તે માઇક્રોસોફ્ટ સર્વરનો પ્રોબ્લેમ છે. કૃપા કરીને થોડી સેકન્ડ પછી બ્રાઉઝરનું 'Play' બટન ફરીથી દબાવો.</li>
+        <li><span style="color:#0288d1;font-weight:700;">🔋 બૅટરી:</span> અવાજ બંધ થઈ જાય તો Settings → Apps → Browser → <b>Battery: Unrestricted</b>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+        <div class="page-container odd-page" id="page-1">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">1</div>
+            <div class="hero-title-box"><h2>દાદા ભગવાન કથિત</h2><h1>ભોગવે<br>તેની<br>ભૂલ</h1></div>
+            <hr style="width:60%;border:0;border-top:1px solid #c8b898;margin:0 auto 20px;"/>
+            <div style="text-align: center; font-size: 18px; margin: 20px 0;">: સંકલન :<br/><strong>આપ્તપુત્ર ભરતાનંદ</strong></div>
+            <hr style="width:60%;border:0;border-top:1px solid #c8b898;margin:0 auto 20px;"/>
+            <div style="text-align: center; margin: 25px 0;">
+                <svg width="60" height="60" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,50 Q25,30 50,50 T90,50" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <path d="M10,65 Q25,45 50,65 T90,65" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <path d="M10,80 Q25,60 50,80 T90,80" fill="none" stroke="#8B6914" stroke-width="8"/>
+                    <circle cx="50" cy="35" r="10" fill="none" stroke="#8B6914" stroke-width="6"/>
+                </svg>
+            </div>
+            <div aria-hidden="true" style="text-align:center;font-size:24px;margin:40px 0 20px;color:#bf953f;">❑</div>
+            <div style="text-align:center;font-weight:bold;border-top:2px solid #8B6914;border-bottom:2px solid #8B6914;padding:6px 0;width:80%;margin:0 auto;">શ્રી આપ્તપુત્ર ટ્રસ્ટ, વડોદરા</div>
+        </div>
+
+        <div class="page-container even-page" id="page-2" aria-hidden="true">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">2</div>
+            <p style="margin:0;"><span lang="en">Bhogve Teni Bhool</span></p>
+            <p style="margin:0;">©</p>
+            <p style="margin:0;">જય સચ્ચિદાનંદ સંઘ, મુંબઈ</p>
+            <div aria-hidden="true" style="font-size: 20px; margin: 10px 0;">❑</div>
+            <div style="border-top: 2px solid #000; border-bottom: 2px solid #000; text-align: center; font-weight: bold; padding: 10px 0; margin-top: 15px;">
+                મૂલ્ય : ‘પરમ વિનય’ અને ‘હું કંઈ જ જાણતો નથી’ એ ભાવ
+            </div>
+            <div style="max-width: 100%; overflow-x: auto;">
+                <table class="p2-table">
+                    <tr><th aria-hidden="true" style="width: 10%;"></th><th style="text-align: left;">આવૃત્તિ</th><th>માસ/વર્ષ</th><th>પ્રત</th></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">પ્રથમ</td><td>નવેમ્બર 1992</td><td>10000</td></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">બીજીથી ચૌદમી</td><td>જાન્યુઆરી 1994થી<br>માર્ચ 2017</td><td>120000</td></tr>
+                    <tr><td aria-hidden="true">❑</td><td style="text-align: left;">પંદરમી</td><td>નવેમ્બર 2023</td><td>20000</td></tr>
+                </table>
+            </div>
+            <div style="display: flex; align-items: center; margin: 15px 0;">
+                <span aria-hidden="true" style="margin-right:10px;">❑</span>
+                <hr style="flex:1; border:0; border-top:1px solid #000;"/>
+                <span style="border: 1px solid #000; padding: 2px 15px; font-weight: bold; margin: 0 10px;">પ્રાપ્તિસ્થાન</span>
+                <hr style="flex:1; border:0; border-top:1px solid #000;"/>
+                <span aria-hidden="true" style="margin-left:10px;">❑</span>
+            </div>
+            <div class="publisher-info" style="display: flex; justify-content: space-between; font-size: 14px; line-height: 1.6;">
+                <div class="pub-col" style="width: 45%;">
+                    <strong>પ્રકાશક</strong><br/><strong>શ્રી આપ્તપુત્ર ટ્રસ્ટ વતી</strong><br/>આપ્તપુત્ર શ્રી મિનેષકુમાર એચ. મહેતા<br/>સંયમધામ, નાગર બાગ સંકુલ,<br/>સિંગોદ-394 335<br/>
+                    <span aria-label="ફોન નંબર: શૂન્ય બે છ બે બે, બે ચાર છ પાંચ એક ત્રણ">✆ : (02622) 246513</span><br/><span lang="en">E-mail</span>: <span lang="en">aptaputratrust@gmail.com</span>
+                </div>
+                <div style="width: 48%; text-align: right;">
+                    <strong>જય સચ્ચિદાનંદ સંઘ</strong><br/>36, પાર્શ્વનાથ ચેમ્બર્સ,<br/>‘રિઝર્વ બૅન્ક’ની ગલીમાં,<br/>ઇન્કમટૅક્સ પાસે, આશ્રમ રોડ,<br/>અમદાવાદ-380 014<br/>
+                    <span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે સાત પાંચ ચાર શૂન્ય પાંચ છ સાત">✆ : (079) 27540567</span><br/>(079) 27582611<br/><span lang="en">E-mail</span>: <span lang="en">akramvignan@gmail.com</span>
+                </div>
+            </div>
+            <div style="border-top:1px solid #000; margin-top:20px; text-align:center; font-size: 14px;">
+                <p style="margin:5px 0;"><strong>લેસર કમ્પોઝ: જય સચ્ચિદાનંદ સંઘ</strong></p>
+                <p style="margin:2px 0; font-size:13px;">36, પાર્શ્વનાથ ચેમ્બર્સ, રિઝર્વ બૅન્કની પાસે, ઇન્કમટૅક્સ ઑફિસ સામે, અમદાવાદ-380 014</p>
+                <p style="margin:2px 0;"><span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે સાત પાંચ ચાર શૂન્ય પાંચ છ સાત, અને બે સાત પાંચ આઠ બે છ એક એક">✆ : (079) 27540567, 27582611</span></p>
+            </div>
+            <div style="border-top:1px solid #000; border-bottom:1px solid #000; text-align:center; font-size: 12px; padding:5px 0;">
+                આ પુસ્તિકામાં બી ભારતી ગોપિકા-2 ટાઈપનો ઉપયોગ કરવામાં આવ્યો છે.<br/>આ પુસ્તિકા <span lang="en">CPT </span>દ્વારા છપાઈ છે.
+            </div>
+            <div style="text-align:center; font-size: 14px; margin-top:5px;">
+                <strong>મુદ્રક: ચિરાગ ઑફસેટ પ્રા. લિ.,</strong> અમદાવાદ-380 022 <span aria-label="ફોન નંબર: શૂન્ય સાત નવ, બે પાંચ ચાર છ ચાર સાત ચાર સાત">✆ : (079) 25464747, 25464848</span>
+            </div>
+        </div>
+
+        <div class="page-container odd-page" id="page-3">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">3</div>
+            <div class="content-flex">
+                <div style="flex: 1;">
+                    <h2 style="height: 1px; opacity: 0.01; overflow: hidden; margin: 0; padding: 0;">સંપાદકીય</h2>
+                    <p style="text-indent: 30px;">નિશદિન ઉદયમાન થતા, પોતાને સ્પર્શતા દરેક સંયોગમાં કે દરેક ભોગવટામાં નિમિત્તને બચકું ભરી લેવાની ટેવ-સ્વભાવ દરેક જીવને સહજપણે જ છે. અજ્ઞાનદૃષ્ટિથી-મિથ્યાત્વથી અને વસ્તુને ‘જેમ છે તેમ’ નહીં જાણવાથી જીવમાત્ર પોતાના દોષ ન સમજતાં સામાને જ દોષિત જુએ છે અને તે પરિણામે આર્ત-રૌદ્રધ્યાન કરી નવાં બીજ, નવું વેર બાંધતો રહે છે અને ક્લેશ પરિણામ ઊભાં કરે છે, પણ ખરેખર તેમ છે ખરું? ના. ‘દાદા ભગવાન’ થકી ખુલ્લું થાય છે કે <strong>ભોગવે તેની ભૂલ!</strong> આ કેમ? કેવી રીતે? તેની સર્વગ્રાહી સમ્યક્ સમજણ તેમની જ વાણીમાં અત્રે પ્રકાશિત થઈ છે.</p>
+                    <p>“જ્ઞાની પુરુષે” રોજબરોજ બનતા તમામ પ્રકારના બનાવોમાં ઝીણવટથી સમજાવ્યું છે કે જેને ઢેખાળો વાગ્યો તેની જ ભૂલ, આપણું ગજવું કપાયું તો આપણી જ ભૂલ, તીર વાગ્યું કોને તેની ભૂલ, ઘરવાળા આપણને પજવે તો આપણી જ ભૂલ, કોઈ થકી આપણને નુકસાન થયું તે આપણી ભૂલ, સામેવાળો ગાળ ભાંડે આપણને તેય આપણી ભૂલ, સામેવાળો અથડાયો આપણને તો ભૂલ આપણી! સામેવાળો તો નિમિત્ત છે. આપણું દીધેલું જ આપણને પાછું આવે છે, એમાં નિમિત્ત શું કરે? આ તો હિસાબને લઈને નિમિત્ત ભેગું થાય છે. હિસાબ ન હોય તો લૂંટારાના ગામમાંય કોઈ અડી ન શકે ને લૂંટારાય ‘સાહેબ, સાહેબ’ કરીને જમાડે.</p>
+                    <p>વળી આ નિમિત્ત ભેગું કરી આપનાર અને કોઈ પણ ‘ઇન્સિડન્ટ’ કે ‘ઍક્સિડન્ટ’ બનવા પાછળ જે લાખો સ્થૂળ-સૂક્ષ્મ-સૂક્ષ્મતર કે સૂક્ષ્મતમ સંયોગો ભેગા થાય છે, દ્રવ્ય-ક્ષેત્ર-કાળ-ભાવ-ભાવિનાં ભૂત-ભવિષ્ય અને વર્તમાનનાં જે લાખો ‘સાયન્ટિફિક સરકમસ્ટેન્શિયલ ઍવિડન્સ’ ભેગાં થાય છે, તે ભેગાં કરનાર ‘નેચર’નું ‘સુપર કૉમ્પ્યુટર’ છે. ગજવું કાપનારને પ્રેરણા કોણ કરે છે કે આ ભાઈનું જ ગજવું કાપ? બીજા હજારોમાં તમારો જ ‘નંબર’ કોણ લગાડે છે? અને તેય પાછું પ્રેરણાથી વાત પતતી નથી. એના ને તમારા દ્રવ્ય-ક્ષેત્ર-કાળ-ભાવના ને બીજા કેટલાય સંયોગો ભેગા થાય ત્યારે ગજવું કપાય, નહીં તો પેલાની કોશિશેય નકામી જાય. કાં તો ગજવું કાપવા જાય તોય કપાય નહીં અને નહીં તો બસોવાળું કપાય ને પાંચ હજારવાળું રહી જાય!</p>
+                    <p class="read-next">એટલે તમારો જે પાછલો ગુનો છે, જે મહીં પરમાણુ પડયાં છે, તે જ્યારે એનો ઉદયકાળ પાકે છે, ફળ આપવા પરિપક્વ થાય છે, ત્યારે એને આનુષંગિક બધાં જ પરમાણુઓ, સંયોગો(‘સાયન્ટિફિક સરકમસ્ટેન્શિયલ એવિડન્સ’)</p>
+                </div>
+                <div aria-hidden="true" class="sidebar-container sidebar-p3">સં<br/>પા<br/>દ<br/>કી<br/>ય</div>
+            </div>
+        </div>
+
+        <div class="page-container even-page" id="page-4">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">4</div>
+            <div class="content-flex" style="flex-direction: row-reverse;">
+                <div style="flex: 1;">
+                    <p>‘નેચર’ ભેગા કરી દે છે. ‘નેચર”નું ‘સુપર કૉમ્પ્યુટર’ આ પરમાણુઓનો ‘ઍક્ઝક્ટ’ હિસાબ-કિતાબ રાખે છે, એમાં કોઈનુંયે ચાલે જ નહીં, અને આ ન્યાય એક પરમાણુ અને એક સમય સુધી ‘ઍક્ઝેક્ટનેસ’માં છે. કોઈને કંઈ પણ દુઃખ દીધું હોય તે પરમાણુઓનો હિસાબ ચૂકવવાનો થાય ત્યારે અશાતાવેદનીયરૂપે ફળ આવે. હવે અશાતાવેદનીય આવી ત્યારે નિમિત્ત સામું દેખાય તો એનો શો દોષ? કુદરત એક ક્ષણ વાર ન્યાયની બહાર વર્તતી નથી.</p>
+                    <p>‘ભોગવે તેની ભૂલ’નો કુદરતી કાયદો તો કોઈને છોડે નહીં. ભગવાન મહાવીરને ગોવાળે કાનમાં બરુ ઠોકી દીધાં, તો ભગવાનના જ્ઞાનમાં શું ઝળક્યું? કે આ તો પૂર્વભવમાં રાજા હતા અને સંગીતકારના કાનમાં સીસું રેડાવેલું તે આ ફળ અત્યારે આ ક્ષેત્રે, આ કાળે, આ નિમિત્તે, આ પ્રકારે ઉદયમાં આવ્યું. હવે ત્યાં ગોવાળને દોષિત જુએ, તો શું થાય? આપણે જ્યાં જ્યાં ભોગવટો ભોગવીએ છીએ ત્યાં આપણી જ ભૂલ છે એમ સમજાશે ત્યારે જ આ ‘પઝલ’ ‘સૉલ્વ’ થશે, ‘ઍટેક’ અને સ્પંદનોની ધાર બંધ થતાં હિસાબો પૂરા થશે, નહીં તો બીજાની ભૂલ જોવાથી સામે આરોપ કરવાથી તો કોઈ દહાડો ‘પઝલ’ ‘સૉલ્વ’ થાય નહીં, ઊલટું વેર વધે, હિસાબો ચાલુ રહે ને ફરી ફરીને ભોગવટો આવ્યા જ કરે.</p>
+                    <p>વળી બીજો જ્યારે આપણા નિમિત્તે ભોગવતો હોય તો તે ભોગવે છે માટે તેની ભૂલ, એવું કહેવાય નહીં. ત્યાં તો આપણે એનું પ્રતિક્રમણ કરવું પડે, જો છૂટવું હોય તો! નહીં તો સોનાની કટાર, અવળો ઉપયોગ થાય તો પેટમાં વાગી જાય. મા-બાપ માંદા હોય તો આપણે સેવાચાકરી કરવી પડે, ‘તમે ભોગવો છો, તે તમારી ભૂલ’ એમ કહીને ઊભા ન રહેવાય.</p>
+                    <p>‘ભોગવે તેની ભૂલ’ આ વાક્ય બહુ ઝીણવટથી સમજી લેવા જેવું છે. વહેલું કે મોડું સમજ્યે જ છૂટકો. સુખી થવાનો આ જ રસ્તો છે, કારણ કે આ વાક્ય જેમ છે તેમ અંદર ઊતરી જાય ને આ એક જ વાક્ય પકડી લેવામાં આવે તો ઠેઠ મોક્ષે લઈ જાય તેમ છે.</p>
+                    <p>પ્રસ્તુત પ્રકાશનમાં મુમુક્ષુને કંઈ ક્ષતિ ભાસે તો તે સંકલનાની ખામી હશે, તે છતાં નિશ્ચે “જ્ઞાની પુરુષ”ની આ વાણીનું સંકલન જીવમાત્રને સહજ ઉપયોગી થઈ પડશે તે નિઃશંકતા સાથે...</p>
+                    <div class="signature-block">ભરતાનંદના<br/>જય સચ્ચિદાનંદ<br/><span style="font-weight: normal; font-size: 14px;"><span lang="en">E-mail</span> : <span lang="en">aptbharatanand@gmail.com</span></span></div>
+                </div>
+                <div aria-hidden="true" class="sidebar-container sidebar-p4">સં<br/>પા<br/>દ<br/>કી<br/>ય</div>
+            </div>
+        </div>
+
+        <div class="page-container odd-page" id="page-5">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">5</div>
+            <div class="content-flex">
+                <div style="flex: 1;">
+                    <h2 style="height: 1px; opacity: 0.01; overflow: hidden; margin: 0; padding: 0;">પરસ્પર</h2>
+                    <p style="text-indent: 30px;"><b>જી</b>વનમાં કેટલીક ગૂંચો એવી હોય છે કે તેને લીધે જિંદગીભર વેદનાઓ વેઠવી પડે છે. આપણી તદ્દન નજીકના માણસ સાથે, કુટુંબ પરિવાર, સગાંસ્નેહીઓ સાથે, પડોશી સાથે સર્જાયેલા પ્રશ્નો ઉકેલવામાં ભારે મુશ્કેલીઓ આવે છે. એક વ્યક્તિના સંબંધમાં કોઈ બાબતમાં ગાંઠ પડી હોય તો તે ગાંઠ ઉકેલવામાં સમય અને શક્તિ વેડફાય છે, તેને ઉકેલવામાં આખી જિંદગી ચાલી જાય. ઘણાને આવા બધા જટિલ પ્રશ્નોને લીધે જીવન નિરર્થક લાગે છે. “જ્ઞાની પુરુષ”ની સમજણથી જીવનના દરેક પ્રશ્નો ઉકેલી શકાય છે, સમાધાન મળે છે.</p>
+                    <p>પરમ પૂજ્ય ‘દાદા ભગવાન’ના જ્ઞાન-નિષ્કર્ષક વ્યવહાર-સૂત્રોની, તેમના જ શબ્દોમાં ‘લઘુભાષ્ય’ જેવી બનેલી આ અણમોલ ઉપહાર સમાન સંકલિત પુસ્તિકાઓને... <i>અથડામણ ટાળો, ઍડજસ્ટ એવરીવ્હૅર, ભોગવે તેની ભૂલ, બન્યું તે ન્યાય, નીતિ-અનીતિ, પૉઝિટિવ દૃષ્ટિ, વાણી-વિજ્ઞાન...</i> જીવનના આંતર-બાહ્ય વિકાસ પ્રેમી વિશાળ વૃંદે વહાલથી વધાવી લીધી છે. આ જ બાબત આ પુસ્તિકાઓની સમ્યક્ ઉપયોગિતા પુરવાર કરે છે.</p>
+                    <div class="signature-block" style="margin-top: 100px;">સુધીર બી. શાહના<br/>જય સચ્ચિદાનંદ</div>
+                </div>
+                <div aria-hidden="true" class="sidebar-container sidebar-p3">પ<br/>ર<br/>સ્પ<br/>ર</div>
+            </div>
+        </div>
+
+        <div class="page-container even-page" id="page-6">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">6</div>
+            
+            <div style="text-align: center; margin-top: 420px;">
+                <h2 style="font-size: 22px !important; font-weight: normal; margin-bottom: 5px; letter-spacing: 1px;">દાદા ભગવાન કથિત</h2>
+                <h1 style="font-size: 44px !important; font-weight: 800; margin: 0; padding-bottom: 10px;">ભોગવે<br>તેની<br>ભૂલ</h1>
+            </div>
+        </div>
+
+        <div class="page-container odd-page" id="page-7">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">7</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <h3><span aria-hidden="true">➤ </span> બંધન, પોતાની ભૂલ થકી</h3>
+            <p>આ આખું જગત ‘આપણી’ માલિકીનું છે. આપણે ‘પોતે’ બ્રહ્માંડના માલિક છીએ, પણ આપણી ભૂલથી બંધાયેલા છીએ. ભોગવવું કેમ પડ્યું તે ખોળી કાઢ ને! આ તો આપણી ભૂલે બંધાયા છીએ. કાંઈ લોકોએ આવીને બાંધ્યા નથી. તે ભૂલ ભાંગે પછી મુક્ત! અને ખરેખર તો મુક્ત જ છે, પણ ભૂલને લીધે બંધન છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> પહેલાંનો ગુનો, આજે દંડ</h3>
+            <p>જ્યાં જ્યાં દંડ પડે છે ત્યાં જાણવું કે આપણો જ ગુનો છે, નહીં તો દંડ પડી જ કેમ શકે?</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> ગુનો પહેલો કે પછી? પહેલાં ગુનો કરેલો છે તે આજે ભોગવવાનો છે, એ આપણને કઈ રીતે ખબર પડે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> આજે પેલાએ આપણને ગાળ ભાંડી અને આપણી મહીં કકળાટ થયો એટલે આ પહેલાં ગુનો કરેલો તેનું ફળ આવ્યું અગર તો રસ્તામાં જતા હોય અને કોઈનાયે ભાગે પેલી શૂળ ના આવી ને આપણે ભાગે આવી તો આ કોણે કર્યું? આ ગુનો કરેલો તેનો આ દંડ આવ્યો. વીંછી કરડે તો આપણે એને બોલાવવા ગયેલા? આપણે એને અડ્યા શી રીતે? અડ્યા ના હોય તો એ શી રીતે કરડે? તો આ ભેગા કોણ કરી આપે છે? આપણો જે પહેલાંનો ગુનો છે તે જ આપણને દંડની સાથે ભેગા કરી આપે છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+        </div>
+<div class="page-container even-page" id="page-8">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">8</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>આ તો જેને ઢેખાળો વાગ્યો તેની જ ભૂલ. એકલી ભૂલ જ નહીં, પણ ભોગવવાનું ઇનામ પણ છે. પાપનું ઈનામ મળે તો એ એનાં બૂરાં કર્તવ્યનો દંડ અને ફૂલાં ચડે તો એનાં સારાં કર્તવ્યનું ઈનામ, છતાં બંન્ને ભોગવટા જ છે, અશાતાનો અથવા શાતાનો.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> તમારી ‘પોસ્ટ’ જ તમને</h3>
+            
+            <p>સાપ દેખીને ભય ઉત્પન્ન થાય ને? એટલે પછી એને મારવા ફરી વળે ને? તમે સાપને મારી નાખેલો કે નહીં?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આમ ઘરમાં ઘૂસેલો હોય અને બીજાને નુકસાન કરતો હોય, ઝેરી સાપ હોય તો મારી નાખીએ.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવું છે, કે ઝેરી સાપ નુકસાન કરવા માટે નથી આવ્યા. એ તો જેને નુકસાન કરવાનું છે તે લોકો માટે આ સાપ જન્મ્યા છે, બીજા લોકોને નુકસાન કરવા માટે નથી આવ્યા. આ ‘પોસ્ટમૅન’ કાગળ કોને આપે છે? જેનો કાગળ હોય તેને જ આપે છે ને? કે બધાને કાગળ આપી જાય છે? એવું આ જેનો હિસાબ હોય તેને જ એ કરડી જાય! માટે આ સાપને કે કોઈ જીવને મારવા જેવું નથી. આપણને ભય લાગે તો આપણે ભાગી જવું, એનાથી છેટા જતા રહેવું. આપણને નુકસાન કરે તોય મારવા જેવું આ જગત જ નથી! કે મારશો? અને મારવા હોય તો મોટા મોટા વાઘ-સિંહ છે, એને મારો ને! આમને બિચારાને શું કરવા મારો છો? ત્યાં કેમ નથી જતા મારવા? આ લોકો હરણાનો શિકાર કરી લાવે ને? જે બિચારા ગરીબ ગાય જેવા હોય તેને આ જગત મારે છે અને સામો બળિયો હોય તો પોતે નાસી જાય.</p>
+            
+            <p>એટલે આ જગતમાં મારવાનો ભાવ ના કરવો, કારણ કે જેમ ‘પોસ્ટ’વાળા જેનો કાગળ હોય તેને જ આપી જાય, બીજાને આપતા નથી, એવું ઝેરી જાનવરો પણ બીજાને આપતા નથી, જેની ‘પોસ્ટ’ હોય તેને જ આપે છે, એ નવરા જ નથી. આ બધું હિસાબ છે, માટે તમારે એવું કશું કરવાની જરૂર નથી. તમારી ‘પોસ્ટ’ છે તો તમને આપી જશે, નહીં તો તમારું કોઈ નામ દેનારો નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> આવો છે શીલનો પ્રતાપ</h3>
+            
+            <p class="read-next">જે ચોર નથી, એનું ગજવું કોણ કાપનાર છે? જેનામાં હિંસાનું એક પણ પરમાણુ</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-9">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">9</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>નથી, એને મારનાર કોણ? સાપ બાજુમાં જ હોય તોય તે તેને મારી ના શકે. એક ચારિત્રવાન પુરુષ હોય અને સાપ ભરેલી ‘રૂમ’માંથી એ જાય તો સાપ ઉપરાછાપરી થઈ જાય અને માર્ગ આપે ને સાપ પેણે હોય તો તે સાપ બળીને ભસ્મીભૂત થાય, આવો શીલનો પ્રતાપ છે, અને આજે તો મચ્છરદાની બાંધી હોય તોય મચ્છર કરડી જાય.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> એ બધું ન્યાય જ</h3>
+            
+            <p>એક ક્ષણ વાર કુદરત ન્યાયની બહાર નથી ગઈ, એવું મેં જાતે જોયું છે આ બધું. એકનો એક બાવીસ વર્ષનો છોકરો મરી જાય, કુંવારો મરી જાય કે પૈણીને તરત મરી જાય, પણ બધું ન્યાય જ છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>એક બાઈ મુંબઈના ‘બસ-સ્ટૅન્ડ’ ઉપર ઊભી હતી, તે ‘બસ-સ્ટૅન્ડ’ ઉપર ઊભું રહેવું, એ કંઈ ગુનો કહેવાય? એટલામાં એક ‘બસ’ આવીને ‘સ્ટૅન્ડ’ ઉપર ચડી ગઈ અને તેણે ‘સ્ટૅન્ડ’ ભાંગી નાખ્યું અને બાઈનેય કચડી નાખી! ત્યાં પાંચસો માણસોનું ટોળું ભેગું થઈ ગયું. આ લોકોને કહીએ કે, ‘આનો ન્યાય કરો.’ તો એ લોકો કહેશે કે, ‘બિચારી આ બઈ વગર ગુને મરી ગઈ. આમાં બઈનો શો ગુનો? આ ડ્રાઈવર નાલાયક છે. બઈ બિચારી વગર ગુને મરી ગઈ, માટે ભગવાન જેવી કાંઈ વસ્તુ જ આ સંસારમાં નથી લાગતી.’ લો, આ લોકોએ આવું તારણ કાઢ્યું! પણ અમે શું કહ્યું? ‘ભોગવે એની ભૂલ!’ ભગવાન તો છે જ. અલ્યા, આ ભગવાન ન હોત તો રહ્યું શું આ જગતમાં? આ લોક તો શું જાણે? કે આ ભગવાનનું ચલણ રહ્યું નથી! તે લોકોની ભગવાન ઉપરથીય આસ્થા ઊડી જાય. અલ્યા, એવું નથી. આ બધા તો ચાલુ હિસાબ છે, આ એક અવતારના નથી. આજે એ બઈની ભૂલ પકડાઈ, તેથી ભોગવવું પડ્યું.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> તમામ શાસ્ત્રોનો સાર</h3>
+            
+            <p>ન્યાય માટે ‘કોર્ટ’માં જવું, એ જ મોટામાં મોટો અન્યાય છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+        </div>
+
+        <div class="page-container even-page" id="page-10">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">10</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>‘નેચરલ કોર્ટ’માં જે ‘લૉ’ ચાલી રહ્યો છે, ‘નેચરલ લૉ’, તે જ અમે આજે અહીં ખુલ્લંખુલ્લા કહીએ છીએ કે, ‘ભોગવે તેની ભૂલ.’</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>જ્યાં આવો ચોખ્ખો નિર્મળ ન્યાય તમને બતાવી દઈએ છીએ, ત્યાં ન્યાયાન્યાયનું વહેંચણ ક્યાં કરવાનું રહે? આ બહુ જ ઊંડી વાત છે, તમામ શાસ્ત્રોનો સાર કહું છું. આ તો ‘ત્યાં’નું ‘જજમૅન્ટ’(ન્યાય) કેવી રીતે ચાલી રહ્યું છે, તે ‘ઍક્ઝેક્ટ’ કહું છું કે, ‘ભોગવે તેની ભૂલ.’</p>
+            
+            <h3><span aria-hidden="true">➤ </span> ભ્રાંતભાષા : વીતરાગભાષા</h3>
+            
+            <p>જગતનો સાપેક્ષ ન્યાય છે, સામસામી હોય તો જ થાય. નિરપેક્ષ ન્યાય જ સાચો ન્યાય છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p class="read-next">‘ભોગવે તેની ભૂલ’ના ન્યાયમાં તો બહારના ન્યાયાધીશનું કામ જ નહીં. એમને શું કામ બોલાવવાના હોય? બહારના ન્યાયાધીશ તો ‘લવાદ’ કહેવાય, અને લવાદ શું કરે? પહેલાં તો આવીને કહે, ‘ચા-નાસ્તો લાવો.’ પછી ધીરે રહીને ધણીધણિયાણીને કહે કે, ‘અક્કલના કોથળા છો, તે આવી ભૂલ કરી?’ લવાદ પોતાની આબરૂ-અક્કલ ઢાંકેલી રાખે અને બીજાની ખુલ્લી કરે! આ કુદરતી ન્યાયમાં તો કોઈ ન્યાયાધીશ જ નહીં. આપણે ને આપણે જ ન્યાયાધીશ, આપણે જ વકીલ અને આપણે જ અસીલ, તે પછી મૂઓ પોતાને ફાવતો જ ન્યાય કરે ને! તે મૂઓ નિરંતર ભૂલો જ કરે, પણ ન્યાય તો કોની પાસે કરાવાય? “જ્ઞાની પુરુષ” પાસે કે જેને પોતાના દેહ માટે પણ પક્ષપાત નથી હોતો. આ પોતે જ ન્યાયાધીશ ને પોતે જ ગુનેગાર ને પોતે જ વકીલ, તે ન્યાય કઈ બાજુ લઈ જાય? પોતાની બાજુ જ. આ તો આમ ને આમ જીવ બંધાયા કરે છે. મહીંથી ન્યાયાધીશ બોલે છે કે, ‘તમારી ભૂલ થઈ છે’, તે પાછો મહીંનો જ વકીલ વકીલાત કરે કે, ‘આમાં મારો શો દોષ?’ એમ કરીને જાતે જ બંધનમાં આવે. પોતાના આત્મહિત માટે જાણી લેવું જોઈએ કે કોના દોષે બંધન છે! ‘ભોગવે તેની ભૂલ’, એનો જ દોષ. દેખીતી રીતે ચાલુ ભાષામાં અન્યાય છે, પણ ભગવાનનો ન્યાય તો એમ જ કહે છે કે, ‘ભોગવે તેની ભૂલ!’ આ ‘દાદા’એ ‘જ્ઞાન’માં જેમ છે તેમ</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-11">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">11</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>જોયું છે કે ભોગવે તેની જ ભૂલ છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>બે પ્રકારની ભાષા છે : એક ભ્રાંતિભાષા અને બીજી વીતરાગભાષા. વીતરાગની ભાષામાં ‘ભોગવે એની જ ભૂલ’!</p>
+            
+            <h3><span aria-hidden="true">➤ </span> ભ્રાંતિનો ન્યાય : કુદરતી ન્યાય</h3>
+            
+            <p>આ જગતના ન્યાયાધીશ તો ઠેર ઠેર હોય છે, પણ કર્મ-જગતના કુદરતી ન્યાયાધીશ તો એક જ ‘ભોગવે તેની ભૂલ’! આ એક જ ન્યાય છે, તેનાથી આખું જગત ચાલી રહ્યું છે અને ભ્રાંતિના ન્યાયથી સંસાર આખોય ઊભો રહ્યો છે.</p>
+            
+            <p>એક જણનું ગજવું કપાયું, તે ભ્રાંતિનો ન્યાય શું કરે? કે જેનું ગજવું કપાયું હોય તેને આશ્વાસન આપવા નીકળી પડે, ‘અરેરે, બિચારાને દુઃખ આવી પડ્યું!’ એમ કરીને પોતેય દુઃખી થાય અને ચોરને સેંકડો ગાળો વરસાવે. જ્યારે કુદરતી ન્યાય, અસલ ન્યાય શું કહે, ખબર છે? ‘અલ્યા, પકડો, પકડો આને, જેનું ગજવું કપાયું છે તેને.’ ચોર અને શાહુકાર, એ બેમાં અત્યારે ભોગવ્યું કોણે? જેણે ભોગવ્યું તેની ભૂલ!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>ભગવાનનો કાયદો તો શું કહે છે? કે જે ક્ષેત્રે, જે કાળે જે ભોગવે છે તે પોતે જ ગુનેગાર છે! એમાં કોઈને, વકીલનેય પૂછવાની જરૂર નથી. આ કોઈનું ગજવું કપાય તો એ કાપનારની આનંદની પરિણતિ હોય; એ તો જલેબી ખાતો હોય, ‘હોટલ’માં ચા-પાણી ને નાસ્તો કરતો હોય ને એ કાળે પેલો કે જેનું ગજવું કપાયું તે ભોગવતો હોય, માટે ભોગવનારની ભૂલ. એણે ક્યારેક પણ ચોરી કરી હશે તે આજે પકડાયા, માટે તે ચોર; ને પેલો તો જ્યારે પકડાશે ત્યારે ‘ચોર’ કહેવાશે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> કુદરતનું સંચાલન કેવું!</h3>
+            
+            <p class="read-next">તારું ગજવું કપાયું, તે શાથી? એ કાપનારાને ગજવું કાપવાનું ‘વ્યૂપોઈન્ટ’ આવ્યું છે, એને ગજવું કાપવામાં જ સુખ લાગે કે ‘આના સિવાય બીજું નથી કરવું!’ ગજવું કાપનારાને ત્રણસો સાઠ ‘ડિગ્રી’ના ‘સર્કલ’માં ‘ગજવું કાપવાનો જ વેપાર કરવો’ એવું દૃષ્ટિબિંદુ નક્કી થઈ ગયું હોય, એ એને જ ‘વેપાર’ માને. ત્યારે એના ઘરાક પણ</p>
+        </div>
+
+        <div class="page-container even-page" id="page-12">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">12</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>હોય ને? કુદરતનું સંચાલન કેવું છે? કે જેની કલમો હોય તેને પેલા ભાઈને ભેગો કરી આપે. જેણે દુઃખ ભોગવ્યું એની ભૂલ. ‘ભોગવે તેની ભૂલ!’ અંધારાની ભૂલો અજવાળામાં પકડાય છે. જેનું ગજવું કપાય છે તેની અંધારાની ભૂલ ગજવું કપાયું ત્યારે ખુલ્લી થઈ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> જો એટલું સમજે ને, તો...</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> ‘ભોગવે તેની ભૂલ’ ગણી ગુનેગારને સજા ન કરવામાં આવે, તો ગુનાનું પ્રમાણ ન વધે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવું ‘ગુનેગારને સજા કરવામાં ના આવે’ એવું નથી. આપણે પહેલું ‘ભોગવે એની ભૂલ’ સમજી જઈએ ને, કે આપણું ગજવું કપાયું એટલે આપણે જાણવું કે આ આપણા જ કર્મના ઉદયે ગજવું કપાયું છે ને પેલો ગજવું કાપનારો તો નિમિત્ત છે, માટે આપણે એની ભૂલ જોવાની નહીં, આરોપ નહીં કરવાનો અને આપણી જ ભૂલ છે એમ જાણી જવાનું. પેલો તો જ્યારે પકડાશે ત્યારે ભોગવશે. પેલોય પકડાશે તો ખરો ને? ભલે ગુનો આજે કર્યો છે, પણ તે ફરી જ્યારે પકડાશે ત્યારે ભોગવશે, પણ આજે આપણે ભોગવીએ છીએ તો તે આપણી ભૂલ છે! છતાં પેલો કરે છે, તેનો ગુનો તો એને મળે જ છે.</p>
+            
+            <p>આ ‘ભોગવે એની ભૂલ’થી તો ઘણા પ્રશ્નોનું સમાધાન થઈ જાય છે.</p>
+
+            <h3><span aria-hidden="true">➤ </span> કુદરતનો ગુનો : સરકારનો ગુનો</h3>
+            
+            <p class="read-next">કુદરતના ગુના ને સરકારના ગુના, બેનો આ ‘ડિફરન્સ’ છે કે સરકારી ગુનામાં દાર્શનિક પુરાવા હોય છે; જ્યારે કુદરતના ગુનામાં ‘સાયન્ટિફિક સરકમસ્ટેન્શિયલ ઍવિડન્સ’ હોય છે, વૈજ્ઞાનિક સાંયોગિક પુરાવા કે જે આંખે દેખાય નહીં, પણ સમજવા માટે પ્રયત્ન કરે તો સમજાય ખરું કે ‘આનાં કારણ શું હશે કે શું હોવા જોઈએ’ તે ‘સાયન્ટિફિક સરકમસ્ટેન્શિયલ ઍવિડન્સીસ્’ અને આ ‘સરકમસ્ટેન્શિયલ ઍવિડન્સ’ કહેવાય. સરકાર ‘સરકમસ્ટેન્શિયલ એવિડન્સ’ જુએ છે અને કુદરત ‘સાયન્ટિફિક સરકમસ્ટેન્શિયલ ઍવિડન્સ’ જુએ છે. સરકાર દાર્શનિક પુરાવા માગે કે આંખે દેખાય એવો શો પુરાવો છે? કુદરત કહે છે કે આનું મૂળ કયા કારણોસર ગજવું કપાયું? ગજવું કપાય તેને પહેલી ચિંતા થાય કે ગજવું કાપનારને ચિંતા પહેલી થાય? કુદરત</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-13">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">13</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>એવું કહેવા માગે છે કે ભોગવે એની ભૂલ છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> એ જ માર્ગ મોક્ષનો</h3>
+            
+            <p>કુદરત હંમેશાં ન્યાયી રહે છે. આ જગતમાં એક ક્ષણ વાર પણ આ કુદરતે અન્યાય નથી કર્યો. આ ‘કોર્ટ’માં અન્યાય થાય, પણ આમાં અન્યાય ના થાય, માટે અત્યારે મોટા લોકો લૂંટે છે તેય બરાબર છે, લોક કાળાબજાર કરે છે તેય બરાબર છે, કાળાબજારનું આવું થશે તેય બરાબર છે, એનું પરિણામ આવું આવશે તેય બરાબર છે! માટે કુદરત બધું નિયમસર જ કરે છે, ‘ઍક્ઝેક્ટ’ કાયદેસર જ કરે છે, કાયદાની બહાર નથી જતી. આ કુદરત અન્યાયી થઈ નથી એક ક્ષણ વાર.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એટલે હમણા જે ભોગવે છે ને પછી પામશે એમ?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવું નહીં. ભોગવે કે ના ભોગવે, કુદરત દંડ આપ્યા જ કરે છે. જેનું ગજવું કપાય છે તેને જગતના લોકો આશ્વાસન આપે છે કે, ‘લો, ચા પીઓ, આમ કરો, તેમ કરો, આમ છે, તેમ છે.’ હવે કુદરત શું કહે છે? ગજવું કપાયું એ જ ગુનેગાર છે, એ આજે પકડાયો. બે જણ જોડે બેઠા હતા, તો એનું જ ગજવું કેમ કપાયું? એટલે પહેલાં જે કરેલું તેનું ફળ આજે આવ્યું. પેલો ચોર તો પકડાશે ત્યારે ગુનેગાર થશે, અત્યારે તો એ જલેબી ખાય છે અને ગજવું કપાયું એ અત્યારે ભોગવે છે, માટે ભોગવે એની ભૂલ. અત્યારે કોણ રડે છે, એ જોઈ લેવાનું. રડતાને જાણવું કે આ જ ગુનેગાર છે. ભોગવે એની ભૂલ! પેલો ભોગવશે ત્યારે એની ભૂલ. આ જગતનો ન્યાય જુદો છે અને કુદરત શું કહે છે? ભોગવે એની ભૂલ! માટે બૂમાબૂમ ના કરશો. કોણ ભોગવી રહ્યું છે એ જોઈ લો, એની ભૂલ.</p>
+            
+            <p>આ વાત બહુ ઊંડી છે. આ વાત જો સમજાય તો ઠેઠ મોક્ષે જાય, ઝીણવટથી વિચારે તો ઠેઠ મોક્ષે પહોંચાડી દે અને બુદ્ધિથી ભૂલ જોવા જાય ને, તો કોઈ દહાડો સંસારની બહાર નીકળશે નહીં. ‘ભોગવે એની ભૂલ’ પરથી તમારે જાણવું કે આ તો આપણે ભોગવીએ છીએ માટે આપણી ભૂલ છે, અને એ જ મોક્ષે જવાનો માર્ગ છે.</p>
+
+            <h3><span aria-hidden="true">➤ </span> એ ગુપ્ત તત્ત્વ સમજવા જેવું</h3>
+            
+            <p class="read-next">‘ભોગવે એની ભૂલ’ એ ‘ગુપ્ત તત્ત્વ’ કહેવાય. અહીં બુદ્ધિ થાકી જાય. જ્યાં મતિજ્ઞાન કામ ના કરે એ વાત “જ્ઞાની પુરુષ” પાસે ઉઘાડી થાય, તે જેમ છે તેમ</p>
+        </div>
+
+        <div class="page-container even-page" id="page-14">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">14</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>હોય. આ ‘ગુપ્ત તત્ત્વ’ બહુ સૂક્ષ્મ રીતે સમજવું જોઈએ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> જ્યાં ભોગવટો, ભૂલ પોતાની</h3>
+            
+            <p>બે માણસ મળે ને ‘લક્ષ્મીચંદ’ પર આરોપ આપે કે, ‘તમે મારું ખોટું કર્યું છે’ તો ‘લક્ષ્મીચંદ’ને રાતે ઊંઘ ના આવે ને પેલો નિરાંતે ઊંઘી ગયો હોય, માટે ભૂલ ‘લક્ષ્મીચંદ’ની, પણ ‘દાદા’નું વાક્ય ‘ભોગવે તેની ભૂલ’ યાદ આવ્યું તો ‘લક્ષ્મીચંદ’ નિરાંતે સૂઈ જશે, નહીં તો પેલાને કેટલીય ગાળો ભાંડશે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>પેલાએ ગાળ ભાંડી, તે પછી આણે ગાળ ખાધી નિરાંતે અને પાછો કહે છે, ‘મને શા આધારે ગાળ દે?’ ત્યારે અલ્યા, ખાઈ શું કરવા ગયો? ગજવામાં રહેવા દેવી હતી ને! અલ્યા, આધાર ખોળે છે? આ કંઈ નિરાધાર આપ્યું છે? આધારસહિત છે. તારા બોલવાથી એમને અકળામણ થાય તો એમનાં કર્મના ઉદય, એમના બોલવા છતાં આપણને અકળામણ નથી તો આપણો ઉદય નથી આમાં. ‘ભોગવે એની ભૂલ!’</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>એક વણિકને ત્યાં બ્રાહ્મણ ચારસો રૂપિયા માગતો હતો, તે જપ્તી કરવા ગયો, એટલે વણિક તો ચિડાયો. ‘સાલા નાલાયકો’ એમ બોલતો જાય અને પછી પાછો કહે, ‘મારા જેવો કોઈ નાલાયક જ નથી ને!’ અલ્યા, તું પોતાને ગાળો દે છે? પાછો પેલાને એટલી બધી ગાળો દીધી, અને બોલે પાછો શું? ‘મારા જેવો કોઈ નાલાયક નથી. રૂપિયા ના આપ્યા ત્યારે આ દશા થઈ ને!’ એવું કહે અને પાછો પેલાને ‘નાલાયક’ કહે. અલ્યા, આ કઈ જાતના છો? આ તો જાતજાતની ખોપરી છે. હવે એ પેલાને ‘નાલાયક’ કહે, પછી પાછું પોતાનું આવું બોલે, એટલે પછી આપણને હસવું જ આવે ને?</p>
+            
+            <p>માટે આ જગતને તો કેમ પહોંચી વળાય? એટલે આપણે તો શું કહ્યું? કે, ‘ભોગવે તેની ભૂલ.’ ‘આપણી ભૂલ છે’ એવું ક્યારે માલૂમ પડશે? કે જ્યારે આપણને ભોગવવાનું થશે ત્યારે. એ સહેલો રસ્તો છે ને?</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-15">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">15</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <h3><span aria-hidden="true">➤ </span> ભૂલ જણાય ભોગવટા થકી</h3>
+            
+            <p>‘ભોગવે તેની ભૂલ’ એ કાયદો મોક્ષે લઈ જશે. કોઈ પૂછે કે, ‘મારે મારી ભૂલો કેવી રીતે ખોળવી?’ તો અમે એને શિખવાડીએ કે, ‘તને ક્યાં ક્યાં ભોગવટો આવે છે? એ તારી ભૂલ. તારી શી ભૂલ થઈ હશે, તે આવું ભોગવવાનું આવ્યું, એ ખોળી કાઢજે.’ આ તો આખો દહાડો ભોગવટો આવે છે, તે ખોળી કાઢવું જોઈએ કે શી શી ભૂલ થઈ છે?</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>લોકો કહે છે કે, ‘આ દેહ છે ત્યાં સુધી ભોગવટો છે’, પણ ના, ભૂલ હોય ત્યાં સુધી જ ભોગવટો છે. અમારે ભોગવવાનું આવતું નથી, તેથી અમારી ભૂલ નથી.</p>
+
+            <h3><span aria-hidden="true">➤ </span> કોની ભૂલ? કોને બચકાં?</h3>
+            
+            <p>‘વાઇફે’ તમારી આંખમાં દવા નાખી ને તમારી આંખ દુઃખે તો તે તમારી ભૂલ. ‘જે સહન કરે તેની ભૂલ’ એમ વીતરાગ કહે છે; અને આ લોકો નિમિત્તને બચકાં ભરે છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>આજના ધણી તો બૈરીને ચોંટી પડે છે. એને કહે કે, ‘આ દાળ તેં વાયડી કરી.’ અલ્યા, તું વાયડો! ભૂલ તારી, તે તારે ભાગે આ દાળ આવી.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>બાબો બારણું બંધ કરે ને આપણી આંગળી મહીં આવી જાય તો બાબાને વઢાય નહીં. આ તો ભોગવ્યું આપણે, માટે આપણી ભૂલ. આ બાબાને શું કહેવું પડે? એને કહેવું પડે કે, ‘જો તું આવું તોફાન કરતો હતો, તેથી મારી આંગળી આવી ગઈ. ફરી આવું તોફાન ના કરીશ.’ આવું બાબાને સમજાવાય, પણ આ તો એને મારે. અલ્યા, નવી ગૂંચ શા માટે પાડે છે?</p>
+
+            <h3><span aria-hidden="true">➤ </span> એમાં નિમિત્તનો શો દોષ?</h3>
+            
+            <p class="read-next">‘ભોગવે એની ભૂલ’ એટલું જો પૂરેપૂરું સમજાય ને, તોય એ મોક્ષે લઈ જાય! આ</p>
+        </div>
+<div class="page-container even-page" id="page-16">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">16</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>જે લોકોની ભૂલ જુએ છે, એ તો સાવ ખોટું છે. પોતાની ભૂલને લઈને નિમિત્ત મળે છે. આ તો પાછું જીવતું નિમિત્ત મળે તો તેને બચકાં ભરે અને આ કાંટો વાગ્યો હોય તો શું કરે? ચાર રસ્તા પર કાંટો પડ્યો ને હજારો માણસો જાય પણ કોઈનેય અડે નહીં, પણ ‘લલ્લુભાઈ’ જાય તે કાંટો વાંકો હોય તોય તેને પગે વાગે. ‘વ્યવસ્થિત’ તો કેવું છે? જેને કાંટો વાગવાનો હોય તેને જ વાગે. બધા જ સંયોગો ભેગા કરી આલે, પણ એમાં નિમિત્તનો શો દોષ?</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>રસ્તામાં ઠોકર હોય અને ‘સિનેમા’માં કેટલાય આવ-જા કરતા હોય ને ‘ચંદુભાઈ’ એકલાને જ ઠોકર વાગે તો ‘ચંદુભાઈ’ કહેશે કે, ‘મને ઠોકર વાગી.’ અલ્યા, તું ઠોકરને વાગ્યો! ઠોકર તો હાલતીય નથી ને ચાલતીય નથી, પણ તું ભાગ્યશાળી તે તને ઠોકર વાગી, પણ ભ્રાંતિથી કહે છે કે, ‘મને આ ઠોકર વાગી.’ અલ્યા, આ તો ભોગવે એની ભૂલ. આ કોઈ પોપાબાઈનું રાજ નથી. આ જગત ‘ઍક્ઝેક્ટ’ ન્યાયસ્વરૂપ છે. ન્યાય વગર આ જગત એક ‘સેકંડ’ પણ રહ્યું નથી.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>જો કોઈ માણસ દવા છાંટીને ઉધરસ ખવડાવે તો તેને માટે વઢંવઢા થઈ જાય. જ્યારે મરચાંનો વઘાર ઊડે ને ઉધરસ આવે તો કંઈ વઢંવઢા કરે છે? આતો પકડાયો તેને વઢે, નિમિત્તને બચકાં ભરે. જો હકીકત જાણીએ કે કરનાર કોણ અને શાથી થાય છે, તો પછી રહે કશી ભાંજગડ?</p>
+
+            <h3><span aria-hidden="true">➤ </span> આમાં ‘રિસ્પોન્સિબલ’ પોતે જ</h3>
+            
+            <p>‘યુ આર હોલ ઍન્ડ સોલ રિસ્પોન્સિબલ ફોર યૉરસેલ્ફ’! આ દુઃખ દે છે, એ તો માત્ર નિમિત્ત છે, પણ મૂળ ભૂલ પોતાની જ છે. જે ફાયદો કરે છે એય નિમિત્ત છે અને જે નુકસાન કરાવે છે એય નિમિત્ત છે, પણ એ આપણો જ હિસાબ છે તેથી આમ થાય છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p class="read-next">જે દુઃખ ભોગવે તેની ભૂલ અને સુખ ભોગવે તો એ એનું ઈનામ. ભ્રાંતિનો કાયદો</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-17">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">17</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>નિમિત્તને પકડે. ભગવાનનો કાયદો, ‘રિયલ કાયદો’ ‘ઍક્ઝેક્ટ’, એ તો જેની ભૂલ હોય તેને જ પકડે. આ કાયદો ‘ઍક્ઝેક્ટ’ છે, અને તેમાં કોઈ ફેરફાર કરી શકે તેમ છે જ નહીં. એવો કોઈ જગતમાં કાયદો નથી કે જે કોઈને ભોગવટો આપી શકે, સરકારનો કાયદોય ના આપી શકે. આ તો ભોગવે તેની ભૂલ!</p>
+
+            <h3><span aria-hidden="true">➤ </span> જેવો હિસાબ તેવું થાય</h3>
+            
+            <p>જગત દુઃખ ભોગવવા માટે નથી, સુખ ભોગવવા માટે છે. જેનો જેટલો હિસાબ હોય તેટલું થાય. કેટલાક એકલું સુખ ભોગવતા હોય છે, તે શાથી? કેટલાક એકલું દુ:ખ જ ભોગવતા હોય છે, એ શાથી? પોતે એવો હિસાબ લાવ્યો છે તેથી. આ સમાચારોમાં રોજ આવે કે ‘આજે ટેક્સીમાં બે માણસોએ આને લૂંટી લીધા, ફલાણા ફ્લેટનાં બાઈસાહેબને બાંધી લૂંટ ચલાવી.’ આ વાંચીને આપણે કંઈ ભડકવાની જરૂર નથી કે ‘હુંય લૂંટાઈ જઈશ તો?’ આ વિકલ્પ એ જ ગુનો છે. એના કરતાં તું તારે સહજમાં ફર્યા કર ને! તારો હિસાબ હશે તો લઈ જશે, નહીં તો કોઈ બાપોય પૂછનાર નથી. ‘ભોગવે એની ભૂલ!’ માટે તું નિર્ભય થઈને ફર. આ ‘પેપર’વાળા તો લખે, માટે આપણે શું બી જવું? આ તો થોડા ઓછા પ્રમાણમાં ‘ડાઈવોર્સ’ થાય છે એ સારું છે, છતાં વધારે ‘ડાઇવોર્સ’ થવા માંડે તો બધાને શંકાને સ્થાન મળે કે આપણેય ‘ડાઈવૉર્સ’ થશે તો? એક લાખ માણસ જે જગ્યાએ લૂંટાય ત્યાં તમે ડરશો નહીં. તમારો કોઈ બાપોય ઉપરી નથી.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>પોતાની દાનત ચોર છે. દુનિયામાં ચોરી શકે એમ છે જ નહીં, કોઈ લૂંટી શકે એમ છે જ નહીં. પોતાની દાનતો જ લૂંટે છે. લૂંટનારો તો નિમિત્ત છે, તમારો જ હિસાબ છે.</p>
+
+            <h3><span aria-hidden="true">➤ </span> ભોગવટો, એ જ ભૂલનું પ્રમાણ</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> હવે, એવું બને કે કશુંક બન્યું હોય તો બધા એમ કહે કે, ‘આ તમારી ભૂલ નથી, પેલા ભાઈની જ ભૂલ છે.’ તો પછી એમાં મારી ભૂલ ના જ કહેવાય ને? પેલા ભાઈની ભૂલ જ કહેવાય ને?</p>
+        </div>
+
+        <div class="page-container even-page" id="page-18">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">18</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p><strong>દાદાશ્રી:</strong> ના, તોય ભોગવે એની ભૂલ. કોણ ભોગવે છે એ જોઈ લેવું.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> માર ખાનારાની ભૂલ કે માર આપનારાની ભૂલ?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> આ મને જે મારતો હતો તે મને દુઃખતું હતું, તે મારી ભૂલ. આમ મને મારતો હતો, તે લોકો કહે છે કે, ‘વધારે મારો’, તે પછી વધારે મારે તો મને વધારે દુ:ખે તોય તે મારી ભૂલ. એ તો કોની ભૂલ થાય છે? કે જે ભોગવે એની ભૂલ. માર જોનારા તે ઘડીએ ભોગવતા નહોતા, એ તો હસી હસીને ‘આમને મારો’ એમ કહેતા હતા.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> અને રડતો હોય તેનું શું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> રડતો હોય તો તે એની ભૂલ. ‘ભોગવે એની ભૂલ’ તો સરસ વાક્ય છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>કોણ ભોગવે છે? લૂંટનારો ભોગવે છે કે લૂંટાયેલો ભોગવે છે? કોણ ભોગવે છે તે જોઈ લેવું. ભોગવે તેની ભૂલ. તીર મારનારની ભૂલ નથી, તીર વાગ્યું કોને તેની ભૂલ છે. તીર મારનારો જ્યારે પકડાશે ત્યારે એની ભૂલ. અત્યારે તો તીર વાગ્યું એ પકડાયો છે. જે પકડાયો એ પહેલો ગુનેગાર. પેલો તો પકડાશે ત્યારે એની ભૂલ.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>પોતાની ભૂલના જ માર ખાય છે. પથ્થર નાખ્યો તેની ભૂલ નહીં. જે ભોગવે, જેને વાગ્યો તેની ભૂલ!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>જેનો વધારે દોષ, તે જ આ જગતમાં માર ખાય છે. માર કોણ ખાય છે, તે જોઈ લેવું. જે માર ખાય છે, તે જ દોષિત છે.</p>
+
+            <h3><span aria-hidden="true">➤ </span> શેકાય કોણ? એની જ ભૂલ</h3>
+            
+            <p class="read-next">ભોગવ્યું એના પરથી હિસાબ નીકળી જાય કે કેટલી ભૂલ હતી. ઘરમાં દસ માણસો હોય, તેમાં બેને ઘર કેમ ચાલતું હશે તેનો વિચાર સરખોય નથી આવતો, બેને ઘરમાં</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-19">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">19</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>‘હેલ્પ’ કરીએ તેવો વિચાર આવે છે ને બે જણા ‘હેલ્પ’ કરે છે અને એક તો આખો દહાડો ઘર શી રીતે ચલાવવું તેની જ ચિંતામાં રહે છે અને બે જણ આરામથી ઊંઘે છે. તો ભૂલ કોની? મૂઆ, ભોગવે એની જ, ચિંતા કરે તેની જ. જે આરામથી ઊંઘે છે, તેને કશું જ નહીં.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>એક ડોસા મને કહે, ‘મને બહુ દુઃખ ભોગવવાનું આવ્યું છે.’ મેં પૂછ્યું, ‘કેમ કાકા, શું થયું છે?’ એ ભાઈ કહે, ‘મારો છોકરો બહુ ખરાબ થઈ ગયો છે.’ મેં પૂછ્યું, ‘એક જ છોકરો ખરાબ થઈ ગયો કે બધા જ?’ ડોસો કહે, ‘એક જ એવો પાક્યો છે. બીજા ત્રણ તો સારા છે.’ મેં પૂછ્યું, ‘એ શું કરે છે?’ ડોસો કહે, ‘દારૂ પીએ છે, રમી રમે છે, રેસમાં જાય છે, હોટલોમાં પડી રહે છે. એનાથી તો મને આખી રાત ઊંઘ આવતી નથી, એની ચિંતા રાતદહાડો થયા જ કરે છે.’ મેં કહ્યું, ‘તો તો ભાઈ તારી જ ભૂલ છે. એ તારી જ ભૂલથી આવું કરે છે. આ બીજા ત્રણ દીકરા સારા છે, એનો આનંદ તું કેમ નથી લેતો?’</p>
+            
+            <p>આ ડોસાના વંઠેલા છોકરાને મેં એક દિવસ પૂછ્યું, ‘અલ્યા, તારા બાપાને તો બહુ દુઃખ થાય છે, ને તને શું દુઃખ નથી થતું?’ છોકરો કહે, ‘મને શેનું દુઃખ? બાપ કમાઈને બેઠા છે, એમાં મારે શેની ચિંતા? હું તો મજા કરું છું.”</p>
+            
+            <p>એટલે આ બાપ-દીકરામાં ભોગવે છે કોણ? બાપ! માટે બાપની જ ભૂલ. ભોગવે તેની ભૂલ! આ છોકરો નાલાયક થઈ ગયો, દારૂ પીતો હોય, ગમે ત્યાં રઝળતો હોય, જુગાર રમતો હોય, ગમે તે કરતો હોય, એમાં એના ભાઈઓ નિરાંતે ઊંઘી ગયાં છે ને? એનાં ‘મધર’ પણ નિરાંતે ઊંઘી ગયાં છે ને? અને અક્કરમી આ ડોસો એકલો જ જાગે છે, માટે એની ભૂલ. એની શી ભૂલ? આ ડોસાએ આ છોકરાને પૂર્વભવમાં ફટવેલો, તે ગયા અવતારના આવા ઋણાનુબંધ પડ્યા છે, તેથી ડોસાને આવો ભોગવટો આવે છે અને છોકરો એની ભૂલ ભોગવશે ત્યારે એની ભૂલ પકડાશે! આ તો બેમાંથી શેકાય છે કોણ? જે શેકાય છે, એની જ ભૂલ. આ આટલો એક જ કાયદો સમજી ગયા તો આખો મોક્ષમાર્ગ ખુલ્લો થઈ ગયો!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+        </div>
+
+        <div class="page-container even-page" id="page-20">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">20</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>તમારી આજુબાજુનાં છોકરાંછૈયાંની ગમે તે ભૂલો કે કુકૃત્યો હશે, પણ તમને તેની અસર થશે નહીં, તો તમારી ભૂલ નહીં અને તમને અસર થાય તો તમારી જ એ ભૂલ, એવું નક્કી સમજી લેજો.</p>
+
+            <h3><span aria-hidden="true">➤ </span> તો તરફડાટ શમે</h3>
+            
+            <p>કર્મને લઈને જીવો તરફડાટ-તરફડાટ અનુભવી રહ્યા છે. ઉપરથી કહે છે કે, ‘આ ભાઈએ મને આમ કર્યું’, એનાથી કર્મ ‘ડબલ’ થતાં જાય છે. જો મૂળ વાત સમજે કે ‘આ શાથી બન્યું, ઘરવાળા પજવે એ પોતાનો જ હિસાબ છે, ભોગવે તેની ભૂલ છે’ તો તરફડાટ શમી જાય.</p>
+
+            <h3><span aria-hidden="true">➤ </span> કંઈ કારણ તો હશે ને?</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> મારો સ્વભાવ એવો છે કે ખોટી વસ્તુ સહન થતી નથી એટલે ગુસ્સો થયા કરે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ખોટું છે, એવો ન્યાય કોણ કરે?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આપણી બુદ્ધિ જેટલું કામ કરે એ પ્રમાણે કરીએ.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, એટલો ન્યાય થાય.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> પણ એવું છે ને, કે એક માણસને આપણે પચીસ રૂપિયા રોજનો પગાર આપતા હોઈએ અને એ માણસ પાંચ રૂપિયાનું પણ કામ ના કરતો હોય, તો આપણને એમ તો લાગે ને, કે આ બરાબર નથી?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> પણ શાથી એ કામ નહીં કરતો હોય? કયા કારણથી એ કામ નહીં કરતો હોય?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> એનો પ્રમાદી સ્વભાવ એટલા માટે.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એવા માણસ બધા લોકોને મળતા હશે?</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> બધાને મળતા હોય, એમ કેમ કહેવાય?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> તો તમને જ એવો માણસ કેમ ભેગો થયો? એનું કંઈ કારણ તો હશે ને?</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-21">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">21</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> આગળનાં મારાં કર્મો એવાં હોય એટલે મને ભેગો થયો.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> તો પછી એનો શો દોષ? તો એની ઉપર ગુસ્સો કરવાનું કારણ જ ક્યાં રહ્યું? ગુસ્સો તો તમારી જાત ઉપર કરો કે, ‘ભઈ, મેં એવાં કેવાં કર્મ બાંધ્યાં કે આ મને આવો મળી આવ્યો?’ પોતાની નબળાઈ તો પોતાને જ નુકસાન કરે. ‘ભોગવે એની ભૂલ!’ એ કામ ના કરે ને તમે ગુસ્સો કરો તો તમને દુઃખ થાય એટલે ભૂલ તમારી છે. એ તો એવો ને એવો જ રહેશે, કાલે પણ એવું જ કરશે અને ઉપરથી તમારા ચાળા પાડશે. તમે પાછા ફરો કે તમારી પાછળ મશ્કરીઓ કરશે, કહેશે કે, ‘ચક્કર જ છે ને! જવા દો ને, એને.’</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> તો એને આપણી પાસે બેસાડીને સમજાવીને કહેવું કે, ‘તારાથી આટલું કામ કેમ નથી થઈ શકતું? જ્યારે બીજા તો કેવું સરસ કામ કરે છે’, એને આવડતું ના હોય તો શિખવાડીએ, એવું કરવું?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> હા, એને સમજ પડે, એને લાગણી ઉત્પન્ન થાય, એ રીતે સમજાવવું જોઈએ.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> આમાં ‘સિલેક્શન’ કોનું?</h3>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> હું સાચી વાત કરું છું ત્યારે ઘરમાં મને કોઈ સમજી નથી શકતું અને કોઈ નથી સમજી શકતું તેથી પછી એ લોકો ઊંધી રીતે સમજે પાછાં.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> તે વખતે આપણે વાતથી વેગળા રહેવું પડે ને મૌન રાખવું પડે. એમાંય પાછો દોષ તો કોઈનો હોતો જ નથી, દોષ તો આપણો જ હોય છે. એવા એવા માણસો છે કે જે પાડોશમાં આપણી જોડે કુટુંબ તરીકે હોય ને, તો આપણા બોલતાં પહેલાં આપણી વાત બધી સમજી જાય. હવે એવા એવા માણસો હોય છે, પણ એ આપણને કેમ ભેગા ના થયા અને આ લોકો જ કેમ ભેગા થયા?આમાં ‘સિલેક્શન’ કોનું? એટલે બધી જ ચીજ છે આ જગતમાં, પણ આપણને ભેગી નથી થતી, એમાં ભૂલ કોની? એટલે ના સમજે તો આપણે ત્યાં મૌન રહેવું, બીજો ઉપાય નથી.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> ભૂલ ત્યાં જ ભોગવટો</h3>
+            
+            <p class="read-next"><strong>પ્રશ્નકર્તા:</strong> કેટલાક એવા હોય છે કે આપણે ગમે તેટલું સારું વર્તન કરીએ તોય</p>
+        </div>
+
+        <div class="page-container even-page" id="page-22">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">22</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>તે સમજતા નથી.</p>
+            
+            <p><strong>દાદાશ્રી:</strong> એ ના સમજતા હોય તો એમાં આપણી જ ભૂલ છે કે એ સમજણવાળો કેમ ના મળ્યો આપણને? આમનો સંયોગ આપણને જ કેમ બાઝ્યો? જે જે વખતે આપણને કંઈ પણ ભોગવવું પડે છે તે ભોગવવાનું આપણી જ ભૂલનું પરિણામ છે.</p>
+            
+            <p><strong>પ્રશ્નકર્તા:</strong> તો આપણે એમ સમજવાનું કે મારાં કર્મો એવાં છે?</p>
+            
+            <p><strong>દાદાશ્રી:</strong> ચોકકસ. આપણી ભૂલ સિવાય આપણને ભોગવવાનું હોય નહીં. આ જગતમાં એવું કોઈ નથી કે જે આપણને સહેજ પણ કિંચિત્માત્ર દુ:ખ આપે અને જો કોઈ દુ:ખ આપનાર છે તો તે આપણી જ ભૂલ છે. તત્ત્વનો દોષ નથી, એ તો નિમિત્ત છે, માટે ભોગવે તેની ભૂલ!</p>
+            
+            <p>કોઈ સ્ત્રી ને પુરુષ બે જણ ખૂબ ઝઘડતાં હોય અને પછી બેઉ સૂઈ ગયા પછી છાનામાના આપણે જોવા જઈએ તો પેલી બહેન તો ઘસઘસાટ ઊંઘતી હોય અને ભઈ આમ આમ પાસાં ફેરવતા હોય તો આપણે સમજવું કે આ ભઈની જ ભૂલ છે બધી, આ બહેન ભોગવતી નથી. જેની ભૂલ હોય તે ભોગવે અને તે ઘડીએ જો ભાઈ ઊંઘતા હોય ને બહેન જાગ્યા કરતાં હોય તો જાણવું કે બહેનની ભૂલ છે. ભોગવે તેની ભૂલ! આ ‘વિજ્ઞાન’ બહુ ભારે ‘સાયન્સ’ છે. હું કહું છું તે બહુ ઝીણું ‘સાયન્સ’ છે. જગત આખું નિમિત્તને જ બચકાં ભરે છે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p class="read-next">આ ‘મશીનરી’ હોય ને પોતે બનાવેલી હોય અને તેમાં ‘ગિયર વ્હીલ’ હોય, તેમાં પોતાની આંગળી આવી જાય તો તે ‘મશીનને તમે લાખ કહો કે, ‘ભાઈ, મારી આંગળી છે, મેં જાતે તને બનાવ્યું છે ને!’ તો શું એ ‘ગિયર વ્હીલ’ આંગળી છોડે? ના છોડે. એ તો તમને સમજાવી જાય છે કે, ‘ભાઈ, આમાં મારો શો દોષ? તેં ભોગવ્યું માટે તારી ભૂલ.’ આવી જ બહાર બધેય ચાલતી ‘મશીનરી’માત્ર છે. આ બધાંય ‘ગિયર’માત્ર છે. ‘ગિયર’ ના હોત તો આખા મુંબઈ શહેરમાં કોઈ બાઈ તેના ધણીને દુઃખ ના દેત અને કોઈ ધણી તેની બૈરીને દુઃખ ના દેત, પોતાનું ઘર તો બધાંય સુખમાં જ રાખત, પણ એમ નથી. આ છોકરાં, ધણી-બૈરી, બધાં જ ‘મશીનરી’માત્ર</p>
+        </div>
+
+        <div class="page-container odd-page" id="page-23">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">23</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>છે, ‘ગિયર’માત્ર છે.</p>
+            
+            <h3><span aria-hidden="true">➤ </span> જગત હિસાબસર, તો ભૂલ કોની?</h3>
+            
+            <p>આ સંસાર તો સમજવા જેવો છે. આ કાકા શું છે? મામા શું છે? ધણી શું છે? બૈરી શું છે? એ તો ચોપડાના હિસાબ છે, પણ એ તો જાણ્યું જ નહીં. જો જાણે તો તો હિસાબ જ ચોખ્ખો કરતો જાય અને આ તો જાણે નહીં એટલે પછી એક હિસાબ ચૂકતે થાય ને બીજો હિસાબ વધારતો જાય અને મામાનો હિસાબ બાકી હોય તો કોઈ પણ નિમિત્તે હિસાબ ચૂકતે થયા વગર રહેવાનો નહીં ને!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>આપણો હિસાબ હોય તો જ આપણું નામ દે. આપણે મહીં જો સહી ના કરેલી હોય તો કોઈ નામ ના દે. આ તો આપણી સહીને લીધે છે આ બધું.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>જો ગાળ ના આપી હોય તો સામી ગાળ ના મળે, પણ આ તો આગલોપાછલો હિસાબ છે, તેથી આપ્યા વગર રહેશે જ નહીં. ચોપડે જમા હોય તો જ આવે. કોઈ પણ જાતની ‘ઈફેક્ટ’ આવી તે હિસાબ વગર ના થાય. ‘ઈફેક્ટ’, એ ‘કૉઝિઝ’નું ફળ છે. ‘ઈફેક્ટ’નો હિસાબ, તે વ્યવહાર!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>સાસુ વહુને વઢે તોયે વહુ સુખમાં હોય અને સાસુને જ ભોગવવાનું હોય ત્યારે ભૂલ સાસુની જ. જેઠાણીને સળી કરી ને ભોગવવું પડે તે આપણી ભૂલ અને સળી ના કરી છતાંયે એ આપવા આવે તો તે પાછલા ભવનું કશુંક બાકી હશે તે ચૂકવવા આવ્યું, ત્યારે તમે પાછી ફરીથી ભૂલ ના કરતા, નહીં તો ફરીથી ભોગવવું પડશે. માટે છૂટવું હોય તો તે જે જે કંઈ કડવું-મીઠું આપે (ગાળો વગેરે) તે જમે કરી લેજો, હિસાબ ચૂકતે થઈ જશે. આ જગતમાં હિસાબ વગર તો આંખેય ભેગી ના મળે, તો બીજું બધું હિસાબ વગર તે થતું હશે? તમે જેટલું જેટલું જેને જેને આપ્યું હશે તેટલું તેટલું તમને તે પાછું આપશે ત્યારે તમે જમે કરી લેજો, ખુશ થઈને કે, ‘હાશ! હવે ચોપડો પૂરો થશે’, નહીં તો ભૂલ કરશો તો પાછું ભોગવવું પડશે જ.</p>
+        </div>
+
+        <div class="page-container even-page" id="page-24">
+            <div aria-hidden="true" class="nav no-print no-tts">
+                <button onclick="prevPage()"><span lang="en">Previous</span></button>
+                <button onclick="scrollToIndex()">🏠 <span lang="en">Index</span></button>
+                <button onclick="nextPage()"><span lang="en">Next</span></button>
+            </div>
+            <div aria-hidden="true" class="page-number">24</div>
+            <h2 class="running-title" aria-hidden="true">ભોગવે તેની ભૂલ</h2>
+            
+            <p>કો’ક વહુને એની સાસુ ગાળો ભાંડ ભાંડ કરતી હોય, પણ જો એટલું જ સમજે કે આમાં ભૂલ કોની? ત્યારે કહે, ‘હું ભોગવું છું, માટે મારી ભૂલ’, તો એની સાસુ ઉપર એ ‘ઍટેક’ નહીં કરે અને ખરાબ વિચારોનું સેવન નહીં કરે, તો એક દહાડો એનો અંત આવશે, નહીં તો સાસુયે ‘ઍટેક’ કરે ને વહુ પણ ‘ઍટેક’ કરે, સાસુ મોઢેથી કરે ને વહુ મનથી કરે. એટલે આ બધું કેટલાય અવતાર સુધી ચાલ્યા કરે ને ‘ભોગવે તેની ભૂલ’ એ ‘જ્ઞાન’થી અંત આવે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>ભોગવે તેની જ ભૂલ! આ ‘જ્ઞાન’થી ધર્મ થશે, એટલે સામા પર આરોપ કરવાનો, કષાય કરવાનું બધું છૂટી જશે. એટલે આ ‘ભોગવે તેની ભૂલ’, એ તો મોક્ષે લઈ જાય એવું છે! આ તો ‘ઍક્ઝેક્ટ’ નીકળેલું છે કે ‘ભોગવે તેની ભૂલ!”</p>
+            
+            <h3><span aria-hidden="true">➤ </span> એ વાક્ય મોક્ષે લઈ જશે</h3>
+            
+            <p>“ભોગવે એની ભૂલ’ આ વાક્ય બિલકુલ ‘ઍક્ઝક્ટ’ નીકળ્યું છે અમારી પાસેથી! એને તો જે જે વાપરશે તેનું કલ્યાણ થઈ જશે.</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>“જ્ઞાની પુરુષ”નો એક જ શબ્દ સમજી જાય અને પકડી બેસે તો મોક્ષે જ જાય. કોનો શબ્દ? “જ્ઞાની”નો! એનાથી કોઈને કોઈની સલાહ જ ના લેવી પડે કે કોની ભૂલ આમાં? ભોગવે એની ભૂલ!</p>
+            
+            <div aria-hidden="true" style="text-align:center;font-size:1.2em;margin:15px 0;color:#bf953f;">❑</div>
+            
+            <p>આ ‘ભોગવે એની ભૂલ’ એકલું પકડી લેશે તોય મોક્ષે લઈ જશે, આ એક વાક્ય માણસને મોક્ષે લઈ જશે!</p>
+            
+            <br>
+            <p style="text-align: center;"><strong>॥ જય સચ્ચિદાનંદ ॥</strong></p>
+        </div>
+
+        <!-- ===== IMPROVED BOTTOM BANNER ===== -->
+        <div class="bottom-banner-box no-print">
+            <div class="bbb-disclaimer" aria-label="નોંધ: ઓડિયો બૂકમાં ક્યાંય પણ ક્ષતિ રહી ગઈ હોય તો દરગુજર કરશો અને આ પુસ્તકની મૂળ છપાયેલ આવૃત્તિ અથવા મૂળ પીડીએફ હંમેશા વાંચવા/ જોઈ લેવા વિનંતી છે.">
+                નોંધ: ઓડિયો બૂકમાં ક્યાંય પણ ક્ષતિ રહી ગઈ હોય તો દરગુજર કરશો અને આ પુસ્તકની મૂળ છપાયેલ આવૃત્તિ અથવા મૂળ પીડીએફ હંમેશા વાંચવા/ જોઈ લેવા વિનંતી છે.
+            </div>
+            <span class="bbb-jay" aria-label="જય સચ્ચિદાનંદ">॥ Jai Sachchidanand ॥</span>
+            <div class="bbb-divider" aria-hidden="true"></div>
+            <div class="bbb-title" aria-label="ડિજિટલ આર્કાઈવર એન્ડ ઇન્ટરેક્ટિવ ઑડિયો સેવા">Digital Archiver &amp; Interactive Audio Seva</div>
+            <div class="bbb-name" aria-label="કમલેશાનંદ મહેતા">Kamleshanand Mehta</div>
+            <div class="bbb-sub" aria-label="દાદા ભગવાન સમાધિ મંદિર, કેલનપુરી, વડોદરા, ગુજરાત.">
+                Dada Bhagwan Samadhi-Mandir,<br/>
+                Kelanpuri, Vadodara, Gujarat.
+            </div>
+            <div class="bbb-divider" aria-hidden="true"></div>
+            <div class="bbb-tagline" aria-label="જગત કલ્યાણ હો ! જગત કલ્યાણ હો ! જગત કલ્યાણ હો !">🙏 Jagat Kalyan Ho ! (3) 🙏</div>
+            <div class="bbb-tagline-guj" aria-label="જગત કલ્યાણ હો ! જગત કલ્યાણ હો ! જગત કલ્યાણ હો !">જગત કલ્યાણ હો ! (3)</div>
+            
+            <div class="bbb-buttons" aria-hidden="true">
+                <button class="bbb-btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆ શરૂઆતમાં જાવ (Top)</button>
+                <button class="bbb-btn-index" onclick="scrollToIndex()">🏠 અનુક્રમણિકા (Index)</button>
+            </div>
+        </div>
+
+    </div><!-- #magazine-content -->
+</div>
+
+<!-- ===== QUICK NAV (Bottom Left) ===== -->
+<div class="quick-nav no-print">
+    <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">⬇ <span lang="en">Bottom</span></button>
+    <button id="theme-toggle-btn" onclick="manualThemeToggle()" title="Toggle Dark Mode">🌓</button>
+    <button id="font-size-btn" onclick="cycleFontSize()" title="Font Size">🔤 ક</button>
+</div>
+
+<!-- ===== TTS PLAYER (Bottom Right) ===== -->
+<div class="no-print" id="tts-player">
+    <div class="tts-title-bar">🎧 <span lang="en">Audio Player</span></div>
+    <div class="tts-controls">
+        <button id="play-pause-btn" onclick="togglePlayPause()">▶ <span lang="en">Play</span></button>
+        <button id="stop-btn" onclick="stopTTS()">⏹ <span lang="en">Stop</span></button>
+        <button id="speed-btn" onclick="cycleSpeed()" title="Change Speed">▶ 0.9x</button>
+    </div>
+    <div class="tts-progress" id="tts-progress"></div>
+</div>
+
+</body>
+</html>
+
+        
