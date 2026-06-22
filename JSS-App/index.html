@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSS Audio Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to manifest.json -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Register service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#2980b9">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #2980b9, #6dd5fa);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      font-style: italic;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 700px;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 8px 0;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #e74c3c;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer small {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JSS Audio Library</h1>
+    <p>Listen and read Akram Vignan &amp; books</p>
+  </header>
+
+  <div class="section" id="section-gujarati">
+    <h2>A. Akram Vignan - Gujarati</h2>
+    <ul>
+      <li><a href="AkramVignan-Gujarati/AVG_2025_12_2026_01_Dec_Jan-V2_Guj_210626.html">1. ડિસેમ્બર-જાન્યુઆરી (2025-26) - Dec-Jan 2025-26</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_02_03_Feb_March_V3_Guj-_210626.html">2. ફેબ્રુઆરી-માર્ચ (2026) - Feb-March 2026</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_04_05_April_May_V3_Guj_210626.html">3. એપ્રિલ-મે (2026) - April-May 2026</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="section-hindi">
+    <h2>B. Akram Vignan - Hindi</h2>
+    <ul>
+      <li><a href="AkramVignan-Hindi/AVH_2026_01_2_Jan_Feb_Hindi_V1_20062026.html">1. जनवरी-फरवरी (2026) - Jan-Feb 2026</a></li>
+      <li><a href="AkramVignan-Hindi/AVH_2026_03_04_March_April_Hindi_V1_200626.html">2. मार्च-अप्रैल (2026) - March-April 2026</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="section-jss-gujarati">
+    <h2>C. JSS Books - Gujarati</h2>
+    <ul>
+      <li><a href="JSSBooks-Gujarati/Adjust Everywhere-Guj-Ver-2_1-100626.html">1. એડજસ્ટ એવરીવ્હેર - Adjust Everywhere</a></li>
+      <li><a href="JSSBooks-Gujarati/Athadaman Talo-Guj-Ver-2_1-10062026.html">2. અથડામણ ટાળો - Athadaman Talo</a></li>
+      <li><a href="JSSBooks-Gujarati/Banyu_te_Nyay-Guj-Ver-2_1-10062026.html">3. બન્યું તે ન્યાય - Banyu te Nyay</a></li>
+      <li><a href="JSSBooks-Gujarati/Bhogave teni bhool-Guj-Ver-2_1-10062026.html">4. ભોગવે તેની ભૂલ - Bhogave teni bhool</a></li>
+      <li><a href="JSSBooks-Gujarati/Vani_Vignan_Guj_ver 2_1-10062026.html">5. વાણી વિજ્ઞાન - Vani Vignan</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="section-jss-hindi">
+    <h2>D. JSS Books - Hindi</h2>
+    <ul>
+      <li>1. (हिंदी जेएसएस पुस्तक - Hindi JSS Book)</li>
+    </ul>
+  </div>
+
+  <footer>
+    © JSS Audio Project — Powered by GitHub Pages
+    <small>Kamleshanand Mehta, Kelapnpuri, Vaddodara (Gujarat)</small>
+  </footer>
+
+  <script>
+  function sortBookList(sectionId, byFilename = true) {
+    const section = document.querySelector(sectionId);
+    if (!section) return;
+
+    const ul = section.querySelector("ul");
+    const items = Array.from(ul.querySelectorAll("li"));
+
+    items.sort((a, b) => {
+      const linkA = a.querySelector("a");
+      const linkB = b.querySelector("a");
+      if (!linkA || !linkB) return 0;
+
+      if (byFilename) {
+        const hrefA = linkA.getAttribute("href") || "";
+        const hrefB = linkB.getAttribute("href") || "";
+        return hrefB.localeCompare(hrefA); // newest first
+      } else {
+        const textA = linkA.textContent.replace(/^\d+\.\s*/, "").toLowerCase();
+        const textB = linkB.textContent.replace(/^\d+\.\s*/, "").toLowerCase();
+        return textA.localeCompare(textB); // alphabetical
+      }
+    });
+
+    ul.innerHTML = "";
+    items.forEach((item, index) => {
+      const link = item.querySelector("a");
+      if (link) {
+        const text = link.innerHTML.replace(/^\d+\.\s*/, "");
+        link.innerHTML = (index + 1) + ". " + text;
+      }
+      ul.appendChild(item);
+    });
+  }
+
+  // Sort AV sections by filename (newest first)
+  sortBookList("#section-gujarati", true);
+  sortBookList("#section-hindi", true);
+
+  // Sort JSS book sections alphabetically
+  sortBookList("#section-jss-gujarati", false);
+  sortBookList("#section-jss-hindi", false);
+  </script>
+</body>
+</html>
