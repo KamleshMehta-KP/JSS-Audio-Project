@@ -76,26 +76,24 @@
     <p>Listen and read Akram Vignan &amp; books</p>
   </header>
 
-  <div class="section">
-  <h2>A. Akram Vignan - Gujarati</h2>
-  <ul>
-    <li><a href="AkramVignan-Gujarati/AVG_2025_12_2026_01_Dec_Jan-V2_Guj_210626.html">1. ડિસેમ્બર-જાન્યુઆરી (2025-26) - Dec-Jan 2025-26</a></li>
-    <li><a href="AkramVignan-Gujarati/AVG_2026_02_03_Feb_March_V3_Guj-_210626.html">2. ફેબ્રુઆરી-માર્ચ (2026) - Feb-March 2026</a></li>
-    <li><a href="AkramVignan-Gujarati/AVG_2026_04_05_April_May_V3_Guj_210626.html">3. એપ્રિલ-મે (2026) - April-May 2026</a></li>
-  </ul>
-</div>
+  <div class="section" id="section-gujarati">
+    <h2>A. Akram Vignan - Gujarati</h2>
+    <ul>
+      <li><a href="AkramVignan-Gujarati/AVG_2025_12_2026_01_Dec_Jan-V2_Guj_210626.html">1. ડિસેમ્બર-જાન્યુઆરી (2025-26) - Dec-Jan 2025-26</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_02_03_Feb_March_V3_Guj-_210626.html">2. ફેબ્રુઆરી-માર્ચ (2026) - Feb-March 2026</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_04_05_April_May_V3_Guj_210626.html">3. એપ્રિલ-મે (2026) - April-May 2026</a></li>
+    </ul>
+  </div>
 
+  <div class="section" id="section-hindi">
+    <h2>B. Akram Vignan - Hindi</h2>
+    <ul>
+      <li><a href="AkramVignan-Hindi/AVH_2026_01_2_Jan_Feb_Hindi_V1_20062026.html">1. जनवरी-फरवरी (2026) - Jan-Feb 2026</a></li>
+      <li><a href="AkramVignan-Hindi/AVH_2026_03_04_March_April_Hindi_V1_200626.html">2. मार्च-अप्रैल (2026) - March-April 2026</a></li>
+    </ul>
+  </div>
 
-  <div class="section">
-  <h2>B. Akram Vignan - Hindi</h2>
-  <ul>
-    <li><a href="AkramVignan-Hindi/AVH_2026_01_2_Jan_Feb_Hindi_V1_20062026.html">1. जनवरी-फरवरी (2026) - Jan-Feb 2026</a></li>
-    <li><a href="AkramVignan-Hindi/AVH_2026_03_04_March_April_Hindi_V1_200626.html">2. मार्च-अप्रैल (2026) - March-April 2026</a></li>
-  </ul>
-</div>
-
-
-  <div class="section">
+  <div class="section" id="section-jss-gujarati">
     <h2>C. JSS Books - Gujarati</h2>
     <ul>
       <li><a href="JSSBooks-Gujarati/Adjust Everywhere-Guj-Ver-2_1-100626.html">1. એડજસ્ટ એવરીવ્હેર - Adjust Everywhere</a></li>
@@ -106,7 +104,7 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section" id="section-jss-hindi">
     <h2>D. JSS Books - Hindi</h2>
     <ul>
       <li>1. (हिंदी जेएसएस पुस्तक - Hindi JSS Book)</li>
@@ -117,5 +115,49 @@
     © JSS Audio Project — Powered by GitHub Pages
     <small>Kamleshanand Mehta, Kelapnpuri, Vaddodara (Gujarat)</small>
   </footer>
+
+  <script>
+  function sortBookList(sectionId, byFilename = true) {
+    const section = document.querySelector(sectionId);
+    if (!section) return;
+
+    const ul = section.querySelector("ul");
+    const items = Array.from(ul.querySelectorAll("li"));
+
+    items.sort((a, b) => {
+      const linkA = a.querySelector("a");
+      const linkB = b.querySelector("a");
+      if (!linkA || !linkB) return 0;
+
+      if (byFilename) {
+        const hrefA = linkA.getAttribute("href") || "";
+        const hrefB = linkB.getAttribute("href") || "";
+        return hrefB.localeCompare(hrefA); // newest first
+      } else {
+        const textA = linkA.textContent.replace(/^\d+\.\s*/, "").toLowerCase();
+        const textB = linkB.textContent.replace(/^\d+\.\s*/, "").toLowerCase();
+        return textA.localeCompare(textB); // alphabetical
+      }
+    });
+
+    ul.innerHTML = "";
+    items.forEach((item, index) => {
+      const link = item.querySelector("a");
+      if (link) {
+        const text = link.innerHTML.replace(/^\d+\.\s*/, "");
+        link.innerHTML = (index + 1) + ". " + text;
+      }
+      ul.appendChild(item);
+    });
+  }
+
+  // Sort AV sections by filename (newest first)
+  sortBookList("#section-gujarati", true);
+  sortBookList("#section-hindi", true);
+
+  // Sort JSS book sections alphabetically
+  sortBookList("#section-jss-gujarati", false);
+  sortBookList("#section-jss-hindi", false);
+  </script>
 </body>
 </html>
