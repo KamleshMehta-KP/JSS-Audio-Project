@@ -8,6 +8,13 @@
   <!-- Link to manifest.json -->
   <link rel="manifest" href="manifest.json">
 
+  <!-- Favicon (browser tab icon) -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+  <!-- iOS home screen icon (manifest.json is ignored by iOS Safari, this tag is required) -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+
   <!-- Register service worker -->
   <script>
     if ("serviceWorker" in navigator) {
