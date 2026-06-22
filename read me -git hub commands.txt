@@ -1,0 +1,20 @@
+git hub command for adding files
+
+use this one line command
+bash
+git add index.html && git commit -m "Update index.html" && git push
+
+code
+https://kamleshmehta-kp.github.io/JSS-Audio-Project/
+
+
+here are the exact Git Bash commands you need to push your fresh index.html to GitHub:
+
+bash
+cd "C:/JSS Audio Project"
+
+git add index.html
+git commit -m "Update index.html with clean script for AV newest-first and JSS alphabetical sorting"
+git push
+
+
