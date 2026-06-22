@@ -1,7 +1,7 @@
 {
   "name": "JSS Audio Library",
   "short_name": "JSS Audio",
-  "start_url": "index.html",
+  "start_url": "/JSS-Audio-Project/index.html"
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2980b9",
