@@ -1,12 +1,9 @@
-// Bump this version number any time you want returning visitors
-// to pick up a fresh copy of the homepage / icons (e.g. after a logo fix).
-const CACHE_NAME = "jss-audio-cache-v2";
+// JSS Audio Library Service Worker
+// Background refresh with selective caching for important file types
 
-// Only the "app shell" is cached here — the homepage and its icons.
-// Individual book/audio pages are NOT listed here on purpose:
-// they are fetched fresh from the network and cached automatically
-// as visitors open them (see the fetch handler below), so you never
-// need to edit this file when you add a new book.
+const CACHE_NAME = "jss-audio-cache-v1";
+
+// App shell files (homepage + icons)
 const SHELL_FILES = [
   "./",
   "./index.html",
@@ -15,6 +12,7 @@ const SHELL_FILES = [
   "./icon-512.png"
 ];
 
+// Install: cache the app shell
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL_FILES))
@@ -22,45 +20,46 @@ self.addEventListener("install", event => {
   self.skipWaiting();
 });
 
+// Activate: clean up old caches
 self.addEventListener("activate", event => {
-  // Delete old-versioned caches so updates actually take effect
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(
-        keys
-          .filter(key => key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      )
+      Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))
     )
   );
   self.clients.claim();
 });
 
+// Fetch: cache only selected file types, auto-refresh in background
 self.addEventListener("fetch", event => {
+  const url = new URL(event.request.url);
+
+  // Cache HTML, audio, images, CSS, JS
+  const isTargetFile =
+    url.pathname.endsWith(".html") ||
+    url.pathname.endsWith(".mp3") ||
+    url.pathname.endsWith(".png") ||
+    url.pathname.endsWith(".css") ||
+    url.pathname.endsWith(".js");
+
+  if (!isTargetFile) {
+    // For other files, just fetch normally
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      // Not in cache (e.g. a book page or audio file) — fetch from
-      // network, then store a copy for offline use next time.
-      return fetch(event.request).then(networkResponse => {
-        // Only cache successful, same-origin responses
-        if (
-          networkResponse &&
-          networkResponse.status === 200 &&
-          event.request.url.startsWith(self.location.origin)
-        ) {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseClone);
-          });
-        }
-        return networkResponse;
-      }).catch(() => {
-        // Offline and not cached - nothing more we can do
-        return cachedResponse;
-      });
-    })
+    caches.open(CACHE_NAME).then(cache =>
+      cache.match(event.request).then(cachedResponse => {
+        const fetchPromise = fetch(event.request).then(networkResponse => {
+          if (networkResponse && networkResponse.status === 200) {
+            cache.put(event.request, networkResponse.clone());
+          }
+          return networkResponse;
+        }).catch(() => cachedResponse);
+
+        // Show cached immediately, update quietly in background
+        return cachedResponse || fetchPromise;
+      })
+    )
   );
 });
