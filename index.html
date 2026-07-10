@@ -50,6 +50,18 @@
       font-size: 18px;
       font-style: italic;
     }
+    #grand-total {
+      background: #eef7ff;
+      border-bottom: 3px solid #2980b9;
+      text-align: center;
+      padding: 12px 10px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    #grand-total span {
+      color: #2980b9;
+    }
     .section {
       background: #fff;
       padding: 20px;
@@ -61,21 +73,55 @@
     h2 {
       color: #34495e;
       margin-top: 0;
+      margin-bottom: 6px;
+    }
+    .section-total {
+      font-weight: bold;
+      color: #2980b9;
+      font-size: 14px;
+      margin: 0 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
     }
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
     li {
-      margin: 8px 0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px dotted #eee;
     }
-    a {
+    li:last-child {
+      border-bottom: none;
+    }
+    li a {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      width: 100%;
+      gap: 12px;
       text-decoration: none;
       color: #2980b9;
       font-weight: bold;
     }
-    a:hover {
+    li a:hover {
       color: #e74c3c;
+    }
+    .book-title {
+      flex: 1;
+    }
+    .page-count {
+      flex-shrink: 0;
+      width: 68px;
+      text-align: right;
+      font-weight: normal;
+      color: #555;
+      font-size: 14px;
     }
     footer {
       background: #2c3e50;
@@ -90,6 +136,31 @@
       font-size: 12px;
       color: #ccc;
     }
+    @media (max-width: 480px) {
+      .section {
+        margin: 12px 10px;
+        padding: 14px;
+      }
+      header h1 {
+        font-size: 26px;
+      }
+      header p {
+        font-size: 15px;
+      }
+      li a {
+        flex-wrap: wrap;
+      }
+      .book-title {
+        font-size: 15px;
+        min-width: 100%;
+      }
+      .page-count {
+        width: auto;
+        text-align: left;
+        font-size: 13px;
+        margin-top: 2px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -98,37 +169,49 @@
     <p>Listen and read Akram Vignan &amp; books</p>
   </header>
 
+  <div id="grand-total">
+    Total Books: <span id="totalBooks">0</span> &nbsp;|&nbsp; Total Pages: <span id="totalPages">0</span>
+  </div>
+
   <div class="section" id="section-gujarati">
     <h2>A. Akram Vignan - Gujarati</h2>
+    <p class="section-total" id="total-section-gujarati"></p>
     <ul>
-      <li><a href="AkramVignan-Gujarati/AVG_2025_12_2026_01_Dec_Jan-V2_Guj_210626.html">1. ડિસેમ્બર-જાન્યુઆરી (2025-26) - Dec-Jan 2025-26</a></li>
-      <li><a href="AkramVignan-Gujarati/AVG_2026_02_03_Feb_March_V3_Guj-_210626.html">2. ફેબ્રુઆરી-માર્ચ (2026) - Feb-March 2026</a></li>
-      <li><a href="AkramVignan-Gujarati/AVG_2026_04_05_April_May_V3_Guj_210626.html">3. એપ્રિલ-મે (2026) - April-May 2026</a></li>
-      <li><a href="AkramVignan-Gujarati/AVG_2026_06_07_June_July.html">4. જૂન-જુલાઇ (2026) - June-July 2026</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2025_12_2026_01_Dec_Jan-V2_Guj_210626.html" data-pages="40">1. ડિસેમ્બર-જાન્યુઆરી (2025-26) - Dec-Jan 2025-26</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_02_03_Feb_March_V3_Guj-_210626.html" data-pages="44">2. ફેબ્રુઆરી-માર્ચ (2026) - Feb-March 2026</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_04_05_April_May_V3_Guj_210626.html" data-pages="44">3. એપ્રિલ-મે (2026) - April-May 2026</a></li>
+      <li><a href="AkramVignan-Gujarati/AVG_2026_06_07_June_July.html" data-pages="44">4. જૂન-જુલાઇ (2026) - June-July 2026</a></li>
 	</ul>
   </div>
 
   <div class="section" id="section-hindi">
     <h2>B. Akram Vignan - Hindi</h2>
+    <p class="section-total" id="total-section-hindi"></p>
     <ul>
-      <li><a href="AkramVignan-Hindi/AVH_2026_01_2_Jan_Feb_Hindi_V1_20062026.html">1. जनवरी-फरवरी (2026) - Jan-Feb 2026</a></li>
-      <li><a href="AkramVignan-Hindi/AVH_2026_03_04_March_April_Hindi_V1_200626.html">2. मार्च-अप्रैल (2026) - March-April 2026</a></li>
+      <li><a href="AkramVignan-Hindi/AVH_2026_01_2_Jan_Feb_Hindi_V1_20062026.html" data-pages="36">1. जनवरी-फरवरी (2026) - Jan-Feb 2026</a></li>
+      <li><a href="AkramVignan-Hindi/AVH_2026_03_04_March_April_Hindi_V1_200626.html" data-pages="28">2. मार्च-अप्रैल (2026) - March-April 2026</a></li>
     </ul>
   </div>
 
   <div class="section" id="section-jss-gujarati">
     <h2>C. JSS Books - Gujarati</h2>
+    <p class="section-total" id="total-section-jss-gujarati"></p>
     <ul>
-      <li><a href="JSSBooks-Gujarati/Adjust Everywhere-Guj-Ver-2_1-100626.html">1. એડજસ્ટ એવરીવ્હેર - Adjust Everywhere</a></li>
-      <li><a href="JSSBooks-Gujarati/Athadaman Talo-Guj-Ver-2_1-10062026.html">2. અથડામણ ટાળો - Athadaman Talo</a></li>
-      <li><a href="JSSBooks-Gujarati/Banyu_te_Nyay-Guj-Ver-2_1-10062026.html">3. બન્યું તે ન્યાય - Banyu te Nyay</a></li>
-      <li><a href="JSSBooks-Gujarati/Bhogave teni bhool-Guj-Ver-2_1-10062026.html">4. ભોગવે તેની ભૂલ - Bhogave teni bhool</a></li>
-      <li><a href="JSSBooks-Gujarati/Vani_Vignan_Guj_ver 2_1-10062026.html">5. વાણી વિજ્ઞાન - Vani Vignan</a></li>
-    </ul>
+      <li><a href="JSSBooks-Gujarati/Adjust Everywhere-Guj-Ver-2_1-100626.html" data-pages="64">1. એડજસ્ટ એવરીવ્હેર - Adjust Everywhere</a></li>
+      <li><a href="JSSBooks-Gujarati/Athadaman Talo-Guj-Ver-2_1-10062026.html" data-pages="24">2. અથડામણ ટાળો - Athadaman Talo</a></li>
+      <li><a href="JSSBooks-Gujarati/Banyu_te_Nyay-Guj-Ver-2_1-10062026.html" data-pages="32">3. બન્યું તે ન્યાય - Banyu te Nyay</a></li>
+      <li><a href="JSSBooks-Gujarati/Bhogave teni bhool-Guj-Ver-2_1-10062026.html" data-pages="24">4. ભોગવે તેની ભૂલ - Bhogave teni bhool</a></li>
+      <li><a href="JSSBooks-Gujarati/Vani_Vignan_Guj_ver 2_1-10062026.html" data-pages="64">5. વાણી વિજ્ઞાન - Vani Vignan</a></li>
+      <li><a href="JSSBooks-Gujarati/Jeevan_Dharma_Guj_Ver_1_10072026.html" data-pages="169">6. જીવન ધર્મ - jeevan Dharm</a></li>
+	  <li><a href="JSSBooks-Gujarati/Neeti-Aneeti_Guj_Ver_1_10072026.html" data-pages="32">7. નીતિ-અનીતિ - Neeti-Aneeti</a></li>
+	  <li><a href="JSSBooks-Gujarati/Param_Sukh_nau_Vaibhav_Guj_Ver_1_10072026.html" data-pages="208">8. પરમ સુખનો વૈભવ - Param Sukh nau Vaibhav</a></li> 
+	  <li><a href="JSSBooks-Gujarati/Positive_Drashti_Guj_Ver_1_10072026.html" data-pages="67">9. પૉઝિટિવ દષ્ટિ - Positive_Drashti</a></li>
+	</ul>
   </div>
 
   <div class="section" id="section-jss-hindi">
     <h2>D. JSS Books - Hindi</h2>
+    <p class="section-total" id="total-section-jss-hindi"></p>
     <ul>
       <li>1. (हिंदी जेएसएस पुस्तक - Hindi JSS Book)</li>
     </ul>
@@ -142,7 +225,7 @@
   <script>
   function sortBookList(sectionId, byFilename = true) {
     const section = document.querySelector(sectionId);
-    if (!section) return;
+    if (!section) return { books: 0, pages: 0 };
 
     const ul = section.querySelector("ul");
     const items = Array.from(ul.querySelectorAll("li"));
@@ -164,23 +247,55 @@
     });
 
     ul.innerHTML = "";
+    let sectionPages = 0;
+    let sectionBooks = 0;
+
     items.forEach((item, index) => {
       const link = item.querySelector("a");
       if (link) {
-        const text = link.innerHTML.replace(/^\d+\.\s*/, "");
-        link.innerHTML = (index + 1) + ". " + text;
+        const rawText = link.textContent.replace(/^\d+\.\s*/, "").trim();
+        const pages = parseInt(link.getAttribute("data-pages") || "0", 10);
+
+        sectionPages += pages;
+        sectionBooks++;
+
+        // rebuild as a two-column row: title | page count
+        link.innerHTML = "";
+        const titleSpan = document.createElement("span");
+        titleSpan.className = "book-title";
+        titleSpan.textContent = (index + 1) + ". " + rawText;
+        link.appendChild(titleSpan);
+
+        const pageSpan = document.createElement("span");
+        pageSpan.className = "page-count";
+        pageSpan.textContent = pages > 0 ? pages + " pages" : "";
+        link.appendChild(pageSpan);
       }
       ul.appendChild(item);
     });
+
+    // Section total, shown under the heading
+    const totalEl = document.getElementById("total-" + sectionId.slice(1));
+    if (totalEl) {
+      totalEl.textContent = "Total: " + sectionBooks + " books, " + sectionPages + " pages";
+    }
+
+    return { books: sectionBooks, pages: sectionPages };
   }
 
   // Sort AV sections by filename (newest first)
-  sortBookList("#section-gujarati", true);
-  sortBookList("#section-hindi", true);
+  const totalGuj = sortBookList("#section-gujarati", true);
+  const totalHin = sortBookList("#section-hindi", true);
 
   // Sort JSS book sections alphabetically
-  sortBookList("#section-jss-gujarati", false);
-  sortBookList("#section-jss-hindi", false);
+  const totalJssGuj = sortBookList("#section-jss-gujarati", false);
+  const totalJssHin = sortBookList("#section-jss-hindi", false);
+
+  // Grand total across all 4 sections, shown at the very top
+  const grandBooks = totalGuj.books + totalHin.books + totalJssGuj.books + totalJssHin.books;
+  const grandPages = totalGuj.pages + totalHin.pages + totalJssGuj.pages + totalJssHin.pages;
+  document.getElementById("totalBooks").textContent = grandBooks;
+  document.getElementById("totalPages").textContent = grandPages;
   </script>
 </body>
 </html>
