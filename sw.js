@@ -1,7 +1,7 @@
 // JSS Audio Library Service Worker
 // Background refresh with selective caching for important file types
 
-const CACHE_NAME = "jss-audio-cache-v1";
+const CACHE_NAME = "jss-audio-cache-v2";
 
 // App shell files (homepage + icons)
 const SHELL_FILES = [
