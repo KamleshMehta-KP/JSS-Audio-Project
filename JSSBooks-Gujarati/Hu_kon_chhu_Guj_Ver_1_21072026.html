@@ -39,7 +39,7 @@
 <meta property="og:description" content="Gujarati Audio e-Book — Satsangs of Dada Bhagwan (A. M. Patel) on Ahimsa (Non-Violence). Publication: Jai Sachchidanand Sangh, Ahmedabad. Digital Archiver &amp; Interactive Audio Creator: Kamleshanand Mehta, Vadodara."/>
 <meta property="og:type" content="book"/>
 <meta property="og:locale" content="gu_IN"/>
-<meta property="og:url" content="https://kamleshmehta-kp.github.io/JSS-Audio-Project/"/>
+<meta property="og:url" content="https://kamleshmehta-kp.github.io/JSS-Audio-Project/JSSBooks-Gujarati/Hu_kon_chhu_Guj_Ver_1_21072026.html"/>
 <meta name="publisher" content="Jai Sachchidanand Sangh — https://www.jssvitragvignan.org/"/>
 <title>હું કોણ છું ? - દાદા ભગવાન કથિત</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -338,10 +338,69 @@ button:focus-visible, a:focus-visible { outline: 3px solid #0d47a1; outline-offs
 
 .dark-saver #ios-banner { background-color: #2a1515 !important; color: #ff8a80 !important; border-color: #5a2020 !important; }
 .dark-saver #ios-banner .banner-link { color: #82b1ff !important; }
+
+/* jss-patch: speed slider, labelled controls, resume banner */
+.tts-speed-wrap { display:flex; flex-direction:column; align-items:center; gap:2px; width:100%; }
+.tts-speed-wrap label { font-size:10px; letter-spacing:1px; text-transform:uppercase; color:#aaa; }
+.tts-speed-wrap input[type=range] { width:104px; accent-color:#f57c00; cursor:pointer; margin:0; }
+.tts-speed-wrap input[type=range]:focus-visible { outline:2px solid #ffb74d; outline-offset:2px; }
+#speed-readout { font-size:11px; color:#ddd; font-weight:700; }
+#jss-resume-banner {
+  position:fixed; left:50%; transform:translateX(-50%);
+  bottom:calc(96px + env(safe-area-inset-bottom));
+  background:#1565c0; color:#fff; padding:10px 16px; border-radius:10px;
+  box-shadow:0 6px 20px rgba(0,0,0,.35); z-index:1200; display:none;
+  font-size:14px; align-items:center; gap:12px; font-family:sans-serif;
+  max-width:calc(100vw - 32px);
+}
+#jss-resume-banner button {
+  background:#fff; color:#1565c0; border:0; border-radius:6px;
+  padding:6px 12px; font-weight:700; cursor:pointer; font-size:13px;
+}
+#jss-resume-banner button.jss-dismiss { background:transparent; color:#cfe3ff; }
+@media print { #jss-resume-banner { display:none !important; } }
 </style>
 <script>
 // ===== DETECTION =====
-const isEdge = /Edg|Edge|EdgiOS|EdgA/i.test(navigator.userAgent); 
+const isEdgeUA = /Edg|Edge|EdgiOS|EdgA/i.test(navigator.userAgent);
+const isFirefox = /Firefox/i.test(navigator.userAgent);
+const hasTTS = ('speechSynthesis' in window);
+/* Unified experience: Chrome, Edge and Firefox all use the built-in player.
+   Edge's native Read Aloud is no longer required, so every isEdge branch
+   below now takes the standard path. isEdgeUA remains for banner copy. */
+const isEdge = false;
+/* jss-patch-v1 */
+// ---- identity + storage namespacing -------------------------------------
+const JSS_BOOK_ID = "jssbooks-gujarati-hu-kon-chhu-guj";
+const JSS_BOOK_TITLE = "હું કોણ છું ? - દાદા ભગવાન કથિત";
+const JSS_LANG = "gu";
+function JSSK(n) { return 'jss:' + JSS_BOOK_ID + ':' + n; }
+function JSSG(n) { return 'jss:' + n; }
+function jssGet(k) {
+  try { return localStorage.getItem(k); } catch (e) {}
+  try { return sessionStorage.getItem(k); } catch (e) {}
+  return null;
+}
+// One-time migration off the old global keys so existing readers keep settings.
+(function () {
+  try {
+    if (localStorage.getItem('jss:migrated') === '1') return;
+    ['theme', 'avTheme'].forEach(function (o) {
+      var v = localStorage.getItem(o);
+      if (v && !localStorage.getItem(JSSG('theme'))) localStorage.setItem(JSSG('theme'), v);
+    });
+    ['fontIdx', 'avFontIdx'].forEach(function (o) {
+      var v = localStorage.getItem(o);
+      if (v && !localStorage.getItem(JSSG('zoomIdx'))) localStorage.setItem(JSSG('zoomIdx'), v);
+    });
+    ['rateIndex', 'avSpeedIndex'].forEach(function (o) {
+      var v = localStorage.getItem(o);
+      if (v && !localStorage.getItem(JSSG('rate'))) localStorage.setItem(JSSG('rate'), v);
+    });
+    localStorage.setItem('jss:migrated', '1');
+  } catch (e) {}
+})();
+ 
 const isIOS = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
 
 // ===== ADVANCED TTS STATE =====
@@ -484,28 +543,28 @@ function chunkText(text) {
 // ===== PERSISTENT PLAYBACK STATE =====
 function savePlaybackState() {
     try {
-        localStorage.setItem('jss_audio_index', currentIndex);
-        localStorage.setItem('jss_audio_chunk', currentChunkIndex);
-        localStorage.setItem('jss_audio_boundary', currentBoundaryIndex);
+        localStorage.setItem(JSSK('audioIndex'), currentIndex);
+        localStorage.setItem(JSSK('audioChunk'), currentChunkIndex);
+        localStorage.setItem(JSSK('audioBoundary'), currentBoundaryIndex);
     } catch(e) {
         try {
-            sessionStorage.setItem('jss_audio_index', currentIndex);
-            sessionStorage.setItem('jss_audio_chunk', currentChunkIndex);
-            sessionStorage.setItem('jss_audio_boundary', currentBoundaryIndex);
+            sessionStorage.setItem(JSSK('audioIndex'), currentIndex);
+            sessionStorage.setItem(JSSK('audioChunk'), currentChunkIndex);
+            sessionStorage.setItem(JSSK('audioBoundary'), currentBoundaryIndex);
         } catch(e2) {}
     }
 }
 
 function clearPlaybackState() {
     try {
-        localStorage.removeItem('jss_audio_index');
-        localStorage.removeItem('jss_audio_chunk');
-        localStorage.removeItem('jss_audio_boundary');
+        localStorage.removeItem(JSSK('audioIndex'));
+        localStorage.removeItem(JSSK('audioChunk'));
+        localStorage.removeItem(JSSK('audioBoundary'));
     } catch(e) {}
     try {
-        sessionStorage.removeItem('jss_audio_index');
-        sessionStorage.removeItem('jss_audio_chunk');
-        sessionStorage.removeItem('jss_audio_boundary');
+        sessionStorage.removeItem(JSSK('audioIndex'));
+        sessionStorage.removeItem(JSSK('audioChunk'));
+        sessionStorage.removeItem(JSSK('audioBoundary'));
     } catch(e2) {}
 }
 
@@ -513,9 +572,9 @@ function checkResumeState() {
     try {
         if (isEdge) return;
         let savedIndex = null;
-        try { savedIndex = localStorage.getItem('jss_audio_index'); } catch(e) { savedIndex = null; }
-        if (savedIndex === null) { try { savedIndex = sessionStorage.getItem('jss_audio_index'); } catch(e2) {} }
-        const store = (function(){ try { localStorage.getItem('jss_audio_index'); return localStorage; } catch(e){ return sessionStorage; } })();
+        try { savedIndex = localStorage.getItem(JSSK('audioIndex')); } catch(e) { savedIndex = null; }
+        if (savedIndex === null) { try { savedIndex = sessionStorage.getItem(JSSK('audioIndex')); } catch(e2) {} }
+        const store = (function(){ try { localStorage.getItem(JSSK('audioIndex')); return localStorage; } catch(e){ return sessionStorage; } })();
         if (savedIndex !== null && parseInt(savedIndex) < ttsElements.length) {
             currentIndex = parseInt(savedIndex);
             currentChunkIndex = parseInt(store.getItem('jss_audio_chunk')) || 0;
@@ -579,7 +638,7 @@ function manualThemeToggle() {
   const val = isDark ? 'light' : 'dark';
   const themeMeta = document.querySelector('meta[name="theme-color"]');
   if (themeMeta) themeMeta.setAttribute('content', isDark ? '#fff8f0' : '#100f0e');
-  try { localStorage.setItem('theme', val); } catch(e) { try { sessionStorage.setItem('theme', val); } catch(e2) {} }
+  try { localStorage.setItem(JSSG('theme'), val); } catch(e) { try { sessionStorage.setItem(JSSG('theme'), val); } catch(e2) {} }
 }
 
 const fontSizes = ['', 'font-lg', 'font-xl']; 
@@ -622,10 +681,10 @@ function cycleFontSize() {
   currentFontClass = newFontClass;
   fontIdx = newFontIdx;
   
-  const labels = ['ક', 'ક+', 'ક++'];
-  document.getElementById('font-size-btn').textContent = '🔤 ' + labels[fontIdx];
-  try { localStorage.setItem('fontIdx', fontIdx); } catch(e) {}
-  try { sessionStorage.setItem('fontIdx', fontIdx); } catch(e) {}
+  const labels = ['Zoom', 'Zoom+', 'Zoom++'];
+  document.getElementById('font-size-btn').textContent = '🔍 ' + labels[fontIdx];
+  try { localStorage.setItem(JSSG('zoomIdx'), fontIdx); } catch(e) {}
+  try { sessionStorage.setItem(JSSG('zoomIdx'), fontIdx); } catch(e) {}
 
   const myToken = ++fontScrollToken;
   if (fontScrollTimer) {
@@ -659,7 +718,7 @@ function cycleSpeed() {
   ttsRate = rateSteps[rateIndex];
   const labels = ['🐢', '▶', '⏩', '⚡'];
   document.getElementById('speed-btn').textContent = labels[rateIndex] + ' ' + ttsRate + 'x';
-  try { localStorage.setItem('rateIndex', rateIndex); } catch(e) { try { sessionStorage.setItem('rateIndex', rateIndex); } catch(e2) {} }
+  try { localStorage.setItem(JSSG('rate'), rateIndex); } catch(e) { try { sessionStorage.setItem(JSSG('rate'), rateIndex); } catch(e2) {} }
   
   if (isPlaying) {
       speedChangeInFlight = true;
@@ -765,7 +824,7 @@ function prevPage() {
 // ===== DOM READY =====
 document.addEventListener("DOMContentLoaded", () => {
   let _savedTheme = '';
-  try { _savedTheme = localStorage.getItem('theme') || ''; } catch(e) { try { _savedTheme = sessionStorage.getItem('theme') || ''; } catch(e2) {} }
+  try { _savedTheme = localStorage.getItem(JSSG('theme')) || ''; } catch(e) { try { _savedTheme = sessionStorage.getItem(JSSG('theme')) || ''; } catch(e2) {} }
   const _themeMeta = document.querySelector('meta[name="theme-color"]');
   if (_savedTheme === 'dark') {
     document.body.classList.add('dark-saver'); document.documentElement.classList.add('dark-saver');
@@ -781,16 +840,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   let _fontRaw = '0';
-  try { _fontRaw = localStorage.getItem('fontIdx') || '0'; } catch(e) { try { _fontRaw = sessionStorage.getItem('fontIdx') || '0'; } catch(e2) {} }
+  try { _fontRaw = localStorage.getItem(JSSG('zoomIdx')) || '0'; } catch(e) { try { _fontRaw = sessionStorage.getItem(JSSG('zoomIdx')) || '0'; } catch(e2) {} }
   const savedFont = parseInt(_fontRaw);
   if (savedFont > 0 && fontSizes[savedFont]) {
     fontIdx = savedFont; currentFontClass = fontSizes[fontIdx]; /* FIX: restore currentFontClass so cycleFontSize() can remove it */ document.body.classList.add(fontSizes[fontIdx]);
     const fbtn = document.getElementById('font-size-btn');
-    if (fbtn) fbtn.textContent = '🔤 ' + ['ક', 'ક+', 'ક++'][fontIdx];
+    if (fbtn) fbtn.textContent = '🔍 ' + ['Zoom', 'Zoom+', 'Zoom++'][fontIdx];
   }
 
   let _rateRaw = '1';
-  try { _rateRaw = localStorage.getItem('rateIndex') || '1'; } catch(e) { try { _rateRaw = sessionStorage.getItem('rateIndex') || '1'; } catch(e2) {} }
+  try { _rateRaw = localStorage.getItem(JSSG('rate')) || '1'; } catch(e) { try { _rateRaw = sessionStorage.getItem(JSSG('rate')) || '1'; } catch(e2) {} }
   const savedRate = parseInt(_rateRaw);
   if (rateSteps[savedRate]) {
     rateIndex = savedRate; ttsRate = rateSteps[rateIndex];
@@ -1060,7 +1119,7 @@ function playChunk(startCharIndex = 0) {
   }
   voiceLoadRetries = 0;
   
-  let gujaratiVoice = voices.find(v => v.lang.startsWith('gu'));
+  let gujaratiVoice = (window.jssPickVoice ? window.jssPickVoice(voices) : null);
 
   if (!gujaratiVoice) {
     let nvBanner = document.getElementById("no-voice-banner");
@@ -1198,7 +1257,409 @@ if (isIOSMobile) {
     }
   }, 500);
 }
+
+/* jss-patch-v1 */
+// =========================================================================
+//  jss-patch runtime: voice quality, mediaSession, speed slider,
+//  resume banner, error recovery, cross-browser normalisation.
+// =========================================================================
+(function () {
+  var LANG = (typeof JSS_LANG === 'string' && JSS_LANG) ? JSS_LANG : 'gu';
+
+  // ---- neural voice preference ----------------------------------------
+  // The Hindi magazines already did this; nothing else did, so readers with
+  // a Natural/Neural voice installed were getting the older robotic one.
+  // Strictly scoped to this page's language. Never cross languages: a
+  // Hindi voice reading Gujarati script produces wrong pronunciation, so
+  // no voice at all is better than the wrong one.
+  var LANG_NAME = { gu: 'gujarati', hi: 'hindi' }[LANG] || '';
+
+  window.jssPickVoice = function (voices) {
+    if (!voices || !voices.length) return null;
+    var pool = voices.filter(function (v) {
+      return v.lang && v.lang.toLowerCase().replace('_', '-').indexOf(LANG + '-') === 0;
+    });
+    if (!pool.length) {
+      pool = voices.filter(function (v) {
+        return v.lang && v.lang.toLowerCase() === LANG;
+      });
+    }
+    if (!pool.length && LANG_NAME) {
+      pool = voices.filter(function (v) {
+        return (v.name || '').toLowerCase().indexOf(LANG_NAME) !== -1;
+      });
+    }
+    if (!pool.length) return null;
+    var ranked = ['natural', 'neural', 'online', 'enhanced', 'premium'];
+    for (var i = 0; i < ranked.length; i++) {
+      var want = ranked[i];
+      var hit = pool.filter(function (v) {
+        return (v.name || '').toLowerCase().indexOf(want) !== -1;
+      })[0];
+      if (hit) return hit;
+    }
+    return pool[0];
+  };
+
+  // ---- speed slider ----------------------------------------------------
+  window.jssSetSpeed = function (value) {
+    var v = Math.max(0.5, Math.min(2, parseFloat(value) || 0.9));
+    try { ttsRate = v; } catch (e) {}
+    if (typeof rateSteps !== 'undefined' && typeof rateIndex !== 'undefined') {
+      var best = 0, bestD = Infinity;
+      for (var i = 0; i < rateSteps.length; i++) {
+        var d = Math.abs(rateSteps[i] - v);
+        if (d < bestD) { bestD = d; best = i; }
+      }
+      try { rateIndex = best; } catch (e) {}
+    }
+    var out = document.getElementById('speed-readout');
+    if (out) out.textContent = v.toFixed(1) + 'x';
+    var sl = document.getElementById('speed-slider');
+    if (sl && parseFloat(sl.value) !== v) sl.value = v;
+    try { localStorage.setItem(JSSG('rate'), String(v)); } catch (e) {}
+
+    if (typeof isPlaying !== 'undefined' && isPlaying && typeof synth !== 'undefined' && synth) {
+      if (typeof speedChangeInFlight !== 'undefined') { speedChangeInFlight = true; }
+      try { synth.cancel(); } catch (e) {}
+      setTimeout(function () {
+        if (typeof speedChangeInFlight !== 'undefined') { speedChangeInFlight = false; }
+        if (typeof playChunk === 'function') playChunk(currentBoundaryIndex || 0);
+        else if (typeof readCurrentElement === 'function') readCurrentElement(currentBoundaryIndex || 0);
+      }, 60);
+    }
+  };
+
+  // ---- error recovery for the magazine engine --------------------------
+  window.jssAdvanceAfterError = function () {
+    if (typeof currentIndex === 'undefined') return;
+    try { currentIndex += 1; currentBoundaryIndex = 0; } catch (e) {}
+    if (typeof readCurrentElement === 'function') {
+      setTimeout(function () { readCurrentElement(0); }, 120);
+    }
+  };
+
+  // ---- resume banner ---------------------------------------------------
+  // Every file called getElementById('resume-banner') and got null, so the
+  // saved position was never offered. Build it instead of shipping it.
+  function buildResumeBanner() {
+    if (document.getElementById('jss-resume-banner')) return;
+    var saved = jssGet(JSSK('audioIndex'));
+    if (saved === null) return;
+    var n = parseInt(saved, 10);
+    if (isNaN(n) || n <= 0) return;
+    if (typeof ttsElements !== 'undefined' && ttsElements.length && n >= ttsElements.length) return;
+
+    var bar = document.createElement('div');
+    bar.id = 'jss-resume-banner';
+    bar.className = 'no-print';
+    bar.setAttribute('role', 'status');
+    var pct = (typeof ttsElements !== 'undefined' && ttsElements.length)
+      ? ' (' + Math.round((n / ttsElements.length) * 100) + '%)' : '';
+    bar.innerHTML =
+      '<span>Resume where you left off' + pct + '</span>' +
+      '<button type="button" class="jss-go">Resume</button>' +
+      '<button type="button" class="jss-dismiss">Start over</button>';
+    document.body.appendChild(bar);
+    bar.style.display = 'flex';
+
+    bar.querySelector('.jss-go').addEventListener('click', function () {
+      bar.remove();
+      try { currentIndex = n; } catch (e) {}
+      if (typeof readCurrentElement === 'function') readCurrentElement(0);
+    });
+    bar.querySelector('.jss-dismiss').addEventListener('click', function () {
+      bar.remove();
+      try {
+        localStorage.removeItem(JSSK('audioIndex'));
+        localStorage.removeItem(JSSK('audioChunk'));
+        localStorage.removeItem(JSSK('audioBoundary'));
+      } catch (e) {}
+      try { currentIndex = 0; } catch (e) {}
+    });
+  }
+
+  // ---- magazine-side playback persistence ------------------------------
+  if (typeof savePlaybackState !== 'function') {
+    window.savePlaybackState = function () {
+      try {
+        localStorage.setItem(JSSK('audioIndex'), String(currentIndex));
+        localStorage.setItem(JSSK('audioBoundary'), String(currentBoundaryIndex || 0));
+      } catch (e) {}
+    };
+    setInterval(function () {
+      if (typeof isPlaying !== 'undefined' && isPlaying) window.savePlaybackState();
+    }, 4000);
+  }
+
+  // ---- mediaSession ----------------------------------------------------
+  // Lock-screen, notification-shade, headset and car controls. Also stops
+  // Android reclaiming the tab the moment the screen goes off.
+  function wireMediaSession() {
+    if (!('mediaSession' in navigator)) return;
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: (typeof JSS_BOOK_TITLE === 'string' ? JSS_BOOK_TITLE : document.title),
+        artist: 'Dada Bhagwan',
+        album: 'JSS Audio Library',
+        artwork: [
+          { src: 'https://kamleshmehta-kp.github.io/JSS-Audio-Project/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'https://kamleshmehta-kp.github.io/JSS-Audio-Project/icon-512.png', sizes: '512x512', type: 'image/png' }
+        ]
+      });
+      navigator.mediaSession.setActionHandler('play', function () {
+        if (typeof isPlaying !== 'undefined' && !isPlaying && typeof togglePlayPause === 'function') togglePlayPause();
+      });
+      navigator.mediaSession.setActionHandler('pause', function () {
+        if (typeof isPlaying !== 'undefined' && isPlaying && typeof togglePlayPause === 'function') togglePlayPause();
+      });
+      navigator.mediaSession.setActionHandler('stop', function () {
+        if (typeof stopTTS === 'function') stopTTS();
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', function () {
+        if (typeof currentIndex === 'undefined') return;
+        currentIndex = Math.max(0, currentIndex - 1);
+        if (typeof readCurrentElement === 'function') readCurrentElement(0);
+      });
+      navigator.mediaSession.setActionHandler('nexttrack', function () {
+        if (typeof currentIndex === 'undefined' || typeof ttsElements === 'undefined') return;
+        currentIndex = Math.min(ttsElements.length - 1, currentIndex + 1);
+        if (typeof readCurrentElement === 'function') readCurrentElement(0);
+      });
+    } catch (e) {}
+  }
+
+  window.jssSyncMediaState = function () {
+    if (!('mediaSession' in navigator)) return;
+    try {
+      navigator.mediaSession.playbackState =
+        (typeof isPlaying !== 'undefined' && isPlaying) ? 'playing' : 'paused';
+    } catch (e) {}
+  };
+
+  // ---- dark-mode label -------------------------------------------------
+  window.jssSyncThemeLabel = function () {
+    var el = document.getElementById('theme-label');
+    if (!el) return;
+    var dark = document.body.classList.contains('dark-saver');
+    el.textContent = dark ? 'Light' : 'Dark';
+    var btn = document.getElementById('theme-toggle-btn');
+    if (btn) {
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      btn.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+  };
+
+  // ---- Firefox: pause()/resume() is unreliable, drop the heartbeat -----
+  if (typeof isFirefox !== 'undefined' && isFirefox) {
+    var kill = setInterval(function () {
+      if (typeof heartbeatTimer !== 'undefined' && heartbeatTimer) clearInterval(heartbeatTimer);
+      if (typeof heartbeatInterval !== 'undefined' && heartbeatInterval) clearInterval(heartbeatInterval);
+    }, 2000);
+    window.addEventListener('pagehide', function () { clearInterval(kill); });
+  }
+
+
+  // ---- play/pause intent guard ----------------------------------------
+  // Pausing used to need two or three taps: onend and the iOS failsafe had
+  // already queued setTimeout(playChunk, ...) calls, and playChunk sets
+  // isPlaying = true unconditionally, so playback resurrected itself.
+  // Record what the user actually asked for and refuse stale restarts.
+  window.__jssWant = 'stop';
+  var jssGen = 0;
+
+  // Time-boxed on purpose. The resurrection race happens within a few
+  // hundred milliseconds of a pause, so a short window is enough -- and it
+  // means a stuck 'stop' can never permanently block the Play button.
+  window.__jssStopAt = 0;
+  var STOP_WINDOW_MS = 1500;
+
+  function guard(name) {
+    if (typeof window[name] !== 'function') return;
+    var orig = window[name];
+    window[name] = function () {
+      if (window.__jssWant === 'stop' &&
+          (Date.now() - window.__jssStopAt) < STOP_WINDOW_MS) return;
+      return orig.apply(this, arguments);
+    };
+  }
+
+  function watchdog() {
+    // If the engine keeps talking after a pause, cut it off.
+    var g = ++jssGen;
+    var t = setInterval(function () {
+      if (jssGen !== g || window.__jssWant !== 'stop') { clearInterval(t); return; }
+      if (typeof synth !== 'undefined' && synth && (synth.speaking || synth.pending)) {
+        try { synth.cancel(); } catch (e) {}
+      }
+    }, 120);
+    setTimeout(function () { clearInterval(t); }, 4000);
+  }
+
+  // ---- URL <-> page number --------------------------------------------
+  // Books use id="page-N", magazines id="pageN". Keep the address bar in
+  // step with what is on screen so any page can be linked or shared.
+  function wirePageHash() {
+    var pages = Array.prototype.slice.call(
+      document.querySelectorAll('.page-container, .av-page-wrapper')
+    ).filter(function (p) { return /^page-?\d+$/.test(p.id || ''); });
+    if (!pages.length) return;
+
+    var current = null;
+    function setHash(id) {
+      if (!id || id === current) return;
+      current = id;
+      try { history.replaceState(null, '', location.pathname + location.search + '#' + id); }
+      catch (e) {}
+    }
+
+    if ('IntersectionObserver' in window) {
+      var visible = new Map();
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) visible.set(en.target.id, en.intersectionRatio);
+          else visible.delete(en.target.id);
+        });
+        var best = null, bestR = 0;
+        visible.forEach(function (r, id) { if (r > bestR) { bestR = r; best = id; } });
+        if (best) setHash(best);
+      }, { threshold: [0.1, 0.5, 0.9], rootMargin: '-10% 0px -60% 0px' });
+      pages.forEach(function (p) { io.observe(p); });
+    } else {
+      var tick = null;
+      window.addEventListener('scroll', function () {
+        if (tick) return;
+        tick = setTimeout(function () {
+          tick = null;
+          var best = null, bestTop = -Infinity;
+          pages.forEach(function (p) {
+            var t = p.getBoundingClientRect().top;
+            if (t <= 80 && t > bestTop) { bestTop = t; best = p.id; }
+          });
+          if (best) setHash(best);
+        }, 200);
+      }, { passive: true });
+    }
+
+    // honour an incoming #page-N (browsers often miss it on a long page)
+    var want = (location.hash || '').replace('#', '');
+    if (want && /^page-?\d+$/.test(want)) {
+      var target = document.getElementById(want);
+      if (target) setTimeout(function () {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }, 350);
+    }
+  }
+
+
+  // ---- actionable no-voice guidance ------------------------------------
+  // The stock banner told Chrome users to "open in Chrome". Explain what is
+  // actually wrong and how to fix it on the browser they are really using.
+  function explainNoVoice() {
+    var el = document.getElementById('no-voice-banner');
+    if (!el) return;
+    var gu = (LANG === 'gu');
+    var isAndroid = /Android/i.test(navigator.userAgent);
+    var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    var chrome = /Chrome/i.test(navigator.userAgent) && !(typeof isEdgeUA !== 'undefined' && isEdgeUA);
+    var langName = gu ? 'ગુજરાતી' : 'हिन्दी';
+    var head = gu
+      ? '⚠️ <b>નોંધ:</b> આ બ્રાઉઝરમાં ' + langName + ' અવાજ ઇન્સ્ટોલ થયેલો નથી.'
+      : '⚠️ <b>ध्यान दें:</b> इस ब्राउज़र में ' + langName + ' आवाज़ इंस्टॉल नहीं है।';
+    var how;
+    if (isiOS) {
+      how = gu
+        ? 'iPhone / iPad ' + langName + ' અવાજને સપોર્ટ કરતું નથી. કૃપા કરીને <b>Microsoft Edge</b> માં ખોલો → <b>Read Aloud</b>.'
+        : 'iPhone / iPad ' + langName + ' आवाज़ को सपोर्ट नहीं करता। कृपया <b>Microsoft Edge</b> में खोलें → <b>Read Aloud</b>.';
+    } else if (isAndroid) {
+      how = gu
+        ? '<b>Settings → Accessibility → Text-to-speech → Install voice data → ' + langName + '</b> ઇન્સ્ટોલ કરો, પછી આ પાનું ફરી ખોલો.'
+        : '<b>Settings → Accessibility → Text-to-speech → Install voice data → ' + langName + '</b> इंस्टॉल करें, फिर यह पेज दोबारा खोलें।';
+    } else if (chrome) {
+      how = gu
+        ? 'Windows માં <b>Settings → Time &amp; Language → Speech → Add voices → ' + langName + '</b> ઉમેરો, અથવા આ પાનું <b>Microsoft Edge</b> માં ખોલો (ત્યાં ' + langName + ' અવાજ તૈયાર મળે છે).'
+        : 'Windows में <b>Settings → Time &amp; Language → Speech → Add voices → ' + langName + '</b> जोड़ें, या यह पेज <b>Microsoft Edge</b> में खोलें।';
+    } else {
+      how = gu
+        ? 'સિસ્ટમમાં ' + langName + ' અવાજ ઉમેરો, અથવા આ પાનું <b>Microsoft Edge</b> માં ખોલો.'
+        : 'सिस्टम में ' + langName + ' आवाज़ जोड़ें, या यह पेज <b>Microsoft Edge</b> में खोलें।';
+    }
+    el.innerHTML = head + ' ' + how;
+  }
+
+  // ---- wrap the originals ---------------------------------------------
+  document.addEventListener('DOMContentLoaded', function () {
+    wireMediaSession();
+    jssSyncThemeLabel();
+
+    if (typeof manualThemeToggle === 'function') {
+      var origTheme = manualThemeToggle;
+      manualThemeToggle = function () { origTheme.apply(this, arguments); jssSyncThemeLabel(); };
+    }
+    if (typeof updatePlayerUI === 'function') {
+      var origUI = updatePlayerUI;
+      updatePlayerUI = function () { origUI.apply(this, arguments); jssSyncMediaState(); };
+    }
+
+    // intent must be recorded before the original runs, because the original
+    // is what flips isPlaying.
+    if (typeof togglePlayPause === 'function') {
+      var origToggle = togglePlayPause;
+      togglePlayPause = function () {
+        var goingToPlay = !(typeof isPlaying !== 'undefined' && isPlaying);
+        window.__jssWant = goingToPlay ? 'play' : 'stop';
+        if (!goingToPlay) window.__jssStopAt = Date.now();
+        var r = origToggle.apply(this, arguments);
+        if (!goingToPlay) watchdog();
+        jssSyncMediaState();
+        return r;
+      };
+    }
+    if (typeof stopTTS === 'function') {
+      var origStop = stopTTS;
+      stopTTS = function () {
+        window.__jssWant = 'stop';
+        window.__jssStopAt = Date.now();
+        var r = origStop.apply(this, arguments);
+        watchdog();
+        jssSyncMediaState();
+        return r;
+      };
+    }
+    if (typeof playFromIndex === 'function') {
+      var origPlayFrom = playFromIndex;
+      playFromIndex = function () {
+        // The original calls stopTTS() first, which would set intent to
+        // 'stop' and block the deferred start. Assert 'play' afterwards.
+        var r = origPlayFrom.apply(this, arguments);
+        window.__jssWant = 'play';
+        return r;
+      };
+    }
+    ['playChunk', 'readCurrentElement'].forEach(guard);
+
+    wirePageHash();
+    explainNoVoice();
+
+    var saved = parseFloat(jssGet(JSSG('rate')));
+    if (!isNaN(saved) && saved >= 0.5 && saved <= 2) jssSetSpeed(saved);
+    else if (typeof ttsRate !== 'undefined') jssSetSpeed(ttsRate);
+
+    setTimeout(buildResumeBanner, 600);
+  });
+})();
+
 </script>
+
+<!-- jss-patch-v1:start -->
+<link rel="canonical" href="https://kamleshmehta-kp.github.io/JSS-Audio-Project/JSSBooks-Gujarati/Hu_kon_chhu_Guj_Ver_1_21072026.html"/>
+<meta property="og:image" content="https://kamleshmehta-kp.github.io/JSS-Audio-Project/icon-512.png"/>
+<meta property="og:image:width" content="512"/>
+<meta property="og:image:height" content="512"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="manifest" href="../manifest.json"/>
+<link rel="apple-touch-icon" href="../icon-192.png"/>
+<!-- jss-patch-v1:end -->
 </head>
 <body>
 
@@ -3465,8 +3926,8 @@ if (isIOSMobile) {
 <!-- ===== QUICK NAV (Bottom Left) ===== -->
 <div class="quick-nav no-print">
   <button onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">⬇ <span lang="en">Bottom</span></button>
-  <button id="theme-toggle-btn" onclick="manualThemeToggle()" title="Toggle Dark Mode">🌓</button>
-  <button id="font-size-btn" onclick="cycleFontSize()" title="Font Size">🔤 ક</button>
+  <button id="theme-toggle-btn" onclick="manualThemeToggle()" title="Toggle Dark Mode">🌓 <span lang="en" id="theme-label">Dark</span></button>
+  <button id="font-size-btn" onclick="cycleFontSize()" title="Font Size">🔍 <span lang="en">Zoom</span></button>
 </div>
 
 <!-- ===== TTS PLAYER (Bottom Right) ===== -->
@@ -3475,7 +3936,12 @@ if (isIOSMobile) {
   <div class="tts-controls">
     <button id="play-pause-btn" onclick="togglePlayPause()">▶ <span lang="en">Play</span></button>
     <button id="stop-btn" onclick="stopTTS()">⏹ <span lang="en">Stop</span></button>
-    <button id="speed-btn" onclick="cycleSpeed()" title="Change Speed">▶ 0.9x</button>
+    <div class="tts-speed-wrap">
+      <label for="speed-slider" lang="en">Speed</label>
+      <input type="range" id="speed-slider" min="0.5" max="2" step="0.1" value="0.9"
+             aria-label="Speech speed" oninput="jssSetSpeed(this.value)">
+      <span id="speed-readout" lang="en">0.9x</span>
+    </div>
   </div>
   <div class="tts-progress" id="tts-progress"></div>
 </div>

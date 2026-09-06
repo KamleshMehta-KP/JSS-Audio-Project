@@ -1,9 +1,11 @@
-// JSS Audio Library Service Worker
-// Background refresh with selective caching for important file types
+// JSS Audio Library Service Worker  (jss-patch-v1)
+// Stale-while-revalidate for pages, cache-first for fonts, with a size cap
+// so a 12 MB library doesn't grow without bound.
 
-const CACHE_NAME = "jss-audio-cache-v2";
+const CACHE_NAME = "jss-audio-cache-v3";
+const FONT_CACHE = "jss-fonts-v1";
+const MAX_ENTRIES = 60;
 
-// App shell files (homepage + icons)
 const SHELL_FILES = [
   "./",
   "./index.html",
@@ -12,54 +14,80 @@ const SHELL_FILES = [
   "./icon-512.png"
 ];
 
-// Install: cache the app shell
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL_FILES))
+    caches.open(CACHE_NAME).then(cache =>
+      // addAll is all-or-nothing; a single 404 used to abort the whole install.
+      Promise.allSettled(SHELL_FILES.map(f => cache.add(f)))
+    )
   );
   self.skipWaiting();
 });
 
-// Activate: clean up old caches
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))
-    )
+      Promise.all(
+        keys.filter(k => k !== CACHE_NAME && k !== FONT_CACHE).map(k => caches.delete(k))
+      )
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Fetch: cache only selected file types, auto-refresh in background
+async function trim(cacheName, max) {
+  const cache = await caches.open(cacheName);
+  const keys = await cache.keys();
+  if (keys.length <= max) return;
+  for (let i = 0; i < keys.length - max; i++) await cache.delete(keys[i]);
+}
+
 self.addEventListener("fetch", event => {
-  const url = new URL(event.request.url);
+  const req = event.request;
+  if (req.method !== "GET") return;
 
-  // Cache HTML, audio, images, CSS, JS
-  const isTargetFile =
-    url.pathname.endsWith(".html") ||
-    url.pathname.endsWith(".mp3") ||
-    url.pathname.endsWith(".png") ||
-    url.pathname.endsWith(".css") ||
-    url.pathname.endsWith(".js");
+  const url = new URL(req.url);
 
-  if (!isTargetFile) {
-    // For other files, just fetch normally
+  // Google Fonts: cache-first so Gujarati and Hindi still render offline.
+  // The old worker skipped them because they carry no file extension.
+  if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") {
+    event.respondWith(
+      caches.open(FONT_CACHE).then(cache =>
+        cache.match(req).then(hit =>
+          hit || fetch(req).then(res => {
+            if (res && (res.ok || res.type === "opaque")) cache.put(req, res.clone());
+            return res;
+          }).catch(() => hit)
+        )
+      )
+    );
     return;
   }
 
+  if (url.origin !== self.location.origin) return;
+
+  const p = url.pathname;
+  const isTarget =
+    p.endsWith(".html") || p.endsWith("/") ||
+    p.endsWith(".mp3") || p.endsWith(".vtt") ||
+    p.endsWith(".png") || p.endsWith(".css") ||
+    p.endsWith(".js")  || p.endsWith(".json");
+  if (!isTarget) return;
+
   event.respondWith(
     caches.open(CACHE_NAME).then(cache =>
-      cache.match(event.request).then(cachedResponse => {
-        const fetchPromise = fetch(event.request).then(networkResponse => {
-          if (networkResponse && networkResponse.status === 200) {
-            cache.put(event.request, networkResponse.clone());
+      cache.match(req).then(cached => {
+        const network = fetch(req).then(res => {
+          if (res && res.status === 200) {
+            cache.put(req, res.clone()).then(() => trim(CACHE_NAME, MAX_ENTRIES));
           }
-          return networkResponse;
-        }).catch(() => cachedResponse);
-
-        // Show cached immediately, update quietly in background
-        return cachedResponse || fetchPromise;
+          return res;
+        }).catch(() => cached);
+        return cached || network;
       })
     )
   );
+});
+
+self.addEventListener("message", e => {
+  if (e.data === "skip-waiting") self.skipWaiting();
 });

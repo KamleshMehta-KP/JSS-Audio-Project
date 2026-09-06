@@ -1,27 +1,21 @@
 {
+  "id": "/JSS-Audio-Project/",
   "name": "JSS Audio Library",
   "short_name": "JSS Audio",
+  "description": "Gujarati and Hindi audio e-books of Dada Bhagwan's Akram Vignan satsangs, with read-along text-to-speech.",
+  "lang": "gu",
+  "dir": "ltr",
   "start_url": "/JSS-Audio-Project/index.html",
+  "scope": "/JSS-Audio-Project/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#2980b9",
+  "categories": ["books", "education", "lifestyle"],
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "splash_screens": [
-    {
-      "src": "splash.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
